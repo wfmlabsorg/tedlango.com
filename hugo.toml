@@ -41,3 +41,13 @@ title = "Ted Lango"
   name = "Apps"
   url = "/apps/"
   weight = 4
+
+[[menus.main]]
+  name = "My Book"
+  url = "/#book"
+  weight = 5
+
+[[menus.main]]
+  name = "Resume API"
+  url = "/#api"
+  weight = 6
