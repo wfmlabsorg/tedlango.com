@@ -129,3 +129,8 @@ images:
 ---
 
 All images captured in 2014 using remote telescopes through the [iTelescope](https://www.itelescope.net/) network. Observatories in New Mexico, California, Spain, and Australia provided access to both northern and southern hemisphere skies through instruments ranging from wide-field Takahashi refractors to deep-field Planewave CDK reflectors up to 27 inches in aperture.
+
+<div class="reference-nav">
+  <a href="/photography/telescopes/">Telescopes</a>
+  <a href="/photography/messier-catalog/">Messier Catalog</a>
+</div>

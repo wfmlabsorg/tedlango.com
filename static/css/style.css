@@ -1106,6 +1106,166 @@ main {
     font-size: 0.8rem;
 }
 
+/* Reference Navigation */
+.reference-nav {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.reference-nav a {
+    padding: 0.4rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.reference-nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Telescope Cards */
+.telescope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 2.5rem;
+}
+
+.telescope-card {
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    position: relative;
+}
+
+.telescope-id {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--bg);
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+}
+
+.telescope-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+    padding-right: 3rem;
+    color: var(--text);
+}
+
+.telescope-type {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.telescope-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.telescope-specs li {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.telescope-specs li:last-child {
+    border-bottom: none;
+}
+
+.telescope-specs strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Messier Catalog Table */
+.catalog-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.catalog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.catalog-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.catalog-table th {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+}
+
+.catalog-table td {
+    padding: 0.45rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.catalog-table td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 0.75rem;
+}
+
+.catalog-table td:nth-child(3) {
+    color: var(--text);
+}
+
+.catalog-table tr:last-child td {
+    border-bottom: none;
+}
+
+.catalog-table tr:hover {
+    background: var(--bg-secondary);
+}
+
+.catalog-table tr.captured {
+    background: rgba(59, 130, 246, 0.06);
+}
+
+.catalog-table tr.captured td:first-child {
+    color: var(--accent);
+}
+
+.catalog-table tr.captured td:nth-child(3) {
+    color: var(--accent);
+}
+
 /* Footer */
 footer {
     max-width: 800px;
@@ -1209,5 +1369,22 @@ footer p {
 
     .lightbox-img {
         max-height: 60vh;
+    }
+
+    .telescope-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-table {
+        font-size: 0.7rem;
+    }
+
+    .catalog-table th,
+    .catalog-table td {
+        padding: 0.35rem 0.5rem;
+    }
+
+    .reference-nav {
+        flex-wrap: wrap;
     }
 }
