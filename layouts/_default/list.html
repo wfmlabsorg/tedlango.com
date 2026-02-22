@@ -1,0 +1,25 @@
+{{ define "main" }}
+<header class="list-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+</header>
+
+<div class="list-items">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="list-item">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <div class="list-item-content">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            {{ with .Params.tags }}
+            <div class="list-item-tags">
+                {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </article>
+    {{ else }}
+    <p class="empty-state">Nothing here yet. Check back soon.</p>
+    {{ end }}
+</div>
+{{ end }}

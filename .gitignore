@@ -1,0 +1,7 @@
+public/
+resources/_gen/
+.hugo_build.lock
+legacy_site/
+*.swp
+*.swo
+.DS_Store

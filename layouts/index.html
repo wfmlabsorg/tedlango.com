@@ -1,0 +1,369 @@
+{{ define "head" }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://tedlango.com/#person",
+            "name": "Ted Lango",
+            "givenName": "Ted",
+            "familyName": "Lango",
+            "jobTitle": "Workforce Transformation Strategist",
+            "description": "Senior operations executive building adaptive workforce systems for the Human-AI Era",
+            "url": "https://tedlango.com",
+            "sameAs": [
+                "https://linkedin.com/in/tedlango",
+                "https://wfmlabs.org",
+                "https://amazon.com/author/tedlango"
+            ],
+            "knowsAbout": [
+                "Workforce Management",
+                "Contact Center Operations",
+                "AI Implementation",
+                "Operations Research",
+                "Digital Transformation"
+            ],
+            "workLocation": {
+                "@type": "Place",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Fort Lauderdale",
+                    "addressRegion": "FL",
+                    "addressCountry": "US"
+                }
+            }
+        },
+        {
+            "@type": "Book",
+            "@id": "https://tedlango.com/#book",
+            "name": "Adaptive: Building Workforce Systems for an (Unpredictable) Future",
+            "author": {"@id": "https://tedlango.com/#person"},
+            "url": "https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M"
+        },
+        {
+            "@type": "WebAPI",
+            "name": "Ted Lango Living Resume API",
+            "url": "https://living-resume-api.tedlango.workers.dev/",
+            "provider": {"@id": "https://tedlango.com/#person"}
+        }
+    ]
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+<header class="hero">
+    <h1>TED LANGO</h1>
+    <p class="subtitle">Workforce Transformation Strategist</p>
+    <p class="tagline">Building Adaptive Systems for the Human-AI Era</p>
+    <div class="status">
+        <span class="status-dot"></span>
+        <span>Available for opportunities</span>
+    </div>
+</header>
+
+<section id="about" class="section">
+    <h2>The Moment</h2>
+    <p>We're entering an era where the distribution of work between human agents and AI agents will be fluid — ebbing and flowing based on technology maturity, regulatory shifts, cost dynamics, and customer expectations.</p>
+    <p><strong>Organizations that build rigid systems optimized for today's distribution will be disrupted.</strong></p>
+    <p><strong>Organizations that build adaptive systems designed for continuous rebalancing will thrive.</strong></p>
+    <p>The organizations winning with AI aren't using smarter models — they're building better scaffolding. I build the infrastructure that connects human expertise to AI capability.</p>
+</section>
+
+<section class="section">
+    <h2>Core Thesis</h2>
+    <p class="highlight">Organizations don't have to choose between cost efficiency, customer experience, and employee satisfaction — they can optimize for all three simultaneously through adaptive systems.</p>
+    <p>This thesis has driven 20+ years of transformation work across Fortune 100 operations, technology providers, and strategic consulting.</p>
+</section>
+
+<section id="offer" class="section">
+    <h2>What I Offer</h2>
+    <div class="offer-grid">
+        <div class="offer-item">
+            <h3>Multi-Objective Optimization</h3>
+            <p>Design systems that satisfy competing stakeholder needs — customers, employees, and shareholders — simultaneously through adaptive capacity planning.</p>
+        </div>
+        <div class="offer-item">
+            <h3>Transformation Leadership</h3>
+            <p>Led workforce transformation across 85+ contact centers handling 400M+ interactions annually. Repeatable methodology for advancing maturity while delivering measurable results.</p>
+        </div>
+        <div class="offer-item">
+            <h3>Technology + Operations Bridge</h3>
+            <p>I operate at the intersection of strategy, operations, and technology — accelerating transformation timelines and reducing implementation risk.</p>
+        </div>
+        <div class="offer-item">
+            <h3>AI Infrastructure Design</h3>
+            <p>I don't build AI solutions — I build the scaffolding that makes AI solutions work. Systems where deterministic code handles precision and probabilistic models handle uncertainty.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Track Record</h2>
+    <div class="stats-grid">
+        <div class="stat">
+            <span class="stat-value">$50M+</span>
+            <span class="stat-label">Captured Savings</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">300%</span>
+            <span class="stat-label">ROI Delivered</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">85+</span>
+            <span class="stat-label">Contact Centers</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">400M+</span>
+            <span class="stat-label">Interactions/Year</span>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>The Clarity Pipeline</h2>
+    <p>Organizations don't just need AI — they need scaffolding appropriate to their maturity.</p>
+    <div class="pipeline-grid">
+        <div class="pipeline-tier">
+            <span class="tier-label">LEGACY ENTERPRISES</span>
+            <span class="tier-examples">100+ years: MetLife, Prudential</span>
+            <p><strong>Challenge:</strong> Change aversion, established processes</p>
+            <p><strong>Path:</strong> AI as efficiency tool → strategic capability</p>
+            <p><strong>Scaffolding:</strong> Integration with existing systems, gradual capability building</p>
+        </div>
+        <div class="pipeline-tier">
+            <span class="tier-label">MODERN ENTERPRISES</span>
+            <span class="tier-examples">50+ years: Comcast, Target</span>
+            <p><strong>Challenge:</strong> Digital transformation mid-flight</p>
+            <p><strong>Path:</strong> AI as transformation accelerator</p>
+            <p><strong>Scaffolding:</strong> Hybrid human-AI workflows, retraining programs</p>
+        </div>
+        <div class="pipeline-tier">
+            <span class="tier-label">DIGITAL NATIVES</span>
+            <span class="tier-examples">5-20 years: Tech startups</span>
+            <p><strong>Challenge:</strong> Building AI-first from ground up</p>
+            <p><strong>Path:</strong> AI as foundational infrastructure</p>
+            <p><strong>Scaffolding:</strong> Avoiding over-automation, maintaining human judgment</p>
+        </div>
+    </div>
+    <p class="pipeline-conclusion">The path from reactive scheduling to AI-augmented operations varies by organizational DNA. I build context-specific frameworks that meet organizations where they are.</p>
+</section>
+
+<section class="section">
+    <h2>The Book</h2>
+    <div class="book-section">
+        <div class="book-info">
+            <h3>Adaptive</h3>
+            <p class="book-subtitle">Building Workforce Systems for an (Unpredictable) Future</p>
+            <p>The resume gets the meeting. The book demonstrates the thinking.</p>
+            <p>A practical framework for organizations navigating workforce evolution — from reactive scheduling to adaptive, intelligent systems.</p>
+            <div class="book-links">
+                <a href="https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" target="_blank" class="btn">Amazon</a>
+                <a href="https://wfmlabs.org" target="_blank" class="btn btn-secondary">WFM Labs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="adaptive" class="section framework-section">
+    <h2>The Adaptive Framework</h2>
+    <p class="framework-intro">A personal operating system for navigating uncertainty — the same principles I apply to workforce systems, applied to life and career.</p>
+
+    <div class="framework-tier">
+        <h3>Problems I'm Solving</h3>
+        <div class="framework-items">
+            <div class="framework-item">
+                <span class="item-marker">P1</span>
+                <div class="item-content">
+                    <strong>Deterministic thinking in a stochastic world</strong>
+                    <p>Most WFM teams use point estimates when probability distributions would serve them better.</p>
+                </div>
+            </div>
+            <div class="framework-item">
+                <span class="item-marker">P2</span>
+                <div class="item-content">
+                    <strong>Workforce as cost center, not strategic lever</strong>
+                    <p>Organizations optimize for efficiency alone, missing the multi-objective opportunity.</p>
+                </div>
+            </div>
+            <div class="framework-item">
+                <span class="item-marker">P3</span>
+                <div class="item-content">
+                    <strong>Unpreparedness for human-AI workforce evolution</strong>
+                    <p>Rigid systems optimized for today will be disrupted. Adaptive systems will thrive.</p>
+                </div>
+            </div>
+            <div class="framework-item">
+                <span class="item-marker">P4</span>
+                <div class="item-content">
+                    <strong>Misapplying AI where code suffices, misapplying code where AI excels</strong>
+                    <p>Organizations waste resources building AI for deterministic problems while missing probabilistic opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework-tier">
+        <h3>Mission</h3>
+        <p class="mission-statement">Transform how organizations deploy, manage, and optimize knowledge workers at scale — from reactive scheduling to adaptive, intelligent systems that respect both operational needs and human potential.</p>
+    </div>
+
+    <div class="framework-tier">
+        <h3>Goals</h3>
+        <div class="framework-items horizontal">
+            <div class="goal-item">
+                <span class="goal-icon">01</span>
+                <strong>Transformation Leadership</strong>
+                <p>Lead workforce transformation at scale in the right organization</p>
+            </div>
+            <div class="goal-item">
+                <span class="goal-icon">02</span>
+                <strong>Thought Leadership</strong>
+                <p>Grow WFM Labs as the home for advancing the craft</p>
+            </div>
+            <div class="goal-item">
+                <span class="goal-icon">03</span>
+                <strong>Systems Building</strong>
+                <p>Build AI-augmented infrastructure as a force multiplier</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework-tier">
+        <h3>Models</h3>
+        <p class="models-intro">Mental frameworks that guide decisions and actions:</p>
+        <div class="models-grid">
+            <div class="model-card">
+                <h4>StoicGraph</h4>
+                <p>Relationship progression through trust zones: Aware → Interested → Trust → Advocate. Warm paths over cold outreach.</p>
+            </div>
+            <div class="model-card">
+                <h4>WFM Maturity Model</h4>
+                <p>5-level framework for assessing and advancing workforce management capability. From reactive to pioneering.</p>
+            </div>
+            <div class="model-card">
+                <h4>Three-Engine Architecture</h4>
+                <p>Network (opportunities) → Content (visibility) → Commerce (sustainability). Each engine reinforces the others.</p>
+            </div>
+            <div class="model-card">
+                <h4>The Algorithm</h4>
+                <p>Current State → Ideal State via verifiable iteration. Define success criteria before executing. Always capture learnings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework-tier">
+        <h3>Metrics</h3>
+        <div class="metrics-list">
+            <span class="metric">Relationships advancing through zones</span>
+            <span class="metric">Community growth and engagement</span>
+            <span class="metric">Transformation opportunities in pipeline</span>
+            <span class="metric">Systems operational and scaling</span>
+        </div>
+    </div>
+</section>
+
+<section id="api" class="section api-section">
+    <h2>Living Resume API</h2>
+    <p>Query my professional profile programmatically. Structured data for AI agents, recruiters, and integrations.</p>
+    <div class="api-status">
+        <span class="status-dot"></span>
+        <span>API Online</span>
+    </div>
+    <code class="api-endpoint">https://living-resume-api.tedlango.workers.dev/</code>
+
+    <div class="api-layers">
+        <div class="api-layer">
+            <span class="layer-label">IDENTITY</span>
+            <div class="api-methods">
+                <span class="method">/about</span>
+                <span class="method">/thesis</span>
+                <span class="method">/narrative</span>
+            </div>
+        </div>
+        <div class="api-layer">
+            <span class="layer-label">TELOS</span>
+            <div class="api-methods">
+                <span class="method">/mission</span>
+                <span class="method">/problems</span>
+                <span class="method">/goals</span>
+                <span class="method">/models</span>
+                <span class="method">/beliefs</span>
+            </div>
+        </div>
+        <div class="api-layer">
+            <span class="layer-label">EVIDENCE</span>
+            <div class="api-methods">
+                <span class="method">/experience</span>
+                <span class="method">/accomplishments</span>
+                <span class="method">/track-record</span>
+                <span class="method">/publications</span>
+            </div>
+        </div>
+        <div class="api-layer">
+            <span class="layer-label">ENGAGEMENT</span>
+            <div class="api-methods">
+                <span class="method">/seeking</span>
+                <span class="method">/clarity-pipeline</span>
+                <span class="method">/offer</span>
+                <span class="method">/book</span>
+                <span class="method">/contact</span>
+            </div>
+        </div>
+        <div class="api-layer">
+            <span class="layer-label">MCP</span>
+            <div class="api-methods">
+                <span class="method method-mcp">POST /mcp</span>
+                <span class="method">/schema</span>
+                <span class="method">/full</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="api-examples">
+        <p class="api-examples-label">Try it:</p>
+        <pre class="api-code">curl https://living-resume-api.tedlango.workers.dev/about</pre>
+        <pre class="api-code">curl https://living-resume-api.tedlango.workers.dev/recruiter-summary</pre>
+        <pre class="api-code api-mcp">curl -X POST https://living-resume-api.tedlango.workers.dev/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"get_mission","id":1}'</pre>
+    </div>
+    <a href="https://living-resume-api.tedlango.workers.dev/" target="_blank" class="btn">API Documentation</a>
+</section>
+
+<section class="section">
+    <h2>Connect</h2>
+    <div class="connect-grid">
+        <a href="https://linkedin.com/in/tedlango" target="_blank" class="connect-item">
+            <span class="connect-label">LinkedIn</span>
+            <span class="connect-value">linkedin.com/in/tedlango</span>
+        </a>
+        <a href="https://wfmlabs.org" target="_blank" class="connect-item">
+            <span class="connect-label">WFM Labs</span>
+            <span class="connect-value">1,000+ members</span>
+        </a>
+        <a href="https://roc.cloud" target="_blank" class="connect-item">
+            <span class="connect-label">Portfolio</span>
+            <span class="connect-value">roc.cloud</span>
+        </a>
+        <a href="mailto:tedlango@gmail.com" class="connect-item">
+            <span class="connect-label">Email</span>
+            <span class="connect-value">tedlango@gmail.com</span>
+        </a>
+    </div>
+</section>
+
+{{ with .Site.RegularPages }}
+<section class="section">
+    <h2>Recent Writing</h2>
+    {{ range first 5 (where $.Site.RegularPages "Section" "ne" "") }}
+    <div class="recent-item">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ with .Params.description }}<p class="recent-desc">{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+{{ end }}
