@@ -13,7 +13,7 @@
         {{ range .Pages.ByWeight }}
         <a href="{{ .RelPermalink }}" class="messier-card">
             {{ with .Params.image }}
-            <img src="{{ . }}" alt="{{ $.Title }}" class="messier-thumb" loading="lazy">
+            <img src="{{ replace . "/messier/" "/messier/thumbs/" }}" alt="{{ $.Title }}" class="messier-thumb" loading="lazy">
             {{ end }}
             <div class="messier-card-info">
                 <strong>{{ .Title }}</strong>
