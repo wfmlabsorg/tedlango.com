@@ -23,8 +23,8 @@ title = "Ted Lango"
   tech = "/tech/:slug/"
 
 [[menus.main]]
-  name = "Essays"
-  url = "/essays/"
+  name = "Home"
+  url = "/"
   weight = 1
 
 [[menus.main]]
