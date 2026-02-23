@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="article">
+    <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="article-desc">{{ . }}</p>{{ end }}
+    </header>
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+
+    {{ if .Pages }}
+    <div class="telescope-grid">
+        {{ range .Pages.ByWeight }}
+        <a href="{{ .RelPermalink }}" class="telescope-card">
+            {{ with .Params.image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="telescope-thumb" loading="lazy">
+            {{ end }}
+            <div class="telescope-card-info">
+                <span class="telescope-id">{{ .Params.telescopeId }}</span>
+                <h4>{{ .Params.telescopeName }}</h4>
+                <p class="telescope-type">{{ .Params.telescopeType }}</p>
+                <ul class="telescope-specs">
+                    <li><strong>Aperture:</strong> {{ .Params.aperture }}</li>
+                    <li><strong>CCD:</strong> {{ .Params.ccd }}</li>
+                    <li><strong>Resolution:</strong> {{ .Params.resolution }}</li>
+                </ul>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}

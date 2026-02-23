@@ -3,7 +3,6 @@
     <header class="gallery-header">
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="gallery-desc">{{ . }}</p>{{ end }}
-        {{ with .Params.images }}<span class="gallery-count">{{ len . }} images</span>{{ end }}
     </header>
 
     {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}
