@@ -6,6 +6,11 @@ layout: gallery
 cover: "/img/photography/messier/Messier27.jpg"
 section_card: true
 weight: 1
+navLinks:
+  - label: "Telescopes"
+    url: "/photography/telescopes/"
+  - label: "Messier Catalog"
+    url: "/photography/messier-catalog/"
 imageBase: "/img/photography/astrophotography"
 images:
   - src: "M27_T24_20140524.jpg"
@@ -129,10 +134,5 @@ images:
     caption: "A supernova remnant and pulsar wind nebula in Taurus. Takahashi TOA-150 with SBIG ST-8300C, New Mexico Skies Observatories, Mayhill, New Mexico. January 2014."
     link: "https://en.wikipedia.org/wiki/Crab_Nebula"
 ---
-
-<div class="reference-nav">
-  <a href="/photography/telescopes/">Telescopes</a>
-  <a href="/photography/messier-catalog/">Messier Catalog</a>
-</div>
 
 All images captured in 2014 using remote telescopes through the [iTelescope](https://www.itelescope.net/) network. Observatories in New Mexico, California, Spain, and Australia provided access to both northern and southern hemisphere skies through instruments ranging from wide-field Takahashi refractors to deep-field Planewave CDK reflectors up to 27 inches in aperture.

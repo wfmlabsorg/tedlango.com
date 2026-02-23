@@ -3,6 +3,7 @@
     <header class="article-header">
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="article-desc">{{ . }}</p>{{ end }}
+        {{ with .Params.navLinks }}<div class="reference-nav">{{ range . }}<a href="{{ .url }}">{{ .label }}</a>{{ end }}</div>{{ end }}
     </header>
     <div class="article-content">
         {{ .Content }}

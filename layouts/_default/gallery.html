@@ -3,6 +3,7 @@
     <header class="gallery-header">
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="gallery-desc">{{ . }}</p>{{ end }}
+        {{ with .Params.navLinks }}<div class="reference-nav">{{ range . }}<a href="{{ .url }}">{{ .label }}</a>{{ end }}</div>{{ end }}
     </header>
 
     {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}

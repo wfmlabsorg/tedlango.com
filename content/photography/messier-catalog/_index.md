@@ -5,12 +5,12 @@ date: 2014-05-25
 tags: ["astrophotography", "messier", "deep sky"]
 cover: "/img/photography/messier/Messier42.jpg"
 type: messier-catalog
+navLinks:
+  - label: "Gallery"
+    url: "/photography/astrophotography/"
+  - label: "Telescopes"
+    url: "/photography/telescopes/"
 ---
-
-<div class="reference-nav">
-  <a href="/photography/astrophotography/">Gallery</a>
-  <a href="/photography/telescopes/">Telescopes</a>
-</div>
 
 The *Catalogue des Nébuleuses et des Amas d'Étoiles* was assembled by French astronomer Charles Messier and originally released in 1771. It catalogs 110 galaxies, star clusters, nebulae, and supernova remnants — the brightest and most accessible deep sky objects visible from the northern hemisphere.
 
