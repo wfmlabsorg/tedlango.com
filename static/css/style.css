@@ -1138,11 +1138,11 @@ main {
 }
 
 .telescope-card {
-    padding: 1.25rem;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 6px;
     position: relative;
+    overflow: hidden;
 }
 
 .telescope-id {
@@ -1194,6 +1194,103 @@ main {
 .telescope-specs strong {
     color: var(--text);
     font-weight: 500;
+}
+
+/* Telescope Card Thumbnails */
+a.telescope-card {
+    display: block;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+a.telescope-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.telescope-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+
+.telescope-card-info {
+    padding: 1.25rem;
+    position: relative;
+}
+
+.telescope-card-info .telescope-id {
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+.telescope-card-info h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+    padding-right: 3rem;
+    color: var(--text);
+}
+
+/* Telescope Subpage Components */
+.telescope-hero {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.telescope-hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.telescope-detail {
+    margin: 1.5rem 0;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.spec-item strong {
+    color: var(--text);
+    font-weight: 600;
+    margin-right: 0.75rem;
+    white-space: nowrap;
+}
+
+.spec-item span {
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.telescope-extra-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin: 1.5rem 0;
+    display: block;
 }
 
 /* Messier Catalog Table */
@@ -1373,6 +1470,14 @@ footer p {
 
     .telescope-grid {
         grid-template-columns: 1fr;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .telescope-hero img {
+        max-height: 300px;
     }
 
     .catalog-table {
