@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="article">
+    <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="article-desc">{{ . }}</p>{{ end }}
+    </header>
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+
+    {{ if .Pages }}
+    <div class="messier-grid">
+        {{ range .Pages.ByWeight }}
+        <a href="{{ .RelPermalink }}" class="messier-card">
+            {{ with .Params.image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="messier-thumb" loading="lazy">
+            {{ end }}
+            <div class="messier-card-info">
+                <strong>{{ .Title }}</strong>
+                <span class="messier-type">{{ .Params.objectType }}</span>
+                <span class="messier-meta">{{ .Params.constellation }} · {{ .Params.telescope }}</span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}

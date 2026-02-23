@@ -1293,6 +1293,79 @@ a.telescope-card:hover {
     display: block;
 }
 
+/* Messier Catalog Grid */
+.messier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.messier-card {
+    display: block;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.messier-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.messier-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+
+.messier-card-info {
+    padding: 0.75rem;
+}
+
+.messier-card-info strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+}
+
+.messier-type {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.15rem;
+}
+
+.messier-meta {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+/* Messier Detail Page */
+.messier-hero {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    text-align: center;
+    background: #000;
+}
+
+.messier-hero img {
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Messier Catalog Table */
 .catalog-wrapper {
     overflow-x: auto;
@@ -1470,6 +1543,10 @@ footer p {
 
     .telescope-grid {
         grid-template-columns: 1fr;
+    }
+
+    .messier-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .spec-grid {
