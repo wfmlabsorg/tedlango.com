@@ -1,6 +1,4 @@
 ---
 title: "Photography"
-description: "Astrophotography, birding, and visual explorations"
+description: "Astrophotography, birding, and travel photography"
 ---
-
-Images captured through telescopes, binoculars, and the occasional moment of looking up.

@@ -1,11 +1,10 @@
 {{ define "main" }}
 <header class="list-header">
     <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
 </header>
 
 <div class="category-grid">
-    {{ range .Pages }}
+    {{ range where (.Pages.ByWeight) ".Params.section_card" true }}
     <a href="{{ .Permalink }}" class="category-card">
         {{ with .Params.cover }}
         <img src="{{ . }}" alt="{{ $.Title }}" class="category-cover" loading="lazy">
@@ -13,7 +12,6 @@
         <div class="category-info">
             <h2>{{ .Title }}</h2>
             {{ with .Description }}<p>{{ . }}</p>{{ end }}
-            {{ with .Params.images }}<span class="photo-count">{{ len . }} photos</span>{{ end }}
         </div>
     </a>
     {{ end }}

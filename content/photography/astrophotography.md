@@ -3,7 +3,9 @@ title: "Astrophotography"
 description: "Deep space objects captured through remote telescopes worldwide"
 date: 2014-05-25
 layout: gallery
-cover: "/img/photography/astrophotography/m42_t20_20140218.jpg"
+cover: "/img/photography/messier/Messier27.jpg"
+section_card: true
+weight: 1
 imageBase: "/img/photography/astrophotography"
 images:
   - src: "M27_T24_20140524.jpg"
