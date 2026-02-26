@@ -1,100 +1,52 @@
 {
   "lifelist": [
     {
-      "species": "Golden-faced Tyrannulet",
-      "scientific_name": "Zimmerius chrysops",
-      "first_seen": "2023-05-04",
+      "species": "Vermilion Flycatcher",
+      "scientific_name": "Pyrocephalus rubinus",
+      "first_seen": "2022-12-27",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Road to Finca",
       "photos": [
         {
-          "file": "DSC_6474.jpg",
-          "width": 3990,
-          "height": 3170,
-          "date": "2023-05-04",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 460.0,
-          "iso": 400,
-          "shutter": "1/160",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Golden-faced Tyrannulet",
-          "scientific_name": "Zimmerius chrysops",
-          "featured": false,
-          "caption": "A Golden-faced Tyrannulet perched alertly on a leaf, showing pale underparts and olive-gray upperparts.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 1,
-      "slug": "golden-faced-tyrannulet"
-    },
-    {
-      "species": "Andean Motmot",
-      "scientific_name": "Momotus aequatorialis",
-      "first_seen": "2023-07-03",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_6518.jpg",
-          "width": 1525,
-          "height": 2585,
-          "date": "2023-07-03",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 280.0,
-          "iso": 400,
-          "shutter": "1/250",
-          "aperture": 5.6,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Andean Motmot",
-          "scientific_name": "Momotus aequatorialis",
-          "featured": true,
-          "caption": "An Andean Motmot perched on a wire displaying its brilliant turquoise crown, red eye, and long racket-tipped tail.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 2,
-      "slug": "andean-motmot"
-    },
-    {
-      "species": "Common Squirrel-Cuckoo",
-      "scientific_name": "Piaya cayana",
-      "first_seen": "2023-07-06",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_6756.jpg",
-          "width": 2689,
-          "height": 3420,
-          "date": "2023-07-06",
+          "file": "DSC_9624.jpg",
+          "width": 663,
+          "height": 1265,
+          "date": "2023-12-21",
           "camera": "NIKON D7100",
           "lens": "150.0-600.0 mm f/5.0-6.3",
           "focal_length": 600.0,
           "iso": 400,
-          "shutter": "1/640",
+          "shutter": "1/125",
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Common Squirrel-Cuckoo",
-          "scientific_name": "Piaya cayana",
-          "featured": true,
-          "caption": "A Common Squirrel-Cuckoo with rich rufous plumage and yellow bill perched on a lichen-covered branch.",
-          "quality": "excellent"
+          "species": "Vermilion Flycatcher",
+          "scientific_name": "Pyrocephalus rubinus",
+          "featured": false,
+          "caption": "A male Vermilion Flycatcher on a bare branch, brilliant scarlet contrasting with dark gray wings.",
+          "quality": "good"
         }
       ],
-      "number": 3,
-      "slug": "common-squirrel-cuckoo"
+      "number": 1,
+      "slug": "vermilion-flycatcher"
+    },
+    {
+      "species": "Red-crowned Woodpecker",
+      "scientific_name": "Melanerpes rubricapillus",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 2,
+      "slug": "red-crowned-woodpecker"
     },
     {
       "species": "Great Kiskadee",
       "scientific_name": "Pitangus sulphuratus",
-      "first_seen": "2023-07-08",
+      "first_seen": "2022-12-27",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_7100.jpg",
@@ -117,204 +69,35 @@
           "quality": "good"
         }
       ],
-      "number": 4,
+      "number": 3,
       "slug": "great-kiskadee"
     },
     {
-      "species": "Streak-headed Woodcreeper",
-      "scientific_name": "Lepidocolaptes souleyetii",
-      "first_seen": "2023-07-09",
+      "species": "Clay-colored Thrush",
+      "scientific_name": "Turdus grayi",
+      "first_seen": "2022-12-27",
       "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_7134.jpg",
-          "width": 1723,
-          "height": 2747,
-          "date": "2023-07-09",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/500",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Streak-headed Woodcreeper",
-          "scientific_name": "Lepidocolaptes souleyetii",
-          "featured": false,
-          "caption": "A Streak-headed Woodcreeper clinging vertically to a smooth palm trunk with streaked breast clearly visible.",
-          "quality": "excellent"
-        }
-      ],
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 4,
+      "slug": "clay-colored-thrush"
+    },
+    {
+      "species": "Orange-bellied Euphonia",
+      "scientific_name": "Euphonia xanthogaster",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
       "number": 5,
-      "slug": "streak-headed-woodcreeper"
-    },
-    {
-      "species": "Yellow-backed Oriole",
-      "scientific_name": "Icterus chrysater",
-      "first_seen": "2023-07-12",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_7582.jpg",
-          "width": 1656,
-          "height": 2512,
-          "date": "2023-07-12",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/320",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Yellow-backed Oriole",
-          "scientific_name": "Icterus chrysater",
-          "featured": false,
-          "caption": "An Yellow-backed Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 6,
-      "slug": "yellow-backed-oriole"
-    },
-    {
-      "species": "Steely-vented Hummingbird",
-      "scientific_name": "Saucerottia saucerottei",
-      "first_seen": "2023-07-12",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_7630.jpg",
-          "width": 809,
-          "height": 1175,
-          "date": "2023-07-12",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/250",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Steely-vented Hummingbird",
-          "scientific_name": "Saucerottia saucerottei",
-          "featured": false,
-          "caption": "A Steely-vented Hummingbird hummingbird resting on a lichen-spotted branch, glittering green plumage catching the light.",
-          "quality": "excellent"
-        },
-        {
-          "file": "DSC_8261.jpg",
-          "width": 2455,
-          "height": 2486,
-          "date": "2023-07-16",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/80",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Steely-vented Hummingbird",
-          "scientific_name": "Saucerottia saucerottei",
-          "featured": false,
-          "caption": "A Steely-vented Hummingbird hummingbird resting on a dried leaf, dark iridescent plumage gleaming.",
-          "quality": "good"
-        }
-      ],
-      "number": 7,
-      "slug": "steely-vented-hummingbird"
-    },
-    {
-      "species": "Blue-necked Tanager",
-      "scientific_name": "Stilpnia cyanicollis",
-      "first_seen": "2023-07-12",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_7682.jpg",
-          "width": 1963,
-          "height": 1848,
-          "date": "2023-07-12",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/200",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Blue-necked Tanager",
-          "scientific_name": "Stilpnia cyanicollis",
-          "featured": true,
-          "caption": "A male Blue-necked Tanager showcasing its brilliant blue head and neck contrasting with turquoise shoulders and dark body.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 8,
-      "slug": "blue-necked-tanager"
-    },
-    {
-      "species": "Spectacled Parrotlet",
-      "scientific_name": "Forpus conspicillatus",
-      "first_seen": "2023-07-12",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_7742.jpg",
-          "width": 1859,
-          "height": 2872,
-          "date": "2023-07-12",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/1600",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Spectacled Parrotlet",
-          "scientific_name": "Forpus conspicillatus",
-          "featured": false,
-          "caption": "A pair of Spectacled Parrotlets investigating a hollow tree stump, blue eye-ring visible.",
-          "quality": "good"
-        },
-        {
-          "file": "DSC_7771.jpg",
-          "width": 1375,
-          "height": 2348,
-          "date": "2023-07-12",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/1250",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Spectacled Parrotlet",
-          "scientific_name": "Forpus conspicillatus",
-          "featured": true,
-          "caption": "A Spectacled Parrotlet hanging upside down from a tree snag, peering curiously toward the camera.",
-          "quality": "good"
-        }
-      ],
-      "number": 9,
-      "slug": "spectacled-parrotlet"
+      "slug": "orange-bellied-euphonia"
     },
     {
       "species": "Crested Oropendola",
       "scientific_name": "Psarocolius decumanus",
-      "first_seen": "2023-07-13",
+      "first_seen": "2022-12-27",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_7855.jpg",
@@ -357,64 +140,299 @@
           "quality": "excellent"
         }
       ],
-      "number": 10,
+      "number": 6,
       "slug": "crested-oropendola"
     },
     {
-      "species": "Bay-headed Tanager",
-      "scientific_name": "Tangara gyrola",
-      "first_seen": "2023-07-16",
+      "species": "Flame-rumped Tanager",
+      "scientific_name": "Ramphocelus flammigerus",
+      "first_seen": "2022-12-27",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 7,
+      "slug": "flame-rumped-tanager"
+    },
+    {
+      "species": "Crimson-backed Tanager",
+      "scientific_name": "Ramphocelus dimidiatus",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 8,
+      "slug": "crimson-backed-tanager"
+    },
+    {
+      "species": "Blue-gray Tanager",
+      "scientific_name": "Thraupis episcopus",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 9,
+      "slug": "blue-gray-tanager"
+    },
+    {
+      "species": "Palm Tanager",
+      "scientific_name": "Thraupis palmarum",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 10,
+      "slug": "palm-tanager"
+    },
+    {
+      "species": "Scrub Tanager",
+      "scientific_name": "Stilpnia vitriolina",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 11,
+      "slug": "scrub-tanager"
+    },
+    {
+      "species": "Saffron Finch",
+      "scientific_name": "Sicalis flaveola",
+      "first_seen": "2022-12-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 12,
+      "slug": "saffron-finch"
+    },
+    {
+      "species": "Rufous-tailed Hummingbird",
+      "scientific_name": "Amazilia tzacatl",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
-          "file": "DSC_8053.jpg",
-          "width": 1530,
-          "height": 1953,
-          "date": "2023-07-16",
+          "file": "DSC_9686.jpg",
+          "width": 2535,
+          "height": 3559,
+          "date": "2023-12-21",
           "camera": "NIKON D7100",
           "lens": "150.0-600.0 mm f/5.0-6.3",
           "focal_length": 600.0,
           "iso": 400,
-          "shutter": "1/200",
-          "aperture": 6.3,
+          "shutter": "1/1250",
+          "aperture": 9.0,
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Bay-headed Tanager",
-          "scientific_name": "Tangara gyrola",
+          "species": "Rufous-tailed Hummingbird",
+          "scientific_name": "Amazilia tzacatl",
           "featured": true,
-          "caption": "A Bay-headed Tanager displaying its rich chestnut head, green back, and turquoise blue underparts.",
+          "caption": "A Rufous-tailed Hummingbird hovers with wings spread while feeding from cascading purple Petrea flowers.",
           "quality": "excellent"
-        },
-        {
-          "file": "DSC_8112.jpg",
-          "width": 2715,
-          "height": 1859,
-          "date": "2023-07-16",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/200",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Bay-headed Tanager",
-          "scientific_name": "Tangara gyrola",
-          "featured": false,
-          "caption": "A Bay-headed Tanager in profile showing the full spectrum from rufous crown through green mantle to blue rump.",
-          "quality": "good"
         }
       ],
-      "number": 11,
-      "slug": "bay-headed-tanager"
+      "number": 13,
+      "slug": "rufous-tailed-hummingbird"
+    },
+    {
+      "species": "Blue-headed Parrot",
+      "scientific_name": "Pionus menstruus",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 14,
+      "slug": "blue-headed-parrot"
+    },
+    {
+      "species": "Scarlet-fronted Parakeet",
+      "scientific_name": "Psittacara wagleri",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_9540.jpg",
+          "width": 1559,
+          "height": 2142,
+          "date": "2023-12-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/250",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Scarlet-fronted Parakeet",
+          "scientific_name": "Psittacara wagleri",
+          "featured": false,
+          "caption": "A Scarlet-fronted Parakeet clinging to a mossy tree trunk, red forehead and bright green plumage visible.",
+          "quality": "fair"
+        }
+      ],
+      "number": 15,
+      "slug": "scarlet-fronted-parakeet"
+    },
+    {
+      "species": "Cattle Tyrant",
+      "scientific_name": "Machetornis rixosa",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 16,
+      "slug": "cattle-tyrant"
+    },
+    {
+      "species": "Black-billed Thrush",
+      "scientific_name": "Turdus ignobilis",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 17,
+      "slug": "black-billed-thrush"
+    },
+    {
+      "species": "Thick-billed Euphonia",
+      "scientific_name": "Euphonia laniirostris",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 18,
+      "slug": "thick-billed-euphonia"
+    },
+    {
+      "species": "Blue-necked Tanager",
+      "scientific_name": "Stilpnia cyanicollis",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_7682.jpg",
+          "width": 1963,
+          "height": 1848,
+          "date": "2023-07-12",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/200",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Blue-necked Tanager",
+          "scientific_name": "Stilpnia cyanicollis",
+          "featured": true,
+          "caption": "A male Blue-necked Tanager showcasing its brilliant blue head and neck contrasting with turquoise shoulders and dark body.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 19,
+      "slug": "blue-necked-tanager"
+    },
+    {
+      "species": "Green Honeycreeper",
+      "scientific_name": "Chlorophanes spiza",
+      "first_seen": "2022-12-28",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 20,
+      "slug": "green-honeycreeper"
+    },
+    {
+      "species": "Black-throated Mango",
+      "scientific_name": "Anthracothorax nigricollis",
+      "first_seen": "2022-12-29",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 21,
+      "slug": "black-throated-mango"
+    },
+    {
+      "species": "Common Squirrel-Cuckoo",
+      "scientific_name": "Piaya cayana",
+      "first_seen": "2023-01-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_6756.jpg",
+          "width": 2689,
+          "height": 3420,
+          "date": "2023-07-06",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/640",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Common Squirrel-Cuckoo",
+          "scientific_name": "Piaya cayana",
+          "featured": true,
+          "caption": "A Common Squirrel-Cuckoo with rich rufous plumage and yellow bill perched on a lichen-covered branch.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 22,
+      "slug": "common-squirrel-cuckoo"
+    },
+    {
+      "species": "Broad-winged Hawk",
+      "scientific_name": "Buteo platypterus",
+      "first_seen": "2023-01-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 23,
+      "slug": "broad-winged-hawk"
+    },
+    {
+      "species": "Yellow-headed Caracara",
+      "scientific_name": "Daptrius chimachima",
+      "first_seen": "2023-01-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 24,
+      "slug": "yellow-headed-caracara"
+    },
+    {
+      "species": "Tropical Mockingbird",
+      "scientific_name": "Mimus gilvus",
+      "first_seen": "2023-01-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 25,
+      "slug": "tropical-mockingbird"
+    },
+    {
+      "species": "Yellow-faced Grassquit",
+      "scientific_name": "Tiaris olivaceus",
+      "first_seen": "2023-01-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 26,
+      "slug": "yellow-faced-grassquit"
     },
     {
       "species": "Bronze-winged Parrot",
       "scientific_name": "Pionus chalcopterus",
-      "first_seen": "2023-12-10",
+      "first_seen": "2023-01-02",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_8605.jpg",
@@ -477,14 +495,25 @@
           "quality": "fair"
         }
       ],
-      "number": 12,
+      "number": 27,
       "slug": "bronze-winged-parrot"
+    },
+    {
+      "species": "Bananaquit",
+      "scientific_name": "Coereba flaveola",
+      "first_seen": "2023-01-02",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 28,
+      "slug": "bananaquit"
     },
     {
       "species": "Colombian Chachalaca",
       "scientific_name": "Ortalis columbiana",
-      "first_seen": "2023-12-10",
+      "first_seen": "2023-01-04",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_8628.jpg",
@@ -507,74 +536,117 @@
           "quality": "excellent"
         }
       ],
-      "number": 13,
+      "number": 29,
       "slug": "colombian-chachalaca"
     },
     {
-      "species": "Rusty-margined Flycatcher",
-      "scientific_name": "Myiozetetes granadensis",
-      "first_seen": "2023-12-13",
+      "species": "Andean Motmot",
+      "scientific_name": "Momotus aequatorialis",
+      "first_seen": "2023-04-30",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
-          "file": "DSC_8767.jpg",
-          "width": 2033,
-          "height": 2839,
-          "date": "2023-12-13",
+          "file": "DSC_6518.jpg",
+          "width": 1525,
+          "height": 2585,
+          "date": "2023-07-03",
           "camera": "NIKON D7100",
           "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
+          "focal_length": 280.0,
           "iso": 400,
-          "shutter": "1/80",
-          "aperture": 6.3,
+          "shutter": "1/250",
+          "aperture": 5.6,
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Rusty-margined Flycatcher",
-          "scientific_name": "Myiozetetes granadensis",
-          "featured": false,
-          "caption": "A Rusty-margined Flycatcher perched among berries, bold black-and-white head pattern and bright yellow underparts.",
+          "species": "Andean Motmot",
+          "scientific_name": "Momotus aequatorialis",
+          "featured": true,
+          "caption": "An Andean Motmot perched on a wire displaying its brilliant turquoise crown, red eye, and long racket-tipped tail.",
           "quality": "excellent"
         }
       ],
-      "number": 14,
-      "slug": "rusty-margined-flycatcher"
+      "number": 30,
+      "slug": "andean-motmot"
     },
     {
-      "species": "Acorn Woodpecker",
-      "scientific_name": "Melanerpes formicivorus",
-      "first_seen": "2023-12-17",
+      "species": "Bar-crested Antshrike",
+      "scientific_name": "Thamnophilus multistriatus",
+      "first_seen": "2023-04-30",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 31,
+      "slug": "bar-crested-antshrike"
+    },
+    {
+      "species": "Roadside Hawk",
+      "scientific_name": "Rupornis magnirostris",
+      "first_seen": "2023-05-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
       "photos": [
         {
-          "file": "DSC_8934.jpg",
-          "width": 3154,
-          "height": 2830,
-          "date": "2023-12-17",
+          "file": "DSC_9714.jpg",
+          "width": 2142,
+          "height": 2886,
+          "date": "2023-12-21",
           "camera": "NIKON D7100",
           "lens": "150.0-600.0 mm f/5.0-6.3",
           "focal_length": 600.0,
           "iso": 400,
-          "shutter": "1/320",
+          "shutter": "1/250",
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Acorn Woodpecker",
-          "scientific_name": "Melanerpes formicivorus",
-          "featured": false,
-          "caption": "An Acorn Woodpecker on a lichen-covered branch showing its distinctive clown-like face, red crown, and pale eye.",
+          "species": "Roadside Hawk",
+          "scientific_name": "Rupornis magnirostris",
+          "featured": true,
+          "caption": "A Roadside Hawk stares directly at the camera, yellow eyes and barred rufous breast in an alert perched pose.",
           "quality": "excellent"
         }
       ],
-      "number": 15,
-      "slug": "acorn-woodpecker"
+      "number": 32,
+      "slug": "roadside-hawk"
+    },
+    {
+      "species": "Southern Lapwing",
+      "scientific_name": "Vanellus chilensis",
+      "first_seen": "2023-05-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 33,
+      "slug": "southern-lapwing"
+    },
+    {
+      "species": "Streaked Saltator",
+      "scientific_name": "Saltator striatipectus",
+      "first_seen": "2023-05-01",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 34,
+      "slug": "streaked-saltator"
+    },
+    {
+      "species": "Lineated Woodpecker",
+      "scientific_name": "Dryocopus lineatus",
+      "first_seen": "2023-05-04",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 35,
+      "slug": "lineated-woodpecker"
     },
     {
       "species": "Spot-breasted Woodpecker",
       "scientific_name": "Colaptes punctigula",
-      "first_seen": "2023-12-17",
+      "first_seen": "2023-07-03",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_9054.jpg",
@@ -617,14 +689,393 @@
           "quality": "good"
         }
       ],
-      "number": 16,
+      "number": 36,
       "slug": "spot-breasted-woodpecker"
+    },
+    {
+      "species": "Streak-headed Woodcreeper",
+      "scientific_name": "Lepidocolaptes souleyetii",
+      "first_seen": "2023-07-03",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_7134.jpg",
+          "width": 1723,
+          "height": 2747,
+          "date": "2023-07-09",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/500",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Streak-headed Woodcreeper",
+          "scientific_name": "Lepidocolaptes souleyetii",
+          "featured": false,
+          "caption": "A Streak-headed Woodcreeper clinging vertically to a smooth palm trunk with streaked breast clearly visible.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 37,
+      "slug": "streak-headed-woodcreeper"
+    },
+    {
+      "species": "Yellow-backed Oriole",
+      "scientific_name": "Icterus chrysater",
+      "first_seen": "2023-07-07",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [
+        {
+          "file": "DSC_7582.jpg",
+          "width": 1656,
+          "height": 2512,
+          "date": "2023-07-12",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/320",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Yellow-backed Oriole",
+          "scientific_name": "Icterus chrysater",
+          "featured": false,
+          "caption": "An Yellow-backed Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 38,
+      "slug": "yellow-backed-oriole"
+    },
+    {
+      "species": "Steely-vented Hummingbird",
+      "scientific_name": "Saucerottia saucerottei",
+      "first_seen": "2023-07-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [
+        {
+          "file": "DSC_7630.jpg",
+          "width": 809,
+          "height": 1175,
+          "date": "2023-07-12",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/250",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Steely-vented Hummingbird",
+          "scientific_name": "Saucerottia saucerottei",
+          "featured": false,
+          "caption": "A Steely-vented Hummingbird hummingbird resting on a lichen-spotted branch, glittering green plumage catching the light.",
+          "quality": "excellent"
+        },
+        {
+          "file": "DSC_8261.jpg",
+          "width": 2455,
+          "height": 2486,
+          "date": "2023-07-16",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/80",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Steely-vented Hummingbird",
+          "scientific_name": "Saucerottia saucerottei",
+          "featured": false,
+          "caption": "A Steely-vented Hummingbird hummingbird resting on a dried leaf, dark iridescent plumage gleaming.",
+          "quality": "good"
+        }
+      ],
+      "number": 39,
+      "slug": "steely-vented-hummingbird"
+    },
+    {
+      "species": "Montane Woodcreeper",
+      "scientific_name": "Lepidocolaptes lacrymiger",
+      "first_seen": "2023-07-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 40,
+      "slug": "montane-woodcreeper"
+    },
+    {
+      "species": "Golden-faced Tyrannulet",
+      "scientific_name": "Zimmerius chrysops",
+      "first_seen": "2023-07-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_6474.jpg",
+          "width": 3990,
+          "height": 3170,
+          "date": "2023-05-04",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 460.0,
+          "iso": 400,
+          "shutter": "1/160",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Golden-faced Tyrannulet",
+          "scientific_name": "Zimmerius chrysops",
+          "featured": false,
+          "caption": "A Golden-faced Tyrannulet perched alertly on a leaf, showing pale underparts and olive-gray upperparts.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 41,
+      "slug": "golden-faced-tyrannulet"
+    },
+    {
+      "species": "Buff-throated Saltator",
+      "scientific_name": "Saltator maximus",
+      "first_seen": "2023-07-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 42,
+      "slug": "buff-throated-saltator"
+    },
+    {
+      "species": "Bare-faced Ibis",
+      "scientific_name": "Phimosus infuscatus",
+      "first_seen": "2023-07-16",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 43,
+      "slug": "bare-faced-ibis"
+    },
+    {
+      "species": "Spectacled Parrotlet",
+      "scientific_name": "Forpus conspicillatus",
+      "first_seen": "2023-07-16",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_7742.jpg",
+          "width": 1859,
+          "height": 2872,
+          "date": "2023-07-12",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/1600",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Spectacled Parrotlet",
+          "scientific_name": "Forpus conspicillatus",
+          "featured": false,
+          "caption": "A pair of Spectacled Parrotlets investigating a hollow tree stump, blue eye-ring visible.",
+          "quality": "good"
+        },
+        {
+          "file": "DSC_7771.jpg",
+          "width": 1375,
+          "height": 2348,
+          "date": "2023-07-12",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/1250",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Spectacled Parrotlet",
+          "scientific_name": "Forpus conspicillatus",
+          "featured": true,
+          "caption": "A Spectacled Parrotlet hanging upside down from a tree snag, peering curiously toward the camera.",
+          "quality": "good"
+        }
+      ],
+      "number": 44,
+      "slug": "spectacled-parrotlet"
+    },
+    {
+      "species": "Bay-headed Tanager",
+      "scientific_name": "Tangara gyrola",
+      "first_seen": "2023-07-16",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_8053.jpg",
+          "width": 1530,
+          "height": 1953,
+          "date": "2023-07-16",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/200",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Bay-headed Tanager",
+          "scientific_name": "Tangara gyrola",
+          "featured": true,
+          "caption": "A Bay-headed Tanager displaying its rich chestnut head, green back, and turquoise blue underparts.",
+          "quality": "excellent"
+        },
+        {
+          "file": "DSC_8112.jpg",
+          "width": 2715,
+          "height": 1859,
+          "date": "2023-07-16",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/200",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Bay-headed Tanager",
+          "scientific_name": "Tangara gyrola",
+          "featured": false,
+          "caption": "A Bay-headed Tanager in profile showing the full spectrum from rufous crown through green mantle to blue rump.",
+          "quality": "good"
+        }
+      ],
+      "number": 45,
+      "slug": "bay-headed-tanager"
+    },
+    {
+      "species": "Ruddy Ground Dove",
+      "scientific_name": "Columbina talpacoti",
+      "first_seen": "2023-07-21",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 46,
+      "slug": "ruddy-ground-dove"
+    },
+    {
+      "species": "Anhinga",
+      "scientific_name": "Anhinga anhinga",
+      "first_seen": "2023-08-26",
+      "location": "Florida, USA",
+      "ebird_location": "rainbow river",
+      "photos": [],
+      "number": 47,
+      "slug": "anhinga"
+    },
+    {
+      "species": "Yellow-bellied Elaenia",
+      "scientific_name": "Elaenia flavogaster",
+      "first_seen": "2023-12-09",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 48,
+      "slug": "yellow-bellied-elaenia"
+    },
+    {
+      "species": "Tropical Kingbird",
+      "scientific_name": "Tyrannus melancholicus",
+      "first_seen": "2023-12-10",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 49,
+      "slug": "tropical-kingbird"
+    },
+    {
+      "species": "Acorn Woodpecker",
+      "scientific_name": "Melanerpes formicivorus",
+      "first_seen": "2023-12-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [
+        {
+          "file": "DSC_8934.jpg",
+          "width": 3154,
+          "height": 2830,
+          "date": "2023-12-17",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/320",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Acorn Woodpecker",
+          "scientific_name": "Melanerpes formicivorus",
+          "featured": false,
+          "caption": "An Acorn Woodpecker on a lichen-covered branch showing its distinctive clown-like face, red crown, and pale eye.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 50,
+      "slug": "acorn-woodpecker"
+    },
+    {
+      "species": "Rusty-margined Flycatcher",
+      "scientific_name": "Myiozetetes cayanensis",
+      "first_seen": "2023-12-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [
+        {
+          "file": "DSC_8767.jpg",
+          "width": 2033,
+          "height": 2839,
+          "date": "2023-12-13",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/80",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Rusty-margined Flycatcher",
+          "scientific_name": "Myiozetetes granadensis",
+          "featured": false,
+          "caption": "A Rusty-margined Flycatcher perched among berries, bold black-and-white head pattern and bright yellow underparts.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 51,
+      "slug": "rusty-margined-flycatcher"
     },
     {
       "species": "Long-billed Starthroat",
       "scientific_name": "Heliomaster longirostris",
       "first_seen": "2023-12-17",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_9238.jpg",
@@ -667,14 +1118,25 @@
           "quality": "good"
         }
       ],
-      "number": 17,
+      "number": 52,
       "slug": "long-billed-starthroat"
+    },
+    {
+      "species": "Black Vulture",
+      "scientific_name": "Coragyps atratus",
+      "first_seen": "2023-12-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 53,
+      "slug": "black-vulture"
     },
     {
       "species": "Guira Tanager",
       "scientific_name": "Hemithraupis guira",
       "first_seen": "2023-12-19",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_9442.jpg",
@@ -717,134 +1179,15 @@
           "quality": "fair"
         }
       ],
-      "number": 18,
+      "number": 54,
       "slug": "guira-tanager"
-    },
-    {
-      "species": "Scarlet-fronted Parakeet",
-      "scientific_name": "Psittacara wagleri",
-      "first_seen": "2023-12-19",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_9540.jpg",
-          "width": 1559,
-          "height": 2142,
-          "date": "2023-12-19",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/250",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Scarlet-fronted Parakeet",
-          "scientific_name": "Psittacara wagleri",
-          "featured": false,
-          "caption": "A Scarlet-fronted Parakeet clinging to a mossy tree trunk, red forehead and bright green plumage visible.",
-          "quality": "fair"
-        }
-      ],
-      "number": 19,
-      "slug": "scarlet-fronted-parakeet"
-    },
-    {
-      "species": "Vermilion Flycatcher",
-      "scientific_name": "Pyrocephalus rubinus",
-      "first_seen": "2023-12-21",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_9624.jpg",
-          "width": 663,
-          "height": 1265,
-          "date": "2023-12-21",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/125",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Vermilion Flycatcher",
-          "scientific_name": "Pyrocephalus rubinus",
-          "featured": false,
-          "caption": "A male Vermilion Flycatcher on a bare branch, brilliant scarlet contrasting with dark gray wings.",
-          "quality": "good"
-        }
-      ],
-      "number": 20,
-      "slug": "vermilion-flycatcher"
-    },
-    {
-      "species": "Rufous-tailed Hummingbird",
-      "scientific_name": "Amazilia tzacatl",
-      "first_seen": "2023-12-21",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_9686.jpg",
-          "width": 2535,
-          "height": 3559,
-          "date": "2023-12-21",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/1250",
-          "aperture": 9.0,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Rufous-tailed Hummingbird",
-          "scientific_name": "Amazilia tzacatl",
-          "featured": true,
-          "caption": "A Rufous-tailed Hummingbird hovers with wings spread while feeding from cascading purple Petrea flowers.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 21,
-      "slug": "rufous-tailed-hummingbird"
-    },
-    {
-      "species": "Roadside Hawk",
-      "scientific_name": "Rupornis magnirostris",
-      "first_seen": "2023-12-21",
-      "location": "Antioquia, Colombia",
-      "photos": [
-        {
-          "file": "DSC_9714.jpg",
-          "width": 2142,
-          "height": 2886,
-          "date": "2023-12-21",
-          "camera": "NIKON D7100",
-          "lens": "150.0-600.0 mm f/5.0-6.3",
-          "focal_length": 600.0,
-          "iso": 400,
-          "shutter": "1/250",
-          "aperture": 6.3,
-          "gps_lat": null,
-          "gps_lon": null,
-          "location": "Antioquia, Colombia",
-          "species": "Roadside Hawk",
-          "scientific_name": "Rupornis magnirostris",
-          "featured": true,
-          "caption": "A Roadside Hawk stares directly at the camera, yellow eyes and barred rufous breast in an alert perched pose.",
-          "quality": "excellent"
-        }
-      ],
-      "number": 22,
-      "slug": "roadside-hawk"
     },
     {
       "species": "Smooth-billed Ani",
       "scientific_name": "Crotophaga ani",
       "first_seen": "2023-12-25",
       "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
       "photos": [
         {
           "file": "DSC_9784.jpg",
@@ -867,14 +1210,45 @@
           "quality": "good"
         }
       ],
-      "number": 23,
+      "number": 55,
       "slug": "smooth-billed-ani"
+    },
+    {
+      "species": "Southern House Wren",
+      "scientific_name": "Troglodytes musculus",
+      "first_seen": "2023-12-26",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 56,
+      "slug": "southern-house-wren"
+    },
+    {
+      "species": "Tropical Gnatcatcher",
+      "scientific_name": "Polioptila plumbea",
+      "first_seen": "2023-12-26",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 57,
+      "slug": "tropical-gnatcatcher"
+    },
+    {
+      "species": "Eared Dove",
+      "scientific_name": "Zenaida auriculata",
+      "first_seen": "2023-12-30",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 58,
+      "slug": "eared-dove"
     },
     {
       "species": "Lesser Goldfinch",
       "scientific_name": "Spinus psaltria",
       "first_seen": "2023-12-30",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_0078.jpg",
@@ -897,14 +1271,675 @@
           "quality": "fair"
         }
       ],
-      "number": 24,
+      "number": 59,
       "slug": "lesser-goldfinch"
+    },
+    {
+      "species": "Olive-gray Saltator",
+      "scientific_name": "Saltator olivascens",
+      "first_seen": "2024-01-04",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [],
+      "number": 60,
+      "slug": "olive-gray-saltator"
+    },
+    {
+      "species": "Blue-and-white Swallow",
+      "scientific_name": "Pygochelidon cyanoleuca",
+      "first_seen": "2024-01-09",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "apartment",
+      "photos": [],
+      "number": 61,
+      "slug": "blue-and-white-swallow"
+    },
+    {
+      "species": "Great Egret",
+      "scientific_name": "Ardea alba",
+      "first_seen": "2024-05-11",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 62,
+      "slug": "great-egret"
+    },
+    {
+      "species": "White-lined Tanager",
+      "scientific_name": "Tachyphonus rufus",
+      "first_seen": "2024-05-11",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 63,
+      "slug": "white-lined-tanager"
+    },
+    {
+      "species": "Brown-throated Parakeet",
+      "scientific_name": "Eupsittula pertinax",
+      "first_seen": "2024-05-12",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 64,
+      "slug": "brown-throated-parakeet"
+    },
+    {
+      "species": "Golden-bellied Flycatcher",
+      "scientific_name": "Myiodynastes hemichrysus",
+      "first_seen": "2024-11-07",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 65,
+      "slug": "golden-bellied-flycatcher"
+    },
+    {
+      "species": "Orange-chinned Parakeet",
+      "scientific_name": "Brotogeris jugularis",
+      "first_seen": "2025-03-09",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "apartment",
+      "photos": [],
+      "number": 66,
+      "slug": "orange-chinned-parakeet"
+    },
+    {
+      "species": "Scarlet Macaw",
+      "scientific_name": "Ara macao",
+      "first_seen": "2025-03-13",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "apartment",
+      "photos": [],
+      "number": 67,
+      "slug": "scarlet-macaw"
+    },
+    {
+      "species": "Barred Antshrike",
+      "scientific_name": "Thamnophilus doliatus",
+      "first_seen": "2025-03-15",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 68,
+      "slug": "barred-antshrike"
+    },
+    {
+      "species": "Striped Cuckoo",
+      "scientific_name": "Tapera naevia",
+      "first_seen": "2025-03-16",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 69,
+      "slug": "striped-cuckoo"
+    },
+    {
+      "species": "Red-headed Barbet",
+      "scientific_name": "Eubucco bourcierii",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 70,
+      "slug": "red-headed-barbet"
+    },
+    {
+      "species": "Southern Emerald-Toucanet",
+      "scientific_name": "Aulacorhynchus albivitta",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 71,
+      "slug": "southern-emerald-toucanet"
+    },
+    {
+      "species": "Andean Cock-of-the-rock",
+      "scientific_name": "Rupicola peruvianus",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 72,
+      "slug": "andean-cock-of-the-rock"
+    },
+    {
+      "species": "Green Jay",
+      "scientific_name": "Cyanocorax yncas",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 73,
+      "slug": "green-jay"
+    },
+    {
+      "species": "Red-bellied Grackle",
+      "scientific_name": "Hypopyrrhus pyrohypogaster",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 74,
+      "slug": "red-bellied-grackle"
+    },
+    {
+      "species": "Blackburnian Warbler",
+      "scientific_name": "Setophaga fusca",
+      "first_seen": "2025-03-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "reserve",
+      "photos": [],
+      "number": 75,
+      "slug": "blackburnian-warbler"
+    },
+    {
+      "species": "Black-headed Saltator",
+      "scientific_name": "Saltator atriceps",
+      "first_seen": "2025-03-23",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 76,
+      "slug": "black-headed-saltator"
+    },
+    {
+      "species": "White Ibis",
+      "scientific_name": "Eudocimus albus",
+      "first_seen": "2025-05-28",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 77,
+      "slug": "white-ibis"
+    },
+    {
+      "species": "European Starling",
+      "scientific_name": "Sturnus vulgaris",
+      "first_seen": "2025-05-28",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 78,
+      "slug": "european-starling"
+    },
+    {
+      "species": "Northern Mockingbird",
+      "scientific_name": "Mimus polyglottos",
+      "first_seen": "2025-05-28",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 79,
+      "slug": "northern-mockingbird"
+    },
+    {
+      "species": "Red-shouldered Hawk",
+      "scientific_name": "Buteo lineatus",
+      "first_seen": "2025-05-31",
+      "location": "Florida, USA",
+      "ebird_location": "wildlife Sanctuary",
+      "photos": [],
+      "number": 80,
+      "slug": "red-shouldered-hawk"
+    },
+    {
+      "species": "Mourning Dove",
+      "scientific_name": "Zenaida macroura",
+      "first_seen": "2025-05-31",
+      "location": "Florida, USA",
+      "ebird_location": "The Pelican Key Largo Cottages",
+      "photos": [],
+      "number": 81,
+      "slug": "mourning-dove"
+    },
+    {
+      "species": "Magnificent Frigatebird",
+      "scientific_name": "Fregata magnificens",
+      "first_seen": "2025-05-31",
+      "location": "Florida, USA",
+      "ebird_location": "The Pelican Key Largo Cottages",
+      "photos": [],
+      "number": 82,
+      "slug": "magnificent-frigatebird"
+    },
+    {
+      "species": "Eurasian Collared-Dove",
+      "scientific_name": "Streptopelia decaocto",
+      "first_seen": "2025-06-07",
+      "location": "Florida, USA",
+      "ebird_location": "Lake Wyman Park",
+      "photos": [],
+      "number": 83,
+      "slug": "eurasian-collared-dove"
+    },
+    {
+      "species": "Monk Parakeet",
+      "scientific_name": "Myiopsitta monachus",
+      "first_seen": "2025-06-12",
+      "location": "Florida, USA",
+      "ebird_location": "Carlton Terrace",
+      "photos": [],
+      "number": 84,
+      "slug": "monk-parakeet"
+    },
+    {
+      "species": "Black-bellied Whistling-Duck",
+      "scientific_name": "Dendrocygna autumnalis",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "ww",
+      "photos": [],
+      "number": 85,
+      "slug": "black-bellied-whistling-duck"
+    },
+    {
+      "species": "Black-necked Stilt",
+      "scientific_name": "Himantopus mexicanus",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "ww",
+      "photos": [],
+      "number": 86,
+      "slug": "black-necked-stilt"
+    },
+    {
+      "species": "Black-crowned Night Heron",
+      "scientific_name": "Nycticorax nycticorax",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "ww",
+      "photos": [],
+      "number": 87,
+      "slug": "black-crowned-night-heron"
+    },
+    {
+      "species": "Western Cattle-Egret",
+      "scientific_name": "Ardea ibis",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "ww",
+      "photos": [],
+      "number": 88,
+      "slug": "western-cattle-egret"
+    },
+    {
+      "species": "Gray-headed Swamphen",
+      "scientific_name": "Porphyrio poliocephalus",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "green cay",
+      "photos": [],
+      "number": 89,
+      "slug": "gray-headed-swamphen"
+    },
+    {
+      "species": "Red-winged Blackbird",
+      "scientific_name": "Agelaius phoeniceus",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "green cay",
+      "photos": [],
+      "number": 90,
+      "slug": "red-winged-blackbird"
+    },
+    {
+      "species": "Wood Stork",
+      "scientific_name": "Mycteria americana",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "WW",
+      "photos": [],
+      "number": 91,
+      "slug": "wood-stork"
+    },
+    {
+      "species": "Roseate Spoonbill",
+      "scientific_name": "Platalea ajaja",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "WW",
+      "photos": [],
+      "number": 92,
+      "slug": "roseate-spoonbill"
+    },
+    {
+      "species": "Tricolored Heron",
+      "scientific_name": "Egretta tricolor",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Green Cay",
+      "photos": [],
+      "number": 93,
+      "slug": "tricolored-heron"
+    },
+    {
+      "species": "Snowy Egret",
+      "scientific_name": "Egretta thula",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Green Cay",
+      "photos": [],
+      "number": 94,
+      "slug": "snowy-egret"
+    },
+    {
+      "species": "White-winged Dove",
+      "scientific_name": "Zenaida asiatica",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Can Green",
+      "photos": [],
+      "number": 95,
+      "slug": "white-winged-dove"
+    },
+    {
+      "species": "Dusky Moorhen",
+      "scientific_name": "Gallinula tenebrosa",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Can Green",
+      "photos": [],
+      "number": 96,
+      "slug": "dusky-moorhen"
+    },
+    {
+      "species": "Pied-billed Grebe",
+      "scientific_name": "Podilymbus podiceps",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Can Green",
+      "photos": [],
+      "number": 97,
+      "slug": "pied-billed-grebe"
+    },
+    {
+      "species": "Green Heron",
+      "scientific_name": "Butorides virescens",
+      "first_seen": "2025-06-14",
+      "location": "Florida, USA",
+      "ebird_location": "Can Green",
+      "photos": [],
+      "number": 98,
+      "slug": "green-heron"
+    },
+    {
+      "species": "Black Phoebe",
+      "scientific_name": "Sayornis nigricans",
+      "first_seen": "2025-06-19",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "wood Mill",
+      "photos": [],
+      "number": 99,
+      "slug": "black-phoebe"
+    },
+    {
+      "species": "Olivaceous Piculet",
+      "scientific_name": "Picumnus olivaceus",
+      "first_seen": "2025-06-26",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 100,
+      "slug": "olivaceous-piculet"
+    },
+    {
+      "species": "Sulphur-bellied Flycatcher",
+      "scientific_name": "Myiodynastes luteiventris",
+      "first_seen": "2025-06-27",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 101,
+      "slug": "sulphur-bellied-flycatcher"
+    },
+    {
+      "species": "Carolina Wren",
+      "scientific_name": "Thryothorus ludovicianus",
+      "first_seen": "2025-08-06",
+      "location": "Georgia, USA",
+      "ebird_location": "Carols House",
+      "photos": [],
+      "number": 102,
+      "slug": "carolina-wren"
+    },
+    {
+      "species": "Eurasian Coot",
+      "scientific_name": "Fulica atra",
+      "first_seen": "2025-08-30",
+      "location": "England, UK",
+      "ebird_location": "Camden Town",
+      "photos": [],
+      "number": 103,
+      "slug": "eurasian-coot"
+    },
+    {
+      "species": "Eurasian Jackdaw",
+      "scientific_name": "Coloeus monedula",
+      "first_seen": "2025-09-06",
+      "location": "Netherlands",
+      "ebird_location": "Amsterdam",
+      "photos": [],
+      "number": 104,
+      "slug": "eurasian-jackdaw"
+    },
+    {
+      "species": "Rock Pigeon",
+      "scientific_name": "Columba livia",
+      "first_seen": "2025-09-14",
+      "location": "Florida, USA",
+      "ebird_location": "Carlton Terrace",
+      "photos": [],
+      "number": 105,
+      "slug": "rock-pigeon"
+    },
+    {
+      "species": "Laughing Gull",
+      "scientific_name": "Leucophaeus atricilla",
+      "first_seen": "2025-09-14",
+      "location": "Florida, USA",
+      "ebird_location": "Lauderdale-by-the-Sea, Florida, US",
+      "photos": [],
+      "number": 106,
+      "slug": "laughing-gull"
+    },
+    {
+      "species": "Brown Pelican",
+      "scientific_name": "Pelecanus occidentalis",
+      "first_seen": "2025-09-14",
+      "location": "Florida, USA",
+      "ebird_location": "Lauderdale-by-the-Sea, Florida, US",
+      "photos": [],
+      "number": 107,
+      "slug": "brown-pelican"
+    },
+    {
+      "species": "Boat-tailed Grackle",
+      "scientific_name": "Quiscalus major",
+      "first_seen": "2025-09-14",
+      "location": "Florida, USA",
+      "ebird_location": "Lauderdale-by-the-Sea, Florida, US",
+      "photos": [],
+      "number": 108,
+      "slug": "boat-tailed-grackle"
+    },
+    {
+      "species": "Red-bellied Woodpecker",
+      "scientific_name": "Melanerpes carolinus",
+      "first_seen": "2025-09-19",
+      "location": "Florida, USA",
+      "ebird_location": "Carlton Terrace",
+      "photos": [],
+      "number": 109,
+      "slug": "red-bellied-woodpecker"
+    },
+    {
+      "species": "Blue Jay",
+      "scientific_name": "Cyanocitta cristata",
+      "first_seen": "2025-09-22",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 110,
+      "slug": "blue-jay"
+    },
+    {
+      "species": "Common Gallinule",
+      "scientific_name": "Gallinula galeata",
+      "first_seen": "2025-09-28",
+      "location": "Florida, USA",
+      "ebird_location": "Green Cay",
+      "photos": [],
+      "number": 111,
+      "slug": "common-gallinule"
+    },
+    {
+      "species": "Glossy Ibis",
+      "scientific_name": "Plegadis falcinellus",
+      "first_seen": "2025-09-28",
+      "location": "Florida, USA",
+      "ebird_location": "Green Cay",
+      "photos": [],
+      "number": 112,
+      "slug": "glossy-ibis"
+    },
+    {
+      "species": "Great Blue Heron",
+      "scientific_name": "Ardea herodias",
+      "first_seen": "2025-09-28",
+      "location": "Florida, USA",
+      "ebird_location": "Green Cay",
+      "photos": [],
+      "number": 113,
+      "slug": "great-blue-heron"
+    },
+    {
+      "species": "Mottled Duck",
+      "scientific_name": "Anas fulvigula",
+      "first_seen": "2025-09-28",
+      "location": "Florida, USA",
+      "ebird_location": "Wakodahatchee Wetlands",
+      "photos": [],
+      "number": 114,
+      "slug": "mottled-duck"
+    },
+    {
+      "species": "Osprey",
+      "scientific_name": "Pandion haliaetus",
+      "first_seen": "2025-09-28",
+      "location": "Florida, USA",
+      "ebird_location": "Wakodahatchee Wetlands",
+      "photos": [],
+      "number": 115,
+      "slug": "osprey"
+    },
+    {
+      "species": "Blue-crowned Parakeet",
+      "scientific_name": "Thectocercus acuticaudatus",
+      "first_seen": "2025-09-29",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 116,
+      "slug": "blue-crowned-parakeet"
+    },
+    {
+      "species": "House Sparrow",
+      "scientific_name": "Passer domesticus",
+      "first_seen": "2025-10-05",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 117,
+      "slug": "house-sparrow"
+    },
+    {
+      "species": "Turkey Vulture",
+      "scientific_name": "Cathartes aura",
+      "first_seen": "2025-10-24",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 118,
+      "slug": "turkey-vulture"
+    },
+    {
+      "species": "American Kestrel",
+      "scientific_name": "Falco sparverius",
+      "first_seen": "2025-10-30",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 119,
+      "slug": "american-kestrel"
+    },
+    {
+      "species": "Fish Crow",
+      "scientific_name": "Corvus ossifragus",
+      "first_seen": "2025-11-01",
+      "location": "Florida, USA",
+      "ebird_location": "Lauderdale-by-the-Sea, Florida, US",
+      "photos": [],
+      "number": 120,
+      "slug": "fish-crow"
+    },
+    {
+      "species": "Palm Warbler",
+      "scientific_name": "Setophaga palmarum",
+      "first_seen": "2025-11-13",
+      "location": "Florida, USA",
+      "ebird_location": "Ft Lauderdale",
+      "photos": [],
+      "number": 121,
+      "slug": "palm-warbler"
+    },
+    {
+      "species": "Muscovy Duck",
+      "scientific_name": "Cairina moschata",
+      "first_seen": "2025-11-15",
+      "location": "Florida, USA",
+      "ebird_location": "Richardson Historic Park and Nature Preserve",
+      "photos": [],
+      "number": 122,
+      "slug": "muscovy-duck"
+    },
+    {
+      "species": "Cooper's Hawk",
+      "scientific_name": "Astur cooperii",
+      "first_seen": "2025-11-17",
+      "location": "Florida, USA",
+      "ebird_location": "home",
+      "photos": [],
+      "number": 123,
+      "slug": "coopers-hawk"
+    },
+    {
+      "species": "Nanday Parakeet",
+      "scientific_name": "Aratinga nenday",
+      "first_seen": "2026-01-19",
+      "location": "Florida, USA",
+      "ebird_location": "Pompano pier",
+      "photos": [],
+      "number": 124,
+      "slug": "nanday-parakeet"
+    },
+    {
+      "species": "Bicolored Wren",
+      "scientific_name": "Campylorhynchus griseus",
+      "first_seen": "2026-02-21",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Finca top of hill",
+      "photos": [],
+      "number": 125,
+      "slug": "bicolored-wren"
     },
     {
       "species": "Blue-and-yellow Macaw",
       "scientific_name": "Ara ararauna",
       "first_seen": "2026-02-22",
       "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
       "photos": [
         {
           "file": "DSC_1357.jpg",
@@ -1007,8 +2042,18 @@
           "quality": "fair"
         }
       ],
-      "number": 25,
+      "number": 126,
       "slug": "blue-and-yellow-macaw"
+    },
+    {
+      "species": "Grayish Piculet",
+      "scientific_name": "Picumnus granadensis",
+      "first_seen": "2026-02-23",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "caracoli",
+      "photos": [],
+      "number": 127,
+      "slug": "grayish-piculet"
     }
   ],
   "featured": [
@@ -1213,6 +2258,7 @@
       "quality": "excellent"
     }
   ],
-  "total_species": 25,
+  "total_species": 127,
+  "species_with_photos": 25,
   "total_photos": 38
 }

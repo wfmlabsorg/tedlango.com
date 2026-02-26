@@ -4,7 +4,7 @@
     <header class="gallery-header">
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="gallery-desc">{{ . }}</p>{{ end }}
-        <p class="gallery-count">{{ $birds.total_species }} species · {{ $birds.total_photos }} photos</p>
+        <p class="gallery-count">{{ $birds.total_species }} species · {{ $birds.species_with_photos }} photographed · {{ $birds.total_photos }} photos</p>
     </header>
 
     {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}
@@ -25,24 +25,24 @@
 
     <!-- Life List -->
     <h2 class="birds-section-title" id="lifelist">Life List</h2>
-    <p class="lifelist-intro">{{ $birds.total_species }} species photographed. Click column headers to sort. Click a species to see all photos.</p>
+    <p class="lifelist-intro">{{ $birds.total_species }} species spotted, {{ $birds.species_with_photos }} photographed so far. Click column headers to sort. Click a species to see all photos.</p>
     <div class="catalog-wrapper">
         <table class="catalog-table lifelist-table" id="lifelist-table">
             <thead>
                 <tr>
-                    <th data-sort="number" class="sortable sort-active sort-asc">#</th>
+                    <th data-sort="number" class="sortable">#</th>
                     <th data-sort="species" class="sortable">Species</th>
                     <th data-sort="scientific" class="sortable">Scientific Name</th>
                     <th data-sort="date" class="sortable">First Seen</th>
                     <th data-sort="location" class="sortable">Location</th>
-                    <th>Photos</th>
+                    <th data-sort="photos" class="sortable sort-active sort-desc">Photos</th>
                 </tr>
             </thead>
             <tbody>
                 {{ range $birds.lifelist }}
-                <tr data-number="{{ .number }}" data-species="{{ .species }}" data-scientific="{{ .scientific_name }}" data-date="{{ .first_seen }}" data-location="{{ .location }}">
+                <tr data-number="{{ .number }}" data-species="{{ .species }}" data-scientific="{{ .scientific_name }}" data-date="{{ .first_seen }}" data-location="{{ .location }}" data-photos="{{ len .photos }}">
                     <td>{{ .number }}</td>
-                    <td><a href="/photography/birds/{{ .slug }}/"><strong>{{ .species }}</strong></a></td>
+                    <td>{{ if .photos }}<a href="/photography/birds/{{ .slug }}/"><strong>{{ .species }}</strong></a>{{ else }}<span>{{ .species }}</span>{{ end }}</td>
                     <td><em>{{ .scientific_name }}</em></td>
                     <td>{{ .first_seen }}</td>
                     <td>{{ with .location }}{{ . }}{{ else }}<span class="text-muted">—</span>{{ end }}</td>
@@ -93,6 +93,16 @@
     if (!table) return;
     var headers = table.querySelectorAll('th.sortable');
     var tbody = table.querySelector('tbody');
+    function sortTable(key, dir) {
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort(function(a, b) {
+            var aVal = a.dataset[key] || '';
+            var bVal = b.dataset[key] || '';
+            if (key === 'number' || key === 'photos') return dir === 'asc' ? parseInt(aVal) - parseInt(bVal) : parseInt(bVal) - parseInt(aVal);
+            return dir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        });
+        rows.forEach(function(row) { tbody.appendChild(row); });
+    }
     headers.forEach(function(header) {
         header.addEventListener('click', function() {
             var key = header.dataset.sort;
@@ -100,16 +110,11 @@
             var newDir = isAsc ? 'desc' : 'asc';
             headers.forEach(function(h) { h.classList.remove('sort-active', 'sort-asc', 'sort-desc'); });
             header.classList.add('sort-active', 'sort-' + newDir);
-            var rows = Array.from(tbody.querySelectorAll('tr'));
-            rows.sort(function(a, b) {
-                var aVal = a.dataset[key] || '';
-                var bVal = b.dataset[key] || '';
-                if (key === 'number') return newDir === 'asc' ? parseInt(aVal) - parseInt(bVal) : parseInt(bVal) - parseInt(aVal);
-                return newDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-            });
-            rows.forEach(function(row) { tbody.appendChild(row); });
+            sortTable(key, newDir);
         });
     });
+    // Initial sort: photos descending
+    sortTable('photos', 'desc');
 })();
 </script>
 {{ end }}
