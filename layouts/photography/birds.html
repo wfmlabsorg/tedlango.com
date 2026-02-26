@@ -1,0 +1,124 @@
+{{ define "main" }}
+{{ $birds := .Site.Data.birds }}
+<article class="gallery-page">
+    <header class="gallery-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="gallery-desc">{{ . }}</p>{{ end }}
+        <p class="gallery-count">{{ $birds.total_species }} species · {{ $birds.total_photos }} photos</p>
+    </header>
+
+    {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}
+
+    <!-- Featured Gallery -->
+    <h2 class="birds-section-title">Best Shots</h2>
+    <div class="gallery-grid">
+        {{ range $birds.featured }}
+        <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
+            <img src="/img/photography/birds/{{ .file }}" alt="{{ .species }}" loading="lazy">
+            <figcaption>
+                <strong>{{ .species }}</strong>
+                {{ with .caption }}<p>{{ . }}</p>{{ end }}
+                <span class="photo-meta">{{ .date }} · {{ .shutter }} · f/{{ .aperture }} · ISO {{ .iso }}</span>
+            </figcaption>
+        </figure>
+        {{ end }}
+    </div>
+
+    <!-- Life List -->
+    <h2 class="birds-section-title" id="lifelist">Life List</h2>
+    <p class="lifelist-intro">{{ $birds.total_species }} species photographed. Click column headers to sort.</p>
+    <div class="catalog-wrapper">
+        <table class="catalog-table lifelist-table" id="lifelist-table">
+            <thead>
+                <tr>
+                    <th data-sort="number" class="sortable sort-active sort-asc">#</th>
+                    <th data-sort="species" class="sortable">Species</th>
+                    <th data-sort="scientific" class="sortable">Scientific Name</th>
+                    <th data-sort="date" class="sortable">First Seen</th>
+                    <th data-sort="location" class="sortable">Location</th>
+                    <th>Photos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range $birds.lifelist }}
+                <tr data-number="{{ .number }}" data-species="{{ .species }}" data-scientific="{{ .scientific_name }}" data-date="{{ .first_seen }}" data-location="{{ .location }}">
+                    <td>{{ .number }}</td>
+                    <td><strong>{{ .species }}</strong></td>
+                    <td><em>{{ .scientific_name }}</em></td>
+                    <td>{{ .first_seen }}</td>
+                    <td>{{ with .location }}{{ . }}{{ else }}<span class="text-muted">—</span>{{ end }}</td>
+                    <td>{{ len .photos }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</article>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-caption"></div>
+</div>
+
+<script>
+(function() {
+    // Lightbox
+    var lb = document.getElementById('lightbox');
+    var lbImg = lb.querySelector('.lightbox-img');
+    var lbCap = lb.querySelector('.lightbox-caption');
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            if (e.target.closest('.gallery-link')) return;
+            lbImg.src = item.dataset.full;
+            lbImg.alt = item.querySelector('img').alt;
+            lbCap.innerHTML = item.querySelector('figcaption').innerHTML;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb || e.target.classList.contains('lightbox-close')) {
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+    });
+
+    // Sortable table
+    var table = document.getElementById('lifelist-table');
+    if (!table) return;
+    var headers = table.querySelectorAll('th.sortable');
+    var tbody = table.querySelector('tbody');
+
+    headers.forEach(function(header) {
+        header.addEventListener('click', function() {
+            var key = header.dataset.sort;
+            var isAsc = header.classList.contains('sort-asc');
+            var newDir = isAsc ? 'desc' : 'asc';
+
+            headers.forEach(function(h) { h.classList.remove('sort-active', 'sort-asc', 'sort-desc'); });
+            header.classList.add('sort-active', 'sort-' + newDir);
+
+            var rows = Array.from(tbody.querySelectorAll('tr'));
+            rows.sort(function(a, b) {
+                var aVal = a.dataset[key] || '';
+                var bVal = b.dataset[key] || '';
+                if (key === 'number') {
+                    aVal = parseInt(aVal); bVal = parseInt(bVal);
+                    return newDir === 'asc' ? aVal - bVal : bVal - aVal;
+                }
+                if (key === 'date') {
+                    return newDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                }
+                return newDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+            });
+            rows.forEach(function(row) { tbody.appendChild(row); });
+        });
+    });
+})();
+</script>
+{{ end }}

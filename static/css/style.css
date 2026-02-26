@@ -1436,6 +1436,72 @@ a.telescope-card:hover {
     color: var(--accent);
 }
 
+/* Bird Photography */
+.birds-section-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 3rem 0 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.lifelist-intro {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.lifelist-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.lifelist-table th.sortable:hover {
+    color: var(--accent);
+}
+
+.lifelist-table th.sortable::after {
+    content: "⇅";
+    position: absolute;
+    right: 0.4rem;
+    font-size: 0.6rem;
+    opacity: 0.4;
+}
+
+.lifelist-table th.sort-asc::after {
+    content: "↑";
+    opacity: 1;
+    color: var(--accent);
+}
+
+.lifelist-table th.sort-desc::after {
+    content: "↓";
+    opacity: 1;
+    color: var(--accent);
+}
+
+.lifelist-table td em {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.photo-meta {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
 /* Footer */
 footer {
     max-width: 800px;
