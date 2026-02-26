@@ -226,7 +226,7 @@
           "location": "Antioquia, Colombia",
           "species": "Rufous-tailed Hummingbird",
           "scientific_name": "Amazilia tzacatl",
-          "featured": true,
+          "featured": false,
           "caption": "A Rufous-tailed Hummingbird hovers with wings spread while feeding from cascading purple Petrea flowers.",
           "quality": "excellent"
         }
@@ -862,7 +862,28 @@
       "first_seen": "2023-07-16",
       "location": "Antioquia, Colombia",
       "ebird_location": "Caracoli Finca",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_1629.jpg",
+          "width": 1600,
+          "height": 1472,
+          "date": "2026-02-24",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/800",
+          "aperture": 7.1,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Bare-faced Ibis",
+          "scientific_name": "Phimosus infuscatus",
+          "featured": false,
+          "caption": "A Bare-faced Ibis perched on a lichen-covered branch, dark plumage showing iridescent green-blue wing sheen and bare pinkish face.",
+          "quality": "excellent"
+        }
+      ],
       "number": 43,
       "slug": "bare-faced-ibis"
     },
@@ -2054,6 +2075,88 @@
       "photos": [],
       "number": 127,
       "slug": "grayish-piculet"
+    },
+    {
+      "species": "Yellow-bellied Seedeater",
+      "scientific_name": "Sporophila nigricollis",
+      "first_seen": "2026-02-26",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_1654.jpg",
+          "width": 1426,
+          "height": 1571,
+          "date": "2026-02-26",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/640",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Yellow-bellied Seedeater",
+          "scientific_name": "Sporophila nigricollis",
+          "featured": false,
+          "caption": "A Yellow-bellied Seedeater perched among thorny branches, dark olive head contrasting with bright yellow belly.",
+          "quality": "good"
+        }
+      ],
+      "number": 128,
+      "slug": "yellow-bellied-seedeater"
+    },
+    {
+      "species": "Summer Tanager",
+      "scientific_name": "Piranga rubra",
+      "first_seen": "2026-02-26",
+      "location": "Antioquia, Colombia",
+      "ebird_location": "Caracoli Finca",
+      "photos": [
+        {
+          "file": "DSC_1681.jpg",
+          "width": 1600,
+          "height": 1066,
+          "date": "2026-02-26",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/80",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Summer Tanager",
+          "scientific_name": "Piranga rubra",
+          "featured": true,
+          "caption": "A male Summer Tanager in brilliant scarlet plumage perched on a mossy branch against soft green bokeh.",
+          "quality": "excellent"
+        },
+        {
+          "file": "DSC_1704.jpg",
+          "width": 1600,
+          "height": 1066,
+          "date": "2026-02-26",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/80",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Antioquia, Colombia",
+          "species": "Summer Tanager",
+          "scientific_name": "Piranga rubra",
+          "featured": false,
+          "caption": "A male Summer Tanager perched alertly on a branch, vivid red plumage glowing against lush tropical foliage.",
+          "quality": "excellent"
+        }
+      ],
+      "number": 129,
+      "slug": "summer-tanager"
     }
   ],
   "featured": [
@@ -2158,26 +2261,6 @@
       "quality": "excellent"
     },
     {
-      "file": "DSC_9686.jpg",
-      "width": 2535,
-      "height": 3559,
-      "date": "2023-12-21",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/1250",
-      "aperture": 9.0,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": "Antioquia, Colombia",
-      "species": "Rufous-tailed Hummingbird",
-      "scientific_name": "Amazilia tzacatl",
-      "featured": true,
-      "caption": "A Rufous-tailed Hummingbird hovers with wings spread while feeding from cascading purple Petrea flowers.",
-      "quality": "excellent"
-    },
-    {
       "file": "DSC_9714.jpg",
       "width": 2142,
       "height": 2886,
@@ -2256,9 +2339,29 @@
       "featured": true,
       "caption": "Two Blue-and-yellow Macaws perched at different heights in a tree, both gazing toward the camera.",
       "quality": "excellent"
+    },
+    {
+      "file": "DSC_1681.jpg",
+      "width": 1600,
+      "height": 1066,
+      "date": "2026-02-26",
+      "camera": "NIKON D7100",
+      "lens": "150.0-600.0 mm f/5.0-6.3",
+      "focal_length": 600.0,
+      "iso": 400,
+      "shutter": "1/80",
+      "aperture": 6.3,
+      "gps_lat": null,
+      "gps_lon": null,
+      "location": "Antioquia, Colombia",
+      "species": "Summer Tanager",
+      "scientific_name": "Piranga rubra",
+      "featured": true,
+      "caption": "A male Summer Tanager in brilliant scarlet plumage perched on a mossy branch against soft green bokeh.",
+      "quality": "excellent"
     }
   ],
-  "total_species": 127,
-  "species_with_photos": 25,
-  "total_photos": 38
+  "total_species": 129,
+  "species_with_photos": 28,
+  "total_photos": 42
 }
