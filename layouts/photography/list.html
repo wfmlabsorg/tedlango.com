@@ -1,11 +1,28 @@
 {{ define "main" }}
+{{ $birds := .Site.Data.birds }}
 <header class="list-header">
     <h1>{{ .Title }}</h1>
 </header>
 
 <div class="category-grid">
     {{ range where (.Pages.ByWeight) ".Params.section_card" true }}
-    <a href="{{ .Permalink }}" class="category-card">
+    <a href="{{ .Permalink }}" class="category-card"
+        {{/* Build cover rotation candidates */}}
+        {{ if eq .Title "Bird Photography" }}
+            {{ $covers := slice }}
+            {{ range $birds.featured }}
+                {{ $covers = $covers | append (printf "/img/photography/birds/%s" .file) }}
+            {{ end }}
+            data-covers='{{ $covers | jsonify }}'
+        {{ else if .Params.images }}
+            {{ $base := .Params.imageBase | default "" }}
+            {{ $covers := slice }}
+            {{ range .Params.images }}
+                {{ $covers = $covers | append (printf "%s/%s" $base .src) }}
+            {{ end }}
+            data-covers='{{ $covers | jsonify }}'
+        {{ end }}
+    >
         {{ with .Params.cover }}
         <img src="{{ . }}" alt="{{ $.Title }}" class="category-cover" loading="lazy">
         {{ end }}
@@ -16,4 +33,14 @@
     </a>
     {{ end }}
 </div>
+
+<script>
+document.querySelectorAll('.category-card[data-covers]').forEach(function(card) {
+    var covers = JSON.parse(card.dataset.covers);
+    if (covers.length > 0) {
+        var img = card.querySelector('.category-cover');
+        if (img) img.src = covers[Math.floor(Math.random() * covers.length)];
+    }
+});
+</script>
 {{ end }}
