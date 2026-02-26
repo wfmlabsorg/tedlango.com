@@ -172,7 +172,7 @@
           "location": "Antioquia, Colombia",
           "species": "Yellow-backed Oriole",
           "scientific_name": "Icterus chrysater",
-          "featured": true,
+          "featured": false,
           "caption": "An Yellow-backed Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
           "quality": "excellent"
         }
@@ -302,7 +302,7 @@
           "location": "Antioquia, Colombia",
           "species": "Spectacled Parrotlet",
           "scientific_name": "Forpus conspicillatus",
-          "featured": false,
+          "featured": true,
           "caption": "A Spectacled Parrotlet hanging upside down from a tree snag, peering curiously toward the camera.",
           "quality": "good"
         }
@@ -332,7 +332,7 @@
           "location": "Antioquia, Colombia",
           "species": "Crested Oropendola",
           "scientific_name": "Psarocolius decumanus",
-          "featured": false,
+          "featured": true,
           "caption": "A Crested Oropendola foraging among traveler's palm stalks, striking blue eye and pale bill visible against blue sky.",
           "quality": "excellent"
         },
@@ -352,7 +352,7 @@
           "location": "Antioquia, Colombia",
           "species": "Crested Oropendola",
           "scientific_name": "Psarocolius decumanus",
-          "featured": true,
+          "featured": false,
           "caption": "A Crested Oropendola perched on a banana, pale ivory bill and piercing blue eye against a clean blue sky.",
           "quality": "excellent"
         }
@@ -432,7 +432,7 @@
           "location": "Antioquia, Colombia",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
-          "featured": false,
+          "featured": true,
           "caption": "A Bronze-winged Parrot clinging to a fruiting branch, showing dark scaly plumage and pink eye-ring.",
           "quality": "good"
         },
@@ -502,7 +502,7 @@
           "location": "Antioquia, Colombia",
           "species": "Colombian Chachalaca",
           "scientific_name": "Ortalis columbiana",
-          "featured": true,
+          "featured": false,
           "caption": "A Colombian Chachalaca walking along a metal railing with rufous-brown head and long rufous-tipped tail.",
           "quality": "excellent"
         }
@@ -562,7 +562,7 @@
           "location": "Antioquia, Colombia",
           "species": "Acorn Woodpecker",
           "scientific_name": "Melanerpes formicivorus",
-          "featured": true,
+          "featured": false,
           "caption": "An Acorn Woodpecker on a lichen-covered branch showing its distinctive clown-like face, red crown, and pale eye.",
           "quality": "excellent"
         }
@@ -982,7 +982,7 @@
           "location": "Antioquia, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
-          "featured": false,
+          "featured": true,
           "caption": "Two Blue-and-yellow Macaws perched at different heights in a tree, both gazing toward the camera.",
           "quality": "excellent"
         },
@@ -1053,15 +1053,15 @@
       "quality": "excellent"
     },
     {
-      "file": "DSC_8302.jpg",
-      "width": 2240,
-      "height": 3253,
-      "date": "2023-07-16",
+      "file": "DSC_7855.jpg",
+      "width": 2961,
+      "height": 1953,
+      "date": "2023-07-13",
       "camera": "NIKON D7100",
       "lens": "150.0-600.0 mm f/5.0-6.3",
       "focal_length": 600.0,
       "iso": 400,
-      "shutter": "1/500",
+      "shutter": "1/1000",
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
@@ -1069,7 +1069,7 @@
       "species": "Crested Oropendola",
       "scientific_name": "Psarocolius decumanus",
       "featured": true,
-      "caption": "A Crested Oropendola perched on a banana, pale ivory bill and piercing blue eye against a clean blue sky.",
+      "caption": "A Crested Oropendola foraging among traveler's palm stalks, striking blue eye and pale bill visible against blue sky.",
       "quality": "excellent"
     },
     {
@@ -1113,26 +1113,6 @@
       "quality": "excellent"
     },
     {
-      "file": "DSC_8934.jpg",
-      "width": 3154,
-      "height": 2830,
-      "date": "2023-12-17",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/320",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": "Antioquia, Colombia",
-      "species": "Acorn Woodpecker",
-      "scientific_name": "Melanerpes formicivorus",
-      "featured": true,
-      "caption": "An Acorn Woodpecker on a lichen-covered branch showing its distinctive clown-like face, red crown, and pale eye.",
-      "quality": "excellent"
-    },
-    {
       "file": "DSC_9686.jpg",
       "width": 2535,
       "height": 3559,
@@ -1173,43 +1153,63 @@
       "quality": "excellent"
     },
     {
-      "file": "DSC_7582.jpg",
-      "width": 1656,
-      "height": 2512,
+      "file": "DSC_8605.jpg",
+      "width": 4313,
+      "height": 2730,
+      "date": "2023-12-10",
+      "camera": "NIKON D7100",
+      "lens": "150.0-600.0 mm f/5.0-6.3",
+      "focal_length": 450.0,
+      "iso": 400,
+      "shutter": "1/30",
+      "aperture": 6.0,
+      "gps_lat": null,
+      "gps_lon": null,
+      "location": "Antioquia, Colombia",
+      "species": "Bronze-winged Parrot",
+      "scientific_name": "Pionus chalcopterus",
+      "featured": true,
+      "caption": "A Bronze-winged Parrot clinging to a fruiting branch, showing dark scaly plumage and pink eye-ring.",
+      "quality": "good"
+    },
+    {
+      "file": "DSC_7771.jpg",
+      "width": 1375,
+      "height": 2348,
       "date": "2023-07-12",
       "camera": "NIKON D7100",
       "lens": "150.0-600.0 mm f/5.0-6.3",
       "focal_length": 600.0,
       "iso": 400,
-      "shutter": "1/320",
+      "shutter": "1/1250",
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
       "location": "Antioquia, Colombia",
-      "species": "Yellow-backed Oriole",
-      "scientific_name": "Icterus chrysater",
+      "species": "Spectacled Parrotlet",
+      "scientific_name": "Forpus conspicillatus",
       "featured": true,
-      "caption": "An Yellow-backed Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
-      "quality": "excellent"
+      "caption": "A Spectacled Parrotlet hanging upside down from a tree snag, peering curiously toward the camera.",
+      "quality": "good"
     },
     {
-      "file": "DSC_8628.jpg",
-      "width": 5561,
-      "height": 2869,
-      "date": "2023-12-10",
+      "file": "DSC_1378.jpg",
+      "width": 1780,
+      "height": 2413,
+      "date": "2026-02-22",
       "camera": "NIKON D7100",
       "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 380.0,
+      "focal_length": 450.0,
       "iso": 400,
-      "shutter": "1/125",
+      "shutter": "1/200",
       "aperture": 6.0,
       "gps_lat": null,
       "gps_lon": null,
       "location": "Antioquia, Colombia",
-      "species": "Colombian Chachalaca",
-      "scientific_name": "Ortalis columbiana",
+      "species": "Blue-and-yellow Macaw",
+      "scientific_name": "Ara ararauna",
       "featured": true,
-      "caption": "A Colombian Chachalaca walking along a metal railing with rufous-brown head and long rufous-tipped tail.",
+      "caption": "Two Blue-and-yellow Macaws perched at different heights in a tree, both gazing toward the camera.",
       "quality": "excellent"
     }
   ],
