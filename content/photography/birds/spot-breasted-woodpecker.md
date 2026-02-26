@@ -1,12 +1,12 @@
 ---
 title: "Spot-breasted Woodpecker"
 layout: "bird-species"
-description: "Colaptes punctigula — Location TBD"
+description: "Colaptes punctigula — Antioquia, Colombia"
 slug: "spot-breasted-woodpecker"
 date: 2023-12-17
 params:
   scientific_name: "Colaptes punctigula"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-17"
   photo_count: 2
   photos:

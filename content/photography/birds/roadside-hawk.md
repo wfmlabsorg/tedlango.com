@@ -1,12 +1,12 @@
 ---
 title: "Roadside Hawk"
 layout: "bird-species"
-description: "Rupornis magnirostris — Location TBD"
+description: "Rupornis magnirostris — Antioquia, Colombia"
 slug: "roadside-hawk"
 date: 2023-12-21
 params:
   scientific_name: "Rupornis magnirostris"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-21"
   photo_count: 1
   photos:

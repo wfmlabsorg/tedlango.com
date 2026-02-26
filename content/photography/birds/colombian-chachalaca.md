@@ -1,12 +1,12 @@
 ---
 title: "Colombian Chachalaca"
 layout: "bird-species"
-description: "Ortalis columbiana — Location TBD"
+description: "Ortalis columbiana — Antioquia, Colombia"
 slug: "colombian-chachalaca"
 date: 2023-12-10
 params:
   scientific_name: "Ortalis columbiana"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-10"
   photo_count: 1
   photos:

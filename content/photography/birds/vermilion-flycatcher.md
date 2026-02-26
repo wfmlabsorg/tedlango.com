@@ -1,12 +1,12 @@
 ---
 title: "Vermilion Flycatcher"
 layout: "bird-species"
-description: "Pyrocephalus rubinus — Location TBD"
+description: "Pyrocephalus rubinus — Antioquia, Colombia"
 slug: "vermilion-flycatcher"
 date: 2023-12-21
 params:
   scientific_name: "Pyrocephalus rubinus"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-21"
   photo_count: 1
   photos:

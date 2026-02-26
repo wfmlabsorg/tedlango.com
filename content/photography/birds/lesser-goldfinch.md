@@ -1,12 +1,12 @@
 ---
 title: "Lesser Goldfinch"
 layout: "bird-species"
-description: "Spinus psaltria — Location TBD"
+description: "Spinus psaltria — Antioquia, Colombia"
 slug: "lesser-goldfinch"
 date: 2023-12-30
 params:
   scientific_name: "Spinus psaltria"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-30"
   photo_count: 1
   photos:

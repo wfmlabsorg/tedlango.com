@@ -1,12 +1,12 @@
 ---
 title: "Rufous-tailed Hummingbird"
 layout: "bird-species"
-description: "Amazilia tzacatl — Location TBD"
+description: "Amazilia tzacatl — Antioquia, Colombia"
 slug: "rufous-tailed-hummingbird"
 date: 2023-12-21
 params:
   scientific_name: "Amazilia tzacatl"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-21"
   photo_count: 1
   photos:

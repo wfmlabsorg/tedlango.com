@@ -1,12 +1,12 @@
 ---
 title: "Long-billed Starthroat"
 layout: "bird-species"
-description: "Heliomaster longirostris — Location TBD"
+description: "Heliomaster longirostris — Antioquia, Colombia"
 slug: "long-billed-starthroat"
 date: 2023-12-17
 params:
   scientific_name: "Heliomaster longirostris"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-17"
   photo_count: 2
   photos:

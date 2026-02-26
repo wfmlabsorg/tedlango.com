@@ -1,12 +1,12 @@
 ---
 title: "Smooth-billed Ani"
 layout: "bird-species"
-description: "Crotophaga ani — Location TBD"
+description: "Crotophaga ani — Antioquia, Colombia"
 slug: "smooth-billed-ani"
 date: 2023-12-25
 params:
   scientific_name: "Crotophaga ani"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-25"
   photo_count: 1
   photos:

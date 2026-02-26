@@ -1,12 +1,12 @@
 ---
 title: "Bronze-winged Parrot"
 layout: "bird-species"
-description: "Pionus chalcopterus — Location TBD"
+description: "Pionus chalcopterus — Antioquia, Colombia"
 slug: "bronze-winged-parrot"
 date: 2023-12-10
 params:
   scientific_name: "Pionus chalcopterus"
-  location: ""
+  location: "Antioquia, Colombia"
   first_seen: "2023-12-10"
   photo_count: 3
   photos:

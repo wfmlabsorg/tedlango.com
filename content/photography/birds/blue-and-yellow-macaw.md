@@ -1,12 +1,12 @@
 ---
 title: "Blue-and-yellow Macaw"
 layout: "bird-species"
-description: "Ara ararauna — Envigado, Colombia"
+description: "Ara ararauna — Antioquia, Colombia"
 slug: "blue-and-yellow-macaw"
 date: 2026-02-22
 params:
   scientific_name: "Ara ararauna"
-  location: "Envigado, Colombia"
+  location: "Antioquia, Colombia"
   first_seen: "2026-02-22"
   photo_count: 5
   photos:
