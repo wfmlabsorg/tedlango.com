@@ -13,7 +13,7 @@
         </div>
     </header>
 
-    <div class="gallery-grid">
+    <div class="gallery-grid birds-gallery">
         {{ range .Params.photos }}
         <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
             <img src="/img/photography/birds/{{ .file }}" alt="{{ $.Title }}" loading="lazy">
@@ -48,14 +48,18 @@
             document.body.style.overflow = 'hidden';
         });
     });
+    lbImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+        lb.classList.toggle('zoomed');
+    });
     lb.addEventListener('click', function(e) {
         if (e.target === lb || e.target.classList.contains('lightbox-close')) {
-            lb.classList.remove('active');
+            lb.classList.remove('active', 'zoomed');
             document.body.style.overflow = '';
         }
     });
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+        if (e.key === 'Escape') { lb.classList.remove('active', 'zoomed'); document.body.style.overflow = ''; }
     });
 })();
 </script>

@@ -1013,6 +1013,15 @@ main {
     display: block;
 }
 
+/* Bird gallery: show full bird without cropping */
+.birds-gallery .gallery-item {
+    background: #111;
+}
+
+.birds-gallery .gallery-item img {
+    object-fit: contain;
+}
+
 .gallery-item figcaption {
     padding: 0.75rem 1rem;
     background: var(--bg-secondary);
@@ -1080,6 +1089,24 @@ main {
     max-height: 70vh;
     object-fit: contain;
     border-radius: 4px;
+    cursor: zoom-in;
+}
+
+.lightbox.zoomed {
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.lightbox.zoomed .lightbox-img {
+    max-width: none;
+    max-height: none;
+    cursor: zoom-out;
+}
+
+.lightbox.zoomed .lightbox-caption {
+    display: none;
 }
 
 .lightbox-caption {

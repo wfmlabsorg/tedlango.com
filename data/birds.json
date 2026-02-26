@@ -261,8 +261,8 @@
       "slug": "blue-necked-tanager"
     },
     {
-      "species": "Orange-chinned Parakeet",
-      "scientific_name": "Brotogeris jugularis",
+      "species": "Spectacled Parrotlet",
+      "scientific_name": "Forpus conspicillatus",
       "first_seen": "2023-07-12",
       "location": "Antioquia, Colombia",
       "photos": [
@@ -280,10 +280,10 @@
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Orange-chinned Parakeet",
-          "scientific_name": "Brotogeris jugularis",
+          "species": "Spectacled Parrotlet",
+          "scientific_name": "Forpus conspicillatus",
           "featured": false,
-          "caption": "A pair of Orange-chinned Parakeets investigating a hollow tree stump.",
+          "caption": "A pair of Spectacled Parrotlets investigating a hollow tree stump, blue eye-ring visible.",
           "quality": "good"
         },
         {
@@ -300,15 +300,15 @@
           "gps_lat": null,
           "gps_lon": null,
           "location": "Antioquia, Colombia",
-          "species": "Orange-chinned Parakeet",
-          "scientific_name": "Brotogeris jugularis",
+          "species": "Spectacled Parrotlet",
+          "scientific_name": "Forpus conspicillatus",
           "featured": false,
-          "caption": "An Orange-chinned Parakeet hanging upside down from a tree snag, peering curiously toward the camera.",
+          "caption": "A Spectacled Parrotlet hanging upside down from a tree snag, peering curiously toward the camera.",
           "quality": "good"
         }
       ],
       "number": 9,
-      "slug": "orange-chinned-parakeet"
+      "slug": "spectacled-parrotlet"
     },
     {
       "species": "Crested Oropendola",
