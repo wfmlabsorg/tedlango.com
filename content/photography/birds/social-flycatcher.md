@@ -1,12 +1,12 @@
 ---
 title: "Social Flycatcher"
 layout: "bird-species"
-description: "Myiozetetes similis — Costa Rica"
+description: "Myiozetetes similis — Location TBD"
 slug: "social-flycatcher"
 date: 2023-12-13
 params:
   scientific_name: "Myiozetetes similis"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-13"
   photo_count: 1
   photos:

@@ -1,12 +1,12 @@
 ---
 title: "Roadside Hawk"
 layout: "bird-species"
-description: "Rupornis magnirostris — Costa Rica"
+description: "Rupornis magnirostris — Location TBD"
 slug: "roadside-hawk"
 date: 2023-12-21
 params:
   scientific_name: "Rupornis magnirostris"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-21"
   photo_count: 1
   photos:

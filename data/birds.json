@@ -424,7 +424,7 @@
       "species": "Bronze-winged Parrot",
       "scientific_name": "Pionus chalcopterus",
       "first_seen": "2023-12-10",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_8605.jpg",
@@ -439,7 +439,7 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -459,7 +459,7 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -479,7 +479,7 @@
           "aperture": 8.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -494,7 +494,7 @@
       "species": "Colombian Chachalaca",
       "scientific_name": "Ortalis columbiana",
       "first_seen": "2023-12-10",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_8628.jpg",
@@ -509,7 +509,7 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Colombian Chachalaca",
           "scientific_name": "Ortalis columbiana",
           "featured": true,
@@ -524,7 +524,7 @@
       "species": "Social Flycatcher",
       "scientific_name": "Myiozetetes similis",
       "first_seen": "2023-12-13",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_8767.jpg",
@@ -539,7 +539,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Social Flycatcher",
           "scientific_name": "Myiozetetes similis",
           "featured": false,
@@ -554,7 +554,7 @@
       "species": "Acorn Woodpecker",
       "scientific_name": "Melanerpes formicivorus",
       "first_seen": "2023-12-17",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_8934.jpg",
@@ -569,7 +569,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Acorn Woodpecker",
           "scientific_name": "Melanerpes formicivorus",
           "featured": true,
@@ -584,7 +584,7 @@
       "species": "Spot-breasted Woodpecker",
       "scientific_name": "Colaptes punctigula",
       "first_seen": "2023-12-17",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9054.jpg",
@@ -599,7 +599,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Spot-breasted Woodpecker",
           "scientific_name": "Colaptes punctigula",
           "featured": false,
@@ -619,7 +619,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Spot-breasted Woodpecker",
           "scientific_name": "Colaptes punctigula",
           "featured": false,
@@ -631,10 +631,10 @@
       "slug": "spot-breasted-woodpecker"
     },
     {
-      "species": "Purple-throated Mountaingem",
-      "scientific_name": "Lampornis calolaemus",
+      "species": "Long-billed Starthroat",
+      "scientific_name": "Heliomaster longirostris",
       "first_seen": "2023-12-17",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9238.jpg",
@@ -649,11 +649,11 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
-          "species": "Purple-throated Mountaingem",
-          "scientific_name": "Lampornis calolaemus",
+          "location": "",
+          "species": "Long-billed Starthroat",
+          "scientific_name": "Heliomaster longirostris",
           "featured": false,
-          "caption": "A male Purple-throated Mountaingem with bill open, displaying iridescent purple gorget and blue crown.",
+          "caption": "A male Long-billed Starthroat with bill open, displaying iridescent purple gorget and blue crown.",
           "quality": "good"
         },
         {
@@ -669,22 +669,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
-          "species": "Purple-throated Mountaingem",
-          "scientific_name": "Lampornis calolaemus",
+          "location": "",
+          "species": "Long-billed Starthroat",
+          "scientific_name": "Heliomaster longirostris",
           "featured": false,
-          "caption": "A male Purple-throated Mountaingem perched alertly, showing green-bronze back and violet throat.",
+          "caption": "A male Long-billed Starthroat perched alertly, showing green-bronze back and violet throat.",
           "quality": "good"
         }
       ],
       "number": 18,
-      "slug": "purple-throated-mountaingem"
+      "slug": "long-billed-starthroat"
     },
     {
       "species": "Flame-colored Tanager",
       "scientific_name": "Piranga bidentata",
       "first_seen": "2023-12-19",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9442.jpg",
@@ -699,7 +699,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Flame-colored Tanager",
           "scientific_name": "Piranga bidentata",
           "featured": false,
@@ -719,7 +719,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Flame-colored Tanager",
           "scientific_name": "Piranga bidentata",
           "featured": false,
@@ -734,7 +734,7 @@
       "species": "Crimson-fronted Parakeet",
       "scientific_name": "Psittacara finschi",
       "first_seen": "2023-12-19",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9540.jpg",
@@ -749,7 +749,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Crimson-fronted Parakeet",
           "scientific_name": "Psittacara finschi",
           "featured": false,
@@ -764,7 +764,7 @@
       "species": "Vermilion Flycatcher",
       "scientific_name": "Pyrocephalus rubinus",
       "first_seen": "2023-12-21",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9624.jpg",
@@ -779,7 +779,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Vermilion Flycatcher",
           "scientific_name": "Pyrocephalus rubinus",
           "featured": false,
@@ -794,7 +794,7 @@
       "species": "Rufous-tailed Hummingbird",
       "scientific_name": "Amazilia tzacatl",
       "first_seen": "2023-12-21",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9686.jpg",
@@ -809,7 +809,7 @@
           "aperture": 9.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Rufous-tailed Hummingbird",
           "scientific_name": "Amazilia tzacatl",
           "featured": true,
@@ -824,7 +824,7 @@
       "species": "Roadside Hawk",
       "scientific_name": "Rupornis magnirostris",
       "first_seen": "2023-12-21",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9714.jpg",
@@ -839,7 +839,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Roadside Hawk",
           "scientific_name": "Rupornis magnirostris",
           "featured": true,
@@ -851,10 +851,10 @@
       "slug": "roadside-hawk"
     },
     {
-      "species": "Groove-billed Ani",
-      "scientific_name": "Crotophaga sulcirostris",
+      "species": "Smooth-billed Ani",
+      "scientific_name": "Crotophaga ani",
       "first_seen": "2023-12-25",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_9784.jpg",
@@ -869,22 +869,22 @@
           "aperture": 9.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
-          "species": "Groove-billed Ani",
-          "scientific_name": "Crotophaga sulcirostris",
+          "location": "",
+          "species": "Smooth-billed Ani",
+          "scientific_name": "Crotophaga ani",
           "featured": false,
-          "caption": "A Groove-billed Ani perched atop leafy vegetation, all-black plumage with heavy ridged bill and long tail.",
+          "caption": "A Smooth-billed Ani perched atop leafy vegetation, all-black plumage with heavy ridged bill and long tail.",
           "quality": "good"
         }
       ],
       "number": 24,
-      "slug": "groove-billed-ani"
+      "slug": "smooth-billed-ani"
     },
     {
       "species": "Lesser Goldfinch",
       "scientific_name": "Spinus psaltria",
       "first_seen": "2023-12-30",
-      "location": "Costa Rica",
+      "location": "",
       "photos": [
         {
           "file": "DSC_0078.jpg",
@@ -899,7 +899,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": "Costa Rica",
+          "location": "",
           "species": "Lesser Goldfinch",
           "scientific_name": "Spinus psaltria",
           "featured": false,
@@ -1135,7 +1135,7 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": "Costa Rica",
+      "location": "",
       "species": "Acorn Woodpecker",
       "scientific_name": "Melanerpes formicivorus",
       "featured": true,
@@ -1155,7 +1155,7 @@
       "aperture": 9.0,
       "gps_lat": null,
       "gps_lon": null,
-      "location": "Costa Rica",
+      "location": "",
       "species": "Rufous-tailed Hummingbird",
       "scientific_name": "Amazilia tzacatl",
       "featured": true,
@@ -1175,7 +1175,7 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": "Costa Rica",
+      "location": "",
       "species": "Roadside Hawk",
       "scientific_name": "Rupornis magnirostris",
       "featured": true,
@@ -1215,7 +1215,7 @@
       "aperture": 6.0,
       "gps_lat": null,
       "gps_lon": null,
-      "location": "Costa Rica",
+      "location": "",
       "species": "Colombian Chachalaca",
       "scientific_name": "Ortalis columbiana",
       "featured": true,

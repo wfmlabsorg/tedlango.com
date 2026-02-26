@@ -1,12 +1,12 @@
 ---
 title: "Rufous-tailed Hummingbird"
 layout: "bird-species"
-description: "Amazilia tzacatl — Costa Rica"
+description: "Amazilia tzacatl — Location TBD"
 slug: "rufous-tailed-hummingbird"
 date: 2023-12-21
 params:
   scientific_name: "Amazilia tzacatl"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-21"
   photo_count: 1
   photos:

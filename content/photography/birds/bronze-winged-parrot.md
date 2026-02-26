@@ -1,12 +1,12 @@
 ---
 title: "Bronze-winged Parrot"
 layout: "bird-species"
-description: "Pionus chalcopterus — Costa Rica"
+description: "Pionus chalcopterus — Location TBD"
 slug: "bronze-winged-parrot"
 date: 2023-12-10
 params:
   scientific_name: "Pionus chalcopterus"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-10"
   photo_count: 3
   photos:

@@ -1,12 +1,12 @@
 ---
 title: "Flame-colored Tanager"
 layout: "bird-species"
-description: "Piranga bidentata — Costa Rica"
+description: "Piranga bidentata — Location TBD"
 slug: "flame-colored-tanager"
 date: 2023-12-19
 params:
   scientific_name: "Piranga bidentata"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-19"
   photo_count: 2
   photos:

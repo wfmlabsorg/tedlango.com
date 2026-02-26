@@ -1,12 +1,12 @@
 ---
 title: "Crimson-fronted Parakeet"
 layout: "bird-species"
-description: "Psittacara finschi — Costa Rica"
+description: "Psittacara finschi — Location TBD"
 slug: "crimson-fronted-parakeet"
 date: 2023-12-19
 params:
   scientific_name: "Psittacara finschi"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-19"
   photo_count: 1
   photos:

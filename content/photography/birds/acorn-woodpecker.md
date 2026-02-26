@@ -1,12 +1,12 @@
 ---
 title: "Acorn Woodpecker"
 layout: "bird-species"
-description: "Melanerpes formicivorus — Costa Rica"
+description: "Melanerpes formicivorus — Location TBD"
 slug: "acorn-woodpecker"
 date: 2023-12-17
 params:
   scientific_name: "Melanerpes formicivorus"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-17"
   photo_count: 1
   photos:

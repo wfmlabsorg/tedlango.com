@@ -1,12 +1,12 @@
 ---
 title: "Spot-breasted Woodpecker"
 layout: "bird-species"
-description: "Colaptes punctigula — Costa Rica"
+description: "Colaptes punctigula — Location TBD"
 slug: "spot-breasted-woodpecker"
 date: 2023-12-17
 params:
   scientific_name: "Colaptes punctigula"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-17"
   photo_count: 2
   photos:

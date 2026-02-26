@@ -11,16 +11,13 @@
 
     <!-- Featured Gallery — Top 10, 1 per species -->
     <h2 class="birds-section-title">Best Shots</h2>
-    <div class="featured-grid">
+    <div class="gallery-grid">
         {{ range $birds.featured }}
-        <figure class="featured-item" data-full="/img/photography/birds/{{ .file }}">
-            <div class="featured-img-wrap">
-                <img src="/img/photography/birds/{{ .file }}" alt="{{ .species }}" loading="lazy">
-            </div>
+        <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
+            <img src="/img/photography/birds/{{ .file }}" alt="{{ .species }}" loading="lazy">
             <figcaption>
                 <strong>{{ .species }}</strong>
                 {{ with .caption }}<p>{{ . }}</p>{{ end }}
-                <span class="photo-meta">{{ .location }} · {{ .date }}</span>
             </figcaption>
         </figure>
         {{ end }}
@@ -70,7 +67,7 @@
     var lb = document.getElementById('lightbox');
     var lbImg = lb.querySelector('.lightbox-img');
     var lbCap = lb.querySelector('.lightbox-caption');
-    document.querySelectorAll('.featured-item').forEach(function(item) {
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
         item.addEventListener('click', function(e) {
             lbImg.src = item.dataset.full;
             lbImg.alt = item.querySelector('img').alt;

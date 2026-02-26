@@ -1,12 +1,12 @@
 ---
 title: "Lesser Goldfinch"
 layout: "bird-species"
-description: "Spinus psaltria — Costa Rica"
+description: "Spinus psaltria — Location TBD"
 slug: "lesser-goldfinch"
 date: 2023-12-30
 params:
   scientific_name: "Spinus psaltria"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-30"
   photo_count: 1
   photos:

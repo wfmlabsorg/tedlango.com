@@ -1,12 +1,12 @@
 ---
 title: "Colombian Chachalaca"
 layout: "bird-species"
-description: "Ortalis columbiana — Costa Rica"
+description: "Ortalis columbiana — Location TBD"
 slug: "colombian-chachalaca"
 date: 2023-12-10
 params:
   scientific_name: "Ortalis columbiana"
-  location: "Costa Rica"
+  location: ""
   first_seen: "2023-12-10"
   photo_count: 1
   photos:
