@@ -4,7 +4,7 @@
       "species": "Yellow Tyrannulet",
       "scientific_name": "Capsiempis flaveola",
       "first_seen": "2023-05-04",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_6474.jpg",
@@ -19,21 +19,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Yellow Tyrannulet",
           "scientific_name": "Capsiempis flaveola",
-          "featured": true,
+          "featured": false,
           "caption": "A Yellow Tyrannulet perched alertly on a leaf, showing pale underparts and olive-gray upperparts.",
           "quality": "excellent"
         }
       ],
-      "number": 1
+      "number": 1,
+      "slug": "yellow-tyrannulet"
     },
     {
       "species": "Andean Motmot",
       "scientific_name": "Momotus aequatorialis",
       "first_seen": "2023-07-03",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_6518.jpg",
@@ -48,7 +49,7 @@
           "aperture": 5.6,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Andean Motmot",
           "scientific_name": "Momotus aequatorialis",
           "featured": true,
@@ -56,13 +57,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 2
+      "number": 2,
+      "slug": "andean-motmot"
     },
     {
       "species": "Squirrel Cuckoo",
       "scientific_name": "Piaya cayana",
       "first_seen": "2023-07-06",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_6756.jpg",
@@ -77,7 +79,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Squirrel Cuckoo",
           "scientific_name": "Piaya cayana",
           "featured": true,
@@ -85,13 +87,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 3
+      "number": 3,
+      "slug": "squirrel-cuckoo"
     },
     {
       "species": "Great Kiskadee",
       "scientific_name": "Pitangus sulphuratus",
       "first_seen": "2023-07-08",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7100.jpg",
@@ -106,7 +109,7 @@
           "aperture": 5.6,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Great Kiskadee",
           "scientific_name": "Pitangus sulphuratus",
           "featured": false,
@@ -114,13 +117,14 @@
           "quality": "good"
         }
       ],
-      "number": 4
+      "number": 4,
+      "slug": "great-kiskadee"
     },
     {
       "species": "Cocoa Woodcreeper",
       "scientific_name": "Xiphorhynchus susurrans",
       "first_seen": "2023-07-09",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7134.jpg",
@@ -135,21 +139,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Cocoa Woodcreeper",
           "scientific_name": "Xiphorhynchus susurrans",
-          "featured": true,
+          "featured": false,
           "caption": "A Cocoa Woodcreeper clinging vertically to a smooth palm trunk with streaked breast clearly visible.",
           "quality": "excellent"
         }
       ],
-      "number": 5
+      "number": 5,
+      "slug": "cocoa-woodcreeper"
     },
     {
       "species": "Orange-crowned Oriole",
       "scientific_name": "Icterus auricapillus",
       "first_seen": "2023-07-12",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7582.jpg",
@@ -164,7 +169,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Orange-crowned Oriole",
           "scientific_name": "Icterus auricapillus",
           "featured": true,
@@ -172,13 +177,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 6
+      "number": 6,
+      "slug": "orange-crowned-oriole"
     },
     {
       "species": "Western Emerald",
       "scientific_name": "Chlorostilbon melanorhynchus",
       "first_seen": "2023-07-12",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7630.jpg",
@@ -193,21 +199,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Western Emerald",
           "scientific_name": "Chlorostilbon melanorhynchus",
-          "featured": true,
+          "featured": false,
           "caption": "A Western Emerald hummingbird resting on a lichen-spotted branch, glittering green plumage catching the light.",
           "quality": "excellent"
         }
       ],
-      "number": 7
+      "number": 7,
+      "slug": "western-emerald"
     },
     {
-      "species": "Golden-hooded Tanager",
-      "scientific_name": "Stilpnia larvata",
+      "species": "Blue-necked Tanager",
+      "scientific_name": "Stilpnia cyanicollis",
       "first_seen": "2023-07-12",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7682.jpg",
@@ -222,21 +229,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
-          "species": "Golden-hooded Tanager",
-          "scientific_name": "Stilpnia larvata",
+          "location": "Antioquia, Colombia",
+          "species": "Blue-necked Tanager",
+          "scientific_name": "Stilpnia cyanicollis",
           "featured": true,
-          "caption": "A male Golden-hooded Tanager showcasing its vivid blue hood, black body, and golden-yellow wing patches.",
+          "caption": "A male Blue-necked Tanager showcasing its brilliant blue head and neck contrasting with turquoise shoulders and dark body.",
           "quality": "excellent"
         }
       ],
-      "number": 8
+      "number": 8,
+      "slug": "blue-necked-tanager"
     },
     {
       "species": "Orange-chinned Parakeet",
       "scientific_name": "Brotogeris jugularis",
       "first_seen": "2023-07-12",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7742.jpg",
@@ -251,7 +259,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Orange-chinned Parakeet",
           "scientific_name": "Brotogeris jugularis",
           "featured": false,
@@ -271,7 +279,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Orange-chinned Parakeet",
           "scientific_name": "Brotogeris jugularis",
           "featured": false,
@@ -279,13 +287,14 @@
           "quality": "good"
         }
       ],
-      "number": 9
+      "number": 9,
+      "slug": "orange-chinned-parakeet"
     },
     {
       "species": "Crested Oropendola",
       "scientific_name": "Psarocolius decumanus",
       "first_seen": "2023-07-13",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_7855.jpg",
@@ -300,10 +309,10 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Crested Oropendola",
           "scientific_name": "Psarocolius decumanus",
-          "featured": true,
+          "featured": false,
           "caption": "A Crested Oropendola foraging among traveler's palm stalks, striking blue eye and pale bill visible against blue sky.",
           "quality": "excellent"
         },
@@ -320,7 +329,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Crested Oropendola",
           "scientific_name": "Psarocolius decumanus",
           "featured": true,
@@ -328,13 +337,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 10
+      "number": 10,
+      "slug": "crested-oropendola"
     },
     {
       "species": "Bay-headed Tanager",
       "scientific_name": "Tangara gyrola",
       "first_seen": "2023-07-16",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_8053.jpg",
@@ -349,7 +359,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Bay-headed Tanager",
           "scientific_name": "Tangara gyrola",
           "featured": true,
@@ -369,7 +379,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Bay-headed Tanager",
           "scientific_name": "Tangara gyrola",
           "featured": false,
@@ -377,13 +387,14 @@
           "quality": "good"
         }
       ],
-      "number": 11
+      "number": 11,
+      "slug": "bay-headed-tanager"
     },
     {
       "species": "Bronze-tailed Plumeleteer",
       "scientific_name": "Chalybura urochrysia",
       "first_seen": "2023-07-16",
-      "location": null,
+      "location": "Antioquia, Colombia",
       "photos": [
         {
           "file": "DSC_8261.jpg",
@@ -398,7 +409,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Antioquia, Colombia",
           "species": "Bronze-tailed Plumeleteer",
           "scientific_name": "Chalybura urochrysia",
           "featured": false,
@@ -406,13 +417,14 @@
           "quality": "good"
         }
       ],
-      "number": 12
+      "number": 12,
+      "slug": "bronze-tailed-plumeleteer"
     },
     {
       "species": "Bronze-winged Parrot",
       "scientific_name": "Pionus chalcopterus",
       "first_seen": "2023-12-10",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_8605.jpg",
@@ -427,7 +439,7 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -447,7 +459,7 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -467,7 +479,7 @@
           "aperture": 8.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Bronze-winged Parrot",
           "scientific_name": "Pionus chalcopterus",
           "featured": false,
@@ -475,13 +487,14 @@
           "quality": "fair"
         }
       ],
-      "number": 13
+      "number": 13,
+      "slug": "bronze-winged-parrot"
     },
     {
-      "species": "Gray-headed Chachalaca",
-      "scientific_name": "Ortalis cinereiceps",
+      "species": "Colombian Chachalaca",
+      "scientific_name": "Ortalis columbiana",
       "first_seen": "2023-12-10",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_8628.jpg",
@@ -496,21 +509,22 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
-          "species": "Gray-headed Chachalaca",
-          "scientific_name": "Ortalis cinereiceps",
+          "location": "Costa Rica",
+          "species": "Colombian Chachalaca",
+          "scientific_name": "Ortalis columbiana",
           "featured": true,
-          "caption": "A Gray-headed Chachalaca walking along a metal railing with scaled gray head and long rufous-tipped tail.",
+          "caption": "A Colombian Chachalaca walking along a metal railing with rufous-brown head and long rufous-tipped tail.",
           "quality": "excellent"
         }
       ],
-      "number": 14
+      "number": 14,
+      "slug": "colombian-chachalaca"
     },
     {
       "species": "Social Flycatcher",
       "scientific_name": "Myiozetetes similis",
       "first_seen": "2023-12-13",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_8767.jpg",
@@ -525,21 +539,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Social Flycatcher",
           "scientific_name": "Myiozetetes similis",
-          "featured": true,
+          "featured": false,
           "caption": "A Social Flycatcher perched among berries, bold black-and-white head pattern and bright yellow underparts.",
           "quality": "excellent"
         }
       ],
-      "number": 15
+      "number": 15,
+      "slug": "social-flycatcher"
     },
     {
       "species": "Acorn Woodpecker",
       "scientific_name": "Melanerpes formicivorus",
       "first_seen": "2023-12-17",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_8934.jpg",
@@ -554,7 +569,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Acorn Woodpecker",
           "scientific_name": "Melanerpes formicivorus",
           "featured": true,
@@ -562,13 +577,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 16
+      "number": 16,
+      "slug": "acorn-woodpecker"
     },
     {
-      "species": "Golden-olive Woodpecker",
-      "scientific_name": "Colaptes rubiginosus",
+      "species": "Spot-breasted Woodpecker",
+      "scientific_name": "Colaptes punctigula",
       "first_seen": "2023-12-17",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9054.jpg",
@@ -583,11 +599,11 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
-          "species": "Golden-olive Woodpecker",
-          "scientific_name": "Colaptes rubiginosus",
-          "featured": true,
-          "caption": "A Golden-olive Woodpecker atop a weathered stump displaying spotted olive-gold back and red nape.",
+          "location": "Costa Rica",
+          "species": "Spot-breasted Woodpecker",
+          "scientific_name": "Colaptes punctigula",
+          "featured": false,
+          "caption": "A Spot-breasted Woodpecker atop a weathered stump displaying spotted breast and olive-barred back.",
           "quality": "excellent"
         },
         {
@@ -603,21 +619,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
-          "species": "Golden-olive Woodpecker",
-          "scientific_name": "Colaptes rubiginosus",
+          "location": "Costa Rica",
+          "species": "Spot-breasted Woodpecker",
+          "scientific_name": "Colaptes punctigula",
           "featured": false,
-          "caption": "A pair of Golden-olive Woodpeckers on bare branches with a misty mountain valley backdrop.",
+          "caption": "A pair of Spot-breasted Woodpeckers on bare branches with a misty mountain valley backdrop.",
           "quality": "good"
         }
       ],
-      "number": 17
+      "number": 17,
+      "slug": "spot-breasted-woodpecker"
     },
     {
       "species": "Purple-throated Mountaingem",
       "scientific_name": "Lampornis calolaemus",
       "first_seen": "2023-12-17",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9238.jpg",
@@ -632,7 +649,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Purple-throated Mountaingem",
           "scientific_name": "Lampornis calolaemus",
           "featured": false,
@@ -652,7 +669,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Purple-throated Mountaingem",
           "scientific_name": "Lampornis calolaemus",
           "featured": false,
@@ -660,13 +677,14 @@
           "quality": "good"
         }
       ],
-      "number": 18
+      "number": 18,
+      "slug": "purple-throated-mountaingem"
     },
     {
       "species": "Flame-colored Tanager",
       "scientific_name": "Piranga bidentata",
       "first_seen": "2023-12-19",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9442.jpg",
@@ -681,7 +699,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Flame-colored Tanager",
           "scientific_name": "Piranga bidentata",
           "featured": false,
@@ -701,7 +719,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Flame-colored Tanager",
           "scientific_name": "Piranga bidentata",
           "featured": false,
@@ -709,13 +727,14 @@
           "quality": "fair"
         }
       ],
-      "number": 19
+      "number": 19,
+      "slug": "flame-colored-tanager"
     },
     {
       "species": "Crimson-fronted Parakeet",
       "scientific_name": "Psittacara finschi",
       "first_seen": "2023-12-19",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9540.jpg",
@@ -730,7 +749,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Crimson-fronted Parakeet",
           "scientific_name": "Psittacara finschi",
           "featured": false,
@@ -738,13 +757,14 @@
           "quality": "fair"
         }
       ],
-      "number": 20
+      "number": 20,
+      "slug": "crimson-fronted-parakeet"
     },
     {
       "species": "Vermilion Flycatcher",
       "scientific_name": "Pyrocephalus rubinus",
       "first_seen": "2023-12-21",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9624.jpg",
@@ -759,7 +779,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Vermilion Flycatcher",
           "scientific_name": "Pyrocephalus rubinus",
           "featured": false,
@@ -767,13 +787,14 @@
           "quality": "good"
         }
       ],
-      "number": 21
+      "number": 21,
+      "slug": "vermilion-flycatcher"
     },
     {
       "species": "Rufous-tailed Hummingbird",
       "scientific_name": "Amazilia tzacatl",
       "first_seen": "2023-12-21",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9686.jpg",
@@ -788,7 +809,7 @@
           "aperture": 9.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Rufous-tailed Hummingbird",
           "scientific_name": "Amazilia tzacatl",
           "featured": true,
@@ -796,13 +817,14 @@
           "quality": "excellent"
         }
       ],
-      "number": 22
+      "number": 22,
+      "slug": "rufous-tailed-hummingbird"
     },
     {
-      "species": "Barred Hawk",
-      "scientific_name": "Morphnarchus princeps",
+      "species": "Roadside Hawk",
+      "scientific_name": "Rupornis magnirostris",
       "first_seen": "2023-12-21",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9714.jpg",
@@ -817,21 +839,22 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
-          "species": "Barred Hawk",
-          "scientific_name": "Morphnarchus princeps",
+          "location": "Costa Rica",
+          "species": "Roadside Hawk",
+          "scientific_name": "Rupornis magnirostris",
           "featured": true,
-          "caption": "A Barred Hawk stares directly at the camera, piercing orange eyes and finely barred belly creating an intense portrait.",
+          "caption": "A Roadside Hawk stares directly at the camera, yellow eyes and barred rufous breast in an alert perched pose.",
           "quality": "excellent"
         }
       ],
-      "number": 23
+      "number": 23,
+      "slug": "roadside-hawk"
     },
     {
       "species": "Groove-billed Ani",
       "scientific_name": "Crotophaga sulcirostris",
       "first_seen": "2023-12-25",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_9784.jpg",
@@ -846,7 +869,7 @@
           "aperture": 9.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Groove-billed Ani",
           "scientific_name": "Crotophaga sulcirostris",
           "featured": false,
@@ -854,13 +877,14 @@
           "quality": "good"
         }
       ],
-      "number": 24
+      "number": 24,
+      "slug": "groove-billed-ani"
     },
     {
       "species": "Lesser Goldfinch",
       "scientific_name": "Spinus psaltria",
       "first_seen": "2023-12-30",
-      "location": null,
+      "location": "Costa Rica",
       "photos": [
         {
           "file": "DSC_0078.jpg",
@@ -875,7 +899,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Costa Rica",
           "species": "Lesser Goldfinch",
           "scientific_name": "Spinus psaltria",
           "featured": false,
@@ -883,13 +907,14 @@
           "quality": "fair"
         }
       ],
-      "number": 25
+      "number": 25,
+      "slug": "lesser-goldfinch"
     },
     {
       "species": "Blue-and-yellow Macaw",
       "scientific_name": "Ara ararauna",
       "first_seen": "2026-02-22",
-      "location": null,
+      "location": "Envigado, Colombia",
       "photos": [
         {
           "file": "DSC_1357.jpg",
@@ -904,7 +929,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Envigado, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
           "featured": false,
@@ -924,7 +949,7 @@
           "aperture": 6.3,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Envigado, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
           "featured": false,
@@ -944,10 +969,10 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Envigado, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
-          "featured": true,
+          "featured": false,
           "caption": "Two Blue-and-yellow Macaws climbing through tropical foliage, displaying vivid blue wings and orange breast.",
           "quality": "excellent"
         },
@@ -964,10 +989,10 @@
           "aperture": 6.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Envigado, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
-          "featured": true,
+          "featured": false,
           "caption": "Two Blue-and-yellow Macaws perched at different heights in a tree, both gazing toward the camera.",
           "quality": "excellent"
         },
@@ -984,7 +1009,7 @@
           "aperture": 5.0,
           "gps_lat": null,
           "gps_lon": null,
-          "location": null,
+          "location": "Envigado, Colombia",
           "species": "Blue-and-yellow Macaw",
           "scientific_name": "Ara ararauna",
           "featured": false,
@@ -992,70 +1017,11 @@
           "quality": "fair"
         }
       ],
-      "number": 26
+      "number": 26,
+      "slug": "blue-and-yellow-macaw"
     }
   ],
   "featured": [
-    {
-      "file": "DSC_1371.jpg",
-      "width": 1244,
-      "height": 2155,
-      "date": "2026-02-22",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 450.0,
-      "iso": 400,
-      "shutter": "1/160",
-      "aperture": 6.0,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Blue-and-yellow Macaw",
-      "scientific_name": "Ara ararauna",
-      "featured": true,
-      "caption": "Two Blue-and-yellow Macaws climbing through tropical foliage, displaying vivid blue wings and orange breast.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_1378.jpg",
-      "width": 1780,
-      "height": 2413,
-      "date": "2026-02-22",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 450.0,
-      "iso": 400,
-      "shutter": "1/200",
-      "aperture": 6.0,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Blue-and-yellow Macaw",
-      "scientific_name": "Ara ararauna",
-      "featured": true,
-      "caption": "Two Blue-and-yellow Macaws perched at different heights in a tree, both gazing toward the camera.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_6474.jpg",
-      "width": 3990,
-      "height": 3170,
-      "date": "2023-05-04",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 460.0,
-      "iso": 400,
-      "shutter": "1/160",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Yellow Tyrannulet",
-      "scientific_name": "Capsiempis flaveola",
-      "featured": true,
-      "caption": "A Yellow Tyrannulet perched alertly on a leaf, showing pale underparts and olive-gray upperparts.",
-      "quality": "excellent"
-    },
     {
       "file": "DSC_6518.jpg",
       "width": 1525,
@@ -1069,91 +1035,11 @@
       "aperture": 5.6,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
+      "location": "Antioquia, Colombia",
       "species": "Andean Motmot",
       "scientific_name": "Momotus aequatorialis",
       "featured": true,
       "caption": "An Andean Motmot perched on a wire displaying its brilliant turquoise crown, red eye, and long racket-tipped tail.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_6756.jpg",
-      "width": 2689,
-      "height": 3420,
-      "date": "2023-07-06",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/640",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Squirrel Cuckoo",
-      "scientific_name": "Piaya cayana",
-      "featured": true,
-      "caption": "A Squirrel Cuckoo with rich rufous plumage and yellow bill perched on a lichen-covered branch.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_7134.jpg",
-      "width": 1723,
-      "height": 2747,
-      "date": "2023-07-09",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/500",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Cocoa Woodcreeper",
-      "scientific_name": "Xiphorhynchus susurrans",
-      "featured": true,
-      "caption": "A Cocoa Woodcreeper clinging vertically to a smooth palm trunk with streaked breast clearly visible.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_7582.jpg",
-      "width": 1656,
-      "height": 2512,
-      "date": "2023-07-12",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/320",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Orange-crowned Oriole",
-      "scientific_name": "Icterus auricapillus",
-      "featured": true,
-      "caption": "An Orange-crowned Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_7630.jpg",
-      "width": 809,
-      "height": 1175,
-      "date": "2023-07-12",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/250",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Western Emerald",
-      "scientific_name": "Chlorostilbon melanorhynchus",
-      "featured": true,
-      "caption": "A Western Emerald hummingbird resting on a lichen-spotted branch, glittering green plumage catching the light.",
       "quality": "excellent"
     },
     {
@@ -1169,51 +1055,11 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
-      "species": "Golden-hooded Tanager",
-      "scientific_name": "Stilpnia larvata",
+      "location": "Antioquia, Colombia",
+      "species": "Blue-necked Tanager",
+      "scientific_name": "Stilpnia cyanicollis",
       "featured": true,
-      "caption": "A male Golden-hooded Tanager showcasing its vivid blue hood, black body, and golden-yellow wing patches.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_7855.jpg",
-      "width": 2961,
-      "height": 1953,
-      "date": "2023-07-13",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/1000",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Crested Oropendola",
-      "scientific_name": "Psarocolius decumanus",
-      "featured": true,
-      "caption": "A Crested Oropendola foraging among traveler's palm stalks, striking blue eye and pale bill visible against blue sky.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_8053.jpg",
-      "width": 1530,
-      "height": 1953,
-      "date": "2023-07-16",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 600.0,
-      "iso": 400,
-      "shutter": "1/200",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Bay-headed Tanager",
-      "scientific_name": "Tangara gyrola",
-      "featured": true,
-      "caption": "A Bay-headed Tanager displaying its rich chestnut head, green back, and turquoise blue underparts.",
+      "caption": "A male Blue-necked Tanager showcasing its brilliant blue head and neck contrasting with turquoise shoulders and dark body.",
       "quality": "excellent"
     },
     {
@@ -1229,7 +1075,7 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
+      "location": "Antioquia, Colombia",
       "species": "Crested Oropendola",
       "scientific_name": "Psarocolius decumanus",
       "featured": true,
@@ -1237,43 +1083,43 @@
       "quality": "excellent"
     },
     {
-      "file": "DSC_8628.jpg",
-      "width": 5561,
-      "height": 2869,
-      "date": "2023-12-10",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 380.0,
-      "iso": 400,
-      "shutter": "1/125",
-      "aperture": 6.0,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Gray-headed Chachalaca",
-      "scientific_name": "Ortalis cinereiceps",
-      "featured": true,
-      "caption": "A Gray-headed Chachalaca walking along a metal railing with scaled gray head and long rufous-tipped tail.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_8767.jpg",
-      "width": 2033,
-      "height": 2839,
-      "date": "2023-12-13",
+      "file": "DSC_8053.jpg",
+      "width": 1530,
+      "height": 1953,
+      "date": "2023-07-16",
       "camera": "NIKON D7100",
       "lens": "150.0-600.0 mm f/5.0-6.3",
       "focal_length": 600.0,
       "iso": 400,
-      "shutter": "1/80",
+      "shutter": "1/200",
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
-      "species": "Social Flycatcher",
-      "scientific_name": "Myiozetetes similis",
+      "location": "Antioquia, Colombia",
+      "species": "Bay-headed Tanager",
+      "scientific_name": "Tangara gyrola",
       "featured": true,
-      "caption": "A Social Flycatcher perched among berries, bold black-and-white head pattern and bright yellow underparts.",
+      "caption": "A Bay-headed Tanager displaying its rich chestnut head, green back, and turquoise blue underparts.",
+      "quality": "excellent"
+    },
+    {
+      "file": "DSC_6756.jpg",
+      "width": 2689,
+      "height": 3420,
+      "date": "2023-07-06",
+      "camera": "NIKON D7100",
+      "lens": "150.0-600.0 mm f/5.0-6.3",
+      "focal_length": 600.0,
+      "iso": 400,
+      "shutter": "1/640",
+      "aperture": 6.3,
+      "gps_lat": null,
+      "gps_lon": null,
+      "location": "Antioquia, Colombia",
+      "species": "Squirrel Cuckoo",
+      "scientific_name": "Piaya cayana",
+      "featured": true,
+      "caption": "A Squirrel Cuckoo with rich rufous plumage and yellow bill perched on a lichen-covered branch.",
       "quality": "excellent"
     },
     {
@@ -1289,31 +1135,11 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
+      "location": "Costa Rica",
       "species": "Acorn Woodpecker",
       "scientific_name": "Melanerpes formicivorus",
       "featured": true,
       "caption": "An Acorn Woodpecker on a lichen-covered branch showing its distinctive clown-like face, red crown, and pale eye.",
-      "quality": "excellent"
-    },
-    {
-      "file": "DSC_9054.jpg",
-      "width": 1911,
-      "height": 3316,
-      "date": "2023-12-17",
-      "camera": "NIKON D7100",
-      "lens": "150.0-600.0 mm f/5.0-6.3",
-      "focal_length": 500.0,
-      "iso": 400,
-      "shutter": "1/500",
-      "aperture": 6.3,
-      "gps_lat": null,
-      "gps_lon": null,
-      "location": null,
-      "species": "Golden-olive Woodpecker",
-      "scientific_name": "Colaptes rubiginosus",
-      "featured": true,
-      "caption": "A Golden-olive Woodpecker atop a weathered stump displaying spotted olive-gold back and red nape.",
       "quality": "excellent"
     },
     {
@@ -1329,7 +1155,7 @@
       "aperture": 9.0,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
+      "location": "Costa Rica",
       "species": "Rufous-tailed Hummingbird",
       "scientific_name": "Amazilia tzacatl",
       "featured": true,
@@ -1349,11 +1175,51 @@
       "aperture": 6.3,
       "gps_lat": null,
       "gps_lon": null,
-      "location": null,
-      "species": "Barred Hawk",
-      "scientific_name": "Morphnarchus princeps",
+      "location": "Costa Rica",
+      "species": "Roadside Hawk",
+      "scientific_name": "Rupornis magnirostris",
       "featured": true,
-      "caption": "A Barred Hawk stares directly at the camera, piercing orange eyes and finely barred belly creating an intense portrait.",
+      "caption": "A Roadside Hawk stares directly at the camera, yellow eyes and barred rufous breast in an alert perched pose.",
+      "quality": "excellent"
+    },
+    {
+      "file": "DSC_7582.jpg",
+      "width": 1656,
+      "height": 2512,
+      "date": "2023-07-12",
+      "camera": "NIKON D7100",
+      "lens": "150.0-600.0 mm f/5.0-6.3",
+      "focal_length": 600.0,
+      "iso": 400,
+      "shutter": "1/320",
+      "aperture": 6.3,
+      "gps_lat": null,
+      "gps_lon": null,
+      "location": "Antioquia, Colombia",
+      "species": "Orange-crowned Oriole",
+      "scientific_name": "Icterus auricapillus",
+      "featured": true,
+      "caption": "An Orange-crowned Oriole perched on a bare branch, vivid orange crown and yellow-and-black plumage striking against green.",
+      "quality": "excellent"
+    },
+    {
+      "file": "DSC_8628.jpg",
+      "width": 5561,
+      "height": 2869,
+      "date": "2023-12-10",
+      "camera": "NIKON D7100",
+      "lens": "150.0-600.0 mm f/5.0-6.3",
+      "focal_length": 380.0,
+      "iso": 400,
+      "shutter": "1/125",
+      "aperture": 6.0,
+      "gps_lat": null,
+      "gps_lon": null,
+      "location": "Costa Rica",
+      "species": "Colombian Chachalaca",
+      "scientific_name": "Ortalis columbiana",
+      "featured": true,
+      "caption": "A Colombian Chachalaca walking along a metal railing with rufous-brown head and long rufous-tipped tail.",
       "quality": "excellent"
     }
   ],

@@ -1448,6 +1448,72 @@ a.telescope-card:hover {
     border-top: 1px solid var(--border);
 }
 
+/* Featured Grid — full bird visible, no cropping */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.featured-item {
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.featured-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.featured-img-wrap {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+}
+
+.featured-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.featured-item figcaption {
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+}
+
+.featured-item figcaption strong {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: var(--text);
+}
+
+.featured-item figcaption p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Species meta on detail pages */
+.species-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* Life List */
 .lifelist-intro {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -1488,6 +1554,15 @@ a.telescope-card:hover {
 .lifelist-table td em {
     color: var(--text-muted);
     font-size: 0.75rem;
+}
+
+.lifelist-table td a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.lifelist-table td a:hover {
+    color: var(--accent);
 }
 
 .photo-meta {
@@ -1589,6 +1664,14 @@ footer p {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-img-wrap {
+        height: 280px;
     }
 
     .category-grid {

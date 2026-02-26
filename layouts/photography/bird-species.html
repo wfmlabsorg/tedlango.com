@@ -1,0 +1,62 @@
+{{ define "main" }}
+<article class="gallery-page">
+    <header class="gallery-header">
+        <h1>{{ .Title }}</h1>
+        <p class="gallery-desc"><em>{{ .Params.scientific_name }}</em></p>
+        <div class="species-meta">
+            {{ with .Params.location }}<span>{{ . }}</span> · {{ end }}
+            <span>First seen {{ .Params.first_seen }}</span> ·
+            <span>{{ .Params.photo_count }} photo{{ if gt .Params.photo_count 1 }}s{{ end }}</span>
+        </div>
+        <div class="reference-nav">
+            <a href="/photography/birds/">Back to Life List</a>
+        </div>
+    </header>
+
+    <div class="gallery-grid">
+        {{ range .Params.photos }}
+        <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
+            <img src="/img/photography/birds/{{ .file }}" alt="{{ $.Title }}" loading="lazy">
+            <figcaption>
+                {{ with .caption }}<p>{{ . }}</p>{{ end }}
+                <span class="photo-meta">{{ .date }} · {{ .shutter }} · f/{{ .aperture }} · ISO {{ .iso }} · {{ .focal_length }}mm</span>
+            </figcaption>
+        </figure>
+        {{ end }}
+    </div>
+</article>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-caption"></div>
+</div>
+
+<script>
+(function() {
+    var lb = document.getElementById('lightbox');
+    var lbImg = lb.querySelector('.lightbox-img');
+    var lbCap = lb.querySelector('.lightbox-caption');
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            if (e.target.closest('.gallery-link')) return;
+            lbImg.src = item.dataset.full;
+            lbImg.alt = item.querySelector('img').alt;
+            lbCap.innerHTML = item.querySelector('figcaption').innerHTML;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb || e.target.classList.contains('lightbox-close')) {
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+    });
+})();
+</script>
+{{ end }}
