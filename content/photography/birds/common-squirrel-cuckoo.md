@@ -8,7 +8,7 @@ params:
   scientific_name: "Piaya cayana"
   location: "Antioquia, Colombia"
   first_seen: "2023-01-01"
-  photo_count: 4
+  photo_count: 5
   photos:
   - file: "DSC_6756.jpg"
     date: "2023-07-06"
@@ -38,4 +38,11 @@ params:
     aperture: 6.3
     iso: 400
     focal_length: 600.0
+  - file: "20170127_205719.jpg"
+    date: "2017-01-27"
+    caption: "A Common Squirrel-Cuckoo perched on a mossy branch, rufous body with gray breast, yellow-green bill, and red eye amid lush foliage."
+    shutter: "1/200"
+    aperture: 6.9
+    iso: 320
+    focal_length: 172.0
 ---
