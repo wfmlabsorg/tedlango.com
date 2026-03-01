@@ -13,8 +13,21 @@
         </div>
     </header>
 
+    {{ $photos := .Params.photos }}
+    {{ with index $photos 0 }}
+    <!-- Hero Image — the featured/main photo -->
+    <div class="species-hero" data-full="/img/photography/birds/{{ .file }}">
+        <img src="/img/photography/birds/{{ .file }}" alt="{{ $.Title }}" loading="lazy">
+        <div class="species-hero-caption">
+            {{ with .caption }}<p>{{ . }}</p>{{ end }}
+            <span class="photo-meta">{{ .date }} · {{ .shutter }} · f/{{ .aperture }} · ISO {{ .iso }} · {{ .focal_length }}mm</span>
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if gt (len $photos) 1 }}
     <div class="gallery-grid birds-gallery">
-        {{ range .Params.photos }}
+        {{ range after 1 $photos }}
         <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
             <img src="/img/photography/birds/{{ .file }}" alt="{{ $.Title }}" loading="lazy">
             <figcaption>
@@ -24,6 +37,7 @@
         </figure>
         {{ end }}
     </div>
+    {{ end }}
 </article>
 
 <!-- Lightbox -->
@@ -38,9 +52,22 @@
     var lb = document.getElementById('lightbox');
     var lbImg = lb.querySelector('.lightbox-img');
     var lbCap = lb.querySelector('.lightbox-caption');
+
+    // Hero image opens lightbox too
+    var hero = document.querySelector('.species-hero');
+    if (hero) {
+        hero.addEventListener('click', function() {
+            lbImg.src = hero.dataset.full;
+            lbImg.alt = hero.querySelector('img').alt;
+            lbCap.innerHTML = hero.querySelector('.species-hero-caption').innerHTML;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Gallery items
     document.querySelectorAll('.gallery-item').forEach(function(item) {
         item.addEventListener('click', function(e) {
-            if (e.target.closest('.gallery-link')) return;
             lbImg.src = item.dataset.full;
             lbImg.alt = item.querySelector('img').alt;
             lbCap.innerHTML = item.querySelector('figcaption').innerHTML;
@@ -48,10 +75,14 @@
             document.body.style.overflow = 'hidden';
         });
     });
+
+    // Zoom toggle
     lbImg.addEventListener('click', function(e) {
         e.stopPropagation();
         lb.classList.toggle('zoomed');
     });
+
+    // Close
     lb.addEventListener('click', function(e) {
         if (e.target === lb || e.target.classList.contains('lightbox-close')) {
             lb.classList.remove('active', 'zoomed');

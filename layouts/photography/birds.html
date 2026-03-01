@@ -9,17 +9,19 @@
 
     {{ with .Content }}<div class="gallery-intro">{{ . }}</div>{{ end }}
 
-    <!-- Featured Gallery — Top 10, 1 per species -->
+    <!-- Featured Gallery — Top 10, 1 per species → links to species pages -->
     <h2 class="birds-section-title">Best Shots</h2>
-    <div class="gallery-grid birds-gallery">
+    <div class="featured-grid">
         {{ range $birds.featured }}
-        <figure class="gallery-item" data-full="/img/photography/birds/{{ .file }}">
-            <img src="/img/photography/birds/{{ .file }}" alt="{{ .species }}" loading="lazy">
-            <figcaption>
+        <a href="/photography/birds/{{ .species | urlize }}/" class="featured-item">
+            <div class="featured-img-wrap">
+                <img src="/img/photography/birds/{{ .file }}" alt="{{ .species }}" loading="lazy">
+            </div>
+            <div class="featured-caption">
                 <strong>{{ .species }}</strong>
                 {{ with .caption }}<p>{{ . }}</p>{{ end }}
-            </figcaption>
-        </figure>
+            </div>
+        </a>
         {{ end }}
     </div>
 
@@ -54,41 +56,8 @@
     </div>
 </article>
 
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img class="lightbox-img" src="" alt="">
-    <div class="lightbox-caption"></div>
-</div>
-
 <script>
 (function() {
-    var lb = document.getElementById('lightbox');
-    var lbImg = lb.querySelector('.lightbox-img');
-    var lbCap = lb.querySelector('.lightbox-caption');
-    document.querySelectorAll('.gallery-item').forEach(function(item) {
-        item.addEventListener('click', function(e) {
-            lbImg.src = item.dataset.full;
-            lbImg.alt = item.querySelector('img').alt;
-            lbCap.innerHTML = item.querySelector('figcaption').innerHTML;
-            lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    lbImg.addEventListener('click', function(e) {
-        e.stopPropagation();
-        lb.classList.toggle('zoomed');
-    });
-    lb.addEventListener('click', function(e) {
-        if (e.target === lb || e.target.classList.contains('lightbox-close')) {
-            lb.classList.remove('active', 'zoomed');
-            document.body.style.overflow = '';
-        }
-    });
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') { lb.classList.remove('active', 'zoomed'); document.body.style.overflow = ''; }
-    });
-
     var table = document.getElementById('lifelist-table');
     if (!table) return;
     var headers = table.querySelectorAll('th.sortable');

@@ -10,6 +10,13 @@ params:
   first_seen: "2026-02-22"
   photo_count: 8
   photos:
+  - file: "DSC_2004.jpg"
+    date: "2026-03-01"
+    caption: "Close-up portrait of a Blue-and-yellow Macaw feeding, detailed facial striping and massive dark bill in sharp focus."
+    shutter: "1/800"
+    aperture: 7.1
+    iso: 400
+    focal_length: 550.0
   - file: "DSC_1357.jpg"
     date: "2026-02-22"
     caption: "A pair of Blue-and-yellow Macaws foraging among the dense green foliage of a tropical tree canopy."
@@ -59,11 +66,4 @@ params:
     aperture: 7.1
     iso: 400
     focal_length: 460.0
-  - file: "DSC_2004.jpg"
-    date: "2026-03-01"
-    caption: "Close-up portrait of a Blue-and-yellow Macaw feeding, detailed facial striping and massive dark bill in sharp focus."
-    shutter: "1/800"
-    aperture: 7.1
-    iso: 400
-    focal_length: 550.0
 ---
