@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-27"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/creoro1"
+  description: "A large, gregarious icterid with mostly dark chestnut-brown plumage, a pale greenish bill, blue eyes, and a bright yellow tail that flashes conspicuously in flight. Males are notably larger than females and perform dramatic bowing displays at colonial nesting sites, hanging their long woven basket-nests from tall trees. Inhabits humid and semi-humid forest edges, clearings, and plantations across lowland tropical America. Produces an extraordinary repertoire of liquid, gurgling calls and mechanical-sounding notes."
   photos:
   - file: "DSC_7855.jpg"
     date: "2023-07-13"

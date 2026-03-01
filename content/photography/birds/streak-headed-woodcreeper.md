@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-09"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/sthwoo1"
+  description: "A slender, medium-sized woodcreeper with brown upperparts, fine pale buff streaking on the crown and head, a pale supercilium, and buff-streaked underparts. The slightly decurved bill is pale and relatively slender compared to other woodcreepers. Found in dry and semi-humid forest, woodland, plantations, and gardens from Mexico to northern South America. Creeps up tree trunks and along branches probing bark crevices for insects, often joining mixed-species flocks in the canopy."
   photos:
   - file: "DSC_7134.jpg"
     date: "2023-07-09"

@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-27"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/saffin"
+  description: "Adult males are bright golden-yellow overall with a deeper orange wash on the forecrown, while females and immatures are duller with streaked olive-brown upperparts and yellowish underparts. A stocky, thick-billed finch commonly found in open and semi-open areas including lawns, parks, agricultural fields, and urban environments. Often forages on the ground in small flocks, picking at seeds and grain. A cavity nester that readily uses nest boxes and crevices in buildings; gives a pleasant warbling song from elevated perches."
   photos:
   - file: "DSC_9721.jpg"
     date: "2023-12-25"

@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-27"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/crbtan1"
+  description: "Males are deep velvety crimson-red overall with contrasting black wings, tail, and a silvery-white lower mandible that catches the light. Females are duller reddish-brown above with paler rose-tinted underparts. Common in gardens, forest edges, shrubby clearings, and urban parks throughout its range in Colombia, Panama, and Venezuela. Typically forages in pairs or small groups, feeding on fruit and insects in the canopy and subcanopy."
   photos:
   - file: "DSC_9606.jpg"
     date: "2023-12-21"

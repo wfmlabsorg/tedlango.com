@@ -9,6 +9,8 @@ params:
   location: "Florida, USA"
   first_seen: "2025-09-28"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/gloibi"
+  description: "A medium-sized, slender ibis that appears all dark at a distance but reveals rich chestnut-maroon and iridescent green and purple plumage in good light. The long, decurved bill is gray-brown and the legs are dark. In breeding plumage, shows pale blue lines bordering the bare facial skin. The most widespread ibis in the world, found in marshes, flooded fields, shallow lakes, and coastal wetlands across every continent except Antarctica. Forages by probing in shallow water and mud for insects, crustaceans, and worms; often flies in V-formation to roosts."
   photos:
   - file: "20241224_142055.jpg"
     date: "2024-12-24"

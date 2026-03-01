@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2017-01-27"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/rufmot1"
+  description: "The largest of the motmots, with a rich rufous-cinnamon head and underparts, olive-green upperparts, a black mask through the eye, and a small black chest spot. Like other motmots, the long tail features the distinctive bare-shafted racket tips. Found in humid lowland and foothill forests, often in dark understory near streams and ravines from Honduras to Bolivia. A patient sit-and-wait predator, sitting motionless on a low perch and then sallying to capture large insects, lizards, and frogs. Gives a deep, resonant 'hoo-hoo' call at dawn."
   photos:
   - file: "20170127_001538.jpg"
     date: "2017-01-27"

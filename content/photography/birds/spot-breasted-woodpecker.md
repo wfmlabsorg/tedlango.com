@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-03"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/spbwoo1"
+  description: "A medium-sized, colorful woodpecker with olive-green upperparts, a bold red crown and nape, yellowish face with a dark malar stripe, and creamy-white underparts heavily spotted with black. The rump is yellowish-green and the tail is dark. Found in open and semi-open habitats including savannas, forest edges, clearings, and urban parks in northern South America. Often forages on the ground, probing for ants, and is frequently seen in pairs; gives a loud, rolling 'wicka-wicka' call."
   photos:
   - file: "DSC_9054.jpg"
     date: "2023-12-17"

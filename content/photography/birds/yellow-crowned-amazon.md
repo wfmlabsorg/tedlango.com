@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2026-03-01"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/ywcpar"
+  description: "A stocky, medium-sized parrot with mostly green plumage, a prominent yellow patch on the crown (variable in extent), red at the bend of the wing, and red and blue in the flight feathers visible in flight. The pale bill and orbital ring help distinguish it from similar species. Found in a wide range of semi-open habitats including forest edges, savannas with scattered trees, palm groves, agricultural areas, and urban parks across northern South America and Panama. Highly social, roosting and flying in noisy flocks; gives a loud, rolling series of 'rah-rah-rah' calls."
   photos:
   - file: "DSC_1902.jpg"
     date: "2026-03-01"

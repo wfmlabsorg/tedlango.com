@@ -23,6 +23,7 @@ title = "Ted Lango"
   priority = 0.5
 
 enableRobotsTXT = true
+ignoreLogs = ['warning-frontmatter-params-overrides']
 
 [permalinks]
   essays = "/essays/:slug/"

@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2025-03-19"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/andcot1"
+  description: "Males are spectacular with brilliant orange or scarlet plumage, a large disc-shaped crest that covers most of the bill, black wings and tail, and a broad gray scapular band. Females are uniformly dark reddish-brown with a smaller crest. The national bird of Peru, found in humid montane forests and ravines along the Andes, typically between 500 and 2,400 meters. Males gather at traditional leks on forest-floor clearings to perform elaborate courtship displays involving bowing, wing-spreading, and loud squawking and grunting calls."
   photos:
   - file: "DSC_0861.jpg"
     date: "2025-03-19"

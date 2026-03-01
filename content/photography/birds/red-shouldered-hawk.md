@@ -9,6 +9,8 @@ params:
   location: "Florida, USA"
   first_seen: "2025-05-31"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/reshaw"
+  description: "A medium-sized buteo with rich rufous barring on the breast, a boldly banded black-and-white tail, and reddish-brown 'shoulders' formed by the lesser wing coverts. In flight, shows translucent crescents near the wingtips. Adults have warm brown upperparts with white checkering. Found in deciduous and mixed woodlands, often near water, swamps, and riparian areas in eastern North America and California. A vocal raptor with a distinctive, repeated 'kee-aah' call, frequently heard year-round, especially during breeding season."
   photos:
   - file: "20250614_181810.jpg"
     date: "2025-06-14"

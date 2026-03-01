@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-28"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/thbeup1"
+  description: "Males are glossy blue-black above with a bright yellow forecrown, throat, and underparts, while females are olive-green above with yellowish underparts. Distinguished from other euphonias by its relatively thick, stubby bill. Inhabits forest edges, gardens, second growth, and plantations from Costa Rica through South America. Feeds heavily on mistletoe berries and other small fruits; gives a variety of musical whistles and chattering calls, and is an accomplished mimic of other species."
   photos:
   - file: "DSC_7608.jpg"
     date: "2023-07-12"

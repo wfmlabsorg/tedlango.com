@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-12"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/orcori1"
+  description: "A handsome oriole with bright orange-yellow body plumage and a contrasting black mask, throat, wings, and tail. The orange crown patch that gives the species its name is often concealed but visible during display. Found in humid forest edges, tall second growth, and wooded gardens in Panama and extreme northwestern Colombia. Relatively uncommon and somewhat skulking compared to other orioles, foraging in the canopy and subcanopy for insects and small fruits. Gives rich, melodious whistled phrases typical of Icterus orioles."
   photos:
   - file: "DSC_7712.jpg"
     date: "2023-07-12"

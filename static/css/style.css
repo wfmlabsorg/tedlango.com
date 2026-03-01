@@ -1568,6 +1568,47 @@ a.telescope-card:hover {
 }
 
 /* Featured Grid Caption (link version) */
+.ebird-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+.ebird-link:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.species-description {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.species-notes {
+    margin: 2rem 0 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--success);
+    border-radius: 4px;
+}
+.species-notes h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--success);
+    margin: 0 0 0.5rem;
+}
+.species-notes p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+}
+
 .featured-caption {
     padding: 0.75rem 1rem;
     background: var(--bg-secondary);

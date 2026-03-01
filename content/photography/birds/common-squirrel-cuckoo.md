@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-01-01"
   photo_count: 5
+  ebird_url: "https://ebird.org/species/squcuc1"
+  description: "A large, slender, long-tailed cuckoo with warm rufous-chestnut upperparts, grayish throat and breast, and a pale rufous belly. The long graduated tail is tipped with white and the orbital skin is conspicuously bare and reddish. Named for its habit of running and hopping along branches in a squirrel-like manner through dense vegetation. Found in forest edges, second growth, gardens, and plantations throughout tropical America, where it feeds mainly on large insects and caterpillars."
   photos:
   - file: "DSC_6756.jpg"
     date: "2023-07-06"

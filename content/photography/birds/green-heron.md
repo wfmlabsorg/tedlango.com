@@ -9,6 +9,8 @@ params:
   location: "Florida, USA"
   first_seen: "2025-06-14"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/grnher"
+  description: "A small, stocky heron with a deep green-black cap, rich chestnut neck and breast, dark greenish upperparts with a subtle glossy sheen, and short yellow-orange legs that turn brighter orange during breeding. Often appears hunched and compact when perched. Found along wooded streams, ponds, marshes, and mangroves, where it hunts from low overhanging branches at the water's edge. One of the few tool-using birds, sometimes placing bait on the water surface to lure fish; gives a sharp, explosive 'skeow' call when flushed."
   photos:
   - file: "20250614_170107.jpg"
     date: "2025-06-14"

@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-16"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/bahtan1"
+  description: "A colorful, medium-sized tanager with a rich chestnut-rufous head contrasting with bright green upperparts and turquoise-blue underparts. The nape often shows a narrow golden-yellow collar. Found in humid montane forest canopy, forest edges, and tall second growth in the Andes and adjacent lowlands. Typically forages in pairs or mixed-species flocks in the upper canopy, feeding primarily on small fruits; gives thin, high-pitched call notes."
   photos:
   - file: "DSC_8053.jpg"
     date: "2023-07-16"

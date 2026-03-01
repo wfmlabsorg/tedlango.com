@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-12-25"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/smbani"
+  description: "A large, all-black, long-tailed cuckoo with an oversized, laterally compressed bill with a distinctive high ridge on the upper mandible. The plumage has a slightly oily, unkempt appearance with a faint bronzy or purplish gloss. Highly gregarious, forming communal groups that share nesting duties in a single large nest. Found in open and semi-open habitats including pastures, scrub, marshes, and agricultural areas. Groups forage together on the ground and in low vegetation, often following cattle; gives a whining, querulous 'ooo-lick' call."
   photos:
   - file: "DSC_9784.jpg"
     date: "2023-12-25"

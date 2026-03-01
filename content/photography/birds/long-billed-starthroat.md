@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-12-17"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/lobsta1"
+  description: "A medium-large hummingbird with a notably long, straight black bill, glittering green upperparts, and a distinctive gorget that flashes blue to violet in good light. The white moustachial stripe and white patch on the lower back and rump are key field marks. The belly is mostly dark gray. Found in semi-open areas, forest edges, gardens, and clearings in tropical lowlands and foothills. Often hovers high in the canopy to feed at flowering trees; less territorial than many hummingbirds, sometimes visiting flowers more deliberately."
   photos:
   - file: "DSC_9238.jpg"
     date: "2023-12-17"

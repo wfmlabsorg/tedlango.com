@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2026-02-22"
   photo_count: 8
+  ebird_url: "https://ebird.org/species/baymac"
+  description: "A spectacular, large macaw with brilliant turquoise-blue upperparts, rich golden-yellow underparts, a green forehead, and a black chin and throat. The face has bare white skin with fine lines of small black feathers. Found in tropical lowland forests, palm swamps, savannas, and gallery forests from Panama through most of northern and central South America. Typically seen in pairs or small groups flying high above the canopy with slow, measured wingbeats. Extremely loud, giving resonant, harsh screaming calls that carry great distances; nests in palm cavities."
   photos:
   - file: "DSC_2004.jpg"
     date: "2026-03-01"

@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-28"
   photo_count: 5
+  ebird_url: "https://ebird.org/species/rutahu"
+  description: "A medium-sized hummingbird with glittering green upperparts and throat, grayish-white breast, and a distinctive rufous-chestnut tail that gives the species its name. The bill is mostly red with a dark tip. One of the most abundant and widespread hummingbirds in Central America and northwestern South America, found in gardens, forest edges, coffee plantations, and second growth. Highly territorial and aggressive at feeders, often dominating other hummingbird species. Delivers a rapid series of sharp chip notes."
   photos:
   - file: "DSC_9686.jpg"
     date: "2023-12-21"

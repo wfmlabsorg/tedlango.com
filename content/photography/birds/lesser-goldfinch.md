@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-12-30"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/lesgol"
+  description: "A tiny, active finch with males showing a black cap, bright yellow underparts, and olive-green to black back depending on subspecies, with white wing patches visible in flight. Females are duller olive-green above with pale yellow underparts. Found in open woodlands, scrubby fields, gardens, weedy areas, and forest edges from the southwestern United States through South America. Gregarious, often in small flocks at feeders or feeding on weed seeds; gives a distinctive tinkling flight call and a sweet, canary-like warbling song."
   photos:
   - file: "DSC_0078.jpg"
     date: "2023-12-30"

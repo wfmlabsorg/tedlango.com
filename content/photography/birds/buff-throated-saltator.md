@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-12"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/butsal1"
+  description: "A large, heavy-billed songbird with olive-green upperparts, a gray head with a bold white supercilium and black-bordered white throat patch tinged with buff, and grayish to olive underparts. The thick, dark bill is well-suited for cracking seeds and fruits. Found in humid forest edges, second growth, gardens, and coffee plantations from Mexico through South America. Gives a rich, melodious song often delivered from a concealed perch in dense vegetation; typically skulking but responsive to pishing."
   photos:
   - file: "DSC_9810.jpg"
     date: "2023-12-26"

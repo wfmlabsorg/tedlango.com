@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-28"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/grehon1"
+  description: "Males are a striking bright turquoise-green overall with a black head and a conspicuous bright yellow bill, while females are uniform grass-green with a paler, less contrasting bill. Despite the name, this species is actually a tanager rather than a true honeycreeper. Inhabits the canopy and edges of humid lowland and foothill forests, as well as tall second growth and shade-coffee plantations. Often joins mixed-species feeding flocks, piercing small fruits with its slightly decurved bill and also visiting flowering trees for nectar."
   photos:
   - file: "DSC_8369.jpg"
     date: "2023-07-17"

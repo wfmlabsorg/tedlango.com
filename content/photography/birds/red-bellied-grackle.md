@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2025-03-19"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/rebgra1"
+  description: "A striking endemic Colombian icterid with glossy black plumage and a vivid red belly and undertail coverts that create a dramatic contrast. The bill is dark and slightly decurved, and the eyes are yellow. Classified as Vulnerable due to habitat loss, found in humid montane forests, forest borders, and shade-coffee plantations in the Colombian Andes, typically between 1,000 and 2,700 meters. Highly gregarious, often traveling in flocks of 5-20 birds; gives a variety of loud, cackling, and whistled calls."
   photos:
   - file: "DSC_0911.jpg"
     date: "2025-03-19"

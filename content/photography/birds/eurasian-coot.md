@@ -9,6 +9,8 @@ params:
   location: "England, UK"
   first_seen: "2025-08-30"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/eurcoo"
+  description: "A plump, all-black waterbird with a distinctive bright white frontal shield and bill that contrast sharply with the dark plumage and red eyes. The lobed toes are visible when walking on shore or during surface swimming. Found on a wide variety of freshwater lakes, ponds, reservoirs, and slow rivers with vegetated margins across Eurasia, Africa, and Australasia. Highly territorial during breeding, engaging in aggressive splashing fights; dives for aquatic vegetation and also grazes on shore. Gives a loud, explosive 'kowk' call."
   photos:
   - file: "20250830_160624.jpg"
     date: "2025-08-30"

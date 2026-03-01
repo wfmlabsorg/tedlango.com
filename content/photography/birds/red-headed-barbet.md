@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2025-03-19"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/rehbar1"
+  description: "A striking, compact barbet with males showing a vivid red head and breast, a thick pale bill, olive-green upperparts, and yellowish streaked underparts. Females have a blue face, orange frontal band, and olive-brown upperparts. Found in humid montane forests, forest borders, and tall second growth in the Andes and adjacent foothills, typically between 500 and 2,100 meters. Forages deliberately in the mid-canopy and subcanopy, eating fruits and insects; gives a repeated, resonant 'kwah' call."
   photos:
   - file: "DSC_0724.jpg"
     date: "2025-03-19"

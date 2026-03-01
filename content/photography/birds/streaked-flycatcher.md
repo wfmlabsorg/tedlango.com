@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-05-01"
   photo_count: 1
+  ebird_url: "https://ebird.org/species/strfly1"
+  description: "A large, robust flycatcher resembling a heavily streaked version of the Boat-billed Flycatcher. Shows dark brown upperparts with rufous-edged wing and tail feathers, bold dark streaking on the whitish breast and flanks, a broad dark eyestripe, and a partially concealed yellow crown patch. Found in forest edges, clearings, plantations, and semi-open areas throughout tropical America. Forages from mid-level perches, sallying for large insects and occasionally taking fruit. Gives a loud, emphatic 'kwee-kwee-kwee' call, especially at dawn."
   photos:
   - file: "DSC_6188.jpg"
     date: "2023-05-01"

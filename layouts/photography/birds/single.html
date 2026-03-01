@@ -8,10 +8,17 @@
             <span>First seen {{ .Params.first_seen }}</span> ·
             <span>{{ .Params.photo_count }} photo{{ if gt .Params.photo_count 1 }}s{{ end }}</span>
         </div>
+        {{ with .Params.ebird_url }}<a href="{{ . }}" target="_blank" rel="noopener" class="ebird-link">View on eBird &rarr;</a>{{ end }}
         <div class="reference-nav">
             <a href="/photography/birds/">Back to Life List</a>
         </div>
     </header>
+
+    {{ with .Params.description }}
+    <div class="species-description">
+        <p>{{ . }}</p>
+    </div>
+    {{ end }}
 
     {{ $photos := .Params.photos }}
     {{ with index $photos 0 }}
@@ -36,6 +43,13 @@
             </figcaption>
         </figure>
         {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.notes }}
+    <div class="species-notes">
+        <h3>Field Notes</h3>
+        <p>{{ . }}</p>
     </div>
     {{ end }}
 </article>

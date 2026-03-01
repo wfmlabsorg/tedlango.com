@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2026-02-21"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/bicwre1"
+  description: "A large, boldly patterned wren with dark brown to blackish upperparts and a clean white breast and belly, creating a striking two-toned appearance. Shows a prominent white supercilium and dark eyestripe. Found in dry scrub, arid woodlands, gardens, and semi-open areas in Colombia and Venezuela. Highly vocal and conspicuous, often seen in family groups perched atop cacti, fences, and shrubs. Delivers loud, rich duets with complex whistled phrases; one of the most easily heard birds in its dry habitats."
   photos:
   - file: "DSC_1336.jpg"
     date: "2026-02-21"

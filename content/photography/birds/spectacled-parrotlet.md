@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2023-07-16"
   photo_count: 4
+  ebird_url: "https://ebird.org/species/spepar1"
+  description: "A tiny parrot, one of the smallest in the world, with bright green plumage and a very short tail. Males show a prominent blue eye ring and blue on the rump and wing coverts, giving the 'spectacled' appearance, while females are entirely green with a narrower pale eye ring. Endemic to Colombia, found in dry and semi-humid open areas, scrub, gardens, and agricultural lands. Often seen in small, noisy flocks flying rapidly with buzzy wingbeats; gives high-pitched, squeaky chattering calls."
   photos:
   - file: "DSC_7742.jpg"
     date: "2023-07-12"

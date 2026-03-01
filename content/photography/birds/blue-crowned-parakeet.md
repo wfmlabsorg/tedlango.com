@@ -9,6 +9,8 @@ params:
   location: "Florida, USA"
   first_seen: "2025-09-29"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/bucpar"
+  description: "A medium-sized, mostly green parakeet with a distinctive dull blue forecrown and face, a long pointed tail, and a bicolored bill with a pale upper mandible. The breast is tinged olive and the underside of the tail and flight feathers are dull reddish. Found in a variety of wooded and semi-open habitats including dry forests, savannas, gallery forests, and urban areas across South America; also established in feral populations in the United States. Travels in noisy flocks; gives harsh, screeching calls in flight and softer chattering notes when perched."
   photos:
   - file: "20240915_181353.jpg"
     date: "2024-09-15"

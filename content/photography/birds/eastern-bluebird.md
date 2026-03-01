@@ -9,6 +9,8 @@ params:
   location: "United States"
   first_seen: "2014-05-14"
   photo_count: 3
+  ebird_url: "https://ebird.org/species/easblu"
+  description: "Males are brilliant royal blue above with a bright rusty-orange throat, breast, and flanks, and a clean white belly. Females are grayer above with a more subdued blue wash on the wings and tail, and paler orange on the breast. A beloved cavity-nesting thrush of open country, found in fields, meadows, orchards, and open woodlands across eastern North America. Frequently perches on fence posts, wires, and nest boxes, dropping down to the ground to catch insects. Gives a soft, musical 'tu-a-wee' warble and a quiet 'chur-lee' call."
   photos:
   - file: "DSC_1564.jpg"
     date: "2014-05-14"

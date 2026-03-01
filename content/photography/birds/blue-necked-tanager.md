@@ -9,6 +9,8 @@ params:
   location: "Antioquia, Colombia"
   first_seen: "2022-12-28"
   photo_count: 2
+  ebird_url: "https://ebird.org/species/blntan1"
+  description: "A small, jewel-like tanager with a shimmering turquoise-blue head and neck, velvety black mask through the eye, and straw-yellow to golden shoulder patches contrasting with dark blue-black wings and back. Underparts vary from purplish-blue to greenish depending on subspecies. Found in humid montane forests and edges in the Andes and adjacent lowlands, typically in the canopy and subcanopy. Forages actively in mixed-species flocks, feeding on small fruits and insects gleaned from foliage."
   photos:
   - file: "DSC_7682.jpg"
     date: "2023-07-12"
