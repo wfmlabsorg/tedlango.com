@@ -1578,14 +1578,14 @@ a.telescope-card:hover {
 .ebird-link:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .species-description {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 2rem;
     padding: 1rem 1.25rem;
     background: var(--bg-secondary);
     border-left: 3px solid var(--accent);
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.6;
-    color: var(--text);
+    color: var(--text-muted);
 }
 
 .species-notes {

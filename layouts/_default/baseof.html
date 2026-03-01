@@ -33,7 +33,7 @@
         <a href="/" class="nav-brand">TED LANGO</a>
         <div class="nav-links">
             {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ with .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
             {{ end }}
         </div>
     </nav>

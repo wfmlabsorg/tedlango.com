@@ -1,4 +1,4 @@
 ---
 title: "Photography"
-description: "Astrophotography, birding, and travel photography"
+description: "Astrophotography and birding photography"
 ---
