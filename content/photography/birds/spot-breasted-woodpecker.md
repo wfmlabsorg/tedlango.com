@@ -3,12 +3,12 @@ title: "Spot-breasted Woodpecker"
 layout: "bird-species"
 description: "Colaptes punctigula — Antioquia, Colombia"
 slug: "spot-breasted-woodpecker"
-date: 2023-12-17
+date: 2023-07-03
 params:
   scientific_name: "Colaptes punctigula"
   location: "Antioquia, Colombia"
-  first_seen: "2023-12-17"
-  photo_count: 2
+  first_seen: "2023-07-03"
+  photo_count: 3
   photos:
   - file: "DSC_9054.jpg"
     date: "2023-12-17"
@@ -24,4 +24,11 @@ params:
     aperture: 6.3
     iso: 400
     focal_length: 460.0
+  - file: "DSC_9060.jpg"
+    date: "2023-12-17"
+    caption: "A Spot-breasted Woodpecker perched on a fence post, black crown, bright red nape, white face, and golden-yellow body speckled with dark spots."
+    shutter: "1/500"
+    aperture: 6.3
+    iso: 400
+    focal_length: 500.0
 ---
