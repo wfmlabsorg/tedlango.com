@@ -2010,7 +2010,28 @@
       "first_seen": "2024-05-12",
       "location": "Antioquia, Colombia",
       "ebird_location": "caracoli",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0583.jpg",
+          "width": 1457,
+          "height": 2185,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 600.0,
+          "iso": 400,
+          "shutter": "1/1000",
+          "aperture": 8.0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Amaga, Colombia",
+          "species": "Brown-throated Parakeet",
+          "scientific_name": "Eupsittula pertinax",
+          "featured": false,
+          "caption": "A Brown-throated Parakeet perched in a tree holding a small fruit, green plumage with brown-olive head and yellowish thighs against overcast sky.",
+          "quality": "good"
+        }
+      ],
       "number": 64,
       "slug": "brown-throated-parakeet"
     },
@@ -2070,7 +2091,28 @@
       "first_seen": "2025-03-19",
       "location": "Antioquia, Colombia",
       "ebird_location": "reserve",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0724.jpg",
+          "width": 908,
+          "height": 908,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 0,
+          "iso": 0,
+          "shutter": "unknown",
+          "aperture": 0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Red-headed Barbet",
+          "scientific_name": "Eubucco bourcierii",
+          "featured": false,
+          "caption": "A male Red-headed Barbet perched on a rope at a feeder, brilliant red head and throat bordered by white, yellow bill, green body with blue throat patch and yellow breast tufts.",
+          "quality": "excellent"
+        }
+      ],
       "number": 70,
       "slug": "red-headed-barbet"
     },
@@ -2080,7 +2122,48 @@
       "first_seen": "2025-03-19",
       "location": "Antioquia, Colombia",
       "ebird_location": "reserve",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0943.jpg",
+          "width": 1679,
+          "height": 1259,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 400.0,
+          "iso": 400,
+          "shutter": "1/125",
+          "aperture": 6.0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Southern Emerald-Toucanet",
+          "scientific_name": "Aulacorhynchus albivitta",
+          "featured": false,
+          "caption": "A Southern Emerald-Toucanet perched on a branch, bright green plumage with blue throat, black-and-yellow bill, and rufous undertail coverts.",
+          "quality": "excellent"
+        },
+        {
+          "file": "DSC_0956.jpg",
+          "width": 1853,
+          "height": 1390,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 400.0,
+          "iso": 400,
+          "shutter": "1/125",
+          "aperture": 6.0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Southern Emerald-Toucanet",
+          "scientific_name": "Aulacorhynchus albivitta",
+          "featured": false,
+          "caption": "A Southern Emerald-Toucanet peering from behind foliage, vivid green plumage, blue throat, and distinctive black-and-yellow bill in close-up.",
+          "quality": "good"
+        }
+      ],
       "number": 71,
       "slug": "southern-emerald-toucanet"
     },
@@ -2090,7 +2173,48 @@
       "first_seen": "2025-03-19",
       "location": "Antioquia, Colombia",
       "ebird_location": "reserve",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0861.jpg",
+          "width": 5333,
+          "height": 4000,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 190.0,
+          "iso": 400,
+          "shutter": "1/30",
+          "aperture": 5.0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Andean Cock-of-the-rock",
+          "scientific_name": "Rupicola peruvianus",
+          "featured": false,
+          "caption": "A male Andean Cock-of-the-Rock perched in cloud forest branches, brilliant orange-red plumage with prominent disk-shaped crest and black wings with silver-gray panels.",
+          "quality": "excellent"
+        },
+        {
+          "file": "20250319_152417.jpg",
+          "width": 4000,
+          "height": 1868,
+          "date": "2025-03-19",
+          "camera": "Samsung Galaxy",
+          "lens": "Phone",
+          "focal_length": 27.2,
+          "iso": 320,
+          "shutter": "1/40",
+          "aperture": 4.9,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Andean Cock-of-the-rock",
+          "scientific_name": "Rupicola peruvianus",
+          "featured": false,
+          "caption": "A male Andean Cock-of-the-Rock hanging upside-down from a branch, blazing orange-red body with prominent crest and black-and-silver wings amid green foliage.",
+          "quality": "good"
+        }
+      ],
       "number": 72,
       "slug": "andean-cock-of-the-rock"
     },
@@ -2100,7 +2224,28 @@
       "first_seen": "2025-03-19",
       "location": "Antioquia, Colombia",
       "ebird_location": "reserve",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0854.jpg",
+          "width": 2852,
+          "height": 2139,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 550.0,
+          "iso": 400,
+          "shutter": "1/10",
+          "aperture": 6.3,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Green Jay",
+          "scientific_name": "Cyanocorax yncas",
+          "featured": false,
+          "caption": "A Green Jay in close-up portrait, electric blue face with frontal crest, black hood, white crown, bright yellow underparts, and green back.",
+          "quality": "excellent"
+        }
+      ],
       "number": 73,
       "slug": "green-jay"
     },
@@ -2110,7 +2255,28 @@
       "first_seen": "2025-03-19",
       "location": "Antioquia, Colombia",
       "ebird_location": "reserve",
-      "photos": [],
+      "photos": [
+        {
+          "file": "DSC_0911.jpg",
+          "width": 2604,
+          "height": 1505,
+          "date": "2025-03-19",
+          "camera": "NIKON D7100",
+          "lens": "150.0-600.0 mm f/5.0-6.3",
+          "focal_length": 420.0,
+          "iso": 400,
+          "shutter": "1/10",
+          "aperture": 6.0,
+          "gps_lat": null,
+          "gps_lon": null,
+          "location": "Jardin, Colombia",
+          "species": "Red-bellied Grackle",
+          "scientific_name": "Hypopyrrhus pyrohypogaster",
+          "featured": false,
+          "caption": "A Red-bellied Grackle in close-up profile, glossy black plumage with vivid scarlet-red belly and rump, orange-red eye, and silvery bill \u2014 a rare Colombian endemic.",
+          "quality": "excellent"
+        }
+      ],
       "number": 74,
       "slug": "red-bellied-grackle"
     },
@@ -3317,6 +3483,6 @@
     }
   ],
   "total_species": 133,
-  "species_with_photos": 43,
-  "total_photos": 87
+  "species_with_photos": 49,
+  "total_photos": 95
 }
