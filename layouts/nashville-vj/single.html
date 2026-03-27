@@ -544,30 +544,41 @@
 
     <!-- MAP -->
     <div class="tab-panel" id="tab-map">
-      <h2 style="margin-bottom: 1rem;">Distance to TriStar Centennial</h2>
-      <div class="map-distance-cards">
+      <h2 style="margin-bottom: 0.5rem;">Distance to TriStar Centennial Medical Center</h2>
+      <p class="prose" style="margin-bottom: 1rem;">2300 Patterson St, Nashville, TN 37203</p>
+
+      <div class="map-distance-cards" id="distance-cards">
         <div class="map-distance-card" style="border-left: 4px solid #e74c3c;">
           <div class="dist-name">Rye Charlotte</div>
-          <div class="dist-value">1.5 mi</div>
-          <div class="dist-detail">~2 min drive</div>
+          <div class="dist-value" id="dist-rye-drive">1.5 mi</div>
+          <div class="dist-detail" id="dist-rye-time">~2 min drive</div>
+          <div class="dist-detail" id="dist-rye-crow" style="color:#bbb; margin-top:0.25rem;">crow flies: loading...</div>
         </div>
         <div class="map-distance-card" style="border-left: 4px solid #3498db;">
           <div class="dist-name">The Reeve</div>
-          <div class="dist-value">2.5 mi</div>
-          <div class="dist-detail">~7-8 min drive</div>
+          <div class="dist-value" id="dist-reeve-drive">2.5 mi</div>
+          <div class="dist-detail" id="dist-reeve-time">~7-8 min drive</div>
+          <div class="dist-detail" id="dist-reeve-crow" style="color:#bbb; margin-top:0.25rem;">crow flies: loading...</div>
         </div>
         <div class="map-distance-card" style="border-left: 4px solid #9b59b6;">
           <div class="dist-name">Modera Nations</div>
-          <div class="dist-value">3.8 mi</div>
-          <div class="dist-detail">~8-10 min drive</div>
+          <div class="dist-value" id="dist-modera-drive">3.8 mi</div>
+          <div class="dist-detail" id="dist-modera-time">~8-10 min drive</div>
+          <div class="dist-detail" id="dist-modera-crow" style="color:#bbb; margin-top:0.25rem;">crow flies: loading...</div>
         </div>
       </div>
+
       <div id="map"></div>
+
       <div class="map-legend">
         <div class="map-legend-item"><div class="map-legend-dot" style="background:#2ecc71;"></div> TriStar Centennial (work)</div>
         <div class="map-legend-item"><div class="map-legend-dot" style="background:#e74c3c;"></div> Rye Charlotte Ave</div>
         <div class="map-legend-item"><div class="map-legend-dot" style="background:#3498db;"></div> The Reeve</div>
         <div class="map-legend-item"><div class="map-legend-dot" style="background:#9b59b6;"></div> Modera Nations</div>
+      </div>
+      <div class="map-legend" style="margin-top: 0;">
+        <div class="map-legend-item"><span style="display:inline-block;width:30px;border-top:3px solid #888;margin-right:0.5rem;"></span> Driving route</div>
+        <div class="map-legend-item"><span style="display:inline-block;width:30px;border-top:2px dashed #888;margin-right:0.5rem;"></span> Crow flies</div>
       </div>
     </div>
 
@@ -712,13 +723,30 @@
       });
     });
 
-    // Map
+    // Map — TriStar Centennial Medical Center, 2300 Patterson St
     const locations = {
-      tristar:  { lat: 36.1580, lng: -86.8006, name: 'TriStar Centennial', color: '#2ecc71' },
-      rye:      { lat: 36.1530, lng: -86.8365, name: 'Rye Charlotte Ave',  color: '#e74c3c' },
-      reeve:    { lat: 36.1595, lng: -86.8230, name: 'The Reeve',          color: '#3498db' },
-      modera:   { lat: 36.1685, lng: -86.8520, name: 'Modera Nations',     color: '#9b59b6' }
+      tristar: { lat: 36.1537, lng: -86.7983, name: 'TriStar Centennial Medical Center', color: '#2ecc71', key: 'tristar' },
+      rye:     { lat: 36.1530, lng: -86.8365, name: 'Rye Charlotte Ave',                 color: '#e74c3c', key: 'rye' },
+      reeve:   { lat: 36.1595, lng: -86.8230, name: 'The Reeve',                         color: '#3498db', key: 'reeve' },
+      modera:  { lat: 36.1685, lng: -86.8520, name: 'Modera Nations',                    color: '#9b59b6', key: 'modera' }
     };
+
+    // Haversine crow-flies distance in miles
+    function crowFliesMi(a, b) {
+      const R = 3958.8;
+      const dLat = (b.lat - a.lat) * Math.PI / 180;
+      const dLng = (b.lng - a.lng) * Math.PI / 180;
+      const s = Math.sin(dLat/2)**2 + Math.cos(a.lat*Math.PI/180) * Math.cos(b.lat*Math.PI/180) * Math.sin(dLng/2)**2;
+      return R * 2 * Math.atan2(Math.sqrt(s), Math.sqrt(1-s));
+    }
+
+    // Fetch driving route from OSRM (free, no key)
+    function fetchRoute(from, to) {
+      const url = 'https://router.project-osrm.org/route/v1/driving/' +
+        from.lng + ',' + from.lat + ';' + to.lng + ',' + to.lat +
+        '?overview=full&geometries=geojson';
+      return fetch(url).then(r => r.json());
+    }
 
     function initMap() {
       const map = L.map('map', { scrollWheelZoom: false }).setView([36.1590, -86.8280], 13);
@@ -729,7 +757,7 @@
         maxZoom: 18
       }).addTo(map);
 
-      // Custom circle markers
+      // Markers
       function makeMarker(loc, radius) {
         return L.circleMarker([loc.lat, loc.lng], {
           radius: radius || 10,
@@ -741,31 +769,59 @@
         }).addTo(map).bindPopup('<strong>' + loc.name + '</strong>');
       }
 
-      // TriStar gets a bigger marker
       makeMarker(locations.tristar, 14);
       makeMarker(locations.rye, 10);
       makeMarker(locations.reeve, 10);
       makeMarker(locations.modera, 10);
 
-      // Dashed lines from each apartment to TriStar
-      const ts = [locations.tristar.lat, locations.tristar.lng];
-      [locations.rye, locations.reeve, locations.modera].forEach(loc => {
-        L.polyline([ts, [loc.lat, loc.lng]], {
+      const ts = locations.tristar;
+      const apartments = [locations.rye, locations.reeve, locations.modera];
+
+      // Crow-flies lines + distance labels
+      apartments.forEach(loc => {
+        const miles = crowFliesMi(ts, loc);
+        // Dashed crow-flies line
+        L.polyline([[ts.lat, ts.lng], [loc.lat, loc.lng]], {
           color: loc.color,
-          weight: 2.5,
-          dashArray: '8, 6',
-          opacity: 0.7
+          weight: 1.5,
+          dashArray: '6, 8',
+          opacity: 0.4
         }).addTo(map);
+        // Update card
+        const el = document.getElementById('dist-' + loc.key + '-crow');
+        if (el) el.textContent = 'crow flies: ' + miles.toFixed(1) + ' mi';
       });
 
-      // Fit bounds with padding
+      // Driving routes from OSRM
+      apartments.forEach(loc => {
+        fetchRoute(loc, ts).then(data => {
+          if (data.code !== 'Ok' || !data.routes.length) return;
+          const route = data.routes[0];
+          const coords = route.geometry.coordinates.map(c => [c[1], c[0]]);
+          // Solid driving route line
+          L.polyline(coords, {
+            color: loc.color,
+            weight: 4,
+            opacity: 0.8
+          }).addTo(map);
+          // Update cards with OSRM distance/time
+          const mi = (route.distance / 1609.34).toFixed(1);
+          const mins = Math.round(route.duration / 60);
+          const driveEl = document.getElementById('dist-' + loc.key + '-drive');
+          const timeEl = document.getElementById('dist-' + loc.key + '-time');
+          if (driveEl) driveEl.textContent = mi + ' mi';
+          if (timeEl) timeEl.textContent = '~' + mins + ' min drive';
+        }).catch(() => {});
+      });
+
+      // Fit bounds
       const bounds = L.latLngBounds(
         Object.values(locations).map(l => [l.lat, l.lng])
       );
       map.fitBounds(bounds, { padding: [40, 40] });
     }
 
-    // Initialize map when its tab is first shown (or on load if visible)
+    // Init map when tab shown
     if (document.getElementById('tab-map').classList.contains('active')) {
       initMap();
     } else {
