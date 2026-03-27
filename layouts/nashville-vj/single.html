@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nashville Apartment Comparison</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f5f0;
+      color: #2d2d2d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Tab navigation */
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0;
+      overflow-x: auto;
+    }
+
+    .tab {
+      padding: 0.75rem 1.25rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #888;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .tab:hover { color: #444; }
+    .tab.active { color: #1a1a1a; border-bottom-color: #c4a35a; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Property cards */
+    .property-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .property-header h2 {
+      font-size: 1.5rem;
+      color: #1a1a1a;
+    }
+
+    .address {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .badges {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge-green { background: #e6f4ea; color: #1e7e34; }
+    .badge-yellow { background: #fff8e1; color: #b8860b; }
+    .badge-blue { background: #e8f0fe; color: #1a73e8; }
+    .badge-red { background: #fce8e6; color: #c5221f; }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+
+    .detail-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      border: 1px solid #e5e5e0;
+    }
+
+    .detail-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #999;
+      margin-bottom: 0.25rem;
+    }
+
+    .detail-card .value {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .detail-card .note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 2rem 0 0.75rem;
+      color: #1a1a1a;
+    }
+
+    .prose {
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .prose strong { color: #2d2d2d; }
+
+    .risk-box {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .risk-box.green {
+      background: #e6f4ea;
+      border-left-color: #34a853;
+    }
+
+    .risk-box .risk-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .risk-box .risk-body {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Comparison table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 2rem;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table th {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+    }
+
+    .comparison-table td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #e5e5e0;
+      vertical-align: top;
+    }
+
+    .comparison-table tr:nth-child(even) { background: #fafaf7; }
+
+    .comparison-table .row-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      white-space: nowrap;
+    }
+
+    .winner { background: #e6f4ea !important; }
+
+    .comparison-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1rem 0 2rem;
+      border-radius: 8px;
+      border: 1px solid #e5e5e0;
+    }
+
+    /* Bottom line cards */
+    .verdict-cards {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .verdict-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.25rem;
+      border: 1px solid #e5e5e0;
+      border-left: 4px solid #c4a35a;
+    }
+
+    .verdict-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .verdict-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Questions section */
+    .questions-list {
+      list-style: none;
+      counter-reset: q;
+    }
+
+    .questions-list li {
+      counter-increment: q;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .questions-list li::before {
+      content: counter(q);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+      color: #aaa;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nashville Apartment Comparison</h1>
+    <p class="subtitle">Three properties compared for April 2026 move-in</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="rye">Rye Charlotte</button>
+      <button class="tab" data-tab="reeve">The Reeve</button>
+      <button class="tab" data-tab="modera">Modera Nations</button>
+      <button class="tab" data-tab="compare">Side-by-Side</button>
+      <button class="tab" data-tab="questions">Tour Questions</button>
+    </div>
+
+    <!-- RYE CHARLOTTE AVE -->
+    <div class="tab-panel active" id="tab-rye">
+      <div class="property-header">
+        <h2>Rye Charlotte Ave</h2>
+        <span class="address">3800 Charlotte Ave — Sylvan Park</span>
+      </div>
+      <div class="badges">
+        <span class="badge badge-green">Best Value</span>
+        <span class="badge badge-green">Closest Commute</span>
+        <span class="badge badge-blue">High Walkability</span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <div class="label">2BR Starting Price</div>
+          <div class="value">~$2,199/mo</div>
+          <div class="note">Lowest of the three</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Concession</div>
+          <div class="value">Up to 3 months free</div>
+          <div class="note">Applications by 3/31/2026</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Drive to TriStar Centennial</div>
+          <div class="value">~2 min (1.5 mi)</div>
+          <div class="note">Closest of all three</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Management</div>
+          <div class="value">Greystar</div>
+          <div class="note">Mixed-to-solid reputation</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Unit Sizes</div>
+          <div class="value">559–1,269 sq ft</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Walkability</div>
+          <div class="value">High</div>
+          <div class="note">Sylvan Park / Charlotte Corridor</div>
+        </div>
+      </div>
+
+      <div class="risk-box">
+        <div class="risk-title">Management Note</div>
+        <div class="risk-body">Greystar is the world's largest apartment operator. Portfolio-wide RentCafe ratings: 4.0 overall, 4.5 for staff and maintenance. Resident reviews for Rye specifically mention feeling safe, helpful staff, and good location. However, Greystar has consistent complaints around communication, maintenance responsiveness, and move-out charges.</div>
+      </div>
+
+      <div class="risk-box">
+        <div class="risk-title">Availability Warning</div>
+        <div class="risk-body">Some listing sites showed no available units at the time of research. Ask during the tour what 2BR units are actually open for your move-in date.</div>
+      </div>
+
+      <h3 class="section-title">Pet Policy</h3>
+      <p class="prose">Pet-friendly with breed restrictions: Rottweiler, Doberman, Pit Bull, Chow, Akita, Presa Canario, Alaskan Malamute, Wolf-Hybrid, or any mix. Pet deposit: $350 for one pet, $600 total for two.</p>
+    </div>
+
+    <!-- THE REEVE -->
+    <div class="tab-panel" id="tab-reeve">
+      <div class="property-header">
+        <h2>The Reeve</h2>
+        <span class="address">405 40th Ave N — Sylvan Park / West End</span>
+      </div>
+      <div class="badges">
+        <span class="badge badge-blue">Best Walkability (85)</span>
+        <span class="badge badge-blue">Near Centennial Park</span>
+        <span class="badge badge-yellow">Boutique Feel</span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <div class="label">2BR Starting Price</div>
+          <div class="value">~$2,700+/mo</div>
+          <div class="note">Highest of the three</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Concession</div>
+          <div class="value">12 weeks free</div>
+          <div class="note">Large concession — may signal leasing struggles</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Drive to TriStar Centennial</div>
+          <div class="value">~7-8 min (2.5 mi)</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Management</div>
+          <div class="value">Roscoe / RPM Living</div>
+          <div class="note">Mixed reputation</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Built</div>
+          <div class="value">2024</div>
+          <div class="note">Brand new, no resident reviews yet</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Size</div>
+          <div class="value">Boutique</div>
+          <div class="note">Small building feel</div>
+        </div>
+      </div>
+
+      <div class="risk-box">
+        <div class="risk-title">Management Warning</div>
+        <div class="risk-body">Roscoe Properties (now RPM Living) has a mixed-to-poor reputation nationally. BBB complaints include overcharging, poor maintenance response, and disputed move-out fees. Employee reviews on Glassdoor and Indeed show recurring themes of disorganization and poor communication. The Reeve is brand new so the on-site team may not yet reflect those corporate patterns — but it's a real risk.</div>
+      </div>
+
+      <h3 class="section-title">Vibe</h3>
+      <p class="prose">Walk score of 85. Near ML Rose, Richland Park Farmer's Market, close to Centennial Park. Studios start around $1,592. The 12-week concession on a new build with zero reviews could signal they're struggling to lease up.</p>
+    </div>
+
+    <!-- MODERA NATIONS -->
+    <div class="tab-panel" id="tab-modera">
+      <div class="property-header">
+        <h2>Modera Nations</h2>
+        <span class="address">1701 54th Ave N — The Nations</span>
+      </div>
+      <div class="badges">
+        <span class="badge badge-green">Best Management</span>
+        <span class="badge badge-green">Resort-Level Amenities</span>
+        <span class="badge badge-yellow">Car-Dependent</span>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card">
+          <div class="label">2BR Starting Price</div>
+          <div class="value">~$2,500+/mo</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Concession</div>
+          <div class="value">Up to 10 weeks free</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Drive to TriStar Centennial</div>
+          <div class="value">~8-10 min (3.8 mi)</div>
+          <div class="note">Farthest of the three</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Management</div>
+          <div class="value">Mill Creek Residential</div>
+          <div class="note">Strong reputation</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Built</div>
+          <div class="value">2025</div>
+          <div class="note">Brand new</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Building Size</div>
+          <div class="value">396 units</div>
+          <div class="note">Large complex</div>
+        </div>
+      </div>
+
+      <div class="risk-box green">
+        <div class="risk-title">Management Strength</div>
+        <div class="risk-body">Mill Creek Residential has a significantly stronger reputation than the other two operators. 4.2/5 on Glassdoor from 328 reviews, with 88% of employees recommending the company. "A" grade on ApartmentRatings from 563 reviews across their portfolio. This is a well-run national developer/operator.</div>
+      </div>
+
+      <h3 class="section-title">Amenities</h3>
+      <p class="prose">Resort-level: bowling alley lounge, spa with saunas and cold plunge, pool, rooftop deck, dog park, pet spa, fitness studio, coworking space, and a riverfront location along the Nashville Greenway.</p>
+
+      <h3 class="section-title">Neighborhood</h3>
+      <p class="prose">The Nations is an up-and-coming neighborhood with breweries, restaurants, and creative energy. Classified as car-dependent — less walkable than the Sylvan Park properties. Parking is $40/month.</p>
+
+      <h3 class="section-title">Pet Policy</h3>
+      <p class="prose">Breed restrictions apply: Pit Bulls, Rottweilers, Dobermans, Mastiffs, Chows, and others are restricted. Worth confirming specific details during the tour.</p>
+    </div>
+
+    <!-- COMPARISON -->
+    <div class="tab-panel" id="tab-compare">
+      <h2 style="margin-bottom: 1rem;">Side-by-Side Comparison</h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Rye Charlotte</th>
+              <th>The Reeve</th>
+              <th>Modera Nations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Address</td>
+              <td>3800 Charlotte Ave</td>
+              <td>405 40th Ave N</td>
+              <td>1701 54th Ave N</td>
+            </tr>
+            <tr>
+              <td class="row-label">Neighborhood</td>
+              <td>Sylvan Park</td>
+              <td>Sylvan Park / West End</td>
+              <td>The Nations</td>
+            </tr>
+            <tr>
+              <td class="row-label">2BR Price</td>
+              <td class="winner">~$2,199</td>
+              <td>~$2,700+</td>
+              <td>~$2,500+</td>
+            </tr>
+            <tr>
+              <td class="row-label">Concession</td>
+              <td>3 months free</td>
+              <td class="winner">12 weeks free</td>
+              <td>10 weeks free</td>
+            </tr>
+            <tr>
+              <td class="row-label">Drive to TriStar</td>
+              <td class="winner">~2 min (1.5 mi)</td>
+              <td>~7-8 min (2.5 mi)</td>
+              <td>~8-10 min (3.8 mi)</td>
+            </tr>
+            <tr>
+              <td class="row-label">Management</td>
+              <td>Greystar (mixed-to-solid)</td>
+              <td>Roscoe/RPM (mixed)</td>
+              <td class="winner">Mill Creek (strong)</td>
+            </tr>
+            <tr>
+              <td class="row-label">Built</td>
+              <td>Recent</td>
+              <td>2024</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td class="row-label">Walkability</td>
+              <td class="winner">High</td>
+              <td class="winner">High (85)</td>
+              <td>Lower (car-dependent)</td>
+            </tr>
+            <tr>
+              <td class="row-label">Amenities</td>
+              <td>Solid</td>
+              <td>Standard new-build</td>
+              <td class="winner">Resort-level</td>
+            </tr>
+            <tr>
+              <td class="row-label">Building Size</td>
+              <td>Mid-size</td>
+              <td>Boutique</td>
+              <td>396 units</td>
+            </tr>
+            <tr>
+              <td class="row-label">Parking</td>
+              <td>Not specified</td>
+              <td>Not specified</td>
+              <td>$40/month</td>
+            </tr>
+            <tr>
+              <td class="row-label">Pet Restrictions</td>
+              <td>Yes (breeds listed)</td>
+              <td>Yes (confirm details)</td>
+              <td>Yes (breeds listed)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="margin: 2rem 0 1rem;">Bottom Line</h2>
+      <div class="verdict-cards">
+        <div class="verdict-card">
+          <h3>Best Value + Closest Commute &rarr; Rye Charlotte Ave</h3>
+          <p>Lowest 2BR price of the three, a strong concession, and only 1.5 miles from the hospital. Greystar management is a moderate risk but better than Roscoe/RPM. Main concern is unit availability — ask during the tour.</p>
+        </div>
+        <div class="verdict-card">
+          <h3>Best Management + Amenities &rarr; Modera Nations</h3>
+          <p>Mill Creek is the most reputable operator of the three. Resort-level amenities and aggressive lease-up pricing. Farther from the hospital and more car-dependent, but still a very reasonable commute.</p>
+        </div>
+        <div class="verdict-card">
+          <h3>Best Walkability + Location &rarr; The Reeve</h3>
+          <p>Great location near Centennial Park, but the highest 2BR price and the weakest management company. The 12-week concession signals possible leasing struggles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOUR QUESTIONS -->
+    <div class="tab-panel" id="tab-questions">
+      <h2 style="margin-bottom: 1rem;">Questions to Ask at All Three</h2>
+      <ol class="questions-list">
+        <li>What's the actual effective monthly rent after the concession is applied? Is it amortized over the full lease or are free months applied upfront?</li>
+        <li>What are ALL mandatory monthly fees beyond base rent? (Trash, pest control, amenity fee, water admin, valet trash, etc. — these add up fast)</li>
+        <li>What's the early lease termination policy and buyout cost?</li>
+        <li>Parking details — covered vs. surface, cost, waitlist?</li>
+        <li>Income requirement — is it 3x rent in combined household income?</li>
+        <li>What 2BR units are available for an April move-in?</li>
+      </ol>
+    </div>
+
+    <div class="footer-note">
+      Researched March 2026. Prices and availability may have changed.
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
