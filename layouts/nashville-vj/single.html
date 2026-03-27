@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nashville Apartment Comparison</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -288,6 +289,77 @@
       font-size: 0.8rem;
       text-align: center;
     }
+
+    /* Map */
+    #map {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      border: 1px solid #e5e5e0;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      #map { height: 380px; }
+    }
+
+    .map-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .map-legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .map-distance-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .map-distance-cards { grid-template-columns: 1fr; }
+    }
+
+    .map-distance-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      border: 1px solid #e5e5e0;
+      text-align: center;
+    }
+
+    .map-distance-card .dist-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .map-distance-card .dist-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .map-distance-card .dist-detail {
+      font-size: 0.8rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
@@ -299,6 +371,7 @@
       <button class="tab active" data-tab="rye">Rye Charlotte</button>
       <button class="tab" data-tab="reeve">The Reeve</button>
       <button class="tab" data-tab="modera">Modera Nations</button>
+      <button class="tab" data-tab="map">Map</button>
       <button class="tab" data-tab="compare">Side-by-Side</button>
       <button class="tab" data-tab="questions">Tour Questions</button>
     </div>
@@ -469,6 +542,35 @@
       <p class="prose">Breed restrictions apply: Pit Bulls, Rottweilers, Dobermans, Mastiffs, Chows, and others are restricted. Worth confirming specific details during the tour.</p>
     </div>
 
+    <!-- MAP -->
+    <div class="tab-panel" id="tab-map">
+      <h2 style="margin-bottom: 1rem;">Distance to TriStar Centennial</h2>
+      <div class="map-distance-cards">
+        <div class="map-distance-card" style="border-left: 4px solid #e74c3c;">
+          <div class="dist-name">Rye Charlotte</div>
+          <div class="dist-value">1.5 mi</div>
+          <div class="dist-detail">~2 min drive</div>
+        </div>
+        <div class="map-distance-card" style="border-left: 4px solid #3498db;">
+          <div class="dist-name">The Reeve</div>
+          <div class="dist-value">2.5 mi</div>
+          <div class="dist-detail">~7-8 min drive</div>
+        </div>
+        <div class="map-distance-card" style="border-left: 4px solid #9b59b6;">
+          <div class="dist-name">Modera Nations</div>
+          <div class="dist-value">3.8 mi</div>
+          <div class="dist-detail">~8-10 min drive</div>
+        </div>
+      </div>
+      <div id="map"></div>
+      <div class="map-legend">
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#2ecc71;"></div> TriStar Centennial (work)</div>
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#e74c3c;"></div> Rye Charlotte Ave</div>
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#3498db;"></div> The Reeve</div>
+        <div class="map-legend-item"><div class="map-legend-dot" style="background:#9b59b6;"></div> Modera Nations</div>
+      </div>
+    </div>
+
     <!-- COMPARISON -->
     <div class="tab-panel" id="tab-compare">
       <h2 style="margin-bottom: 1rem;">Side-by-Side Comparison</h2>
@@ -594,15 +696,84 @@
     </div>
   </div>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
+    // Tab switching
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+        // Leaflet needs invalidateSize when map becomes visible
+        if (tab.dataset.tab === 'map' && window._map) {
+          setTimeout(() => window._map.invalidateSize(), 100);
+        }
       });
     });
+
+    // Map
+    const locations = {
+      tristar:  { lat: 36.1580, lng: -86.8006, name: 'TriStar Centennial', color: '#2ecc71' },
+      rye:      { lat: 36.1530, lng: -86.8365, name: 'Rye Charlotte Ave',  color: '#e74c3c' },
+      reeve:    { lat: 36.1595, lng: -86.8230, name: 'The Reeve',          color: '#3498db' },
+      modera:   { lat: 36.1685, lng: -86.8520, name: 'Modera Nations',     color: '#9b59b6' }
+    };
+
+    function initMap() {
+      const map = L.map('map', { scrollWheelZoom: false }).setView([36.1590, -86.8280], 13);
+      window._map = map;
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      // Custom circle markers
+      function makeMarker(loc, radius) {
+        return L.circleMarker([loc.lat, loc.lng], {
+          radius: radius || 10,
+          fillColor: loc.color,
+          color: '#fff',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.9
+        }).addTo(map).bindPopup('<strong>' + loc.name + '</strong>');
+      }
+
+      // TriStar gets a bigger marker
+      makeMarker(locations.tristar, 14);
+      makeMarker(locations.rye, 10);
+      makeMarker(locations.reeve, 10);
+      makeMarker(locations.modera, 10);
+
+      // Dashed lines from each apartment to TriStar
+      const ts = [locations.tristar.lat, locations.tristar.lng];
+      [locations.rye, locations.reeve, locations.modera].forEach(loc => {
+        L.polyline([ts, [loc.lat, loc.lng]], {
+          color: loc.color,
+          weight: 2.5,
+          dashArray: '8, 6',
+          opacity: 0.7
+        }).addTo(map);
+      });
+
+      // Fit bounds with padding
+      const bounds = L.latLngBounds(
+        Object.values(locations).map(l => [l.lat, l.lng])
+      );
+      map.fitBounds(bounds, { padding: [40, 40] });
+    }
+
+    // Initialize map when its tab is first shown (or on load if visible)
+    if (document.getElementById('tab-map').classList.contains('active')) {
+      initMap();
+    } else {
+      let mapInit = false;
+      document.querySelector('[data-tab="map"]').addEventListener('click', function() {
+        if (!mapInit) { setTimeout(initMap, 150); mapInit = true; }
+      });
+    }
   </script>
 </body>
 </html>
