@@ -281,6 +281,59 @@
       flex-shrink: 0;
     }
 
+    /* Lease tab */
+    .lease-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .lease-table td {
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #e5e5e0;
+    }
+
+    .lease-table td:first-child {
+      font-weight: 600;
+      color: #1a1a1a;
+      white-space: nowrap;
+      width: 40%;
+    }
+
+    .lease-table tr:nth-child(even) { background: #fafaf7; }
+
+    .lease-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      border: 1px solid #e5e5e0;
+      margin-bottom: 0.75rem;
+    }
+
+    .lease-item h4 {
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      margin-bottom: 0.35rem;
+    }
+
+    .lease-item p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .alert-box {
+      background: #fce8e6;
+      border-left: 4px solid #c5221f;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+
+    .alert-box .risk-title { color: #c5221f; }
+    .alert-box .risk-body { font-size: 0.9rem; color: #555; }
+
     .footer-note {
       margin-top: 3rem;
       padding-top: 1.5rem;
@@ -373,6 +426,7 @@
       <button class="tab" data-tab="modera">Modera Nations</button>
       <button class="tab" data-tab="map">Map</button>
       <button class="tab" data-tab="compare">Side-by-Side</button>
+      <button class="tab" data-tab="lease">Lease</button>
       <button class="tab" data-tab="questions">Tour Questions</button>
     </div>
 
@@ -685,6 +739,150 @@
         <div class="verdict-card">
           <h3>Best Walkability + Location &rarr; The Reeve</h3>
           <p>Great location near Centennial Park, but the highest 2BR price and the weakest management company. The 12-week concession signals possible leasing struggles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEASE REVIEW -->
+    <div class="tab-panel" id="tab-lease">
+      <div class="property-header">
+        <h2>Lease Review: The Reeve &mdash; Unit 407</h2>
+      </div>
+      <p class="prose">405 40th Ave N, Nashville, TN 37209 &bull; Lease dated March 28, 2026 &bull; Term: April 8, 2026 &ndash; July 7, 2027 (15 months)</p>
+      <p class="prose">Management: RangeWater Real Estate LLC &bull; Locator: Apt Insiders &ndash; Hallie Bryant</p>
+
+      <div class="risk-box green" style="margin-bottom: 1.5rem;">
+        <div class="risk-title">Verdict: Standard Tennessee NAA Lease</div>
+        <div class="risk-body">National Apartment Association standard form for Tennessee. Nothing unusual or predatory. Several provisions worth understanding before signing.</div>
+      </div>
+
+      <h3 class="section-title">Key Financial Terms</h3>
+      <div class="comparison-wrapper">
+        <table class="lease-table">
+          <tr><td>Total Monthly Rent</td><td>$2,799/mo</td></tr>
+          <tr><td>One-Time Concession</td><td>$8,397 (3 months free: May, Jun, Jul 2026)</td></tr>
+          <tr><td>Monthly Discount</td><td>$211/mo off suggested rate</td></tr>
+          <tr><td>Prorated Rent (1st month)</td><td>$2,145.90 due April 8</td></tr>
+          <tr><td>Security Deposit</td><td>$300</td></tr>
+          <tr><td>Total Due at Move-In</td><td>$2,203.40</td></tr>
+          <tr><td>Reletting Charge</td><td>$2,799 (100% of one month's rent)</td></tr>
+          <tr><td>Late Fee</td><td>10% of rent after the 5th</td></tr>
+          <tr><td>NSF/Returned Check</td><td>$30</td></tr>
+          <tr><td>Notice to Vacate</td><td>60 days written notice</td></tr>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        <div class="risk-title">Concession Clawback &mdash; Read This Carefully</div>
+        <div class="risk-body">
+          <p style="margin-bottom:0.5rem;">You receive $8,397 in free rent plus $211/mo monthly discount. <strong>If the lease is terminated early due to default</strong> (non-payment, eviction, abandonment), you must immediately repay ALL concessions and discounts received, plus locator fees.</p>
+          <p style="margin-bottom:0.5rem;"><strong>Total exposure if broken early: potentially $12,000+</strong> between repaid concessions ($8,397), reletting charge ($2,799), and locator fees.</p>
+          <p>The "3 months free" is conditional on completing the full 15-month term.</p>
+        </div>
+      </div>
+
+      <h3 class="section-title">Things to Be Aware Of</h3>
+
+      <div class="lease-item">
+        <h4>1. 60-Day Notice Requirement</h4>
+        <p>Must give <strong>60 days' written notice</strong> before lease end or before moving out during renewal. Failure to give proper notice = responsible for an additional month's rent. Mark the calendar: <strong>submit written notice no later than May 8, 2027.</strong></p>
+      </div>
+
+      <div class="lease-item">
+        <h4>2. Automatic Month-to-Month Renewal</h4>
+        <p>Auto-renews month-to-month after July 7, 2027 unless proper 60-day notice is given. Rent can be increased during month-to-month.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>3. Joint and Several Liability</h4>
+        <p>Both residents are <strong>jointly and severally liable</strong> for all obligations. If one roommate doesn't pay, the other is fully responsible for the entire amount. If one roommate's guest causes damage, both are liable.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>4. Reletting Charge = $2,799</h4>
+        <p>Breaking the lease early triggers a $2,799 reletting charge (one full month), <strong>plus</strong> continued rent liability until a new tenant is found, <strong>plus</strong> the concession clawback above.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>5. True Monthly Cost</h4>
+        <p>$2,799 rent + $75 community bundle (trash/pest/amenity) + ~$50-80 water/sewer + electricity + internet = <strong>likely $3,000&ndash;$3,100/month all-in</strong> during months when rent is paid.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>6. Liability Insurance Required</h4>
+        <p>Must maintain <strong>$100,000 personal liability insurance</strong> throughout the lease. Failure is an "immediate, material, and incurable default." Renter's insurance with liability coverage satisfies this. Get it before move-in.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>7. No Package Acceptance</h4>
+        <p>Office does not accept packages and won't be liable for missing deliveries. Plan for Amazon lockers or on-site package lockers.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>8. Parking</h4>
+        <p>Managed by Parkade (third-party). Two vehicles registered: 2025 Acura Integra (FL) and 2017 Ford Focus (FL). No parking fee listed. Unregistered vehicles can be towed without notice.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>9. No Smoking Anywhere</h4>
+        <p>Prohibited inside all buildings <strong>and</strong> on balconies/patios. Includes e-cigarettes and vaporizers. Violation is a material breach.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>10. No Short-Term Subletting</h4>
+        <p>Airbnb and similar platforms are explicitly prohibited. Material lease violation.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>11. Move-Out Inspection</h4>
+        <p>Right to be present for a scheduled mutual move-out inspection. <strong>If you fail to attend, you waive the right to contest damage charges.</strong> Schedule proactively.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>12. Washer/Dryer Included</h4>
+        <p>Full-size W/D in-unit at no extra cost. Report issues promptly &mdash; you're liable for damage from unreported leaks.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>13. Pet Policy</h4>
+        <p>No pets currently. Up to 2 allowed with approval and new addendum. Extensive breed restrictions (Pit Bulls, Rottweilers, German Shepherds, Chows, Akitas, Dobermans, Mastiffs, and more).</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>14. Homebody Rent Reporting</h4>
+        <p>Auto-enrolled at <strong>$9.95/month</strong> ($14.95 for both residents). This is optional &mdash; cancel within the first month if you don't want it.</p>
+      </div>
+
+      <div class="lease-item">
+        <h4>15. Holdover Penalty</h4>
+        <p>Staying past move-out date = <strong>125% of rent</strong> on a daily basis, no notice required. Don't overstay by even a day.</p>
+      </div>
+
+      <h3 class="section-title">Bottom Line</h3>
+      <div class="verdict-cards">
+        <div class="verdict-card" style="border-left-color: #c5221f;">
+          <h3>The concession clawback is real</h3>
+          <p>Breaking this lease early could cost $12,000+ between repaid concessions, reletting charges, and locator fees.</p>
+        </div>
+        <div class="verdict-card" style="border-left-color: #f9a825;">
+          <h3>60 days notice, not 30</h3>
+          <p>Mark May 8, 2027 on the calendar now.</p>
+        </div>
+        <div class="verdict-card" style="border-left-color: #f9a825;">
+          <h3>Both roommates are on the hook</h3>
+          <p>Joint and several liability means each person is responsible for 100% of everything.</p>
+        </div>
+        <div class="verdict-card" style="border-left-color: #1a73e8;">
+          <h3>Budget ~$3,000&ndash;$3,100/month all-in</h3>
+          <p>Not $2,799. Factor in community bundle, utilities, and insurance.</p>
+        </div>
+        <div class="verdict-card" style="border-left-color: #c5221f;">
+          <h3>Get renter's insurance before move-in</h3>
+          <p>$100K liability coverage is a lease requirement, not optional.</p>
+        </div>
+        <div class="verdict-card" style="border-left-color: #f9a825;">
+          <h3>Cancel Homebody Rent Reporting</h3>
+          <p>Unless you want the $9.95&ndash;$14.95/month charge for credit bureau reporting.</p>
         </div>
       </div>
     </div>
