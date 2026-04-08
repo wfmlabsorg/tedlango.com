@@ -9,8 +9,8 @@
             "name": "Ted Lango",
             "givenName": "Ted",
             "familyName": "Lango",
-            "jobTitle": "Workforce Transformation & Applied Intelligence",
-            "description": "Senior operations executive turning operational data into decisions across Fortune 100 service operations",
+            "jobTitle": "Workforce Transformation Strategist",
+            "description": "Senior operations executive building adaptive workforce systems for the Human-AI Era",
             "url": "https://tedlango.com",
             "sameAs": [
                 "https://linkedin.com/in/tedlango",
@@ -18,12 +18,11 @@
                 "https://amazon.com/author/tedlango"
             ],
             "knowsAbout": [
-                "Workforce Transformation",
-                "Applied Intelligence",
+                "Workforce Management",
                 "Contact Center Operations",
                 "AI Implementation",
-                "Causal Analytics",
-                "Operations Research"
+                "Operations Research",
+                "Digital Transformation"
             ],
             "workLocation": {
                 "@type": "Place",
@@ -56,8 +55,8 @@
 {{ define "main" }}
 <header class="hero">
     <h1>TED LANGO</h1>
-    <p class="subtitle">Workforce Transformation & Applied Intelligence</p>
-    <p class="tagline">Turning operational data into decisions across Fortune 100 service operations</p>
+    <p class="subtitle">Workforce Transformation Strategist</p>
+    <p class="tagline">Building Adaptive Systems for the Human-AI Era</p>
     <div class="status">
         <span class="status-dot"></span>
         <span>Available for opportunities</span>
@@ -65,11 +64,11 @@
 </header>
 
 <section id="about" class="section">
-    <h2>Applied Intelligence</h2>
+    <h2>The Moment</h2>
     <p>We're entering an era where the distribution of work between human agents and AI agents will be fluid — ebbing and flowing based on technology maturity, regulatory shifts, cost dynamics, and customer expectations.</p>
     <p><strong>Organizations that build rigid systems optimized for today's distribution will be disrupted.</strong></p>
     <p><strong>Organizations that build adaptive systems designed for continuous rebalancing will thrive.</strong></p>
-    <p>Applied Intelligence is the practice of using AI, causal analytics, and operational data to turn insight into action at the point of decision. The organizations winning with AI aren't using smarter models — they're building better scaffolding. I build the infrastructure that connects human expertise to AI capability.</p>
+    <p>The organizations winning with AI aren't using smarter models — they're building better scaffolding. I build the infrastructure that connects human expertise to AI capability.</p>
 </section>
 
 <section class="section">
@@ -94,8 +93,8 @@
             <p>I operate at the intersection of strategy, operations, and technology — accelerating transformation timelines and reducing implementation risk.</p>
         </div>
         <div class="offer-item">
-            <h3>Applied Intelligence Design</h3>
-            <p>I build the systems that turn AI from a tool into a decision engine. Deterministic code handles precision, probabilistic models handle uncertainty — and the scaffolding connects them.</p>
+            <h3>AI Infrastructure Design</h3>
+            <p>I don't build AI solutions — I build the scaffolding that makes AI solutions work. Systems where deterministic code handles precision and probabilistic models handle uncertainty.</p>
         </div>
     </div>
 </section>
@@ -233,7 +232,7 @@
 
     <div class="framework-tier">
         <h3>Models</h3>
-        <p class="models-intro">Mental frameworks that form the applied intelligence layer — where data becomes decisions:</p>
+        <p class="models-intro">Mental frameworks that guide decisions and actions:</p>
         <div class="models-grid">
             <div class="model-card">
                 <h4>StoicGraph</h4>
@@ -331,31 +330,6 @@
   -d '{"jsonrpc":"2.0","method":"get_mission","id":1}'</pre>
     </div>
     <a href="https://living-resume-api.tedlango.workers.dev/" target="_blank" class="btn">API Documentation</a>
-
-    <div class="api-explorer">
-        <div class="explorer-header">
-            <span class="explorer-title">Interactive Explorer</span>
-            <span class="explorer-hint">The future of recruiting is API-first</span>
-        </div>
-        <div class="explorer-suggestions">
-            <button class="suggestion-chip" data-endpoint="/about">Who is Ted?</button>
-            <button class="suggestion-chip" data-endpoint="/experience">Career history</button>
-            <button class="suggestion-chip" data-endpoint="/accomplishments">Accomplishments</button>
-            <button class="suggestion-chip" data-endpoint="/track-record">Key stats</button>
-            <button class="suggestion-chip" data-endpoint="/seeking">What he's seeking</button>
-            <button class="suggestion-chip" data-endpoint="/skills">Skills</button>
-            <button class="suggestion-chip" data-endpoint="/thesis">Core thesis</button>
-            <button class="suggestion-chip" data-endpoint="/recruiter-summary">Recruiter summary</button>
-        </div>
-        <div class="explorer-input-row">
-            <span class="explorer-prompt">GET</span>
-            <input type="text" class="explorer-input" placeholder="/about, /experience, /skills ..." value="/about" id="apiInput" autocomplete="off" spellcheck="false">
-            <button class="explorer-send" id="apiSend">Send</button>
-        </div>
-        <div class="explorer-response" id="apiResponse">
-            <pre class="explorer-json" id="apiJson"><span class="json-muted">// Click "Send" or choose a query above to explore the API live</span></pre>
-        </div>
-    </div>
 </section>
 
 <section class="section">
@@ -379,85 +353,5 @@
         </a>
     </div>
 </section>
-
-<script>
-(function() {
-    const API_BASE = '{{ .Site.Params.apiBase }}';
-    const input = document.getElementById('apiInput');
-    const sendBtn = document.getElementById('apiSend');
-    const jsonEl = document.getElementById('apiJson');
-    const chips = document.querySelectorAll('.suggestion-chip');
-
-    function formatJson(obj, indent) {
-        indent = indent || 0;
-        const pad = '  '.repeat(indent);
-        const padInner = '  '.repeat(indent + 1);
-
-        if (obj === null) return '<span class="json-null">null</span>';
-        if (typeof obj === 'boolean') return '<span class="json-bool">' + obj + '</span>';
-        if (typeof obj === 'number') return '<span class="json-num">' + obj + '</span>';
-        if (typeof obj === 'string') {
-            const escaped = obj.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            return '<span class="json-str">"' + escaped + '"</span>';
-        }
-
-        if (Array.isArray(obj)) {
-            if (obj.length === 0) return '[]';
-            // Compact arrays of simple values
-            if (obj.length <= 4 && obj.every(function(v) { return typeof v === 'string' && v.length < 30; })) {
-                return '[' + obj.map(function(v) { return formatJson(v, indent); }).join(', ') + ']';
-            }
-            var items = obj.map(function(v) { return padInner + formatJson(v, indent + 1); });
-            return '[\n' + items.join(',\n') + '\n' + pad + ']';
-        }
-
-        if (typeof obj === 'object') {
-            var keys = Object.keys(obj);
-            if (keys.length === 0) return '{}';
-            var entries = keys.map(function(k) {
-                return padInner + '<span class="json-key">"' + k + '"</span>: ' + formatJson(obj[k], indent + 1);
-            });
-            return '{\n' + entries.join(',\n') + '\n' + pad + '}';
-        }
-
-        return String(obj);
-    }
-
-    function fetchEndpoint(path) {
-        if (!path.startsWith('/')) path = '/' + path;
-        input.value = path;
-        jsonEl.innerHTML = '<span class="json-muted">// Fetching ' + path.replace(/</g, '&lt;') + ' ...</span>';
-        sendBtn.disabled = true;
-
-        fetch(API_BASE + path)
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                // Show only the data payload if it exists, skip meta
-                var display = data.data || data;
-                jsonEl.innerHTML = formatJson(display, 0);
-            })
-            .catch(function(err) {
-                jsonEl.innerHTML = '<span class="json-err">// Error: ' + err.message + '</span>';
-            })
-            .finally(function() {
-                sendBtn.disabled = false;
-            });
-    }
-
-    sendBtn.addEventListener('click', function() {
-        fetchEndpoint(input.value.trim());
-    });
-
-    input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') fetchEndpoint(input.value.trim());
-    });
-
-    chips.forEach(function(chip) {
-        chip.addEventListener('click', function() {
-            fetchEndpoint(chip.getAttribute('data-endpoint'));
-        });
-    });
-})();
-</script>
 
 {{ end }}
