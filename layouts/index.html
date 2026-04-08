@@ -337,16 +337,24 @@
                 <span class="agent-dot"></span>
                 <span class="agent-title">Ask the Resume Agent</span>
             </div>
-            <span class="agent-subtitle">AI-powered answers from the Living Resume API</span>
+            <span class="agent-badge">Powered by Claude</span>
         </div>
         <div class="agent-messages" id="agentMessages">
             <div class="agent-msg agent-msg-assistant">
-                <p>I have access to Ted's full professional profile via the Living Resume API. Ask me anything — experience, skills, what he's looking for, track record, or how he could fit your team.</p>
+                <div class="agent-msg-content"><p>I have access to Ted's full professional profile. Ask me anything — experience, skills, what he's looking for, track record, or how he could fit your team.</p></div>
             </div>
         </div>
+        <div class="agent-suggestions">
+            <button class="agent-chip" data-q="What's Ted's experience with AI?">AI experience</button>
+            <button class="agent-chip" data-q="What are Ted's key accomplishments?">Accomplishments</button>
+            <button class="agent-chip" data-q="What kind of role is Ted looking for?">Job search</button>
+            <button class="agent-chip" data-q="Would Ted be a good fit for a VP Operations role?">VP Ops fit</button>
+        </div>
         <div class="agent-input-row">
-            <input type="text" class="agent-input" id="agentInput" placeholder="e.g. What's Ted's experience with AI?" autocomplete="off" spellcheck="false" maxlength="500">
-            <button class="agent-send" id="agentSend">Ask</button>
+            <input type="text" class="agent-input" id="agentInput" placeholder="Ask about Ted's background, skills, experience..." autocomplete="off" spellcheck="false" maxlength="500">
+            <button class="agent-send" id="agentSend">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
         </div>
     </div>
 </section>
@@ -378,29 +386,81 @@
     var AGENT_URL = '{{ .Site.Params.agentBase }}';
     var input = document.getElementById('agentInput');
     var sendBtn = document.getElementById('agentSend');
-    var messages = document.getElementById('agentMessages');
+    var msgContainer = document.getElementById('agentMessages');
+    var chips = document.querySelectorAll('.agent-chip');
+    var suggestions = document.querySelector('.agent-suggestions');
 
-    function addMessage(text, role) {
+    // Simple markdown to HTML: bold, bullets, numbered lists, paragraphs
+    function md(text) {
+        var escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        // Split into blocks by double newline
+        var blocks = escaped.split(/\n\n+/);
+        var html = '';
+        for (var i = 0; i < blocks.length; i++) {
+            var block = blocks[i].trim();
+            if (!block) continue;
+            var lines = block.split('\n');
+            // Check if block is a list
+            var isBullet = lines.every(function(l) { return /^\s*[-*]\s/.test(l) || !l.trim(); });
+            var isNumbered = lines.every(function(l) { return /^\s*\d+[\.\)]\s/.test(l) || !l.trim(); });
+            if (isBullet) {
+                html += '<ul>' + lines.map(function(l) {
+                    var content = l.replace(/^\s*[-*]\s+/, '');
+                    return content ? '<li>' + inline(content) + '</li>' : '';
+                }).join('') + '</ul>';
+            } else if (isNumbered) {
+                html += '<ol>' + lines.map(function(l) {
+                    var content = l.replace(/^\s*\d+[\.\)]\s+/, '');
+                    return content ? '<li>' + inline(content) + '</li>' : '';
+                }).join('') + '</ol>';
+            } else {
+                html += '<p>' + inline(lines.join('<br>')) + '</p>';
+            }
+        }
+        return html || '<p>' + inline(escaped) + '</p>';
+    }
+
+    function inline(s) {
+        // Bold: **text**
+        s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        // Italic: *text* (but not inside bold)
+        s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        // Inline code
+        s = s.replace(/`(.+?)`/g, '<code>$1</code>');
+        return s;
+    }
+
+    function addMsg(content, role, isHtml) {
         var div = document.createElement('div');
         div.className = 'agent-msg agent-msg-' + role;
-        var p = document.createElement('p');
-        p.textContent = text;
-        div.appendChild(p);
-        messages.appendChild(div);
-        messages.scrollTop = messages.scrollHeight;
+        if (role === 'user') {
+            var p = document.createElement('p');
+            p.textContent = content;
+            div.appendChild(p);
+        } else {
+            var inner = document.createElement('div');
+            inner.className = 'agent-msg-content';
+            inner.innerHTML = isHtml ? content : md(content);
+            div.appendChild(inner);
+        }
+        msgContainer.appendChild(div);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
         return div;
     }
 
-    function send() {
-        var question = input.value.trim();
+    function send(question) {
+        if (!question) question = input.value.trim();
         if (!question) return;
 
-        addMessage(question, 'user');
+        // Hide suggestions after first real question
+        if (suggestions) suggestions.style.display = 'none';
+
+        addMsg(question, 'user');
         input.value = '';
         sendBtn.disabled = true;
         input.disabled = true;
 
-        var thinking = addMessage('Thinking...', 'thinking');
+        var thinking = addMsg('<p class="thinking-text">Querying profile data...</p>', 'thinking', true);
 
         fetch(AGENT_URL, {
             method: 'POST',
@@ -409,12 +469,12 @@
         })
         .then(function(r) { return r.json(); })
         .then(function(data) {
-            messages.removeChild(thinking);
-            addMessage(data.response || data.error || 'No response', 'assistant');
+            msgContainer.removeChild(thinking);
+            addMsg(data.response || data.error || 'No response', 'assistant');
         })
         .catch(function() {
-            messages.removeChild(thinking);
-            addMessage('Something went wrong. Try again.', 'assistant');
+            msgContainer.removeChild(thinking);
+            addMsg('Something went wrong. Try again.', 'assistant');
         })
         .finally(function() {
             sendBtn.disabled = false;
@@ -423,9 +483,14 @@
         });
     }
 
-    sendBtn.addEventListener('click', send);
+    sendBtn.addEventListener('click', function() { send(); });
     input.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') send();
+    });
+    chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+            send(chip.getAttribute('data-q'));
+        });
     });
 })();
 </script>
