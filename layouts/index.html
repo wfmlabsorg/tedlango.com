@@ -353,9 +353,7 @@
             <button class="explorer-send" id="apiSend">Send</button>
         </div>
         <div class="explorer-response" id="apiResponse">
-            <div class="explorer-content" id="apiContent">
-                <p class="explorer-placeholder">Click "Send" or choose a query above to explore the API live</p>
-            </div>
+            <pre class="explorer-json" id="apiJson"><span class="json-muted">// Click "Send" or choose a query above to explore the API live</span></pre>
         </div>
     </div>
 </section>
@@ -384,149 +382,62 @@
 
 <script>
 (function() {
-    var API_BASE = '{{ .Site.Params.apiBase }}';
-    var input = document.getElementById('apiInput');
-    var sendBtn = document.getElementById('apiSend');
-    var contentEl = document.getElementById('apiContent');
-    var chips = document.querySelectorAll('.suggestion-chip');
+    const API_BASE = '{{ .Site.Params.apiBase }}';
+    const input = document.getElementById('apiInput');
+    const sendBtn = document.getElementById('apiSend');
+    const jsonEl = document.getElementById('apiJson');
+    const chips = document.querySelectorAll('.suggestion-chip');
 
-    function esc(s) {
-        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    }
+    function formatJson(obj, indent) {
+        indent = indent || 0;
+        const pad = '  '.repeat(indent);
+        const padInner = '  '.repeat(indent + 1);
 
-    function label(key) {
-        return key.replace(/_/g, ' ').replace(/\b\w/g, function(c){ return c.toUpperCase(); });
-    }
-
-    // Render a single value as readable HTML
-    function renderValue(val) {
-        if (val === null || val === undefined) return '';
-        if (typeof val === 'boolean') return val ? 'Yes' : 'No';
-        if (typeof val === 'number') return '<strong>' + val + '</strong>';
-        if (typeof val === 'string') return esc(val);
-        if (Array.isArray(val)) {
-            if (val.length === 0) return '<em>None</em>';
-            // Array of strings → bullet list
-            if (typeof val[0] === 'string') {
-                return '<ul class="rv-list">' + val.map(function(v){ return '<li>' + esc(v) + '</li>'; }).join('') + '</ul>';
-            }
-            // Array of objects → render each as a card
-            return val.map(function(item){ return renderObject(item); }).join('');
-        }
-        if (typeof val === 'object') return renderObject(val);
-        return esc(val);
-    }
-
-    // Render an object as a readable card
-    function renderObject(obj) {
-        var keys = Object.keys(obj);
-        if (keys.length === 0) return '';
-
-        // Detect a "titled" card — find a heading from common fields
-        var headingKeys = ['title','name','company','role','label','headline','degree','stat','value','category'];
-        var heading = '';
-        var subtitle = '';
-        for (var i = 0; i < headingKeys.length; i++) {
-            if (obj[headingKeys[i]] && typeof obj[headingKeys[i]] === 'string') {
-                heading = obj[headingKeys[i]];
-                break;
-            }
-        }
-        // Subtitle from secondary fields
-        var subKeys = ['company','dates','location','institution','type','context','source'];
-        for (var j = 0; j < subKeys.length; j++) {
-            if (obj[subKeys[j]] && typeof obj[subKeys[j]] === 'string' && obj[subKeys[j]] !== heading) {
-                subtitle += (subtitle ? ' · ' : '') + esc(obj[subKeys[j]]);
-            }
+        if (obj === null) return '<span class="json-null">null</span>';
+        if (typeof obj === 'boolean') return '<span class="json-bool">' + obj + '</span>';
+        if (typeof obj === 'number') return '<span class="json-num">' + obj + '</span>';
+        if (typeof obj === 'string') {
+            const escaped = obj.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return '<span class="json-str">"' + escaped + '"</span>';
         }
 
-        var html = '<div class="rv-card">';
-        if (heading) html += '<div class="rv-heading">' + esc(heading) + '</div>';
-        if (subtitle) html += '<div class="rv-subtitle">' + subtitle + '</div>';
-
-        // Render remaining fields
-        var skip = {};
-        if (heading) { for (var h = 0; h < headingKeys.length; h++) { if (obj[headingKeys[h]] === heading) { skip[headingKeys[h]] = true; break; } } }
-        for (var s = 0; s < subKeys.length; s++) skip[subKeys[s]] = true;
-        // Also skip keywords/tags at the bottom
-        var deferKeys = ['keywords','tags','key_terms'];
-        for (var d = 0; d < deferKeys.length; d++) skip[deferKeys[d]] = true;
-
-        for (var k = 0; k < keys.length; k++) {
-            var key = keys[k];
-            if (skip[key]) continue;
-            var val = obj[key];
-            if (val === null || val === undefined) continue;
-            if (typeof val === 'string') {
-                html += '<div class="rv-field"><span class="rv-label">' + label(key) + '</span> ' + esc(val) + '</div>';
-            } else if (typeof val === 'number' || typeof val === 'boolean') {
-                html += '<div class="rv-field"><span class="rv-label">' + label(key) + '</span> ' + renderValue(val) + '</div>';
-            } else if (Array.isArray(val) && val.length > 0 && typeof val[0] === 'string') {
-                html += '<div class="rv-field"><span class="rv-label">' + label(key) + '</span>' + renderValue(val) + '</div>';
-            } else {
-                html += '<div class="rv-field"><span class="rv-label">' + label(key) + '</span>' + renderValue(val) + '</div>';
+        if (Array.isArray(obj)) {
+            if (obj.length === 0) return '[]';
+            // Compact arrays of simple values
+            if (obj.length <= 4 && obj.every(function(v) { return typeof v === 'string' && v.length < 30; })) {
+                return '[' + obj.map(function(v) { return formatJson(v, indent); }).join(', ') + ']';
             }
+            var items = obj.map(function(v) { return padInner + formatJson(v, indent + 1); });
+            return '[\n' + items.join(',\n') + '\n' + pad + ']';
         }
 
-        // Render tags/keywords as pills at bottom
-        for (var t = 0; t < deferKeys.length; t++) {
-            if (obj[deferKeys[t]] && Array.isArray(obj[deferKeys[t]])) {
-                html += '<div class="rv-tags">' + obj[deferKeys[t]].map(function(v){ return '<span class="rv-tag">' + esc(v) + '</span>'; }).join('') + '</div>';
-            }
+        if (typeof obj === 'object') {
+            var keys = Object.keys(obj);
+            if (keys.length === 0) return '{}';
+            var entries = keys.map(function(k) {
+                return padInner + '<span class="json-key">"' + k + '"</span>: ' + formatJson(obj[k], indent + 1);
+            });
+            return '{\n' + entries.join(',\n') + '\n' + pad + '}';
         }
 
-        html += '</div>';
-        return html;
-    }
-
-    // Top-level render — decides layout based on data shape
-    function render(data) {
-        if (typeof data === 'string') return '<p>' + esc(data) + '</p>';
-        if (Array.isArray(data)) {
-            if (data.length === 0) return '<p class="explorer-placeholder">No data</p>';
-            return data.map(function(item){
-                if (typeof item === 'object' && item !== null) return renderObject(item);
-                return '<p>' + renderValue(item) + '</p>';
-            }).join('');
-        }
-        if (typeof data === 'object' && data !== null) {
-            // If flat-ish object with mostly string values, render as profile
-            var keys = Object.keys(data);
-            // Check if it has nested arrays/objects
-            var hasComplex = keys.some(function(k){ return Array.isArray(data[k]) || (typeof data[k] === 'object' && data[k] !== null); });
-            if (!hasComplex || keys.length <= 12) {
-                return renderObject(data);
-            }
-            // Complex object — render section by section
-            var html = '';
-            for (var i = 0; i < keys.length; i++) {
-                var key = keys[i];
-                var val = data[key];
-                if (typeof val === 'string' || typeof val === 'number' || typeof val === 'boolean') {
-                    html += '<div class="rv-field rv-top"><span class="rv-label">' + label(key) + '</span> ' + renderValue(val) + '</div>';
-                } else {
-                    html += '<div class="rv-section"><div class="rv-section-title">' + label(key) + '</div>' + renderValue(val) + '</div>';
-                }
-            }
-            return html;
-        }
-        return '<p>' + esc(data) + '</p>';
+        return String(obj);
     }
 
     function fetchEndpoint(path) {
         if (!path.startsWith('/')) path = '/' + path;
         input.value = path;
-        contentEl.innerHTML = '<p class="explorer-loading">Fetching <code>' + esc(path) + '</code> ...</p>';
+        jsonEl.innerHTML = '<span class="json-muted">// Fetching ' + path.replace(/</g, '&lt;') + ' ...</span>';
         sendBtn.disabled = true;
 
         fetch(API_BASE + path)
             .then(function(r) { return r.json(); })
             .then(function(data) {
+                // Show only the data payload if it exists, skip meta
                 var display = data.data || data;
-                contentEl.innerHTML = render(display);
+                jsonEl.innerHTML = formatJson(display, 0);
             })
             .catch(function(err) {
-                contentEl.innerHTML = '<p class="explorer-error">Error: ' + esc(err.message) + '</p>';
+                jsonEl.innerHTML = '<span class="json-err">// Error: ' + err.message + '</span>';
             })
             .finally(function() {
                 sendBtn.disabled = false;
