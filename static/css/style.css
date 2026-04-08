@@ -520,13 +520,13 @@ main {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 2px 12px 12px 12px;
-    padding: 0.85rem 1rem;
+    padding: 0.7rem 0.9rem;
 }
 
 .agent-msg-content p {
-    margin: 0 0 0.5rem 0;
-    font-size: 0.85rem;
-    line-height: 1.65;
+    margin: 0 0 0.35rem 0;
+    font-size: 0.82rem;
+    line-height: 1.55;
     color: var(--text);
 }
 
@@ -544,10 +544,10 @@ main {
 }
 
 .agent-msg-content .chat-h {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     color: var(--accent);
-    margin: 0.6rem 0 0.3rem;
+    margin: 0.4rem 0 0.2rem;
     letter-spacing: 0.01em;
 }
 
@@ -556,7 +556,7 @@ main {
 }
 
 h3.chat-h {
-    font-size: 0.83rem;
+    font-size: 0.82rem;
     color: var(--text);
 }
 
