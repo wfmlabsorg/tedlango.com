@@ -390,42 +390,65 @@
     var chips = document.querySelectorAll('.agent-chip');
     var suggestions = document.querySelector('.agent-suggestions');
 
-    // Simple markdown to HTML: bold, bullets, numbered lists, paragraphs
+    // Markdown to HTML: headers, bold, bullets, numbered lists, paragraphs
     function md(text) {
         var escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        // Split into blocks by double newline
-        var blocks = escaped.split(/\n\n+/);
+        var lines = escaped.split('\n');
         var html = '';
-        for (var i = 0; i < blocks.length; i++) {
-            var block = blocks[i].trim();
-            if (!block) continue;
-            var lines = block.split('\n');
-            // Check if block is a list
-            var isBullet = lines.every(function(l) { return /^\s*[-*]\s/.test(l) || !l.trim(); });
-            var isNumbered = lines.every(function(l) { return /^\s*\d+[\.\)]\s/.test(l) || !l.trim(); });
-            if (isBullet) {
-                html += '<ul>' + lines.map(function(l) {
-                    var content = l.replace(/^\s*[-*]\s+/, '');
-                    return content ? '<li>' + inline(content) + '</li>' : '';
-                }).join('') + '</ul>';
-            } else if (isNumbered) {
-                html += '<ol>' + lines.map(function(l) {
-                    var content = l.replace(/^\s*\d+[\.\)]\s+/, '');
-                    return content ? '<li>' + inline(content) + '</li>' : '';
-                }).join('') + '</ol>';
-            } else {
-                html += '<p>' + inline(lines.join('<br>')) + '</p>';
+        var i = 0;
+
+        while (i < lines.length) {
+            var line = lines[i];
+
+            // Skip empty lines
+            if (!line.trim()) { i++; continue; }
+
+            // Headers: ## or ###
+            var hMatch = line.match(/^(#{1,3})\s+(.+)/);
+            if (hMatch) {
+                var level = Math.min(hMatch[1].length + 1, 4); // h2-h4 range
+                html += '<h' + level + ' class="chat-h">' + inline(hMatch[2]) + '</h' + level + '>';
+                i++; continue;
+            }
+
+            // Bullet list block
+            if (/^\s*[-*]\s/.test(line)) {
+                html += '<ul>';
+                while (i < lines.length && /^\s*[-*]\s/.test(lines[i])) {
+                    html += '<li>' + inline(lines[i].replace(/^\s*[-*]\s+/, '')) + '</li>';
+                    i++;
+                }
+                html += '</ul>';
+                continue;
+            }
+
+            // Numbered list block
+            if (/^\s*\d+[\.\)]\s/.test(line)) {
+                html += '<ol>';
+                while (i < lines.length && /^\s*\d+[\.\)]\s/.test(lines[i])) {
+                    html += '<li>' + inline(lines[i].replace(/^\s*\d+[\.\)]\s+/, '')) + '</li>';
+                    i++;
+                }
+                html += '</ol>';
+                continue;
+            }
+
+            // Paragraph: collect consecutive non-special lines
+            var para = [];
+            while (i < lines.length && lines[i].trim() && !/^#{1,3}\s/.test(lines[i]) && !/^\s*[-*]\s/.test(lines[i]) && !/^\s*\d+[\.\)]\s/.test(lines[i])) {
+                para.push(lines[i]);
+                i++;
+            }
+            if (para.length) {
+                html += '<p>' + inline(para.join(' ')) + '</p>';
             }
         }
         return html || '<p>' + inline(escaped) + '</p>';
     }
 
     function inline(s) {
-        // Bold: **text**
         s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-        // Italic: *text* (but not inside bold)
         s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
-        // Inline code
         s = s.replace(/`(.+?)`/g, '<code>$1</code>');
         return s;
     }
