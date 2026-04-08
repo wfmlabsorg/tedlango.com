@@ -4,8 +4,9 @@ title = "Ted Lango"
 
 [params]
   author = "Ted Lango"
-  description = "Workforce Transformation Strategist — essays, photography, technology, and experiments"
+  description = "Workforce Transformation & Applied Intelligence — essays, photography, technology, and experiments"
   apiBase = "https://living-resume-api.tedlango.workers.dev"
+  agentBase = "https://resume-agent.tedlango.workers.dev"
 
 [markup]
   [markup.goldmark]

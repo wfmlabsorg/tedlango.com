@@ -330,6 +330,25 @@
   -d '{"jsonrpc":"2.0","method":"get_mission","id":1}'</pre>
     </div>
     <a href="https://living-resume-api.tedlango.workers.dev/" target="_blank" class="btn">API Documentation</a>
+
+    <div class="agent-chat">
+        <div class="agent-header">
+            <div class="agent-header-left">
+                <span class="agent-dot"></span>
+                <span class="agent-title">Ask the Resume Agent</span>
+            </div>
+            <span class="agent-subtitle">AI-powered answers from the Living Resume API</span>
+        </div>
+        <div class="agent-messages" id="agentMessages">
+            <div class="agent-msg agent-msg-assistant">
+                <p>I have access to Ted's full professional profile via the Living Resume API. Ask me anything — experience, skills, what he's looking for, track record, or how he could fit your team.</p>
+            </div>
+        </div>
+        <div class="agent-input-row">
+            <input type="text" class="agent-input" id="agentInput" placeholder="e.g. What's Ted's experience with AI?" autocomplete="off" spellcheck="false" maxlength="500">
+            <button class="agent-send" id="agentSend">Ask</button>
+        </div>
+    </div>
 </section>
 
 <section class="section">
@@ -353,5 +372,62 @@
         </a>
     </div>
 </section>
+
+<script>
+(function() {
+    var AGENT_URL = '{{ .Site.Params.agentBase }}';
+    var input = document.getElementById('agentInput');
+    var sendBtn = document.getElementById('agentSend');
+    var messages = document.getElementById('agentMessages');
+
+    function addMessage(text, role) {
+        var div = document.createElement('div');
+        div.className = 'agent-msg agent-msg-' + role;
+        var p = document.createElement('p');
+        p.textContent = text;
+        div.appendChild(p);
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+        return div;
+    }
+
+    function send() {
+        var question = input.value.trim();
+        if (!question) return;
+
+        addMessage(question, 'user');
+        input.value = '';
+        sendBtn.disabled = true;
+        input.disabled = true;
+
+        var thinking = addMessage('Thinking...', 'thinking');
+
+        fetch(AGENT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: question })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            messages.removeChild(thinking);
+            addMessage(data.response || data.error || 'No response', 'assistant');
+        })
+        .catch(function() {
+            messages.removeChild(thinking);
+            addMessage('Something went wrong. Try again.', 'assistant');
+        })
+        .finally(function() {
+            sendBtn.disabled = false;
+            input.disabled = false;
+            input.focus();
+        });
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') send();
+    });
+})();
+</script>
 
 {{ end }}
