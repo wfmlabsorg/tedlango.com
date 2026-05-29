@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="rcbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#rcbg)" opacity="0.6" rx="8"/>
+
+  <!-- Three pillars -->
+  <!-- CX -->
+  <rect x="100" y="60" width="180" height="200" rx="8" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="190" y="95" text-anchor="middle" fill="#3b82f6" font-size="15" font-weight="700">CX</text>
+  <line x1="130" y1="110" x2="250" y2="110" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="190" y="135" text-anchor="middle" fill="#8899aa" font-size="10">Stabilized service</text>
+  <text x="190" y="152" text-anchor="middle" fill="#8899aa" font-size="10">Reduced wait times</text>
+  <text x="190" y="169" text-anchor="middle" fill="#8899aa" font-size="10">Consistent quality</text>
+
+  <!-- Cost -->
+  <rect x="310" y="60" width="180" height="200" rx="8" fill="#111827" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="400" y="95" text-anchor="middle" fill="#22c55e" font-size="15" font-weight="700">Cost</text>
+  <line x1="340" y1="110" x2="460" y2="110" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="400" y="135" text-anchor="middle" fill="#8899aa" font-size="10">Reduced overtime</text>
+  <text x="400" y="152" text-anchor="middle" fill="#8899aa" font-size="10">Optimized staffing</text>
+  <text x="400" y="169" text-anchor="middle" fill="#8899aa" font-size="10">Less waste</text>
+
+  <!-- Wellbeing -->
+  <rect x="520" y="60" width="180" height="200" rx="8" fill="#111827" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="610" y="95" text-anchor="middle" fill="#f5c542" font-size="15" font-weight="700">Wellbeing</text>
+  <line x1="550" y1="110" x2="670" y2="110" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="610" y="135" text-anchor="middle" fill="#8899aa" font-size="10">Predictable schedules</text>
+  <text x="610" y="152" text-anchor="middle" fill="#8899aa" font-size="10">Development time</text>
+  <text x="610" y="169" text-anchor="middle" fill="#8899aa" font-size="10">Reduced burnout</text>
+
+  <!-- Compound arrows below each -->
+  <text x="190" y="225" text-anchor="middle" fill="#3b82f6" font-size="20">↑</text>
+  <text x="400" y="225" text-anchor="middle" fill="#22c55e" font-size="20">↑</text>
+  <text x="610" y="225" text-anchor="middle" fill="#f5c542" font-size="20">↑</text>
+  <text x="190" y="248" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="600">COMPOUNDS</text>
+  <text x="400" y="248" text-anchor="middle" fill="#22c55e" font-size="9" font-weight="600">COMPOUNDS</text>
+  <text x="610" y="248" text-anchor="middle" fill="#f5c542" font-size="9" font-weight="600">COMPOUNDS</text>
+
+  <!-- Bottom -->
+  <text x="400" y="295" text-anchor="middle" fill="#f5c542" font-size="13" font-style="italic">Adaptive systems don't trade metrics — they compound across all three</text>
+</svg>

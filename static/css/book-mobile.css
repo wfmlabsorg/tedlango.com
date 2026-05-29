@@ -1,0 +1,230 @@
+/* Book Mobile — Accordion viewer for small screens */
+
+.book-zoom-overlay.mobile-book .book-zoom-canvas {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mb-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem 1rem 4rem;
+}
+
+.mb-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+.mb-book-img {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+.mb-title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: #f5c542;
+}
+
+.mb-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+}
+
+/* Section accordion */
+.mb-section {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.mb-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.mb-section-header:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.mb-section-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(59,130,246,0.15);
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.mb-section-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.mb-chevron {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.mb-section.open .mb-chevron {
+    transform: rotate(180deg);
+}
+
+/* Cards container */
+.mb-cards {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1rem;
+}
+
+.mb-section.open .mb-cards {
+    padding-bottom: 1rem;
+}
+
+/* Individual card */
+.mb-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.mb-card-header {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.02);
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+}
+
+.mb-card-header::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.mb-card.open .mb-card-header::after {
+    content: '−';
+}
+
+.mb-card-header:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Card body */
+.mb-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.mb-card.open .mb-card-body {
+    padding: 0 1rem 1rem;
+}
+
+.mb-card-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.mb-card-lead {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+}
+
+.mb-card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.mb-card-text p {
+    margin-bottom: 0.75rem;
+}
+
+.mb-card-text strong {
+    color: var(--text);
+}
+
+.mb-card-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.mb-card-text ul li {
+    padding: 0.3rem 0 0.3rem 1.25rem;
+    position: relative;
+}
+
+.mb-card-text ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.mb-highlight {
+    background: var(--bg);
+    border-left: 3px solid #f5c542;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-style: italic;
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}

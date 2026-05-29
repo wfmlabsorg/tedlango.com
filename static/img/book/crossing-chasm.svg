@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="ccbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#ccbg)" opacity="0.6" rx="8"/>
+
+  <!-- Left plateau: L1/2 -->
+  <path d="M 60 200 L 200 200 L 260 200" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <rect x="80" y="150" width="160" height="50" rx="6" fill="#111827" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="160" y="172" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="600">Level 1 / 2</text>
+  <text x="160" y="190" text-anchor="middle" fill="#556677" font-size="9">Reactive · Manual</text>
+
+  <!-- Chasm -->
+  <path d="M 260 200 L 290 260 L 340 280 L 390 260 L 420 200" fill="none" stroke="#f5c542" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="340" y="265" text-anchor="middle" fill="#f5c542" font-size="10" font-weight="600">THE CHASM</text>
+
+  <!-- Bridge arrow -->
+  <path d="M 280 180 Q 340 120 420 180" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <polygon points="416,175 425,180 416,185" fill="#22c55e"/>
+  <text x="350" y="140" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600">3x–7x ROI</text>
+
+  <!-- Right plateau: L3 -->
+  <path d="M 420 200 L 540 200 L 700 200" fill="none" stroke="#22c55e" stroke-width="2"/>
+  <rect x="440" y="150" width="200" height="50" rx="6" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+  <text x="540" y="172" text-anchor="middle" fill="#86efac" font-size="13" font-weight="600">Level 3 — Progressive</text>
+  <text x="540" y="190" text-anchor="middle" fill="#556677" font-size="9">Real-time · Adaptive</text>
+
+  <!-- Outcomes on right side -->
+  <text x="660" y="90" fill="#8899aa" font-size="10">&#10003; Stabilized service levels</text>
+  <text x="660" y="108" fill="#8899aa" font-size="10">&#10003; Variance harvesting</text>
+  <text x="660" y="126" fill="#8899aa" font-size="10">&#10003; 100s of moves automated</text>
+
+  <!-- Bottom -->
+  <text x="400" y="310" text-anchor="middle" fill="#f5c542" font-size="12" font-style="italic">The highest-leverage transition — fastest, most measurable ROI</text>
+</svg>

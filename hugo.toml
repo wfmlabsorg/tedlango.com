@@ -7,6 +7,8 @@ title = "Ted Lango"
   description = "Workforce Transformation & Applied Intelligence — essays, photography, technology, and experiments"
   apiBase = "https://living-resume-api.tedlango.workers.dev"
   agentBase = "https://resume-agent.tedlango.workers.dev"
+  ga4 = "G-HQRSND342K"
+  ogImage = "img/og-default.png"
 
 [markup]
   [markup.goldmark]
@@ -20,8 +22,11 @@ title = "Ted Lango"
   home = ["HTML", "RSS"]
 
 [sitemap]
-  changefreq = "weekly"
+  changefreq = "monthly"
   priority = 0.5
+
+[frontmatter]
+  lastmod = [":git", "lastmod", "date"]
 
 enableRobotsTXT = true
 ignoreLogs = ['warning-frontmatter-params-overrides']

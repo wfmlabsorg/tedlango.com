@@ -1,4 +1,7 @@
 {{ define "head" }}
+<link rel="stylesheet" href="/css/zumly.css">
+<link rel="stylesheet" href="/css/book-zoom.css">
+<link rel="stylesheet" href="/css/book-mobile.css">
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -161,6 +164,7 @@
             <div class="book-links">
                 <a href="https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" target="_blank" class="btn">Amazon</a>
                 <a href="https://wfmlabs.org" target="_blank" class="btn btn-secondary">WFM Labs</a>
+                <button type="button" onclick="openBookZoom()" class="btn btn-secondary">Explore the Book</button>
             </div>
         </div>
     </div>
@@ -266,7 +270,10 @@
 
 <section id="api" class="section api-section">
     <h2>Living Resume API</h2>
-    <p>Query my professional profile programmatically. Structured data for AI agents, recruiters, and integrations.</p>
+    <p>Query my professional profile programmatically. Structured data for AI agents, recruiters, and integrations.
+        <a href="https://talentintel.wfmlabs.com/" target="_blank">Learn more</a> about the future of searching for talent.
+        Want to <a href="https://api-resume2.wfmlabs.com/" target="_blank">build your own</a>?
+        Explore directly below, or engage the AI agent to query my API.</p>
     <div class="api-status">
         <span class="status-dot"></span>
         <span>API Online</span>
@@ -447,6 +454,7 @@
     }
 
     function inline(s) {
+        s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
         s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
         s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
         s = s.replace(/`(.+?)`/g, '<code>$1</code>');
@@ -517,5 +525,14 @@
     });
 })();
 </script>
+
+<!-- Book Zoom Overlay -->
+<div id="bookZoomOverlay" class="book-zoom-overlay">
+    <button type="button" class="book-zoom-back" onclick="closeBookZoom()" aria-label="Back to site">&larr; Back to site</button>
+    <div class="book-zoom-canvas"></div>
+</div>
+<script src="/js/zumly.js"></script>
+<script src="/js/book-zoom.js"></script>
+<script src="/js/book-mobile.js"></script>
 
 {{ end }}

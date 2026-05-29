@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="mmbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="stairGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#mmbg)" opacity="0.6" rx="8"/>
+
+  <!-- Axes -->
+  <line x1="100" y1="340" x2="720" y2="340" stroke="#334455" stroke-width="1.5"/>
+  <line x1="100" y1="340" x2="100" y2="50" stroke="#334455" stroke-width="1.5"/>
+  <text x="410" y="375" text-anchor="middle" fill="#556677" font-size="11">Maturity Progression</text>
+  <text x="55" y="195" text-anchor="middle" fill="#556677" font-size="11" transform="rotate(-90 55 195)">Value &amp; Capability</text>
+
+  <!-- Axis endpoints -->
+  <text x="130" y="365" fill="#556677" font-size="9">REACTIVE</text>
+  <text x="680" y="365" fill="#556677" font-size="9">PROACTIVE</text>
+
+  <!-- Staircase levels -->
+  <!-- L1 -->
+  <rect x="120" y="290" width="110" height="50" rx="4" fill="#111827" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="175" y="312" text-anchor="middle" fill="#8899aa" font-size="10" font-weight="600">Level 1</text>
+  <text x="175" y="326" text-anchor="middle" fill="#556677" font-size="9">Initial/Manual</text>
+
+  <!-- L2 -->
+  <rect x="240" y="240" width="110" height="50" rx="4" fill="#111827" stroke="#2a4a7f" stroke-width="1.5"/>
+  <text x="295" y="262" text-anchor="middle" fill="#8899aa" font-size="10" font-weight="600">Level 2</text>
+  <text x="295" y="276" text-anchor="middle" fill="#556677" font-size="9">Foundational</text>
+
+  <!-- L3 (highlighted - crossing the chasm) -->
+  <rect x="360" y="190" width="110" height="50" rx="4" fill="#1a2744" stroke="#3b82f6" stroke-width="2"/>
+  <text x="415" y="212" text-anchor="middle" fill="#93c5fd" font-size="10" font-weight="600">Level 3</text>
+  <text x="415" y="226" text-anchor="middle" fill="#3b82f6" font-size="9">Progressive</text>
+
+  <!-- Chasm indicator -->
+  <path d="M 330 265 L 340 280 L 350 260 L 370 270 L 380 255" fill="none" stroke="#f5c542" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="355" y="300" text-anchor="middle" fill="#f5c542" font-size="8" font-style="italic">the chasm</text>
+
+  <!-- L4 -->
+  <rect x="480" y="140" width="110" height="50" rx="4" fill="#111827" stroke="#3b6abf" stroke-width="1.5"/>
+  <text x="535" y="162" text-anchor="middle" fill="#8899aa" font-size="10" font-weight="600">Level 4</text>
+  <text x="535" y="176" text-anchor="middle" fill="#556677" font-size="9">Advanced</text>
+
+  <!-- L5 -->
+  <rect x="600" y="80" width="110" height="50" rx="4" fill="#1a2744" stroke="#f5c542" stroke-width="2"/>
+  <text x="655" y="102" text-anchor="middle" fill="#f5c542" font-size="10" font-weight="700">Level 5</text>
+  <text x="655" y="116" text-anchor="middle" fill="#fcd34d" font-size="9">Pioneering</text>
+
+  <!-- Connecting curve -->
+  <path d="M 175 290 C 250 270 270 245 295 240 C 340 230 370 200 415 190 C 460 180 500 150 535 140 C 580 125 610 100 655 80" fill="none" stroke="url(#stairGrad)" stroke-width="2" opacity="0.5"/>
+</svg>

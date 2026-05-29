@@ -1,0 +1,297 @@
+/* src/style.css */
+.zumly-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  perspective: 1000px;
+  cursor: zoom-out;
+  contain: strict;
+}
+.zumly-canvas:focus {
+  outline: none;
+}
+.z-view {
+  position: absolute;
+  contain: strict;
+}
+.z-view.is-current-view {
+  cursor: default;
+}
+.z-view.is-previous-view,
+.z-view.is-last-view,
+.z-view.has-no-events {
+  pointer-events: none;
+  user-select: none;
+}
+.z-view {
+  content-visibility: auto;
+}
+.zoom-current-view,
+.zoom-current-view-reverse,
+.zoom-previous-view,
+.zoom-previous-view-reverse,
+.zoom-last-view,
+.zoom-last-view-reverse,
+.zoom-lateral-back,
+.zoom-lateral-out,
+.zoom-lateral-in {
+  will-change:
+    transform,
+    opacity,
+    filter;
+}
+.z-view.has-effect {
+  transition: filter var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  filter: var(--z-effect-filter, none);
+}
+.z-view.has-effect-reverse {
+  transition: filter var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  filter: none;
+}
+.z-view.hide {
+  opacity: 0;
+}
+.zoom-me.z-trigger-hidden {
+  visibility: hidden;
+}
+.zoom-me.z-trigger-fade {
+  transition: opacity var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  opacity: 0;
+}
+.zoom-me.z-trigger-fade-reverse {
+  transition: opacity var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  opacity: 1;
+}
+.z-view.z-view-fade-in {
+  transition: opacity var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  opacity: 1;
+}
+.z-view.z-view-fade-out {
+  transition: opacity var(--zoom-duration, 1s) var(--zoom-ease, ease-in-out);
+  opacity: 0;
+}
+.zoom-me {
+  cursor: zoom-in;
+}
+.zoom-me[role=button] {
+  -webkit-tap-highlight-color: transparent;
+}
+.zoom-current-view-reverse {
+  animation-name: zoom-current-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+.zoom-current-view {
+  animation-name: zoom-current-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+}
+@keyframes zoom-current-view {
+  0% {
+    transform: var(--current-view-transform-start);
+  }
+  100% {
+    transform: var(--current-view-transform-end);
+  }
+}
+.zoom-previous-view {
+  animation-name: zoom-previous-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+}
+.zoom-previous-view-reverse {
+  animation-name: zoom-previous-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+@keyframes zoom-previous-view {
+  0% {
+    transform: var(--previous-view-transform-start);
+  }
+  100% {
+    transform: var(--previous-view-transform-end);
+  }
+}
+.zoom-last-view-reverse {
+  animation-name: zoom-last-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+.zoom-last-view {
+  animation-name: zoom-last-view;
+  animation-duration: var(--zoom-duration);
+  animation-timing-function: var(--zoom-ease);
+  animation-fill-mode: both;
+}
+@keyframes zoom-last-view {
+  0% {
+    transform: var(--last-view-transform-start);
+  }
+  100% {
+    transform: var(--last-view-transform-end);
+  }
+}
+.zoom-lateral-back {
+  animation: zoom-lateral-back var(--zoom-duration) var(--zoom-ease) forwards;
+}
+@keyframes zoom-lateral-back {
+  0% {
+    transform: var(--lateral-from);
+  }
+  100% {
+    transform: var(--lateral-to);
+  }
+}
+.zoom-lateral-out {
+  animation: zoom-lateral-out var(--zoom-duration) var(--zoom-ease) forwards;
+}
+@keyframes zoom-lateral-out {
+  0% {
+    transform: var(--lateral-out-from);
+    opacity: 1;
+  }
+  100% {
+    transform: var(--lateral-out-to);
+    opacity: 0;
+  }
+}
+.zoom-lateral-in {
+  animation: zoom-lateral-in var(--zoom-duration) var(--zoom-ease) forwards;
+}
+@keyframes zoom-lateral-in {
+  0% {
+    transform: var(--lateral-in-from);
+    opacity: 0;
+  }
+  100% {
+    transform: var(--lateral-in-to);
+    opacity: 1;
+  }
+}
+.z-depth-nav {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+.z-depth-nav > * {
+  pointer-events: auto;
+}
+.z-depth-nav--bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+.z-depth-nav--top-left {
+  top: 20px;
+  left: 20px;
+}
+.z-nav-back {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  padding: 0;
+}
+.z-nav-back:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.z-lateral-nav {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 6px 10px;
+}
+.z-lateral-nav > * {
+  pointer-events: auto;
+}
+.z-lateral-nav--bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.z-lateral-nav--top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.z-nav-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  padding: 0;
+}
+.z-nav-arrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.z-nav-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+.z-nav-lateral-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.z-nav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0;
+  cursor: default;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+.z-nav-lat-dot {
+  cursor: pointer;
+}
+.z-nav-lat-dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.z-nav-dot.is-active {
+  background: #fff;
+  border-color: #fff;
+  transform: scale(1.35);
+}

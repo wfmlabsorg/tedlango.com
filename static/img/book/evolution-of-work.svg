@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="ewbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#f5c542"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#ewbg)" opacity="0.6" rx="8"/>
+
+  <!-- Rising arc -->
+  <path d="M 80 240 Q 200 230 300 200 Q 400 160 500 110 Q 600 60 720 40" fill="none" stroke="url(#arcGrad)" stroke-width="3" opacity="0.6"/>
+
+  <!-- Stages along the arc -->
+  <!-- Survival -->
+  <circle cx="100" cy="238" r="20" fill="#111827" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="100" y="233" text-anchor="middle" fill="#556677" font-size="16">&#9878;</text>
+  <text x="100" y="248" text-anchor="middle" fill="#556677" font-size="7">muscle</text>
+  <text x="100" y="272" text-anchor="middle" fill="#8899aa" font-size="10">Survival</text>
+
+  <!-- Agriculture -->
+  <circle cx="230" cy="215" r="20" fill="#111827" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="230" y="219" text-anchor="middle" fill="#556677" font-size="14">&#9752;</text>
+  <text x="230" y="250" text-anchor="middle" fill="#8899aa" font-size="10">Agriculture</text>
+
+  <!-- Industry -->
+  <circle cx="360" cy="175" r="20" fill="#111827" stroke="#2a4a7f" stroke-width="1.5"/>
+  <text x="360" y="179" text-anchor="middle" fill="#6b7280" font-size="14">&#9881;</text>
+  <text x="360" y="210" text-anchor="middle" fill="#8899aa" font-size="10">Industry</text>
+
+  <!-- Information -->
+  <circle cx="500" cy="120" r="20" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="500" y="124" text-anchor="middle" fill="#93c5fd" font-size="14">&#9000;</text>
+  <text x="500" y="155" text-anchor="middle" fill="#8899aa" font-size="10">Information</text>
+
+  <!-- Collaborative Intelligence -->
+  <circle cx="660" cy="55" r="28" fill="#1a2744" stroke="#f5c542" stroke-width="2"/>
+  <text x="660" y="52" text-anchor="middle" fill="#f5c542" font-size="10" font-weight="600">Human</text>
+  <text x="660" y="64" text-anchor="middle" fill="#f5c542" font-size="10" font-weight="600">+ AI</text>
+  <text x="660" y="100" text-anchor="middle" fill="#f5c542" font-size="11" font-weight="600">Collaborative</text>
+  <text x="660" y="114" text-anchor="middle" fill="#f5c542" font-size="11" font-weight="600">Intelligence</text>
+
+  <!-- Labels -->
+  <text x="100" y="20" fill="#334455" font-size="9">Physical labor</text>
+  <path d="M 100 24 L 100 38" stroke="#334455" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="660" y="20" fill="#334455" font-size="9" text-anchor="middle">Cognitive augmentation</text>
+
+  <!-- Bottom -->
+  <text x="400" y="290" text-anchor="middle" fill="#556677" font-size="11" font-style="italic">Previous transitions replaced physical labor. This one augments cognitive labor.</text>
+</svg>

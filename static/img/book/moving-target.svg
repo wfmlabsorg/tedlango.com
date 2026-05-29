@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="mtbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#mtbg)" opacity="0.6" rx="8"/>
+
+  <!-- Center: the anchor / certainty -->
+  <circle cx="400" cy="165" r="70" fill="#111827" stroke="#22c55e" stroke-width="2.5"/>
+  <circle cx="400" cy="165" r="60" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3"/>
+  <text x="400" y="150" text-anchor="middle" fill="#e5e5e5" font-size="16" font-weight="600">Human + AI</text>
+  <text x="400" y="172" text-anchor="middle" fill="#86efac" font-size="12">the one certainty</text>
+  <text x="400" y="192" text-anchor="middle" fill="#556677" font-size="10">next 5–10 years</text>
+
+  <!-- Orbiting uncertainties — scattered with motion trails -->
+  <!-- The ratio -->
+  <ellipse cx="400" cy="165" rx="180" ry="100" fill="none" stroke="#334455" stroke-width="0.8" stroke-dasharray="4,6" opacity="0.4"/>
+  <circle cx="215" cy="140" r="5" fill="#f5c542" opacity="0.8"/>
+  <line x1="220" y1="138" x2="235" y2="133" stroke="#f5c542" stroke-width="1" opacity="0.3"/>
+  <line x1="238" y1="132" x2="248" y2="129" stroke="#f5c542" stroke-width="1" opacity="0.15"/>
+  <text x="215" y="125" text-anchor="middle" fill="#fcd34d" font-size="10">the ratio</text>
+
+  <!-- Who leads -->
+  <circle cx="570" cy="110" r="5" fill="#f5c542" opacity="0.8"/>
+  <line x1="565" y1="112" x2="550" y2="117" stroke="#f5c542" stroke-width="1" opacity="0.3"/>
+  <text x="570" y="98" text-anchor="middle" fill="#fcd34d" font-size="10">who leads which task</text>
+
+  <!-- When mix changes -->
+  <ellipse cx="400" cy="165" rx="260" ry="140" fill="none" stroke="#334455" stroke-width="0.6" stroke-dasharray="3,8" opacity="0.25"/>
+  <circle cx="630" cy="210" r="5" fill="#f59e42" opacity="0.7"/>
+  <line x1="625" y1="212" x2="610" y2="218" stroke="#f59e42" stroke-width="1" opacity="0.25"/>
+  <text x="650" y="200" fill="#f59e42" font-size="10">when the mix changes</text>
+
+  <!-- Technology capability -->
+  <circle cx="250" cy="250" r="5" fill="#f59e42" opacity="0.6"/>
+  <line x1="255" y1="248" x2="268" y2="242" stroke="#f59e42" stroke-width="1" opacity="0.2"/>
+  <text x="250" y="272" text-anchor="middle" fill="#f59e42" font-size="10">technology capability</text>
+
+  <!-- Cost dynamics -->
+  <circle cx="540" cy="270" r="4" fill="#dc8a42" opacity="0.5"/>
+  <text x="540" y="290" text-anchor="middle" fill="#dc8a42" font-size="9" opacity="0.7">cost dynamics</text>
+
+  <!-- Regulation -->
+  <circle cx="170" cy="200" r="4" fill="#dc8a42" opacity="0.5"/>
+  <text x="170" y="220" text-anchor="middle" fill="#dc8a42" font-size="9" opacity="0.7">regulation</text>
+
+  <!-- Labels -->
+  <text x="400" y="30" text-anchor="middle" fill="#22c55e" font-size="11" letter-spacing="0.1em">FIXED ANCHOR</text>
+  <line x1="400" y1="35" x2="400" y2="90" stroke="#22c55e" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.3"/>
+
+  <text x="680" y="30" fill="#f5c542" font-size="11" letter-spacing="0.1em">MOVING TARGETS</text>
+
+  <!-- Bottom -->
+  <text x="400" y="325" text-anchor="middle" fill="#f5c542" font-size="12" font-style="italic">Don't bet on one outcome — engineer for whatever comes</text>
+</svg>

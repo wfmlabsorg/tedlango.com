@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="fbbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="specGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#f5c542"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="360" fill="url(#fbbg)" opacity="0.6" rx="8"/>
+
+  <!-- Labels -->
+  <text x="140" y="40" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="600">Human</text>
+  <text x="660" y="40" text-anchor="middle" fill="#f5c542" font-size="14" font-weight="600">AI</text>
+
+  <!-- Spectrum rows -->
+  <!-- 100% Human -->
+  <rect x="100" y="60" width="600" height="36" rx="4" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+  <rect x="100" y="60" width="600" height="36" rx="4" fill="#3b82f6" opacity="0.15"/>
+  <text x="400" y="83" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">100% Human Tasks</text>
+
+  <!-- Human 75 / AI 25 -->
+  <rect x="100" y="102" width="600" height="36" rx="4" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+  <rect x="100" y="102" width="450" height="36" rx="4" fill="#3b82f6" opacity="0.12"/>
+  <rect x="550" y="102" width="150" height="36" rx="4" fill="#f5c542" opacity="0.06"/>
+  <text x="400" y="125" text-anchor="middle" fill="#8899aa" font-size="12">Human Leads · 25% AI Assistance</text>
+
+  <!-- Human 50 / AI 50 -->
+  <rect x="100" y="144" width="600" height="36" rx="4" fill="#111827" stroke="#8b5cf6" stroke-width="1" opacity="0.8"/>
+  <rect x="100" y="144" width="300" height="36" rx="4" fill="#3b82f6" opacity="0.1"/>
+  <rect x="400" y="144" width="300" height="36" rx="4" fill="#f5c542" opacity="0.08"/>
+  <text x="400" y="167" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="600">50 / 50 — The Fluid Middle</text>
+
+  <!-- AI 75 / Human 25 -->
+  <rect x="100" y="186" width="600" height="36" rx="4" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+  <rect x="100" y="186" width="150" height="36" rx="4" fill="#3b82f6" opacity="0.06"/>
+  <rect x="250" y="186" width="450" height="36" rx="4" fill="#f5c542" opacity="0.08"/>
+  <text x="400" y="209" text-anchor="middle" fill="#8899aa" font-size="12">AI Leads · 25% Human Assistance</text>
+
+  <!-- 100% AI -->
+  <rect x="100" y="228" width="600" height="36" rx="4" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+  <rect x="100" y="228" width="600" height="36" rx="4" fill="#f5c542" opacity="0.08"/>
+  <text x="400" y="251" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="600">100% Artificial Intelligence</text>
+
+  <!-- Wavy divider line showing "fuzzy" -->
+  <path d="M 400 56 Q 410 80 400 102 Q 390 124 400 144 Q 410 166 400 186 Q 390 208 400 228 Q 410 248 400 268" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.4" stroke-dasharray="4,4"/>
+
+  <!-- Bottom -->
+  <text x="400" y="300" text-anchor="middle" fill="#8899aa" font-size="12">The boundary shifts by task, context, and time</text>
+  <text x="400" y="322" text-anchor="middle" fill="#f5c542" font-size="12" font-style="italic">Rigid systems break. Adaptive systems flex across the spectrum.</text>
+</svg>

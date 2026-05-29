@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="albg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#albg)" opacity="0.6" rx="8"/>
+
+  <!-- Deterministic input -->
+  <rect x="60" y="120" width="150" height="60" rx="6" fill="#111827" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="135" y="148" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="600">Deterministic</text>
+  <text x="135" y="166" text-anchor="middle" fill="#556677" font-size="10">Point estimates</text>
+
+  <!-- Arrow to adaptive loop -->
+  <path d="M 210 150 L 270 150" stroke="#556677" stroke-width="1.5"/>
+  <polygon points="268,145 278,150 268,155" fill="#556677"/>
+
+  <!-- Adaptive loop circle -->
+  <circle cx="460" cy="150" r="100" fill="none" stroke="#22c55e" stroke-width="2" opacity="0.3"/>
+
+  <!-- Sense -->
+  <rect x="410" y="50" width="100" height="36" rx="6" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="73" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="600">Sense</text>
+
+  <!-- Decide -->
+  <rect x="540" y="130" width="100" height="36" rx="6" fill="#111827" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="590" y="153" text-anchor="middle" fill="#fcd34d" font-size="12" font-weight="600">Decide</text>
+
+  <!-- Learn -->
+  <rect x="410" y="220" width="100" height="36" rx="6" fill="#111827" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="460" y="243" text-anchor="middle" fill="#86efac" font-size="12" font-weight="600">Learn</text>
+
+  <!-- Center label -->
+  <text x="460" y="147" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="700">Adaptive</text>
+  <text x="460" y="164" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="700">Loop</text>
+
+  <!-- Curved arrows between nodes -->
+  <path d="M 510 68 Q 555 80 540 130" fill="none" stroke="#556677" stroke-width="1.5"/>
+  <polygon points="538,128 542,138 534,132" fill="#556677"/>
+
+  <path d="M 590 166 Q 560 210 510 238" fill="none" stroke="#556677" stroke-width="1.5"/>
+  <polygon points="512,236 508,244 504,234" fill="#556677"/>
+
+  <path d="M 410 238 Q 370 200 380 160 Q 390 100 410 86" fill="none" stroke="#556677" stroke-width="1.5"/>
+  <polygon points="408,88 414,78 416,90" fill="#556677"/>
+
+  <!-- Output: confidence bands -->
+  <text x="460" y="295" text-anchor="middle" fill="#8899aa" font-size="11">Confidence bands · explicit risk · continuous improvement</text>
+</svg>

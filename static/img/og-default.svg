@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+
+  <!-- Subtle accent gradient -->
+  <defs>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Accent overlay -->
+  <rect width="1200" height="630" fill="url(#accentGrad)"/>
+
+  <!-- Left accent line -->
+  <line x1="60" y1="0" x2="60" y2="630" stroke="#3b82f6" stroke-width="3" opacity="0.3"/>
+
+  <!-- Main title -->
+  <text x="600" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="96" font-weight="700" fill="url(#textGrad)" text-anchor="middle" letter-spacing="-2">
+    Ted Lango
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="400" fill="#9ca3af" text-anchor="middle" letter-spacing="0.5">
+    Workforce Transformation Strategist
+  </text>
+
+  <!-- Bottom accent dots -->
+  <circle cx="520" cy="550" r="6" fill="#3b82f6" opacity="0.6"/>
+  <circle cx="600" cy="550" r="6" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="680" cy="550" r="6" fill="#3b82f6" opacity="0.6"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" font-family="'Times New Roman', Georgia, serif">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#1a3a5f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0f1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1920" height="1080" fill="#0b1525"/>
+
+  <!-- Bottom glow (book light) -->
+  <ellipse cx="960" cy="1020" rx="600" ry="200" fill="url(#bgGlow)"/>
+
+  <!-- Equations scattered - very faint -->
+  <!-- Erlang C formula top right -->
+  <text x="1350" y="120" fill="#1e3a5f" font-size="28" font-style="italic" opacity="0.35">SL(T) = 1 − P<tspan font-size="20" dy="-8">wait</tspan><tspan dy="8"> e</tspan><tspan font-size="18" dy="-10">−(c−a)T</tspan></text>
+
+  <!-- Erlang probability left side -->
+  <text x="80" y="680" fill="#1e3a5f" font-size="24" font-style="italic" opacity="0.25">P<tspan font-size="18" dy="-6">wait</tspan><tspan dy="6"> = </tspan></text>
+  <text x="210" y="670" fill="#1e3a5f" font-size="20" font-style="italic" opacity="0.25">c · ρ<tspan font-size="16" dy="-8">c</tspan></text>
+  <line x1="180" y1="685" x2="330" y2="685" stroke="#1e3a5f" stroke-width="1" opacity="0.2"/>
+  <text x="200" y="710" fill="#1e3a5f" font-size="20" font-style="italic" opacity="0.25">c! · (1−ρ)</text>
+
+  <!-- Traffic intensity -->
+  <text x="120" y="780" fill="#1e3a5f" font-size="22" font-style="italic" opacity="0.2">where a = λs = λ/μ,  ρ = a/c &lt; 1</text>
+
+  <!-- Summation -->
+  <text x="80" y="850" fill="#1e3a5f" font-size="28" font-style="italic" opacity="0.15">Σ</text>
+  <text x="100" y="850" fill="#1e3a5f" font-size="16" font-style="italic" opacity="0.15"> c · ρ/c!</text>
+
+  <!-- Service level formula top left -->
+  <text x="60" y="200" fill="#1e3a5f" font-size="20" font-style="italic" opacity="0.15">G(x) = ∫ f(t)dt</text>
+
+  <!-- Variance -->
+  <text x="1500" y="400" fill="#1e3a5f" font-size="22" font-style="italic" opacity="0.2">σ² = E[(X−μ)²]</text>
+
+  <!-- Probability -->
+  <text x="1400" y="550" fill="#1e3a5f" font-size="20" font-style="italic" opacity="0.15">P(A|B) = P(B|A)·P(A) / P(B)</text>
+
+  <!-- Optimization -->
+  <text x="1300" y="750" fill="#1e3a5f" font-size="18" font-style="italic" opacity="0.12">min Σ c<tspan font-size="14" dy="-6">i</tspan><tspan dy="6">x</tspan><tspan font-size="14" dy="-6">i</tspan></text>
+
+  <!-- Normal distribution curve upper left -->
+  <path d="M 50 280 Q 80 280 100 270 Q 130 240 150 180 Q 165 140 180 180 Q 200 240 220 270 Q 240 280 280 280" fill="none" stroke="#1e3a5f" stroke-width="1.5" opacity="0.2"/>
+  <!-- Bell curve axis -->
+  <line x1="40" y1="280" x2="290" y2="280" stroke="#1e3a5f" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- Queueing notation scattered -->
+  <text x="1600" y="200" fill="#1e3a5f" font-size="18" font-style="italic" opacity="0.12">W<tspan font-size="14" dy="-6">q</tspan><tspan dy="6"> = λ/(μ(μ−λ))</tspan></text>
+
+  <!-- Lambda -->
+  <text x="700" y="900" fill="#1e3a5f" font-size="32" font-style="italic" opacity="0.1">λ</text>
+  <text x="1200" y="180" fill="#1e3a5f" font-size="28" font-style="italic" opacity="0.1">μ</text>
+
+  <!-- Stochastic process -->
+  <text x="400" y="100" fill="#1e3a5f" font-size="16" font-style="italic" opacity="0.1">E[N] = λ/μ · 1/(1−ρ)</text>
+</svg>

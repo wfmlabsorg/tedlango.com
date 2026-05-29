@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="cdbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#cdbg)" opacity="0.6" rx="8"/>
+
+  <!-- Outer orbit -->
+  <ellipse cx="400" cy="200" rx="300" ry="160" fill="none" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="6,4"/>
+  <!-- Inner orbit -->
+  <ellipse cx="400" cy="200" rx="180" ry="95" fill="none" stroke="#2a4a7f" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Center: Workforce Strategy -->
+  <circle cx="400" cy="200" r="55" fill="#111827" stroke="#3b82f6" stroke-width="2"/>
+  <text x="400" y="195" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="600">Workforce</text>
+  <text x="400" y="213" text-anchor="middle" fill="#e5e5e5" font-size="13" font-weight="600">Strategy</text>
+
+  <!-- Orbiting drivers -->
+  <!-- Customer Expectations (top) -->
+  <circle cx="400" cy="50" r="30" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.5" opacity="0.8"/>
+  <text x="400" y="47" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="600">Customer</text>
+  <text x="400" y="59" text-anchor="middle" fill="#fca5a5" font-size="9" font-weight="600">Expectations</text>
+
+  <!-- Technology (bottom) -->
+  <circle cx="400" cy="350" r="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="400" y="345" text-anchor="middle" fill="#93c5fd" font-size="8" font-weight="600">Technology &amp;</text>
+  <text x="400" y="357" text-anchor="middle" fill="#93c5fd" font-size="8" font-weight="600">Digital Forces</text>
+
+  <!-- Resource Scarcity (right) -->
+  <circle cx="660" cy="140" r="24" fill="#1a2744" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="660" y="137" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">Resource</text>
+  <text x="660" y="149" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">Scarcity</text>
+
+  <!-- Regulatory (right lower) -->
+  <circle cx="650" cy="260" r="22" fill="#1a2744" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="650" y="263" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">Regulatory</text>
+
+  <!-- Demographics (upper right) -->
+  <circle cx="580" cy="85" r="22" fill="#2d1f4e" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="580" y="88" text-anchor="middle" fill="#c4b5fd" font-size="8" font-weight="600">Demographics</text>
+
+  <!-- Economic (lower left) -->
+  <circle cx="210" cy="300" r="24" fill="#1a2744" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="210" y="297" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">Economic &amp;</text>
+  <text x="210" y="309" text-anchor="middle" fill="#9ca3af" font-size="8" font-weight="600">Geopolitical</text>
+
+  <!-- Culture (left) -->
+  <circle cx="160" cy="170" r="24" fill="#4a2f1a" stroke="#f59e42" stroke-width="1.5"/>
+  <text x="160" y="173" text-anchor="middle" fill="#fcd34d" font-size="9" font-weight="600">Culture</text>
+
+  <!-- Workforce Expectations (lower left) -->
+  <circle cx="180" cy="240" r="26" fill="#4a3a1a" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="180" y="237" text-anchor="middle" fill="#fcd34d" font-size="8" font-weight="600">Workforce</text>
+  <text x="180" y="249" text-anchor="middle" fill="#fcd34d" font-size="8" font-weight="600">Expectations</text>
+</svg>
