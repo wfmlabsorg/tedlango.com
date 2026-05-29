@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $cur := . }}
+{{ $pages := (site.GetPage "/ccaas").Pages }}
+<article class="approach-phase">
+    <p class="phase-breadcrumb"><a href="{{ (site.GetPage "/ccaas").RelPermalink }}">Contact Center Modernization</a> <span>/</span> Phase {{ .Params.phase }}</p>
+
+    <header class="phase-header">
+        <span class="phase-header-num">{{ .Params.phase }}</span>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.summary }}<p class="phase-lead">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ with .Params.frameworks }}
+    <div class="phase-tags phase-tags-top">
+        {{ range . }}<span class="phase-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+
+    <div class="section phase-body">
+        {{ .Content }}
+    </div>
+
+    <nav class="phase-nav">
+        {{ range $i, $p := $pages }}
+            {{ if eq $p.File.Path $cur.File.Path }}
+                {{ if gt $i 0 }}{{ $prev := index $pages (sub $i 1) }}
+                <a class="phase-nav-link phase-prev" href="{{ $prev.RelPermalink }}">
+                    <span class="phase-nav-dir">← Previous</span>
+                    <span class="phase-nav-title">{{ $prev.Params.phase }} · {{ $prev.Title }}</span>
+                </a>
+                {{ else }}<span></span>{{ end }}
+                {{ $len := len $pages }}
+                {{ if lt $i (sub $len 1) }}{{ $next := index $pages (add $i 1) }}
+                <a class="phase-nav-link phase-next" href="{{ $next.RelPermalink }}">
+                    <span class="phase-nav-dir">Next →</span>
+                    <span class="phase-nav-title">{{ $next.Params.phase }} · {{ $next.Title }}</span>
+                </a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </nav>
+
+    <p class="phase-backlink"><a href="{{ (site.GetPage "/ccaas").RelPermalink }}">← Back to the full approach</a></p>
+</article>
+{{ end }}

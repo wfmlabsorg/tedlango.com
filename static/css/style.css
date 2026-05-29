@@ -2203,3 +2203,113 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
+/* ===== Approach section ===== */
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+.approach-hero { padding-bottom: 1rem; }
+.approach-intro p:first-child { font-size: 1.15rem; }
+
+/* Journey stepper */
+.journey {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    position: relative;
+}
+.journey::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 8%;
+    right: 8%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+}
+.journey-step { position: relative; z-index: 1; text-align: center; }
+.journey-step a { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; color: var(--text-muted); }
+.journey-num {
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    background: var(--bg);
+    font-weight: 700;
+    color: var(--text);
+    transition: border-color 0.2s, color 0.2s;
+}
+.journey-step a:hover .journey-num { border-color: var(--accent); color: var(--accent); }
+.journey-label { font-size: 0.8rem; line-height: 1.3; }
+.journey-step a:hover .journey-label { color: var(--text); }
+
+/* Phase cards */
+.phase-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.phase-card {
+    display: block;
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+}
+.phase-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.phase-card-num { font-size: 0.85rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; }
+.phase-card h3 { margin: 0.4rem 0 0.6rem; font-size: 1.25rem; }
+.phase-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+.phase-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.phase-tag {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-muted);
+}
+.phase-card-link { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+
+/* Inline phase diagram (in markdown) */
+.phase-diagram { float: right; width: 120px; height: 120px; margin: 0 0 1rem 1.5rem; }
+.phase-diagram svg { width: 100%; height: 100%; }
+
+/* Phase single page */
+.approach-phase { max-width: 760px; margin: 0 auto; }
+.phase-breadcrumb { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+.phase-breadcrumb a { color: var(--accent); }
+.phase-breadcrumb span { margin: 0 0.4rem; }
+.phase-header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+.phase-header-num { font-size: 1rem; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; }
+.phase-header h1 { margin: 0.3rem 0 0.8rem; }
+.phase-lead { font-size: 1.15rem; color: var(--text); }
+.phase-tags-top { margin-bottom: 1.5rem; }
+.phase-body h2 { font-size: 1.3rem; margin: 2rem 0 0.75rem; }
+.phase-body em { color: var(--text-muted); }
+.phase-nav {
+    display: flex; justify-content: space-between; gap: 1rem;
+    margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+}
+.phase-nav-link { display: flex; flex-direction: column; gap: 0.25rem; max-width: 48%; }
+.phase-next { text-align: right; margin-left: auto; }
+.phase-nav-dir { font-size: 0.8rem; color: var(--accent); }
+.phase-nav-title { color: var(--text); font-weight: 600; font-size: 0.95rem; }
+.phase-nav-link:hover .phase-nav-title { color: var(--accent); }
+.phase-backlink { margin-top: 2rem; text-align: center; }
+.phase-backlink a { color: var(--text-muted); }
+.phase-backlink a:hover { color: var(--accent); }
+.approach-cta { text-align: center; }
+
+@media (max-width: 720px) {
+    .journey { grid-template-columns: repeat(3, 1fr); row-gap: 1.5rem; }
+    .journey::before { display: none; }
+    .phase-cards { grid-template-columns: 1fr; }
+    .phase-diagram { float: none; margin: 0 auto 1rem; }
+}

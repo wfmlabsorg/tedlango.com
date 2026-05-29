@@ -1,0 +1,81 @@
+{{ define "main" }}
+<header class="hero approach-hero">
+    <p class="eyebrow">Contact Center Modernization · CCaaS</p>
+    <h1>{{ with .Params.subtitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+    <p class="tagline">A value-first, frontline-grounded method for transforming legacy operations into modern, adaptive, cloud-based platforms.</p>
+</header>
+
+<section class="section approach-intro">
+    {{ .Content }}
+</section>
+
+<section class="section">
+    <h2>The Transformation Journey</h2>
+    <p class="framework-intro">Six phases, in sequence — each accountable to value that survives contact with reality.</p>
+    <ol class="journey">
+        {{ range .Pages }}
+        <li class="journey-step">
+            <a href="{{ .RelPermalink }}">
+                <span class="journey-num">{{ .Params.phase }}</span>
+                <span class="journey-label">{{ .Title }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ol>
+</section>
+
+<section class="section">
+    <div class="phase-cards">
+        {{ range .Pages }}
+        <a class="phase-card" href="{{ .RelPermalink }}">
+            <span class="phase-card-num">{{ .Params.phase }}</span>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.summary }}</p>
+            {{ with .Params.frameworks }}
+            <div class="phase-tags">
+                {{ range . }}<span class="phase-tag">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <span class="phase-card-link">Explore phase →</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+<section class="section">
+    <h2>Principles That Run Through Every Phase</h2>
+    <div class="offer-grid">
+        <div class="offer-item"><h3>Frontline-first</h3><p>Technology serves the work, not the reverse. I start where the work is done and design back from it.</p></div>
+        <div class="offer-item"><h3>Value over deflection</h3><p>Count the savings that survive contact with reality — after rebound, after complexity concentration.</p></div>
+        <div class="offer-item"><h3>Adaptive by design</h3><p>Build for continuous human-AI rebalancing, not for today's snapshot of who does what.</p></div>
+        <div class="offer-item"><h3>Multi-objective</h3><p>Customer experience, associate experience, and cost — optimized together, not traded off.</p></div>
+        <div class="offer-item"><h3>Evidence-based</h3><p>Calibrated estimates, second-order effects, and a source-of-truth for every metric that matters.</p></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>The Track Record Behind It</h2>
+    <div class="stats-grid">
+        <div class="stat"><span class="stat-value">85+</span><span class="stat-label">Contact Centers</span></div>
+        <div class="stat"><span class="stat-value">400M+</span><span class="stat-label">Interactions / Year</span></div>
+        <div class="stat"><span class="stat-value">$50M+</span><span class="stat-label">Captured Savings</span></div>
+        <div class="stat"><span class="stat-value">300%</span><span class="stat-label">ROI Delivered</span></div>
+    </div>
+    <p class="framework-intro" style="margin-top:1.5rem">The frameworks behind this approach are built and live — not slideware:</p>
+    <div class="book-links">
+        <a href="https://valuemodel.wfmlabs.com" target="_blank" rel="noopener" class="btn">FOW-Value Model</a>
+        <a href="https://wfmlabs.org" target="_blank" rel="noopener" class="btn btn-secondary">WFM Labs Maturity Model</a>
+        <a href="/#book" class="btn btn-secondary">The Book: <em>Adaptive</em></a>
+        <a href="/#api" class="btn btn-secondary">Living Resume API</a>
+    </div>
+</section>
+
+<section class="section approach-cta">
+    <h2>Let's talk about your transformation</h2>
+    <p>Whether you're moving off legacy telephony, unifying an omnichannel journey, or sizing the real value of AI in servicing — I've run the playbook end to end.</p>
+    <div class="book-links">
+        <a href="/#api" class="btn">Ask my AI agent</a>
+        <a href="mailto:ted@kyodosolutions.com" class="btn btn-secondary">Get in touch</a>
+    </div>
+</section>
+{{ end }}
