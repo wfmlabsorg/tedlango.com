@@ -36,23 +36,30 @@ ignoreLogs = ['warning-frontmatter-params-overrides']
   weight = 1
 
 [[menus.main]]
-  name = "Photography"
-  url = "/photography/"
-  weight = 2
-
-[[menus.main]]
-  name = "Portfolio"
-  url = "https://roc.cloud"
-  weight = 3
-  [menus.main.params]
-    external = true
-
-[[menus.main]]
   name = "My Book"
   url = "/#book"
-  weight = 5
+  weight = 2
 
 [[menus.main]]
   name = "Resume API"
   url = "/#api"
+  weight = 3
+
+[[menus.main]]
+  name = "My Wiki"
+  url = "https://wiki.wfmlabs.org"
+  weight = 4
+  [menus.main.params]
+    external = true
+
+[[menus.main]]
+  name = "Portfolio"
+  url = "https://roc.cloud"
+  weight = 5
+  [menus.main.params]
+    external = true
+
+[[menus.main]]
+  name = "Photography"
+  url = "/photography/"
   weight = 6
