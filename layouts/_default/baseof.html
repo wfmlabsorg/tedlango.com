@@ -62,12 +62,12 @@
                 <span class="nav-dropdown-toggle">{{ .Name }}<span class="caret" aria-hidden="true">▾</span></span>
                 <div class="dropdown">
                     {{ range .Children }}
-                    <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ with .Params.external }} target="_blank" rel="noopener"{{ end }} onclick="{{ $close }}">{{ .Name }}</a>
+                    <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ with .Params.external }} target="_blank" rel="noopener"{{ end }} onclick="{{ $close | safeJS }}">{{ .Name }}</a>
                     {{ end }}
                 </div>
             </div>
             {{ else }}
-            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ with .Params.external }} target="_blank" rel="noopener"{{ end }} onclick="{{ $close }}">{{ .Name }}</a>
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}{{ with .Params.external }} target="_blank" rel="noopener"{{ end }} onclick="{{ $close | safeJS }}">{{ .Name }}</a>
             {{ end }}
             {{ end }}
         </div>
