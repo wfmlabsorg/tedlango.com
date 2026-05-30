@@ -2317,3 +2317,68 @@ footer p {
     .phase-cards { grid-template-columns: 1fr; }
     .phase-diagram { float: none; margin: 0 auto 1rem; }
 }
+
+/* ===== Nav dropdown (Approach) ===== */
+.nav-item.has-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dropdown-toggle {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+.nav-item.has-dropdown:hover .nav-dropdown-toggle,
+.nav-item.has-dropdown:focus-within .nav-dropdown-toggle,
+.nav-item.has-dropdown.active .nav-dropdown-toggle { color: var(--text); }
+.caret { font-size: 0.7em; transition: transform 0.2s; }
+.nav-item.has-dropdown:hover .caret,
+.nav-item.has-dropdown:focus-within .caret { transform: rotate(180deg); }
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.6rem;
+    min-width: 175px;
+    padding: 0.4rem 0;
+    background: rgba(10, 10, 10, 0.97);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    z-index: 100;
+}
+.dropdown::before { content: ""; position: absolute; top: -0.6rem; left: 0; right: 0; height: 0.6rem; }
+.nav-item.has-dropdown:hover .dropdown,
+.nav-item.has-dropdown:focus-within .dropdown { display: flex; }
+.dropdown a {
+    padding: 0.55rem 1.1rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+}
+.dropdown a:hover, .dropdown a.active { color: var(--accent); background: var(--bg-secondary); }
+
+@media (max-width: 600px) {
+    .nav-item.has-dropdown { flex-direction: column; align-items: flex-start; width: 100%; }
+    .nav-dropdown-toggle { font-size: 1rem; padding: 0.5rem 0; cursor: default; }
+    .caret { display: none; }
+    .dropdown {
+        position: static;
+        transform: none;
+        display: flex;
+        margin-top: 0;
+        padding: 0 0 0.25rem 1rem;
+        min-width: auto;
+        background: transparent;
+        backdrop-filter: none;
+        border: none;
+        border-radius: 0;
+    }
+    .dropdown::before { display: none; }
+    .dropdown a { padding: 0.4rem 0; }
+}
