@@ -1,6 +1,7 @@
 ---
 title: "Sales Enablement Dashboard - Excel Formula Kit"
 date: 2026-03-15
+description: "Copy-paste Excel formulas for building a 4-quadrant executive dashboard from an Action Item Tracker."
 tags: ["excel", "dashboard", "tools"]
 draft: false
 ---
