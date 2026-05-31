@@ -27,6 +27,7 @@ LENGTH GUIDE:
 
 APPROACH QUESTIONS:
 - When asked how Ted approaches transformation, contact center modernization, or CCaaS — summarize his six-phase approach (see "approach" in the profile) in 2-3 sentences and point them to https://tedlango.com/ccaas/ to explore it.
+- When asked how he'd break down the program, scope the work, or about the key epics/deliverables — use approach.key_epics: there are 8 epics in a 4-layer memory map (Channels → Associate → Engine → Spine; "Talk · Bot · Text → Tools · Assist → Plan · Measure → Connect"). Give the map briefly and point them to https://tedlango.com/ccaas/key-epics/.
 
 === TED LANGO'S PROFILE ===
 ${JSON.stringify(profileData)}`;

@@ -1,7 +1,7 @@
 {
   "meta": {
     "api_version": "2.0",
-    "last_updated": "2026-05-29",
+    "last_updated": "2026-05-31",
     "source": "Ted Lango Living Resume API",
     "built_with": "TARS Personal AI Infrastructure",
     "mcp_compatible": true,
@@ -1217,6 +1217,88 @@
       "Adaptive by design",
       "Multi-objective (CX + EX + cost together)",
       "Evidence-based & second-order-aware"
-    ]
+    ],
+    "key_epics": {
+      "url": "https://tedlango.com/ccaas/key-epics/",
+      "summary": "The eight CCaaS program epics, mapped through the five principles and arranged as a memory map: 3 channels → 2 for the associate → 2 in the engine → 1 spine (Talk · Bot · Text → Tools · Assist → Plan · Measure → Connect).",
+      "count": 8,
+      "memory_map": "Talk · Bot · Text → Tools · Assist → Plan · Measure → Connect",
+      "layers": [
+        {
+          "layer": "Channels",
+          "meaning": "how the customer reaches in",
+          "epics": [
+            "01 Core Telephony (voice)",
+            "02 Conversational Interactions (virtual agents)",
+            "03 Messaging"
+          ]
+        },
+        {
+          "layer": "Associate",
+          "meaning": "who serves — augmented",
+          "epics": [
+            "04 Frontline Technologies & Agent Experience",
+            "05 AI-Powered Support"
+          ]
+        },
+        {
+          "layer": "Engine",
+          "meaning": "keeps service on-target",
+          "epics": [
+            "06 Workforce Planning & Optimization",
+            "07 Analytics & Reporting"
+          ]
+        },
+        {
+          "layer": "Spine",
+          "meaning": "ties it together",
+          "epics": [
+            "08 Integration"
+          ]
+        }
+      ],
+      "epics": [
+        {
+          "n": "01",
+          "name": "Core Telephony",
+          "lens": "Evidence-based — reliable voice is table stakes; instrument callback/virtual hold against abandonment and the true cost of hold."
+        },
+        {
+          "n": "02",
+          "name": "Conversational Interactions (Virtual Agents)",
+          "lens": "Value over deflection — containment isn't savings; size automation against demand rebound and the harder residual it leaves."
+        },
+        {
+          "n": "03",
+          "name": "Messaging",
+          "lens": "Multi-objective — async messaging is a rare three-way win (CX + cost + associate experience); optimize the channel mix, not one deflection number."
+        },
+        {
+          "n": "04",
+          "name": "Frontline Technologies & Agent Experience",
+          "lens": "Frontline-first — knowledge & quality management cut cognitive load and make coaching effective; the customer outcome follows the associate experience."
+        },
+        {
+          "n": "05",
+          "name": "AI-Powered Support",
+          "lens": "Frontline-first + adaptive — agent assist, after-call summaries, sentiment, next-best-action serve the associate's judgment, not replace it; the human-AI split rebalances as models mature."
+        },
+        {
+          "n": "06",
+          "name": "Workforce Planning & Optimization",
+          "lens": "Evidence-based — staffing is a probability problem; calibrated, intraday-adaptive plans with intelligent routing hold SLAs without over-staffing."
+        },
+        {
+          "n": "07",
+          "name": "Analytics & Reporting",
+          "lens": "Evidence-based — one governed source of truth (EDL/Snowflake → Tableau); a KPI portfolio (CCT, CSAT/NPS, FCR, ASA, self-service, productivity) measured together, not cherry-picked."
+        },
+        {
+          "n": "08",
+          "name": "Integration",
+          "lens": "Frontline-first — the spine: unified Salesforce/CRM desktop, CTI/screen-pop, context transfer; one context, end-to-end visibility."
+        }
+      ]
+    }
   }
 }
