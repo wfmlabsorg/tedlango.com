@@ -1,0 +1,137 @@
+{{ define "main" }}
+{{ $principles := slice
+  (dict "code" "FF" "name" "Frontline-first")
+  (dict "code" "VD" "name" "Value over deflection")
+  (dict "code" "AD" "name" "Adaptive")
+  (dict "code" "EV" "name" "Evidence-based")
+  (dict "code" "MO" "name" "Multi-objective")
+}}
+{{ $epics := slice
+  (dict "n" "01" "name" "Core Telephony" "sub" "Voice Integration" "layer" "Channels" "beat" "Talk"
+    "deliver" "Carrier integration, cloud telephony / call control, dialer, outbound IVR campaigns, and customer-friendly callback / virtual hold."
+    "primary" "EV" "principles" (slice "EV" "VD")
+    "lens" "Reliable voice is table stakes. I'd instrument callback and virtual hold against abandonment and the true cost of hold — proving the experience with data, not just shipping the dialer.")
+  (dict "n" "02" "name" "Conversational Interactions" "sub" "Virtual Agents" "layer" "Channels" "beat" "Bot"
+    "deliver" "NLU/NLP-driven voice and chat virtual agents that automate high-volume intents, maintain context, and hand off seamlessly to live agents."
+    "primary" "VD" "principles" (slice "VD" "AD" "MO")
+    "lens" "Containment is not savings. I'd size virtual-agent automation against demand rebound and the harder residual it leaves behind — so the business case survives Year 2.")
+  (dict "n" "03" "name" "Messaging" "sub" "Digital-First Engagement" "layer" "Channels" "beat" "Text"
+    "deliver" "Omnichannel messaging — synchronous / asynchronous chat, SMS, secure co-browse, and proactive notifications."
+    "primary" "MO" "principles" (slice "MO" "AD")
+    "lens" "Async messaging is a rare three-way win — better CX, lower cost, calmer associates. I'd design the channel mix to optimize all three, not chase a single deflection number.")
+  (dict "n" "04" "name" "Frontline Technologies & Agent Experience" "sub" "Knowledge & Quality" "layer" "Associate" "beat" "Tools"
+    "deliver" "Next-gen knowledge and quality management to improve agent experience, resolution accuracy, compliance, and manager coaching effectiveness."
+    "primary" "FF" "principles" (slice "FF" "MO")
+    "lens" "Frontline-first, made literal. Knowledge and QM exist to cut the associate's cognitive load and make coaching effective — the customer outcome follows the associate experience.")
+  (dict "n" "05" "name" "AI-Powered Support" "sub" "Assist & Insight" "layer" "Associate" "beat" "Assist"
+    "deliver" "Agent assist, automated after-call summaries, real-time sentiment, customer-journey context with next-best-action, and future-state speech analytics."
+    "primary" "FF" "principles" (slice "FF" "AD" "EV")
+    "lens" "All of it serves the associate's judgment, not replaces it. Adaptive by design — the human-AI split rebalances as the models mature, instead of being frozen to today's snapshot.")
+  (dict "n" "06" "name" "Workforce Planning & Optimization" "sub" "Plan & Route" "layer" "Engine" "beat" "Plan"
+    "deliver" "Forecasting, scheduling, intraday management, adherence, performance analytics, and intelligent call/chat routing to meet SLAs and contractual obligations."
+    "primary" "EV" "principles" (slice "EV" "AD" "MO")
+    "lens" "Staffing is a probability problem, not a point estimate. Calibrated, intraday-adaptive plans that route intelligently to hold SLAs without over-staffing — evidence over gut.")
+  (dict "n" "07" "name" "Analytics & Reporting" "sub" "Measure & Govern" "layer" "Engine" "beat" "Measure"
+    "deliver" "Enterprise data integration (EDL / DWH / Snowflake), real-time and historical dashboards, interaction analytics, and Tableau connectivity for continuous KPI optimization."
+    "primary" "EV" "principles" (slice "EV" "MO")
+    "lens" "One source of truth, or the program argues about whose number is right. A governed KPI portfolio — CCT, CSAT/NPS, FCR, ASA, self-service, productivity — measured together, not cherry-picked.")
+  (dict "n" "08" "name" "Integration" "sub" "Enterprise Platform" "layer" "Spine" "beat" "Connect"
+    "deliver" "A secure, scalable layer across Salesforce/CRM desktop, CCaaS, and core systems — APIs/microservices, IAM (Okta/SSO), CTI/screen-pop, context transfer, routing alignment, end-to-end visibility."
+    "primary" "FF" "principles" (slice "FF" "MO")
+    "lens" "The spine. A unified desktop with CTI/screen-pop and context transfer means the associate stops tool-switching — one context, end-to-end visibility. Where frontline-first and multi-objective meet.")
+}}
+{{ $layers := slice
+  (dict "name" "Channels" "tag" "How the customer reaches in")
+  (dict "name" "Associate" "tag" "Who serves — augmented")
+  (dict "name" "Engine" "tag" "How service stays on-target")
+  (dict "name" "Spine" "tag" "What ties it together")
+}}
+
+<header class="hero approach-hero">
+    <p class="eyebrow">CCaaS · A Layer Deeper</p>
+    <h1>Key Epics &amp; Deliverables</h1>
+    <p class="tagline">The eight program epics, mapped through five principles — and built to memorize.</p>
+</header>
+
+<section class="section approach-intro">
+    {{ .Content }}
+</section>
+
+<section class="section">
+    <h2>The Memory Map</h2>
+    <p class="framework-intro">Eight epics, four layers, one story: <strong>3 channels → 2 for the associate → 2 in the engine → 1 spine.</strong></p>
+    <div class="epic-map">
+        {{ range $layers }}
+        {{ $ln := .name }}
+        <div class="epic-layer">
+            <div class="epic-layer-head"><span class="epic-layer-name">{{ .name }}</span><span class="epic-layer-tag">{{ .tag }}</span></div>
+            <div class="epic-layer-nodes">
+                {{ range (where $epics "layer" $ln) }}
+                <a class="epic-node" href="#epic-{{ .n }}">
+                    <span class="epic-node-num">{{ .n }}</span>
+                    <span class="epic-node-beat">{{ .beat }}</span>
+                    <span class="epic-node-name">{{ .name }}</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <p class="epic-mnemonic">Talk · Bot · Text &nbsp;→&nbsp; Tools · Assist &nbsp;→&nbsp; Plan · Measure &nbsp;→&nbsp; Connect</p>
+</section>
+
+<section class="section">
+    <h2>The Five Principles</h2>
+    <div class="principle-legend">
+        {{ range $principles }}<span class="principle-chip" data-code="{{ .code }}"><b>{{ .code }}</b> {{ .name }}</span>{{ end }}
+    </div>
+</section>
+
+<section class="section">
+    <h2>The Eight Epics, Through the Lens</h2>
+    <div class="epic-cards">
+        {{ range $epics }}
+        {{ $self := . }}
+        <article class="epic-card" id="epic-{{ .n }}">
+            <div class="epic-card-top">
+                <span class="epic-card-num">{{ .n }}</span>
+                <div>
+                    <h3>{{ .name }}</h3>
+                    <span class="epic-card-sub">{{ .sub }} · <em>{{ .layer }}</em></span>
+                </div>
+            </div>
+            <p class="epic-deliver"><strong>Deliverables:</strong> {{ .deliver }}</p>
+            <div class="epic-lens">
+                {{ range $principles }}{{ if in $self.principles .code }}<span class="principle-chip{{ if eq $self.primary .code }} primary{{ end }}" data-code="{{ .code }}"><b>{{ .code }}</b></span>{{ end }}{{ end }}
+                <p>{{ .lens }}</p>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+
+<section class="section">
+    <h2>Principles × Epics</h2>
+    <p class="framework-intro">Where each principle bites hardest — <span class="dot primary-dot"></span> primary lens, <span class="dot"></span> also applies.</p>
+    <div class="epic-matrix-wrap">
+    <table class="epic-matrix">
+        <thead><tr><th>Epic</th>{{ range $principles }}<th title="{{ .name }}">{{ .code }}</th>{{ end }}</tr></thead>
+        <tbody>
+            {{ range $epics }}
+            {{ $self := . }}
+            <tr>
+                <td class="epic-matrix-name"><span class="epic-matrix-num">{{ .n }}</span> {{ .name }}</td>
+                {{ range $principles }}
+                <td>{{ if eq $self.primary .code }}<span class="dot primary-dot"></span>{{ else if in $self.principles .code }}<span class="dot"></span>{{ end }}</td>
+                {{ end }}
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    </div>
+</section>
+
+<section class="section approach-cta">
+    <p class="phase-backlink"><a href="{{ (site.GetPage "/ccaas").RelPermalink }}">← Back to the CCaaS approach</a></p>
+</section>
+{{ end }}
