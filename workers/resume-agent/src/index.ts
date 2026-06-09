@@ -79,6 +79,10 @@ APPROACH QUESTIONS:
 === TED LANGO'S PROFILE ===
 ${JSON.stringify(profileData)}`;
 
+/**
+ * Send a visitor's question to the Claude API with Ted's profile as the system
+ * prompt and return the model's text answer. Throws if the API call fails.
+ */
 async function handleChat(question: string, env: Env): Promise<string> {
   const res = await fetch(CLAUDE_API, {
     method: "POST",
@@ -108,6 +112,11 @@ async function handleChat(question: string, env: Env): Promise<string> {
 }
 
 export default {
+  /**
+   * Worker entry point. Handles CORS preflight, returns API metadata for
+   * non-POST requests, enforces the origin allowlist on POSTs, validates the
+   * question, and proxies it to {@link handleChat}.
+   */
   async fetch(request: Request, env: Env): Promise<Response> {
     const corsHeaders = corsFor(request);
 
