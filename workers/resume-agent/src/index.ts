@@ -6,6 +6,43 @@ interface Env {
 
 const CLAUDE_API = "https://api.anthropic.com/v1/messages";
 
+// Only these origins may call the agent. CORS headers stop browsers from other
+// sites; the server-side Origin/Referer check below stops naive scripts too.
+const ALLOWED_ORIGINS = new Set([
+  "https://tedlango.com",
+  "https://www.tedlango.com",
+  "http://localhost:1313", // hugo dev server
+]);
+
+function corsFor(request: Request): Record<string, string> {
+  const origin = request.headers.get("Origin") ?? "";
+  const headers: Record<string, string> = {
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
+  };
+  if (ALLOWED_ORIGINS.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+  }
+  return headers;
+}
+
+// True only when the request demonstrably comes from an allowed origin.
+// Origin is set by browsers on cross-origin POSTs; Referer is the fallback.
+function isAllowedRequest(request: Request): boolean {
+  const origin = request.headers.get("Origin");
+  if (origin) return ALLOWED_ORIGINS.has(origin);
+  const referer = request.headers.get("Referer");
+  if (referer) {
+    try {
+      return ALLOWED_ORIGINS.has(new URL(referer).origin);
+    } catch {
+      return false;
+    }
+  }
+  return false;
+}
+
 const SYSTEM_PROMPT = `You are a conversational AI on Ted Lango's personal website. Recruiters, hiring managers, and collaborators ask you about Ted.
 
 You have his complete profile below. Answer like a knowledgeable colleague — conversational, warm, specific.
@@ -62,11 +99,7 @@ async function handleChat(question: string, env: Env): Promise<string> {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    const corsHeaders = {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    };
+    const corsHeaders = corsFor(request);
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
@@ -81,6 +114,15 @@ export default {
         }),
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Reject POSTs that don't come from an allowed origin (stops cross-site
+    // browser abuse and naive scripts spending API credits).
+    if (!isAllowedRequest(request)) {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     try {
