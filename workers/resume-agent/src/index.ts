@@ -14,6 +14,11 @@ const ALLOWED_ORIGINS = new Set([
   "http://localhost:1313", // hugo dev server
 ]);
 
+/**
+ * Build CORS response headers for a request, reflecting the request's Origin
+ * only when it is in {@link ALLOWED_ORIGINS}. Disallowed origins receive no
+ * `Access-Control-Allow-Origin` header (so browsers block the response).
+ */
 function corsFor(request: Request): Record<string, string> {
   const origin = request.headers.get("Origin") ?? "";
   const headers: Record<string, string> = {
@@ -27,8 +32,13 @@ function corsFor(request: Request): Record<string, string> {
   return headers;
 }
 
-// True only when the request demonstrably comes from an allowed origin.
-// Origin is set by browsers on cross-origin POSTs; Referer is the fallback.
+/**
+ * Returns true when the request's Origin (or Referer fallback) is in
+ * {@link ALLOWED_ORIGINS}. This is a cheap first-line filter against casual
+ * cross-site and scripted abuse; it is NOT a strong auth control, since a
+ * non-browser client can forge these headers. The real cost cap is a
+ * Cloudflare Rate Limiting rule on the Worker route.
+ */
 function isAllowedRequest(request: Request): boolean {
   const origin = request.headers.get("Origin");
   if (origin) return ALLOWED_ORIGINS.has(origin);
