@@ -426,6 +426,48 @@
       ]
     }
   ],
+  "operating_model": {
+    "name": "Embedded-Builder Operating Model",
+    "summary": "Ted sits at an uncommon intersection: an operations executive with the genuine technical depth to execute, and a technologist who deeply understands operations. He works the way forward-deployed, embedded-builder teams work — go deep inside the operation to discover the real problem, then build a working prototype against live operational data, fast — rather than writing a spec and waiting.",
+    "positioning_language": [
+      "Operations executive who understands the technical depth needed to execute",
+      "Technologist who understands operations",
+      "Discover the real problem inside the operation, then build a working prototype against live data — fast"
+    ],
+    "important_boundary": "This describes HOW Ted operates — an operating model and mindset, not a job title or credential. Ted has never worked at Palantir and has never held a 'Forward Deployed Engineer', 'Echo team', or 'Delta team' title. His operating model resembles how those teams work; it is not a claim of having been on one.",
+    "when_relevant": "Surface this identity when a question touches product/engineering plus domain expertise, AI-assisted building, embedded problem discovery, or rapid prototyping against real operational data.",
+    "proof_points": [
+      {
+        "name": "Domain depth",
+        "evidence": "20+ years of WFM and contact-center operations leadership — 85+ contact centers, 400M+ interactions annually at peak, $50M+ in documented savings. The operations side of the intersection is lived, not studied."
+      },
+      {
+        "name": "CCAE (Case Consulting Analytics Engine)",
+        "evidence": "Built a multi-agent analytics pipeline that ETLs raw operational data, runs exploratory pattern detection, generates hypotheses, validates them with domain experts, and synthesizes findings into reports and prototype candidates. Built for real consulting engagements against live client operational data."
+      },
+      {
+        "name": "O-VIX (Operational Volatility Index)",
+        "evidence": "Built a live dashboard that collapses the '50 browser tabs' of operational monitoring into one computed volatility score, running against real-time data feeds.",
+        "url": "https://ovix.wfmlabs.com"
+      },
+      {
+        "name": "Embedded product work at Intradiem",
+        "evidence": "Embedded as the domain expert directly inside the product organization — worked daily in the product team's own toolchain (Jira/Confluence) translating frontline operational needs into prioritized, buildable features, guided ML-based attrition prediction models, and co-invented a patented multi-objective queue optimization approach. Domain-expert-in-the-loop, prototype over spec."
+      },
+      {
+        "name": "Embedded discovery at MetLife Japan",
+        "evidence": "Year-long engagement embedded inside MetLife Japan's live operation — discovering how the work was actually done on the ground, then standardizing global WFM practices from that ground truth."
+      },
+      {
+        "name": "TARS personal AI infrastructure",
+        "evidence": "Built TARS, a personal multi-agent AI system on modern agentic architecture — MCP-based tool use, multi-agent orchestration, Cloudflare Workers. The resume agent answering this question is part of it."
+      },
+      {
+        "name": "WFM Labs community validation",
+        "evidence": "Founded WFM Labs (1,000+ members) — community-based problem discovery and validation, where real practitioners pressure-test hypotheses and prototypes before they ship."
+      }
+    ]
+  },
   "track_record": {
     "headline_stats": [
       {
@@ -982,6 +1024,12 @@
         "url": "https://valuemodel.wfmlabs.com/",
         "description": "Interactive three-pool workforce planning simulator with second-order effect quantification. Models demand rebound, complexity concentration, and escalation cascades across Autonomous AI, Collaborative, and Specialist pools.",
         "type": "simulator"
+      },
+      {
+        "name": "O-VIX Dashboard (Operational Volatility Index)",
+        "url": "https://ovix.wfmlabs.com",
+        "description": "Live operational volatility dashboard — collapses the '50 browser tabs' of operational monitoring into one computed volatility score against real-time data feeds. Working prototype built fast against live data, embedded-builder style.",
+        "type": "dashboard"
       },
       {
         "name": "TalentIntel",
