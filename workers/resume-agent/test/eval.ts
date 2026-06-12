@@ -92,7 +92,8 @@ function hardCheck(c: Case, answer: string): string[] {
   if (REQUIRE_NEGATION.has(c.category) && !NEGATION.test(answer)) {
     failures.push("missing explicit negation (hasn't / no record / never)");
   }
-  if (REQUIRE_NEGATION.has(c.category) && VALIDATION_Q.test(answer)) {
+  const closingLine = answer.trim().split(/\r?\n/).filter(Boolean).at(-1) ?? "";
+  if (REQUIRE_NEGATION.has(c.category) && VALIDATION_Q.test(closingLine)) {
     failures.push("validation-seeking close ('does that make sense?')");
   }
   return failures;
@@ -127,7 +128,15 @@ let judgeFailures = 0;
 console.log(`Eval against ${ENDPOINT} (${CASES.length} cases, judge: ${apiKey ? JUDGE_MODEL : "OFF — no ANTHROPIC_API_KEY"})\n`);
 
 for (const c of CASES) {
-  const answer = await ask(c.question);
+  let answer: string;
+  try {
+    answer = await ask(c.question);
+  } catch (err: any) {
+    hardFailures++;
+    console.log(`✗ HARD         [${c.category}] ${c.id} — request failed: ${err.message}`);
+    results.push({ ...c, answer: null, hard_failures: [`request failed: ${err.message}`], judge: null });
+    continue;
+  }
   const hard = hardCheck(c, answer);
   const verdict = apiKey ? await judge(c, answer, apiKey) : null;
   if (hard.length) hardFailures++;
