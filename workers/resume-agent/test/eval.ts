@@ -84,7 +84,8 @@ async function ask(question: string): Promise<string> {
   return data.response;
 }
 
-function hardCheck(c: Case, answer: string): string[] {
+function hardCheck(c: Case, rawAnswer: string): string[] {
+  const answer = rawAnswer.replace(/[*_]/g, ""); // markdown bold/italics break word-boundary regexes ("**not** worked")
   const failures: string[] = [];
   for (const re of FORBIDDEN) {
     if (re.test(answer)) failures.push(`forbidden claim matched: ${re}`);
