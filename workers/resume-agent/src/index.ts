@@ -6,6 +6,53 @@ interface Env {
 
 const CLAUDE_API = "https://api.anthropic.com/v1/messages";
 
+// Only these origins may call the agent. CORS headers stop browsers from other
+// sites; the server-side Origin/Referer check below stops naive scripts too.
+const ALLOWED_ORIGINS = new Set([
+  "https://tedlango.com",
+  "https://www.tedlango.com",
+  "http://localhost:1313", // hugo dev server
+]);
+
+/**
+ * Build CORS response headers for a request, reflecting the request's Origin
+ * only when it is in {@link ALLOWED_ORIGINS}. Disallowed origins receive no
+ * `Access-Control-Allow-Origin` header (so browsers block the response).
+ */
+function corsFor(request: Request): Record<string, string> {
+  const origin = request.headers.get("Origin") ?? "";
+  const headers: Record<string, string> = {
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
+  };
+  if (ALLOWED_ORIGINS.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+  }
+  return headers;
+}
+
+/**
+ * Returns true when the request's Origin (or Referer fallback) is in
+ * {@link ALLOWED_ORIGINS}. This is a cheap first-line filter against casual
+ * cross-site and scripted abuse; it is NOT a strong auth control, since a
+ * non-browser client can forge these headers. The real cost cap is a
+ * Cloudflare Rate Limiting rule on the Worker route.
+ */
+function isAllowedRequest(request: Request): boolean {
+  const origin = request.headers.get("Origin");
+  if (origin) return ALLOWED_ORIGINS.has(origin);
+  const referer = request.headers.get("Referer");
+  if (referer) {
+    try {
+      return ALLOWED_ORIGINS.has(new URL(referer).origin);
+    } catch {
+      return false;
+    }
+  }
+  return false;
+}
+
 const SYSTEM_PROMPT = `You are a conversational AI on Ted Lango's personal website. Recruiters, hiring managers, and collaborators ask you about Ted.
 
 You have his complete profile below. Answer like a knowledgeable colleague — conversational, warm, specific.
@@ -32,6 +79,10 @@ APPROACH QUESTIONS:
 === TED LANGO'S PROFILE ===
 ${JSON.stringify(profileData)}`;
 
+/**
+ * Send a visitor's question to the Claude API with Ted's profile as the system
+ * prompt and return the model's text answer. Throws if the API call fails.
+ */
 async function handleChat(question: string, env: Env): Promise<string> {
   const res = await fetch(CLAUDE_API, {
     method: "POST",
@@ -61,12 +112,13 @@ async function handleChat(question: string, env: Env): Promise<string> {
 }
 
 export default {
+  /**
+   * Worker entry point. Handles CORS preflight, returns API metadata for
+   * non-POST requests, enforces the origin allowlist on POSTs, validates the
+   * question, and proxies it to {@link handleChat}.
+   */
   async fetch(request: Request, env: Env): Promise<Response> {
-    const corsHeaders = {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    };
+    const corsHeaders = corsFor(request);
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
@@ -81,6 +133,15 @@ export default {
         }),
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    // Reject POSTs that don't come from an allowed origin (stops cross-site
+    // browser abuse and naive scripts spending API credits).
+    if (!isAllowedRequest(request)) {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     try {
