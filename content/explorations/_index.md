@@ -1,5 +1,6 @@
 ---
 title: "Explorations"
+layout: "landing"
 description: "Where my attention wanders — photography, physics, and coffee."
 cards:
   - title: "Photography"
