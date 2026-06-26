@@ -92,6 +92,6 @@ ignoreLogs = ['warning-frontmatter-params-overrides']
     external = true
 
 [[menus.main]]
-  name = "Photography"
-  url = "/photography/"
+  name = "Explorations"
+  url = "/explorations/"
   weight = 7

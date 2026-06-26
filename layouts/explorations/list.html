@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="list-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+</header>
+
+<div class="category-grid">
+    {{ range .Params.cards }}
+    <a href="{{ .url }}" class="category-card">
+        {{ with .cover }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="category-cover" loading="lazy">
+        {{ else }}
+        <div class="category-cover category-cover--placeholder">{{ with .icon }}<span>{{ . }}</span>{{ end }}</div>
+        {{ end }}
+        <div class="category-info">
+            <h2>{{ .title }}</h2>
+            {{ with .description }}<p>{{ . }}</p>{{ end }}
+        </div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}
