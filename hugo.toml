@@ -9,6 +9,16 @@ title = "Ted Lango"
   agentBase = "https://resume-agent.tedlango.workers.dev"
   ga4 = "G-HQRSND342K"
   ogImage = "img/og-default.png"
+  # Public Mapbox token (pk.*) for the coffee map. Pull from SecretManager.
+  # Empty is safe: the page builds and feature data is present; only basemap tiles need this.
+  mapboxToken = ""
+
+# GeoJSON output format for the coffee map — generated FROM content front matter.
+[outputFormats.CoffeeMap]
+  mediaType = "application/json"
+  baseName = "coffee-map"
+  isPlainText = true
+  notAlternative = true
 
 [markup]
   [markup.goldmark]
