@@ -15,7 +15,7 @@ In 1994 a physicist named Miguel Alcubierre published a short paper in *Classica
 
 The trick is to stop thinking about moving the ship *through* space and start thinking about moving space *around* the ship.
 
-![The Alcubierre warp drive: space contracts ahead of the ship and expands behind it, carrying a flat bubble across the universe.](/img/physics/warp-drive.png)
+![The Alcubierre warp drive: space contracts ahead of the ship and expands behind it, carrying a flat bubble across the universe.](/img/physics/warp-drive.webp)
 
 Alcubierre's metric does two things at once: it **contracts** space directly in front of the ship and **expands** space directly behind it. The ship sits in a pocket of perfectly flat, undisturbed spacetime — the "bubble" — and that bubble gets carried forward by the wave of contraction and expansion, like a surfer riding a wave they didn't make.
 
