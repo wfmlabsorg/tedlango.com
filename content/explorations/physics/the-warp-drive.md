@@ -1,6 +1,7 @@
 +++
 date = '2026-06-26'
 draft = false
+weight = 2
 title = 'The Warp Drive: Contract Space Ahead, Expand It Behind'
 description = "The Star Trek warp drive is real general relativity — Miguel Alcubierre wrote the metric down in 1994. Here's how it works, and the bill that comes due in negative energy."
 summary = "A real solution of Einstein's equations carries a ship faster than light without it ever locally breaking the speed limit. The catch is what you'd build it from."
