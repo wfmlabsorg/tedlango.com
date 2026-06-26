@@ -1,7 +1,6 @@
 +++
 date = '2026-06-24'
 draft = false
-weight = 3
 title = 'The Wormhole: A Tunnel Between Two Distant Places'
 description = "The other famous shortcut doesn't move you fast — it makes the distance short. A traversable wormhole needs surprisingly little exotic matter, and that's exactly where its real troubles begin."
 summary = "A wormhole dodges the warp drive's impossible energy bill — you need only a little exotic matter. Then it hands you four new problems instead, including a time machine."

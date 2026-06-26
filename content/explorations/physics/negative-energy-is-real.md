@@ -1,7 +1,6 @@
 +++
 date = '2026-06-23'
 draft = false
-weight = 4
 title = 'Negative Energy Is Real — and Nowhere Near Enough'
 description = "Warp drives and wormholes need negative energy: matter with less than nothing in it. The surprise is that we've measured it in a lab. The catch is that it's tiny, fleeting, and always repaid."
 summary = "We really have made negative energy — the Casimir effect is measured to better than 1%. So why isn't that a warp drive? Because of how little, how briefly, and at what cost."

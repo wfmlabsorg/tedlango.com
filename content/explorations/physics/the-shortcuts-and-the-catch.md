@@ -1,7 +1,6 @@
 +++
 date = '2026-06-26'
 draft = false
-weight = 1
 title = 'The Shortcuts and the Catch: What It Would Actually Take to Go Interstellar'
 description = "Science fiction has warp drives and wormholes. The real physics says general relativity allows the geometry — but every shortcut demands matter we have no idea how to make, and the barriers are getting firmer, not weaker."
 summary = "General relativity really does permit faster-than-light shortcuts on paper. The catch is what they're made of — and a closer look says the door is closing, not opening."

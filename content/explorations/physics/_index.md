@@ -1,6 +1,5 @@
 ---
 title: "Physics"
-type: "physics"
 description: "Reading and notes on wormholes, faster-than-light travel, and what it would actually take to go interstellar."
 ---
 
