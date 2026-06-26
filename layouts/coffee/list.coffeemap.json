@@ -1,0 +1,16 @@
+{{- /* Coffee map GeoJSON — generated FROM content front matter (single source of truth). */ -}}
+{{- $features := slice -}}
+{{- range where .Site.RegularPages "Params.map" true -}}
+  {{- $geo := .Params.geo -}}
+  {{- if and $geo (isset $geo "lat") (isset $geo "lng") -}}
+    {{- $coords := slice $geo.lng $geo.lat -}}
+    {{- $props := dict
+        "title" .Title
+        "kind" .Params.entry_type
+        "url" .RelPermalink
+        "label" (index $geo "label")
+        "description" .Description -}}
+    {{- $features = $features | append (dict "type" "Feature" "geometry" (dict "type" "Point" "coordinates" $coords) "properties" $props) -}}
+  {{- end -}}
+{{- end -}}
+{{- dict "type" "FeatureCollection" "features" $features | jsonify -}}
