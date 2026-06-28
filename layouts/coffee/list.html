@@ -26,6 +26,7 @@
 <div class="coffee-map-legend">
   <span><i style="background:#c8862b"></i> Origins</span>
   <span><i style="background:#5b8a72"></i> Roasters &amp; cafés</span>
+  <span><i style="background:#3d6fa5"></i> Coffee across the world</span>
 </div>
 
 {{ $kinds := slice
@@ -33,7 +34,8 @@
   (dict "k" "bean"    "label" "Beans")
   (dict "k" "brew"    "label" "Brews")
   (dict "k" "roaster" "label" "Roasters &amp; Cafés")
-  (dict "k" "roast"   "label" "Roast Logs") }}
+  (dict "k" "roast"   "label" "Roast Logs")
+  (dict "k" "place"   "label" "Coffee Across the World") }}
 
 {{ range $g := $kinds }}
   {{ $pages := where $.Site.RegularPages "Params.entry_type" $g.k }}
