@@ -1,5 +1,5 @@
 {{ define "head" }}
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
 <style>
   #coffee-map { height: 460px; border-radius: 12px; margin: 1.75rem 0; overflow: hidden; background: #11151a; }
   #coffee-map .coffee-map-note { display:flex; align-items:center; justify-content:center; height:100%; padding:2rem; text-align:center; color:#9aa0a6; font-size:.95rem; }
@@ -8,8 +8,8 @@
   .coffee-map-legend i { width:.7rem; height:.7rem; border-radius:50%; display:inline-block; }
   .coffee-group { margin: 2rem 0; }
   .coffee-group > h2 { border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom:.35rem; }
-  .mapboxgl-popup-content { color:#1a1a1a; }
-  .mapboxgl-popup-content .muted { color:#666; font-size:.85em; }
+  .maplibregl-popup-content { color:#1a1a1a; }
+  .maplibregl-popup-content .muted { color:#666; font-size:.85em; }
 </style>
 {{ end }}
 
@@ -20,7 +20,7 @@
 </header>
 
 {{ $mapURL := "" }}{{ with .OutputFormats.Get "CoffeeMap" }}{{ $mapURL = .RelPermalink }}{{ end }}
-<div id="coffee-map" data-geojson="{{ $mapURL }}" data-token="{{ .Site.Params.mapboxToken }}">
+<div id="coffee-map" data-geojson="{{ $mapURL }}">
   <div class="coffee-map-note">Loading map…</div>
 </div>
 <div class="coffee-map-legend">
@@ -57,6 +57,6 @@
   {{ end }}
 {{ end }}
 
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="/js/coffee-map.js"></script>
 {{ end }}
