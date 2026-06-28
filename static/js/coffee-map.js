@@ -7,7 +7,7 @@
 
   var token = el.getAttribute("data-token");
   var src = el.getAttribute("data-geojson");
-  var COLORS = { origin: "#c8862b", roaster: "#5b8a72", cafe: "#5b8a72", both: "#5b8a72" };
+  var COLORS = { origin: "#c8862b", roaster: "#5b8a72", cafe: "#5b8a72", both: "#5b8a72", place: "#3d6fa5" };
   var DEFAULT = "#9aa0a6";
 
   function note(msg) { el.innerHTML = '<div class="coffee-map-note">' + msg + "</div>"; }
