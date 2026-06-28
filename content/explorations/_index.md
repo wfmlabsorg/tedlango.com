@@ -10,7 +10,7 @@ cards:
   - title: "Physics"
     url: "/explorations/physics/"
     description: "Reading and notes on wormholes, faster-than-light travel, and what it would actually take to go interstellar."
-    icon: "🪐"
+    cover: "/img/physics/physics-cover.webp"
   - title: "Coffee"
     url: "/explorations/coffee/"
     description: "A new hobby from the ground up — brewing, roasting, and tasting coffees from different regions."
