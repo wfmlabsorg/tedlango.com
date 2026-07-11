@@ -5,3 +5,7 @@ legacy_site/
 *.swp
 *.swo
 .DS_Store
+
+# Wrangler local build cache
+.wrangler/
+workers/**/.wrangler/
