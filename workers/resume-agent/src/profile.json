@@ -940,8 +940,8 @@
         "type": "research_model"
       },
       {
-        "title": "MAP-Elites for Workforce Planning: Illuminating a Repertoire of Staffing Models for Volatile Demand",
-        "description": "Brings MAP-Elites—a quality-diversity search from robotics—to workforce planning. Instead of one forecast-optimal staffing plan, it illuminates a full map of the best plan of every kind across two operator levers (part-time share and surge reserve), surfacing the robust operating models a single optimizer discards and the infeasible regions that mark the boundary of what is achievable. Built on Erlang-C queueing math with risk-aware scoring and a seeded, reproducible engine verified against the live interactive tool. AI proposes candidate plans; a deterministic, auditable simulation selects. Full research draft published in the WFM Labs community (community.wfmlabs.org). Companion to the Contact Center Compass issue “When the Plan Breaks.”",
+        "title": "When the Plan Breaks: Illuminating Staffing with MAP-Elites",
+        "description": "Brings MAP-Elites—a quality-diversity search from robotics—to workforce planning. Instead of one forecast-optimal staffing plan, it illuminates a full map of the best plan of every kind across two operator levers (part-time share and surge reserve), surfacing the robust operating models a single optimizer discards and the infeasible regions that mark the boundary of what is achievable. Built on Erlang-C queueing math with risk-aware scoring and a seeded, reproducible engine verified against the live interactive tool. AI proposes candidate plans; a deterministic, auditable simulation selects. First-draft research paper published in the WFM Labs community (community.wfmlabs.org). Companion to the Contact Center Compass issue “When the Plan Breaks.”",
         "url": "https://planbreaks.wfmlabs.com",
         "type": "research_model"
       }
