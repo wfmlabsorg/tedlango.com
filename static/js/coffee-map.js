@@ -24,7 +24,9 @@
       el.innerHTML = "";
       var map = new maplibregl.Map({
         container: "coffee-map",
-        style: "https://tiles.openfreemap.org/styles/positron",
+        // Dark basemap — the site is dark-only; positron is near-white and
+        // rendered as a bright slab against the #11151a map shell.
+        style: "https://tiles.openfreemap.org/styles/dark",
         center: [0, 15],
         zoom: 1.3,
         cooperativeGestures: true,
