@@ -1,0 +1,20 @@
+name = "book-agent"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[observability]
+enabled = true
+
+[vars]
+# Ted's call: Opus 5.5 by default; flip to claude-sonnet-5-5 to halve the cold-cache cost.
+MODEL = "claude-opus-5-5"
+
+# Per-IP rate limit (config-only, no storage): 10 questions per minute.
+[[unsafe.bindings]]
+name = "RL"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
+
+# Secret: ANTHROPIC_API_KEY — set with `wrangler secret put ANTHROPIC_API_KEY`
+# (dedicated Console workspace key with a monthly spend cap).
