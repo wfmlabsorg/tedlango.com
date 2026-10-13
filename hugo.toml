@@ -7,6 +7,9 @@ title = "Ted Lango"
   description = "Workforce Transformation & Applied Intelligence — essays, photography, technology, and experiments"
   apiBase = "https://living-resume-api.tedlango.workers.dev"
   agentBase = "https://resume-agent.tedlango.workers.dev"
+  # Adaptive online edition: audio lives in R2 (bucket adaptive-audio), Ask the Book is a Worker.
+  audioBase = "https://audio.tedlango.com/adaptive/"
+  bookAgentBase = "https://book-agent.tedlango.workers.dev"
   ga4 = "G-HQRSND342K"
   ogImage = "img/og-default.png"
   # Public Mapbox token (pk.*) for the coffee map. Pull from SecretManager.
@@ -24,6 +27,12 @@ title = "Ted Lango"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    # Math in the Adaptive chapters: delimiters pass through untouched for KaTeX auto-render.
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]']]
+        inline = [['\(', '\)']]
   [markup.highlight]
     style = "monokai"
     noClasses = true
@@ -52,7 +61,7 @@ ignoreLogs = ['warning-frontmatter-params-overrides']
 
 [[menus.main]]
   name = "My Book"
-  url = "/#book"
+  url = "/adaptive/"
   weight = 2
 
 [[menus.main]]

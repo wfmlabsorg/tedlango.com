@@ -1,0 +1,294 @@
+[
+  {
+    "term": "ACD",
+    "definition": "Automatic Call Distributor. Telephony/omnichannel system that routes contacts to agents using skills/policies."
+  },
+  {
+    "term": "ACW",
+    "definition": "After‑Call Work. Post‑contact wrap time included in handle time and staffing assumptions."
+  },
+  {
+    "term": "AHT",
+    "definition": "Average Handle Time. Talk + hold + ACW per contact; a driver of workload and staffing."
+  },
+  {
+    "term": "AL",
+    "definition": "Adaptation Latency. Median time from a material signal (campaign/outage/sentiment) to the effective routing/schedule change."
+  },
+  {
+    "term": "A/B (test)",
+    "definition": "Experimental design comparing two conditions; often used for pilot rule toggles."
+  },
+  {
+    "term": "AAR",
+    "definition": "Automation Acceptance Rate. Accepted automated prompts ÷ eligible prompts."
+  },
+  {
+    "term": "ASA",
+    "definition": "Average Speed of Answer. Mean wait time for answered contacts; pairs with SL to show depth of delay."
+  },
+  {
+    "term": "BPO",
+    "definition": "Business Process Outsourcing; external vendor capacity used under guardrails or envelopes."
+  },
+  {
+    "term": "BI",
+    "definition": "Business Intelligence; reporting/visualization layer aligned to the single source of truth."
+  },
+  {
+    "term": "CCaaS",
+    "definition": "Contact Center as a Service; cloud platform providing routing, reporting, and channels."
+  },
+  {
+    "term": "CES",
+    "definition": "Customer Effort Score; perceived effort to resolve an issue."
+  },
+  {
+    "term": "CLV",
+    "definition": "Customer Lifetime Value; value contribution over a relationship horizon."
+  },
+  {
+    "term": "Cohort",
+    "definition": "A defined population segment used for pilots and measurement (e.g., tenure band, skill)."
+  },
+  {
+    "term": "CRM",
+    "definition": "Customer Relationship Management; system of record for customer interactions and attributes."
+  },
+  {
+    "term": "CSAT",
+    "definition": "Customer Satisfaction; survey‑based outcome metric."
+  },
+  {
+    "term": "Decision Cards",
+    "definition": "Lightweight documentation of automated or human decisions: inputs, owner, guardrails, rollback path."
+  },
+  {
+    "term": "DES",
+    "definition": "Discrete‑Event Simulation. Event‑by‑event modeling of queues/skills/policies for planning and policy evaluation."
+  },
+  {
+    "term": "Envelope (Staffing)",
+    "definition": "A probability band (e.g., P50/P80/P95) for staffing need; leaders pick a band that matches risk tolerance."
+  },
+  {
+    "term": "Envelope hit‑rate",
+    "definition": "Share of intervals where realized need falls within the chosen band (e.g., P80)."
+  },
+  {
+    "term": "ERP",
+    "definition": "Enterprise Resource Planning; finance/inventory backbone integrated with WFM decisions."
+  },
+  {
+    "term": "ETL",
+    "definition": "Extract–Transform–Load; data pipelines feeding planning and the ROC."
+  },
+  {
+    "term": "EWI",
+    "definition": "Employee Wellbeing Index. Composite (e.g., schedule stability, growth delivered, burnout risk)."
+  },
+  {
+    "term": "EX",
+    "definition": "Employee Experience; perceived quality of work environment and systems."
+  },
+  {
+    "term": "Explainability Coverage",
+    "definition": "Share of automated decisions with recorded reasons, inputs, and override path."
+  },
+  {
+    "term": "Fairness Disparity Ratio",
+    "definition": "Simple fairness lens comparing outcomes across cohorts (e.g., tenure/shift)."
+  },
+  {
+    "term": "Fan Chart",
+    "definition": "Visual showing a forecast median with widening percentile bands over time."
+  },
+  {
+    "term": "Feature Store",
+    "definition": "Managed repository of model features used consistently across training and inference."
+  },
+  {
+    "term": "FCR",
+    "definition": "First‑Contact Resolution; issue resolved in the first interaction."
+  },
+  {
+    "term": "Governance Review",
+    "definition": "Cadence that approves guardrails, rollbacks, and changes to formulas and rule logic."
+  },
+  {
+    "term": "GRPIT",
+    "definition": "Goals, Roles, Processes, Interpersonal, Technology. Five‑lens structure used in each level’s operational profile."
+  },
+  {
+    "term": "Guardrails",
+    "definition": "Policy bounds that define safe ranges (e.g., SL floor, occupancy band, fairness limits) for automation and people."
+  },
+  {
+    "term": "HRIS",
+    "definition": "Human Resources Information System; authoritative staffing/tenure/attrition data."
+  },
+  {
+    "term": "Integration Contract",
+    "definition": "One‑pager clarifying inputs/outputs/SLAs between teams/systems for an integration."
+  },
+  {
+    "term": "ITSM",
+    "definition": "IT Service Management; incident/ticket framework mirrored in ROC incident handling."
+  },
+  {
+    "term": "LMS",
+    "definition": "Learning Management System; source for training content, delivery, and completion data."
+  },
+  {
+    "term": "LP/MILP",
+    "definition": "(Mixed‑Integer) Linear Programming; optimization methods for schedules/assignments under constraints."
+  },
+  {
+    "term": "MAPE",
+    "definition": "Mean Absolute Percentage Error; forecasting accuracy metric (sensitive to small denominators)."
+  },
+  {
+    "term": "Model Card",
+    "definition": "Lightweight model documentation (purpose, data, limits, monitoring)."
+  },
+  {
+    "term": "Model Serving",
+    "definition": "Low‑latency inference tier that exposes models via stable APIs."
+  },
+  {
+    "term": "Monte Carlo",
+    "definition": "Sampling‑based method to produce distributions (not points) for plans and KPIs."
+  },
+  {
+    "term": "NPS",
+    "definition": "Net Promoter Score; “recommend” intent proxy."
+  },
+  {
+    "term": "Occupancy",
+    "definition": "Share of agent time engaged on work; manage via bands (e.g., 78–88%)."
+  },
+  {
+    "term": "Option Value of Flexibility (OVF)",
+    "definition": "Value difference between static and flexible posture under uncertainty."
+  },
+  {
+    "term": "OT",
+    "definition": "Overtime; scheduled or incidental work beyond base shift."
+  },
+  {
+    "term": "Pilot Charter",
+    "definition": "1-page scope/owners/metrics/rollback for a time-boxed pilot."
+  },
+  {
+    "term": "Portfolio Review",
+    "definition": "Quarterly cadence aligning outcomes to objectives; adjusts roadmap and ownership."
+  },
+  {
+    "term": "Posture (Staffing)",
+    "definition": "Declared coverage stance (e.g., P80 envelope) given risk tolerance and budget."
+  },
+  {
+    "term": "Power of One",
+    "definition": "Nonlinear sensitivity of SL to small staffing changes in tight queues."
+  },
+  {
+    "term": "RACI‑Lite",
+    "definition": "Roles for cadences: A — Accountable; R — Responsible; C — Consulted; I — Informed. Abbreviations used in this book: CWS, EAIG, ROC Lead, MLO."
+  },
+  {
+    "term": "CWS",
+    "definition": "Chief Workforce Strategist. Executive owner for workforce strategy and scorecards; co‑owns scenario/portfolio reviews; selects staffing posture by band."
+  },
+  {
+    "term": "EAIG",
+    "definition": "Enterprise AI Governance. Cross‑functional oversight for explainability, fairness, drift, and rollbacks; chairs the governance review."
+  },
+  {
+    "term": "ROC Lead",
+    "definition": "Operational owner of the Resource Optimization Center cadence; chairs daily stand‑ups; coordinates intraday moves across skills/sites."
+  },
+  {
+    "term": "MLO",
+    "definition": "Model Lifecycle Owner. Accountable for model deployment, monitoring, drift/rollback, and audit evidence; partner to EAIG."
+  },
+  {
+    "term": "Real‑Time Analyst (RTA)",
+    "definition": "Supervises intraday variance across queues; implements schedule/routing adjustments; manages incident response; and designs/tunes rules and automation with supervisors, WFM, and IT. Present from L2 (reactive) through L3–L5 (increasingly proactive)."
+  },
+  {
+    "term": "RuleTriggerAction (RTA)",
+    "definition": "Pattern for automation/playbooks: a rule with a condition and a specific action; not the RTA role."
+  },
+  {
+    "term": "Rule Registry",
+    "definition": "Versioned inventory of rules with owner, intent, guardrails, metrics, and change history."
+  },
+  {
+    "term": "Scenario Forum",
+    "definition": "Weekly review of driver changes and updated weights that feed envelopes and rules."
+  },
+  {
+    "term": "SCR",
+    "definition": "Supervisor Coaching Ratio. Share of supervisor time on coaching vs.\\ admin."
+  },
+  {
+    "term": "Service Level (SL)",
+    "definition": "Timeliness promise (e.g., 80% in 30s) read at 15–30 minute intervals."
+  },
+  {
+    "term": "Service‑Profit Chain",
+    "definition": "Link between employee experience, service quality, and financial performance."
+  },
+  {
+    "term": "Service‑Level Stability (SLS)",
+    "definition": "Share of intervals where SL and ASA are within a published band."
+  },
+  {
+    "term": "Short‑abandon",
+    "definition": "Policy for ignoring abandons under a small wait threshold in SL math; document threshold."
+  },
+  {
+    "term": "SSoT",
+    "definition": "Single Source of Truth; governed, versioned metric/data definitions."
+  },
+  {
+    "term": "SQI",
+    "definition": "Schedule Quality Index. Composite of lead time, change count, preference match, and stability."
+  },
+  {
+    "term": "STaRS",
+    "definition": "Startup, Turnaround, Realignment, Sustaining Success—context lens for sequencing moves."
+  },
+  {
+    "term": "TTS",
+    "definition": "Time‑to‑Stabilize. Time from threshold breach to return within the service band."
+  },
+  {
+    "term": "VCE",
+    "definition": "Variance Capture Efficiency. Minutes redeployed to value work ÷ eligible micro‑availability minutes."
+  },
+  {
+    "term": "Variance Log",
+    "definition": "Structured record of incidents, causes, actions, and results that feeds weekly changes."
+  },
+  {
+    "term": "VOT",
+    "definition": "Voluntary Overtime; offered under guardrails when understaffed."
+  },
+  {
+    "term": "VTO",
+    "definition": "Voluntary Time Off; offered under guardrails when overstaffed."
+  },
+  {
+    "term": "WAPE",
+    "definition": "Weighted Absolute Percentage Error; preferred for uneven interval volumes."
+  },
+  {
+    "term": "WFM",
+    "definition": "Workforce Management; the loop: forecast → schedule → real‑time → learn."
+  },
+  {
+    "term": "WFM Labs Maturity Model™",
+    "definition": "Five‑level progression (L1–L5) from manual foundations to enterprise orchestration."
+  }
+]
