@@ -164,9 +164,10 @@
             <h3>Adaptive</h3>
             <p class="book-subtitle">Building Workforce Systems for an (Unpredictable) Future</p>
             <p>The resume gets the meeting. The book demonstrates the thinking.</p>
-            <p>A practical framework for organizations navigating workforce evolution — from reactive scheduling to adaptive, intelligent systems.</p>
+            <p>A practical framework for organizations navigating workforce evolution — from reactive scheduling to adaptive, intelligent systems. The full text and the 13½-hour audiobook, narrated by the author, are free to read and listen to here.</p>
             <div class="book-links">
-                <a href="https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" target="_blank" class="btn">Amazon</a>
+                <a href="/adaptive/" class="btn">Read &amp; listen free</a>
+                <a href="https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" target="_blank" class="btn btn-secondary">Paperback on Amazon</a>
                 <a href="https://wfmlabs.org" target="_blank" class="btn btn-secondary">WFM Labs</a>
                 <button type="button" onclick="openBookZoom()" class="btn btn-secondary">Explore the Book</button>
             </div>
@@ -392,6 +393,7 @@
     </div>
 </section>
 
+<script src="/js/chat-md.js"></script>
 <script>
 (function() {
     var AGENT_URL = '{{ .Site.Params.agentBase }}';
@@ -401,69 +403,7 @@
     var chips = document.querySelectorAll('.agent-chip');
     var suggestions = document.querySelector('.agent-suggestions');
 
-    // Markdown to HTML: headers, bold, bullets, numbered lists, paragraphs
-    function md(text) {
-        var escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        var lines = escaped.split('\n');
-        var html = '';
-        var i = 0;
-
-        while (i < lines.length) {
-            var line = lines[i];
-
-            // Skip empty lines
-            if (!line.trim()) { i++; continue; }
-
-            // Headers: ## or ###
-            var hMatch = line.match(/^(#{1,3})\s+(.+)/);
-            if (hMatch) {
-                var level = Math.min(hMatch[1].length + 1, 4); // h2-h4 range
-                html += '<h' + level + ' class="chat-h">' + inline(hMatch[2]) + '</h' + level + '>';
-                i++; continue;
-            }
-
-            // Bullet list block
-            if (/^\s*[-*]\s/.test(line)) {
-                html += '<ul>';
-                while (i < lines.length && /^\s*[-*]\s/.test(lines[i])) {
-                    html += '<li>' + inline(lines[i].replace(/^\s*[-*]\s+/, '')) + '</li>';
-                    i++;
-                }
-                html += '</ul>';
-                continue;
-            }
-
-            // Numbered list block
-            if (/^\s*\d+[\.\)]\s/.test(line)) {
-                html += '<ol>';
-                while (i < lines.length && /^\s*\d+[\.\)]\s/.test(lines[i])) {
-                    html += '<li>' + inline(lines[i].replace(/^\s*\d+[\.\)]\s+/, '')) + '</li>';
-                    i++;
-                }
-                html += '</ol>';
-                continue;
-            }
-
-            // Paragraph: collect consecutive non-special lines
-            var para = [];
-            while (i < lines.length && lines[i].trim() && !/^#{1,3}\s/.test(lines[i]) && !/^\s*[-*]\s/.test(lines[i]) && !/^\s*\d+[\.\)]\s/.test(lines[i])) {
-                para.push(lines[i]);
-                i++;
-            }
-            if (para.length) {
-                html += '<p>' + inline(para.join(' ')) + '</p>';
-            }
-        }
-        return html || '<p>' + inline(escaped) + '</p>';
-    }
-
-    function inline(s) {
-        s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-        s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-        s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
-        s = s.replace(/`(.+?)`/g, '<code>$1</code>');
-        return s;
-    }
+    // md() / inline() live in /js/chat-md.js (shared with Ask the Book).
 
     function addMsg(content, role, isHtml) {
         var div = document.createElement('div');

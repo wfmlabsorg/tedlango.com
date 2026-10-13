@@ -1,0 +1,69 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/adaptive.css?v={{ now.Unix }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Chapter",
+  "name": {{ .Title | jsonify }},
+  "position": {{ .Params.chapter | default 0 }},
+  "isPartOf": { "@type": "Book", "name": "Adaptive: Building Workforce Systems for an (Unpredictable) Future", "author": { "@type": "Person", "name": "Ted Lango" }, "url": "https://tedlango.com/adaptive/" },
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{- $book := site.GetPage "/adaptive" -}}
+{{- $pages := where $book.RegularPages.ByWeight "Params.audio_file" "!=" nil -}}
+{{- $cur := . -}}
+<article class="book-page" data-chapter="{{ .Params.slug }}"{{ if .Params.math }} data-math="1"{{ end }}>
+    <p class="book-crumb"><a href="{{ $book.RelPermalink }}">Adaptive</a>{{ with .Params.part }} <span>/</span> {{ index (split . " — ") 0 }}{{ end }} <span>/</span> {{ .Params.label }}</p>
+
+    <header class="book-header">
+        {{ with .Params.hero }}<img class="book-hero" src="{{ . }}" alt="" aria-hidden="true" width="140" height="140">{{ end }}
+        <div>
+            <p class="book-eyebrow">{{ .Params.label }}</p>
+            <h1>{{ .Title }}</h1>
+            <p class="book-meta">
+                <span>{{ math.Round (div (countwords .Content) 220.0) }} min read</span>
+                {{ with .Params.audio_duration }}<span>·</span><span>{{ partial "adaptive/duration.html" . }} listen</span>{{ end }}
+            </p>
+            <div class="book-actions">
+                {{ if .Params.audio_file }}<button type="button" class="btn book-listen" data-listen="{{ .Params.slug }}">▶ Listen to this chapter</button>{{ end }}
+                {{ with .Params.wiki_page }}<a class="btn btn-secondary" href="https://wiki.wfmlabs.org/wiki/{{ replace . " " "_" }}" target="_blank" rel="noopener">Concept page on the WFM wiki ↗</a>{{ end }}
+                <button type="button" class="btn btn-secondary book-ask" data-ask="" hidden>Ask the Book</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="article-content book-content">
+        {{ .Content }}
+    </div>
+
+    <div class="book-nav" role="navigation" aria-label="Chapter navigation">
+        {{ range $i, $p := $pages }}
+            {{ if eq $p.Params.slug $cur.Params.slug }}
+                {{ if gt $i 0 }}{{ $prev := index $pages (sub $i 1) }}
+                <a class="book-nav-link book-prev" href="{{ $prev.RelPermalink }}">
+                    <span class="book-nav-dir">← Previous</span>
+                    <span class="book-nav-title">{{ $prev.Params.label }} · {{ $prev.Title }}</span>
+                </a>
+                {{ else }}<span></span>{{ end }}
+                {{ if lt $i (sub (len $pages) 1) }}{{ $next := index $pages (add $i 1) }}
+                <a class="book-nav-link book-next" href="{{ $next.RelPermalink }}">
+                    <span class="book-nav-dir">Next →</span>
+                    <span class="book-nav-title">{{ $next.Params.label }} · {{ $next.Title }}</span>
+                </a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+
+    <aside class="book-cta">
+        <p><strong>Working through this level with your own team?</strong> The WFM Labs community is where readers compare notes, share tools, and pressure-test the ideas in this chapter.</p>
+        <p><a class="btn btn-secondary" href="https://community.wfmlabs.org" target="_blank" rel="noopener">Discuss in WFM Labs ↗</a> <a class="btn btn-secondary" href="{{ $book.RelPermalink }}">← Contents</a></p>
+    </aside>
+</article>
+{{ end }}
+
+{{ define "body_end" }}{{ partial "adaptive/shell.html" . }}{{ end }}

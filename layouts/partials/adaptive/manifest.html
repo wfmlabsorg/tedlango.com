@@ -1,0 +1,18 @@
+{{- /* Audiobook manifest — generated FROM chapter front matter (single source of truth for the player). */ -}}
+{{- $chapters := slice -}}
+{{- $i := 0 -}}
+{{- range (site.GetPage "/adaptive").RegularPages.ByWeight -}}{{ $p := . }}
+  {{- with .Params.audio_file -}}
+    {{- $chapters = $chapters | append (dict
+        "order" $i
+        "slug" $p.Params.slug
+        "chapter" $p.Params.chapter
+        "label" $p.Params.label
+        "title" $p.Title
+        "url" $p.RelPermalink
+        "audio" (printf "%s%s" site.Params.audioBase .)
+        "duration" $p.Params.audio_duration) -}}
+    {{- $i = add $i 1 -}}
+  {{- end -}}
+{{- end -}}
+{{- dict "title" "Adaptive" "author" "Ted Lango" "cover" "/img/book/adaptive-3d.png" "chapters" $chapters | jsonify -}}

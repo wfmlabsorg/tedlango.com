@@ -1,0 +1,3 @@
+{{- /* seconds → "1h 20m" / "29 min" */ -}}
+{{- $s := int . -}}{{- $h := div $s 3600 -}}{{- $m := div (mod $s 3600) 60 -}}
+{{- if gt $h 0 }}{{ $h }}h {{ $m }}m{{ else }}{{ $m }} min{{ end -}}
