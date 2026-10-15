@@ -107,7 +107,7 @@ export default {
     const cors = corsFor(request);
     if (request.method === "OPTIONS") return new Response(null, { headers: cors });
     if (request.method !== "POST") {
-      return json({ name: "Ask the Book — Adaptive", usage: 'POST {"question": "...", "history": [], "chapter": "slug", "stream": true}', book: "https://tedlango.com/adaptive/" }, 200, cors);
+      return json({ name: "Ask the Book — Adaptive", usage: 'POST {"question": "...", "history": [], "chapter": "slug", "stream": true}', book: "https://tedlango.com/adaptive/", rateLimit: env.RL ? "bound" : "unbound" }, 200, cors);
     }
     if (!isAllowedRequest(request)) return json({ error: "Forbidden" }, 403, cors);
 
@@ -117,6 +117,7 @@ export default {
     if (env.RL) {
       const ip = request.headers.get("CF-Connecting-IP") ?? "anon";
       const { success } = await env.RL.limit({ key: ip });
+      console.log(JSON.stringify({ event: "ratelimit", ip, success }));
       if (!success) return json({ error: "Too many questions — give it a minute." }, 429, { ...cors, "Retry-After": "60" });
     }
 
