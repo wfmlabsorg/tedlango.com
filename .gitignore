@@ -9,3 +9,6 @@ legacy_site/
 # Wrangler local build cache
 .wrangler/
 workers/**/.wrangler/
+
+# Worker dependencies
+workers/**/node_modules/

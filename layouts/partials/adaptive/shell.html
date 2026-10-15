@@ -1,0 +1,58 @@
+{{- /* Rendered once per /adaptive/ page via the body_end block. Lives OUTSIDE <main>, so the
+       player survives soft navigation between chapters. Markup must be identical on every page. */ -}}
+<script type="application/json" id="bookManifest">{{ partial "adaptive/manifest.html" . | safeJS }}</script>
+<script type="application/json" id="bookGlossary">{{ site.Data.adaptive.glossary | jsonify | safeJS }}</script>
+
+<div id="bookPlayer" class="player" data-state="idle" aria-label="Audiobook player" data-agent="{{ site.Params.bookAgentBase }}">
+    <div class="player-scrub">
+        <input type="range" class="player-seek" min="0" max="1000" value="0" step="1" aria-label="Seek">
+        <div class="player-times"><span class="player-cur">0:00</span><span class="player-dur">0:00</span></div>
+    </div>
+    <div class="player-row">
+        <div class="player-meta">
+            <span class="player-eyebrow">Now playing</span>
+            <a class="player-title" href="/adaptive/">Adaptive — the audiobook</a>
+            <a class="player-goto" href="#" hidden>Go to chapter →</a>
+        </div>
+        <div class="player-controls">
+            <button type="button" class="player-btn" data-act="prev" aria-label="Previous chapter" title="Previous chapter (Shift+P)">⏮</button>
+            <button type="button" class="player-btn" data-act="back" aria-label="Back 15 seconds" title="Back 15 s (J)">↺<small>15</small></button>
+            <button type="button" class="player-btn player-play" data-act="toggle" aria-label="Play" title="Play / pause (K)">▶</button>
+            <button type="button" class="player-btn" data-act="fwd" aria-label="Forward 15 seconds" title="Forward 15 s (L)">↻<small>15</small></button>
+            <button type="button" class="player-btn" data-act="next" aria-label="Next chapter" title="Next chapter (Shift+N)">⏭</button>
+        </div>
+        <div class="player-extras">
+            <button type="button" class="player-btn player-rate" data-act="rate" aria-label="Playback speed" title="Speed (, and .)">1×</button>
+            <button type="button" class="player-btn" data-act="chapters" aria-label="Chapters" aria-expanded="false" title="Chapters">☰</button>
+            <button type="button" class="player-btn player-ask" data-act="ask" aria-label="Ask the Book" title="Ask the Book" hidden>?</button>
+        </div>
+    </div>
+    <div class="player-chapters" hidden></div>
+    <audio id="bookAudio" preload="none"></audio>
+</div>
+
+<aside id="askBook" class="ask-panel" hidden aria-label="Ask the Book">
+    <div class="agent-chat ask-chat">
+        <div class="agent-header">
+            <div class="agent-header-left"><span class="agent-dot"></span><span class="agent-title">Ask the Book</span><span class="agent-badge">grounded in the text</span></div>
+            <button type="button" class="ask-close" aria-label="Close">✕</button>
+        </div>
+        <div class="agent-messages">
+            <div class="agent-msg agent-msg-assistant"><div class="agent-msg-content"><p>Ask me anything about <em>Adaptive</em>. I answer from the book itself and link you to the passage — and the audio keeps playing while you jump around.</p></div></div>
+        </div>
+        <div class="agent-suggestions">
+            <button type="button" class="agent-chip" data-q="What are the five maturity levels, in one line each?">The five maturity levels</button>
+            <button type="button" class="agent-chip" data-q="Summarize the chapter I am currently reading in a short paragraph.">Summarize this chapter</button>
+            <button type="button" class="agent-chip" data-q="My team is still planning in spreadsheets. Where should we start, and which chapter should I read first?">Where should my team start?</button>
+            <button type="button" class="agent-chip" data-q="How does forecasting change as an operation moves from Level 2 to Level 4?">How forecasting changes by level</button>
+        </div>
+        <div class="agent-input-row">
+            <input type="text" class="agent-input" placeholder="Ask about a concept, a level, a chapter…" maxlength="500" aria-label="Your question">
+            <button type="button" class="agent-send" aria-label="Send">➤</button>
+        </div>
+    </div>
+</aside>
+
+<script src="/js/chat-md.js?v={{ now.Unix }}"></script>
+<script defer src="/js/book-player.js?v={{ now.Unix }}"></script>
+<script defer src="/js/ask-the-book.js?v={{ now.Unix }}"></script>

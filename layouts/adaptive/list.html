@@ -1,0 +1,78 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/adaptive.css?v={{ now.Unix }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Adaptive: Building Workforce Systems for an (Unpredictable) Future",
+  "author": { "@type": "Person", "name": "Ted Lango", "url": "https://tedlango.com" },
+  "isbn": "979-8-9934867-0-3",
+  "url": "https://tedlango.com/adaptive/",
+  "workExample": [
+    { "@type": "Book", "bookFormat": "https://schema.org/EBook", "url": "https://tedlango.com/adaptive/", "isAccessibleForFree": true },
+    { "@type": "Audiobook", "url": "https://tedlango.com/adaptive/", "isAccessibleForFree": true, "readBy": { "@type": "Person", "name": "Ted Lango" } },
+    { "@type": "Book", "bookFormat": "https://schema.org/Paperback", "url": "https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" }
+  ]
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{- $pages := .RegularPages.ByWeight -}}
+{{- $total := 0 -}}{{- range $pages }}{{ with .Params.audio_duration }}{{ $total = add $total . }}{{ end }}{{ end -}}
+<article class="book-page book-home" data-chapter="">
+    <header class="book-cover-row">
+        <img class="book-cover" src="{{ .Params.cover }}" alt="Adaptive — book cover" width="220">
+        <div>
+            <p class="book-eyebrow">The book — read & listen free</p>
+            <h1>Adaptive</h1>
+            <p class="book-subtitle">Building Workforce Systems for an (Unpredictable) Future</p>
+            <p class="book-byline">Ted Lango · narrated by the author</p>
+            <p class="book-meta"><span>12 chapters</span><span>·</span><span>{{ partial "adaptive/duration.html" $total }} of audio</span><span>·</span><span>Foreword by Matt McConnell</span></p>
+            <div class="book-actions">
+                <a class="btn book-start" href="{{ (index $pages 0).RelPermalink }}" data-start-reading>Start reading</a>
+                <button type="button" class="btn btn-secondary book-listen" data-listen="{{ (index $pages 0).Params.slug }}" data-start-listening>▶ Start listening</button>
+                <a class="btn btn-secondary" href="https://www.amazon.com/Adaptive-Building-Workforce-Systems-Unpredictable/dp/B0FZWDPH2M" target="_blank" rel="noopener">Paperback ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="book-intro">{{ .Content }}</div>
+
+    <section class="book-toc" aria-label="Contents">
+        <h2>Contents</h2>
+        {{- $groups := slice "Front matter" "Part I — Adaptive Foundations: Context, Drivers, and Frameworks" "Part II — The Five-Level Playbook to Enterprise Orchestration" "Back matter" -}}
+        {{- range $g := $groups }}
+        {{- $rows := slice -}}
+        {{- range $p := $pages -}}
+            {{- $grp := cond (lt $p.Weight 10) "Front matter" (cond (ge $p.Weight 30) "Back matter" ($p.Params.part | default "")) -}}
+            {{- if eq $grp $g }}{{ $rows = $rows | append $p }}{{ end -}}
+        {{- end -}}
+        {{- if $rows }}
+        <h3 class="book-toc-group">{{ $g }}</h3>
+        <ol class="book-toc-list">
+            {{- range $rows }}{{ $pg := . }}
+            <li class="book-toc-item" data-slug="{{ .Params.slug }}">
+                <a class="book-toc-link" href="{{ .RelPermalink }}">
+                    <span class="book-toc-label">{{ .Params.label }}</span>
+                    <span class="book-toc-title">{{ .Title }}</span>
+                </a>
+                {{ with .Params.audio_duration }}
+                <button type="button" class="book-toc-play" data-listen="{{ $pg.Params.slug }}" aria-label="Listen to {{ $pg.Params.label }}">▶ {{ partial "adaptive/duration.html" . }}</button>
+                {{ end }}
+            </li>
+            {{- end }}
+        </ol>
+        {{- end }}
+        {{- end }}
+    </section>
+
+    <section class="book-links-row">
+        <a href="https://wiki.wfmlabs.org/wiki/Adaptive_Concepts" target="_blank" rel="noopener"><strong>Adaptive Concepts on the WFM wiki ↗</strong><span>One reference page per chapter, maintained alongside the book.</span></a>
+        <a href="https://community.wfmlabs.org" target="_blank" rel="noopener"><strong>WFM Labs community ↗</strong><span>Where readers compare notes and build the tools the book describes.</span></a>
+        <a href="https://wfmlabs.org" target="_blank" rel="noopener"><strong>wfmlabs.org ↗</strong><span>The living companion: tools, templates, and research briefs by level.</span></a>
+    </section>
+</article>
+{{ end }}
+
+{{ define "body_end" }}{{ partial "adaptive/shell.html" . }}{{ end }}
