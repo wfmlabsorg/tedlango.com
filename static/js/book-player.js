@@ -81,6 +81,9 @@
             save(true);
         }
         audio.playbackRate = state.rate || 1;
+        // Keep the page on the chapter that is playing: next/prev, the chapter list, lock-screen
+        // skips and auto-advance all land the reader on the matching text.
+        if (changed && c.url && pageSlug() !== slug) navigate(c.url, true);
         renderMeta();
         renderList();
         updateListenButtons();
@@ -272,12 +275,56 @@
     // ---------- content enhancements (run on every page render) ----------
     function enhance() {
         if (root.getAttribute('data-agent')) main.querySelectorAll('[data-ask]').forEach(function (b) { b.hidden = false; });
+        decorateWikiLinks();
         decorateGlossary();
         renderMath();
         updateListenButtons();
         renderMeta();
     }
-    var SKIP_TAGS = { A: 1, CODE: 1, PRE: 1, H1: 1, H2: 1, H3: 1, H4: 1, ABBR: 1, SCRIPT: 1, STYLE: 1, FIGCAPTION: 1, BUTTON: 1 };
+    var SKIP_TAGS = { A: 1, CODE: 1, PRE: 1, H1: 1, H2: 1, H3: 1, H4: 1, ABBR: 1, SCRIPT: 1, STYLE: 1, FIGCAPTION: 1, BUTTON: 1, SUP: 1 };
+    function textNodes(content) {
+        var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, {
+            acceptNode: function (n) {
+                for (var p = n.parentNode; p && p !== content; p = p.parentNode) { if (SKIP_TAGS[p.tagName]) return NodeFilter.FILTER_REJECT; }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+        var nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+        return nodes;
+    }
+    // Wiki links: per-chapter term → wiki page map (data/adaptive/wikilinks.json, embedded by the chapter
+    // template). The first mention of each term becomes a link to wiki.wfmlabs.org in a new tab.
+    function decorateWikiLinks() {
+        var content = main.querySelector('.book-content');
+        var data = main.querySelector('#bookWikiLinks');
+        if (!content || !data || content.getAttribute('data-wikilinked')) return;
+        content.setAttribute('data-wikilinked', '1');
+        var links;
+        try { links = JSON.parse(data.textContent || '[]'); } catch (e) { return; }
+        if (!links.length) return;
+        var pages = {}; links.forEach(function (l) { pages[l.term.toLowerCase()] = l.page; });
+        var terms = links.map(function (l) { return l.term; }).sort(function (a, b) { return b.length - a.length; });
+        var re = new RegExp('\\b(' + terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '[\\s\u00a0\u2010-\u2012-]+'); }).join('|') + ')(s?)\\b', 'i');
+        var seen = {};
+        textNodes(content).forEach(function (node) {
+            var text = node.nodeValue, m, out = document.createDocumentFragment(), last = 0, hit = false;
+            var local = new RegExp(re.source, 'gi');
+            while ((m = local.exec(text))) {
+                var key = m[1].toLowerCase().replace(/[\s\u00a0\u2010-\u2012-]+/g, ' ');
+                if (seen[key] || !pages[key]) continue;
+                seen[key] = true; hit = true;
+                out.appendChild(document.createTextNode(text.slice(last, m.index)));
+                var a = document.createElement('a');
+                a.className = 'wiki-link'; a.href = 'https://wiki.wfmlabs.org/wiki/' + encodeURIComponent(pages[key].replace(/ /g, '_'));
+                a.target = '_blank'; a.rel = 'noopener'; a.title = 'Open "' + pages[key] + '" on the WFM Labs wiki';
+                a.textContent = m[1] + m[2];
+                var sup = document.createElement('sup'); sup.textContent = '↗'; sup.setAttribute('aria-hidden', 'true'); a.appendChild(sup);
+                out.appendChild(a);
+                last = m.index + m[0].length;
+            }
+            if (hit) { out.appendChild(document.createTextNode(text.slice(last))); node.parentNode.replaceChild(out, node); }
+        });
+    }
     function decorateGlossary() {
         var content = main.querySelector('.book-content');
         if (!content || !glossary.length || content.getAttribute('data-glossed')) return;
@@ -287,14 +334,7 @@
             .sort(function (a, b) { return b.term.length - a.term.length; });
         var re = new RegExp('\\b(' + terms.map(function (g) { return g.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')\\b');
         var defs = {}; terms.forEach(function (g) { defs[g.term] = g.definition; });
-        var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, {
-            acceptNode: function (n) {
-                for (var p = n.parentNode; p && p !== content; p = p.parentNode) { if (SKIP_TAGS[p.tagName]) return NodeFilter.FILTER_REJECT; }
-                return NodeFilter.FILTER_ACCEPT;
-            }
-        });
-        var nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
-        nodes.forEach(function (node) {
+        textNodes(content).forEach(function (node) {
             var text = node.nodeValue, m, out = document.createDocumentFragment(), last = 0, hit = false;
             var local = new RegExp(re.source, 'g');
             while ((m = local.exec(text))) {
@@ -383,6 +423,10 @@
             if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
             main.focus({ preventScroll: true });
             closeList();
+            // Keep the audio on the chapter being read: if the player is active and the reader moved to
+            // another chapter, switch to it (resuming its saved position) and keep the play/pause state.
+            var here = pageSlug();
+            if (current && here && bySlug[here] && here !== current.slug) loadChapter(here, !audio.paused);
             enhance();
             if (typeof gtag === 'function') gtag('event', 'page_view', { page_location: res.url, page_title: doc.title });
             document.dispatchEvent(new CustomEvent('adaptive:navigated', { detail: { url: res.url } }));

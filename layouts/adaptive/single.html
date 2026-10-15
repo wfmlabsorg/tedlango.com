@@ -36,9 +36,22 @@
         </div>
     </header>
 
+    {{- $wl := index site.Data.adaptive.wikilinks .Params.slug -}}
+    {{- with $wl }}<script type="application/json" id="bookWikiLinks">{{ .inline | jsonify | safeJS }}</script>{{ end }}
     <div class="article-content book-content">
         {{ .Content }}
     </div>
+    {{- with $wl }}{{ with .deeper }}
+    <section class="book-deeper" aria-labelledby="deeperTitle">
+        <h2 id="deeperTitle">Go deeper on the WFM Labs wiki</h2>
+        <p class="book-deeper-lede">Concept pages that expand on this chapter. Each opens in a new tab.</p>
+        <ul>
+        {{- range . }}
+            <li><a href="https://wiki.wfmlabs.org/wiki/{{ replace .page " " "_" }}" target="_blank" rel="noopener">{{ .page }} ↗</a>{{ with .why }} <span>— {{ . }}</span>{{ end }}</li>
+        {{- end }}
+        </ul>
+    </section>
+    {{ end }}{{ end }}
 
     <div class="book-nav" role="navigation" aria-label="Chapter navigation">
         {{ range $i, $p := $pages }}

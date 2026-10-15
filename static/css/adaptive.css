@@ -157,3 +157,14 @@ body.ask-open .player-ask { background: var(--accent); color: #fff; }
 
 /* Ask the Book: anonymous-storage note in the welcome message */
 .ask-panel .ask-privacy { font-size: 0.78em; opacity: 0.65; margin-top: 0.5em; }
+
+/* Wiki links: first mention of a mapped concept opens its WFM Labs wiki page in a new tab */
+.book-content a.wiki-link { color: inherit; text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--accent, #7cc4ff); text-underline-offset: 0.18em; }
+.book-content a.wiki-link:hover { text-decoration-style: solid; color: var(--accent, #7cc4ff); }
+.book-content a.wiki-link sup { font-size: 0.6em; margin-left: 0.1em; opacity: 0.7; }
+.book-deeper { margin: 2.5rem 0 1.5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--border, rgba(255,255,255,0.12)); border-radius: 10px; background: var(--card, rgba(255,255,255,0.03)); }
+.book-deeper h2 { font-size: 1.15rem; margin: 0 0 0.35rem; }
+.book-deeper-lede { margin: 0 0 0.75rem; opacity: 0.75; font-size: 0.92em; }
+.book-deeper ul { margin: 0; padding-left: 1.2rem; }
+.book-deeper li { margin: 0.35rem 0; }
+.book-deeper li span { opacity: 0.75; }

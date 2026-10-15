@@ -1,0 +1,161 @@
+{
+  "_comment": "Per-chapter links from the book text to wiki.wfmlabs.org. `inline`: first mention of `term` in the chapter body becomes a new-tab link to `page`. `deeper`: the 'Go deeper on the WFM Labs wiki' list rendered at the end of the chapter. Pilot: Chapter 6.",
+  "chapter-06-maturity-model": {
+    "inline": [
+      {
+        "term": "WFM Labs Maturity Model",
+        "page": "WFM Labs Maturity Model"
+      },
+      {
+        "term": "variance harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "workforce management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "workforce planning",
+        "page": "Workforce Planning"
+      },
+      {
+        "term": "workforce optimization",
+        "page": "Workforce Optimization"
+      },
+      {
+        "term": "capacity planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "forecast accuracy",
+        "page": "Forecast Accuracy"
+      },
+      {
+        "term": "forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "schedule adherence",
+        "page": "Schedule Adherence"
+      },
+      {
+        "term": "shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "service level",
+        "page": "Service Level"
+      },
+      {
+        "term": "abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "operations research",
+        "page": "Operations Research"
+      },
+      {
+        "term": "discrete event simulation",
+        "page": "Discrete Event Simulation"
+      },
+      {
+        "term": "Power of One",
+        "page": "Power of One"
+      },
+      {
+        "term": "agent experience",
+        "page": "Agent Experience"
+      },
+      {
+        "term": "employee engagement",
+        "page": "Employee Engagement"
+      },
+      {
+        "term": "enterprise integration",
+        "page": "Enterprise Integration"
+      },
+      {
+        "term": "Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C and Service Level"
+      },
+      {
+        "term": "Erlang",
+        "page": "Agner Krarup Erlang"
+      },
+      {
+        "term": "intraday",
+        "page": "Intraday Management"
+      },
+      {
+        "term": "Monte Carlo",
+        "page": "Monte Carlo Simulation"
+      },
+      {
+        "term": "simulation",
+        "page": "Simulation Methods in Workforce Management"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "WFM Labs Maturity Model",
+        "why": "The model this chapter introduces, with the full level definitions and assessment criteria."
+      },
+      {
+        "page": "Level 1: The Excel Foundation",
+        "why": "Concept page for Level 1 — spreadsheet-era planning and how to recognise it."
+      },
+      {
+        "page": "Level 2: Structured Workforce Management",
+        "why": "Concept page for Level 2 — definitions, handoffs and rules that execute consistently."
+      },
+      {
+        "page": "Level 3: The Automation Layer",
+        "why": "Concept page for Level 3 — real-time variance harvesting and micro-automations."
+      },
+      {
+        "page": "Level 4: Planning in Distributions",
+        "why": "Concept page for Level 4 — forecasting ranges, simulation and optimisation loops."
+      },
+      {
+        "page": "Level 5: Adaptive Orchestration",
+        "why": "Concept page for Level 5 — the enterprise-wide, continuously adapting operation."
+      },
+      {
+        "page": "Variance Harvesting",
+        "why": "The core idea behind Levels 3 and up: treating the gap between plan and reality as capacity to capture."
+      },
+      {
+        "page": "Resource Optimization Center (ROC)",
+        "why": "The operating structure that emerges as teams climb the levels."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Hub for every wiki page drawn from the book."
+      }
+    ]
+  }
+}
