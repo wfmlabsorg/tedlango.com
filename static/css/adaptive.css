@@ -154,3 +154,6 @@ body.ask-open .player-ask { background: var(--accent); color: #fff; }
 @media (max-width: 720px) {
     .ask-panel { right: 0.5rem; left: 0.5rem; width: auto; max-height: 60vh; }
 }
+
+/* Ask the Book: anonymous-storage note in the welcome message */
+.ask-panel .ask-privacy { font-size: 0.78em; opacity: 0.65; margin-top: 0.5em; }

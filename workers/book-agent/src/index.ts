@@ -12,10 +12,12 @@
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { SYSTEM_PROMPT, lookupCitation } from "./prompt";
+import { neon } from "@neondatabase/serverless";
 
 interface Env {
   ANTHROPIC_API_KEY: string;
   MODEL?: string;
+  NEON_DATABASE_URL?: string; // optional: when set, every answered question is recorded (no IP, no identity)
   RL?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
 }
 
@@ -103,7 +105,7 @@ function validate(body: any): { question: string; history: Turn[]; chapter: stri
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const cors = corsFor(request);
     if (request.method === "OPTIONS") return new Response(null, { headers: cors });
     if (request.method !== "POST") {
@@ -127,6 +129,7 @@ export default {
     if (typeof input === "string") return json({ error: input }, 400, cors);
 
     const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1 });
+    const startedAt = Date.now();
     const params = {
       model: env.MODEL || "claude-opus-5-5",
       max_tokens: 1024,
@@ -143,6 +146,7 @@ export default {
         const raw = msg.content.filter((b) => b.type === "text").map((b) => (b as any).text).join("");
         const { text, citations } = resolveCitations(raw);
         logUsage(msg.usage, msg.stop_reason);
+        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(msg.stop_reason), citations, usage: usageOf(msg.usage), stop: msg.stop_reason, latencyMs: Date.now() - startedAt, streamed: false }));
         return json({ answer: text || declined(msg.stop_reason), citations, usage: usageOf(msg.usage), stopReason: msg.stop_reason }, 200, cors);
       } catch (err: any) {
         console.error("book-agent error", err?.status, err?.message);
@@ -168,6 +172,7 @@ export default {
         const final = await stream.finalMessage();
         const { text, citations } = resolveCitations(full);
         logUsage(final.usage, final.stop_reason);
+        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(final.stop_reason), citations, usage: usageOf(final.usage), stop: final.stop_reason, latencyMs: Date.now() - startedAt, streamed: true }));
         await send("done", { text: text || declined(final.stop_reason), citations, usage: usageOf(final.usage), stopReason: final.stop_reason });
       } catch (err: any) {
         console.error("book-agent stream error", err?.status, err?.message);
@@ -189,4 +194,32 @@ function usageOf(u: any) {
 function logUsage(u: any, stop: string | null) {
   const x = usageOf(u);
   console.log(JSON.stringify({ event: "answer", stop, ...x, cold: x.cacheRead === 0 }));
+}
+
+/**
+ * Record an answered question in Neon (table book_questions, schema/001_book_questions.sql).
+ * Raw signal feed for "what do readers ask?" — stores the question, chapter context, the answer
+ * and its citations, plus usage. Deliberately no IP, user agent or session id. Runs after the
+ * response is sent (ctx.waitUntil) and never affects the reader if it fails.
+ */
+type RecordArgs = {
+  input: { question: string; history: Turn[]; chapter: string | null };
+  model: string; answer: string; citations: Citation[];
+  usage: { input: number; cacheRead: number; cacheWrite: number; output: number };
+  stop: string | null; latencyMs: number; streamed: boolean;
+};
+async function record(env: Env, a: RecordArgs): Promise<void> {
+  if (!env.NEON_DATABASE_URL) return;
+  try {
+    const sql = neon(env.NEON_DATABASE_URL);
+    const cites = a.citations.map((c) => ({ slug: c.slug, anchor: c.anchor, heading: c.heading, url: c.url }));
+    await sql`
+      INSERT INTO book_questions (question, chapter, history_turns, answer, citations, stop_reason, model,
+                                  input_tokens, cache_read, cache_write, output_tokens, cold, latency_ms, streamed)
+      VALUES (${a.input.question}, ${a.input.chapter ?? null}, ${a.input.history.length}, ${a.answer}, ${JSON.stringify(cites)}::jsonb,
+              ${a.stop}, ${a.model}, ${a.usage.input}, ${a.usage.cacheRead}, ${a.usage.cacheWrite}, ${a.usage.output},
+              ${a.usage.cacheRead === 0}, ${a.latencyMs}, ${a.streamed})`;
+  } catch (err: any) {
+    console.error("book-agent record error", err?.message);
+  }
 }
