@@ -28,11 +28,20 @@ with sync_playwright() as p:
     check(any("erlang_c" in l["h"].lower() for l in links), "Erlang‑C (non-breaking hyphen) linked to the Erlang C page")
     check(page.locator(".book-content a.wiki-link abbr.gloss").count() == 0, "no glossary popover nested inside a wiki link")
     deeper = page.eval_on_selector_all(".book-deeper a", "els => els.map(a => [a.textContent, a.target])")
-    check(len(deeper) == 9 and all(t == "_blank" for _, t in deeper), "Go deeper section lists 9 new-tab links")
+    check(len(deeper) == 9 and all(t == "_blank" for _, t in deeper), "chapter 6 Go deeper section lists 9 new-tab links")
     check(page.locator("h2#deeperTitle").count() == 1, "Go deeper heading present")
-    page.goto(BASE + "/adaptive/chapter-07-level-1-initial/")
-    page.wait_for_selector(".book-content[data-glossed]")
-    check(page.locator(".book-content a.wiki-link").count() == 0 and page.locator(".book-deeper").count() == 0, "chapter 7 (not in pilot) has no wiki links or section")
+    print("[wiki links on every chapter]")
+    import json as _json, urllib.request as _u
+    wl = _json.load(open(__import__("os").path.join(__import__("os").path.dirname(__file__), "../../../data/adaptive/wikilinks.json")))
+    for slug, entry in wl.items():
+        if slug.startswith("_"): continue
+        page.goto(BASE + "/adaptive/" + slug + "/")
+        page.wait_for_selector(".book-content[data-wikilinked]")
+        n = page.locator(".book-content a.wiki-link").count()
+        bad = page.eval_on_selector_all(".book-content a.wiki-link", "els => els.filter(a => a.target !== '_blank' || !/noopener/.test(a.rel)).length")
+        deeper_n = page.locator(".book-deeper a").count()
+        want_deeper = len(entry.get("deeper", []))
+        check(n >= 1 and bad == 0 and deeper_n == want_deeper, f"{slug}: {n} inline links (expected ≥1, {len(entry['inline'])} mapped), {deeper_n}/{want_deeper} deeper links")
 
     print("[audio → page]")
     page.goto(BASE + "/adaptive/chapter-07-level-1-initial/")

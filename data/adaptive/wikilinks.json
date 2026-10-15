@@ -1,5 +1,487 @@
 {
   "_comment": "Per-chapter links from the book text to wiki.wfmlabs.org. `inline`: first mention of `term` in the chapter body becomes a new-tab link to `page`. `deeper`: the 'Go deeper on the WFM Labs wiki' list rendered at the end of the chapter. Pilot: Chapter 6.",
+  "acknowledgements": {
+    "inline": [
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Intradiem",
+        "page": "Intradiem"
+      },
+      {
+        "term": "Matt McConnell",
+        "page": "Matt McConnell"
+      }
+    ]
+  },
+  "chapter-01-evolution-of-work": {
+    "inline": [
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "WFM Labs Maturity Model",
+        "page": "WFM Labs Maturity Model"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Probabilistic Planning",
+        "page": "Probabilistic Planning"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "The Ten Change Drivers",
+        "page": "The Ten Change Drivers"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "The Collaborative Intelligence Era",
+        "why": "The Collaborative Intelligence Era is the emerging period of work defined by the deliberate design of human–AI teams that amplify one another's strengths, as distinct from…"
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "WFM Labs Maturity Model",
+        "why": "The five-level model at the heart of Adaptive, from spreadsheet-era planning to adaptive orchestration, with the criteria for each level."
+      },
+      {
+        "page": "Attrition",
+        "why": "Employee Attrition and Turnover is the single largest controllable cost in contact center operations and the variable most likely to invalidate a capacity plan."
+      },
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-02-historical-context": {
+    "inline": [
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Intradiem",
+        "page": "Intradiem"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Workforce Planning",
+        "page": "Workforce Planning"
+      },
+      {
+        "term": "Change Management",
+        "page": "Change Management"
+      },
+      {
+        "term": "Forecast Accuracy",
+        "page": "Forecast Accuracy"
+      },
+      {
+        "term": "Workforce Optimization",
+        "page": "Workforce Optimization"
+      },
+      {
+        "term": "Agner Krarup Erlang",
+        "page": "Agner Krarup Erlang"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Average Handle Time",
+        "page": "Average Handle Time"
+      },
+      {
+        "term": "Discrete Event Simulation",
+        "page": "Discrete Event Simulation"
+      },
+      {
+        "term": "Dr. James Pipkins",
+        "page": "Dr. James Pipkins"
+      },
+      {
+        "term": "Erlang B",
+        "page": "Erlang B"
+      },
+      {
+        "term": "Exponential Smoothing",
+        "page": "Exponential Smoothing"
+      },
+      {
+        "term": "Forecasting Methods",
+        "page": "Forecasting Methods"
+      },
+      {
+        "term": "Matt McConnell",
+        "page": "Matt McConnell"
+      },
+      {
+        "term": "Ric Kosiba",
+        "page": "Ric Kosiba"
+      },
+      {
+        "term": "Schedule Adherence",
+        "page": "Schedule Adherence"
+      },
+      {
+        "term": "Skill-Based Routing",
+        "page": "Skill-Based Routing"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "The Four Eras of Workforce Management",
+        "why": "The Four Eras of Workforce Management is a periodization of the workforce management discipline — the planning philosophy, not the technology stack — from its mathematical…"
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Variance Harvesting",
+        "why": "Variance Harvesting is the operational principle that inverts traditional WFM thinking by treating in-day variance as fuel rather than a problem."
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "Erlang C",
+        "why": "The Erlang C formula is a mathematical model from queueing theory that calculates the probability that an arriving customer must wait in queue before being served."
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-03-change-drivers": {
+    "inline": [
+      {
+        "term": "Workforce Planning",
+        "page": "Workforce Planning"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Customer Satisfaction Score",
+        "page": "Customer Satisfaction Score"
+      },
+      {
+        "term": "Employee Engagement",
+        "page": "Employee Engagement"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Workforce Optimization",
+        "page": "Workforce Optimization"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "The Ten Change Drivers",
+        "why": "The Ten Change Drivers is a diagnostic framework for identifying which external forces most powerfully reshape an organization's workforce requirements — and therefore which…"
+      },
+      {
+        "page": "Workforce Planning",
+        "why": "Workforce planning is the strategic process of analyzing, forecasting, and planning workforce supply and demand to ensure an organization has the right people, with the right…"
+      },
+      {
+        "page": "The Collaborative Intelligence Era",
+        "why": "The Collaborative Intelligence Era is the emerging period of work defined by the deliberate design of human–AI teams that amplify one another's strengths, as distinct from…"
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Attrition",
+        "why": "Employee Attrition and Turnover is the single largest controllable cost in contact center operations and the variable most likely to invalidate a capacity plan."
+      },
+      {
+        "page": "Customer Satisfaction Score",
+        "why": "Customer Experience Management (CXM) is the operational discipline of measuring, governing, and improving the experience customers have across their interactions with the…"
+      },
+      {
+        "page": "Employee Engagement",
+        "why": "The Happiness-Performance Link synthesizes research from positive psychology, motivation science, and organizational behavior demonstrating that worker well-being is not a…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-04-frameworks": {
+    "inline": [
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "The Service-Profit Chain",
+        "page": "The Service-Profit Chain"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Workforce Planning",
+        "page": "Workforce Planning"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Employee Engagement",
+        "page": "Employee Engagement"
+      },
+      {
+        "term": "Interpersonal Relationships",
+        "page": "Interpersonal Relationships"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Intraday Management",
+        "page": "Intraday Management"
+      },
+      {
+        "term": "Performance Management",
+        "page": "Performance Management"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Omnichannel Workforce Management",
+        "page": "Omnichannel Workforce Management"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Workforce Forecasting",
+        "page": "Workforce Forecasting"
+      },
+      {
+        "term": "Workforce Optimization",
+        "page": "Workforce Optimization"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Framework Selection for Workforce Transformation",
+        "why": "Framework Selection for Workforce Transformation is the practice of matching transformation frameworks to an organization's situation rather than applying one framework…"
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "The Service-Profit Chain",
+        "why": "The Service-Profit Chain is a causal framework developed by James L. Heskett, Thomas O. Jones, Gary W. Loveman, W. Earl Sasser, Jr., and Leonard A. Schlesinger, first published…"
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Workforce Planning",
+        "why": "Workforce planning is the strategic process of analyzing, forecasting, and planning workforce supply and demand to ensure an organization has the right people, with the right…"
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-05-variance-and-volatility": {
+    "inline": [
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Average Handle Time",
+        "page": "Average Handle Time"
+      },
+      {
+        "term": "Business Process Outsourcing",
+        "page": "Business Process Outsourcing"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C"
+      },
+      {
+        "term": "Forecast Accuracy",
+        "page": "Forecast Accuracy"
+      },
+      {
+        "term": "Scenario Planning",
+        "page": "Scenario Planning"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Variance and Volatility in Service Operations",
+        "why": "Variance and Volatility in Service Operations distinguishes the two kinds of uncertainty a workforce operation faces, on the argument that treating them as one problem…"
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "The Collaborative Intelligence Era",
+        "why": "The Collaborative Intelligence Era is the emerging period of work defined by the deliberate design of human–AI teams that amplify one another's strengths, as distinct from…"
+      },
+      {
+        "page": "Average Handle Time",
+        "why": "Average handle time (AHT) is a workforce management metric that measures the mean duration of a customer interaction from initiation to completion, including all associated…"
+      },
+      {
+        "page": "Business Process Outsourcing",
+        "why": "Business process outsourcing (BPO) is the practice of contracting specific business functions — most commonly contact center operations, back-office processing, and technical…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
   "chapter-06-maturity-model": {
     "inline": [
       {
@@ -100,7 +582,7 @@
       },
       {
         "term": "Erlang C",
-        "page": "Erlang C and Service Level"
+        "page": "Erlang C"
       },
       {
         "term": "Erlang",
@@ -155,6 +637,869 @@
       {
         "page": "Adaptive Concepts",
         "why": "Hub for every wiki page drawn from the book."
+      }
+    ],
+    "curated": true
+  },
+  "chapter-07-level-1-initial": {
+    "inline": [
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C"
+      },
+      {
+        "term": "Power of One",
+        "page": "Power of One"
+      },
+      {
+        "term": "Cost per Contact",
+        "page": "Cost per Contact"
+      },
+      {
+        "term": "Abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "Real-Time Adherence",
+        "page": "Real-Time Adherence"
+      },
+      {
+        "term": "Average Handle Time",
+        "page": "Average Handle Time"
+      },
+      {
+        "term": "Average Speed of Answer",
+        "page": "Average Speed of Answer"
+      },
+      {
+        "term": "First Contact Resolution",
+        "page": "First Contact Resolution"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Erlang A",
+        "page": "Erlang A"
+      },
+      {
+        "term": "Erlang X",
+        "page": "Erlang X"
+      },
+      {
+        "term": "Forecast Accuracy",
+        "page": "Forecast Accuracy"
+      },
+      {
+        "term": "Penny Reynolds",
+        "page": "Penny Reynolds"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "Schedule Generation",
+        "page": "Schedule Generation"
+      },
+      {
+        "term": "Speech Analytics",
+        "page": "Speech Analytics"
+      },
+      {
+        "term": "The Maturity Curve",
+        "page": "The Maturity Curve"
+      },
+      {
+        "term": "The Service-Profit Chain",
+        "page": "The Service-Profit Chain"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Level 1: The Excel Foundation",
+        "why": "Level 1: The Excel Foundation describes what workforce management looks like at the first level of the WFM Labs Maturity Model™ — and the minimum path out."
+      },
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Overtime",
+        "why": "Overtime and voluntary time off (VTO) management refers to the set of real-time and near-term operational decisions used to align actual staffed headcount with forecasted…"
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-08-level-2-foundational": {
+    "inline": [
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C"
+      },
+      {
+        "term": "Forecast Accuracy",
+        "page": "Forecast Accuracy"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "Erlang A",
+        "page": "Erlang A"
+      },
+      {
+        "term": "WFM Processes",
+        "page": "WFM Processes"
+      },
+      {
+        "term": "Agent Desktop",
+        "page": "Agent Desktop"
+      },
+      {
+        "term": "Cost per Contact",
+        "page": "Cost per Contact"
+      },
+      {
+        "term": "Exponential Smoothing",
+        "page": "Exponential Smoothing"
+      },
+      {
+        "term": "Real-Time Adherence",
+        "page": "Real-Time Adherence"
+      },
+      {
+        "term": "Society of Workforce Planning Professionals",
+        "page": "Society of Workforce Planning Professionals"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "WFM Roles",
+        "page": "WFM Roles"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Workforce Management Software",
+        "page": "Workforce Management Software"
+      },
+      {
+        "term": "Workforce Planning",
+        "page": "Workforce Planning"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Level 2: Structured Workforce Management",
+        "why": "Level 2: Structured Workforce Management describes operating at the second level of the WFM Labs Maturity Model™ — where most contact-center operations sit."
+      },
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Capacity Planning",
+        "why": "Capacity Planning Methods is the master reference for capacity-planning techniques used in workforce management."
+      },
+      {
+        "page": "Overtime",
+        "why": "Overtime and voluntary time off (VTO) management refers to the set of real-time and near-term operational decisions used to align actual staffed headcount with forecasted…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-09-level-3-progressive": {
+    "inline": [
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Change Management",
+        "page": "Change Management"
+      },
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Agent Experience",
+        "page": "Agent Experience"
+      },
+      {
+        "term": "Annual Attrition",
+        "page": "Annual Attrition"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Discrete Event Simulation",
+        "page": "Discrete Event Simulation"
+      },
+      {
+        "term": "Intelligent Automation",
+        "page": "Intelligent Automation"
+      },
+      {
+        "term": "Intradiem",
+        "page": "Intradiem"
+      },
+      {
+        "term": "Matt McConnell",
+        "page": "Matt McConnell"
+      },
+      {
+        "term": "Multi-Objective Optimization",
+        "page": "Multi-Objective Optimization"
+      },
+      {
+        "term": "Next-Best-Action",
+        "page": "Next-Best-Action"
+      },
+      {
+        "term": "Operations Research",
+        "page": "Operations Research"
+      },
+      {
+        "term": "Performance Management",
+        "page": "Performance Management"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "Schedule Adherence",
+        "page": "Schedule Adherence"
+      },
+      {
+        "term": "Schedule Optimization",
+        "page": "Schedule Optimization"
+      },
+      {
+        "term": "WFM Labs Maturity Model",
+        "page": "WFM Labs Maturity Model"
+      },
+      {
+        "term": "WFM Processes",
+        "page": "WFM Processes"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Level 3: The Automation Layer",
+        "why": "Level 3: The Automation Layer describes operating at the third level of the WFM Labs Maturity Model™ — the level at which an operation stops defending its plan manually and…"
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Attrition",
+        "why": "Employee Attrition and Turnover is the single largest controllable cost in contact center operations and the variable most likely to invalidate a capacity plan."
+      },
+      {
+        "page": "Change Management",
+        "why": "Change Management for Workforce Transformation is the discipline of leading people, processes, and organizations through the fundamental shifts required to advance WFM maturity."
+      },
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Overtime",
+        "why": "Overtime and voluntary time off (VTO) management refers to the set of real-time and near-term operational decisions used to align actual staffed headcount with forecasted…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-10-level-4-advanced": {
+    "inline": [
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Operations Research",
+        "page": "Operations Research"
+      },
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Multi-Objective Optimization",
+        "page": "Multi-Objective Optimization"
+      },
+      {
+        "term": "Discrete Event Simulation",
+        "page": "Discrete Event Simulation"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Erlang C",
+        "page": "Erlang C"
+      },
+      {
+        "term": "Ric Kosiba",
+        "page": "Ric Kosiba"
+      },
+      {
+        "term": "Abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "Agent Experience",
+        "page": "Agent Experience"
+      },
+      {
+        "term": "Probabilistic Planning",
+        "page": "Probabilistic Planning"
+      },
+      {
+        "term": "Systems Thinking",
+        "page": "Systems Thinking"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "Average Handle Time",
+        "page": "Average Handle Time"
+      },
+      {
+        "term": "Business Process Outsourcing",
+        "page": "Business Process Outsourcing"
+      },
+      {
+        "term": "Change Management",
+        "page": "Change Management"
+      },
+      {
+        "term": "Intradiem",
+        "page": "Intradiem"
+      },
+      {
+        "term": "Monte Carlo Simulation",
+        "page": "Monte Carlo Simulation"
+      },
+      {
+        "term": "Pareto Frontier",
+        "page": "Pareto Frontier"
+      },
+      {
+        "term": "Reinforcement learning",
+        "page": "Reinforcement learning"
+      },
+      {
+        "term": "Statistical Process Control",
+        "page": "Statistical Process Control"
+      },
+      {
+        "term": "WFM Roles",
+        "page": "WFM Roles"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Level 4: Planning in Distributions",
+        "why": "Level 4: Planning in Distributions describes operating at the fourth level of the WFM Labs Maturity Model™ — the level at which the capacity plan stops being a number and…"
+      },
+      {
+        "page": "Capacity Planning",
+        "why": "Capacity Planning Methods is the master reference for capacity-planning techniques used in workforce management."
+      },
+      {
+        "page": "Operations Research",
+        "why": "Operations Research in Workforce Management frames workforce management as what it has always been — a branch of applied operations research."
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Attrition",
+        "why": "Employee Attrition and Turnover is the single largest controllable cost in contact center operations and the variable most likely to invalidate a capacity plan."
+      },
+      {
+        "page": "Overtime",
+        "why": "Overtime and voluntary time off (VTO) management refers to the set of real-time and near-term operational decisions used to align actual staffed headcount with forecasted…"
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-11-level-5-pioneering": {
+    "inline": [
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Multi-Objective Optimization",
+        "page": "Multi-Objective Optimization"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Cost per Contact",
+        "page": "Cost per Contact"
+      },
+      {
+        "term": "Reinforcement learning",
+        "page": "Reinforcement learning"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      },
+      {
+        "term": "Scenario Planning",
+        "page": "Scenario Planning"
+      },
+      {
+        "term": "Abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "Contact Center Metrics",
+        "page": "Contact Center Metrics"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Operations Research",
+        "page": "Operations Research"
+      },
+      {
+        "term": "Portfolio optimization",
+        "page": "Portfolio optimization"
+      },
+      {
+        "term": "Probabilistic Planning",
+        "page": "Probabilistic Planning"
+      },
+      {
+        "term": "Schedule Flexibility",
+        "page": "Schedule Flexibility"
+      },
+      {
+        "term": "Systems Thinking",
+        "page": "Systems Thinking"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Level 5: Adaptive Orchestration",
+        "why": "Level 5: Adaptive Orchestration describes operating at the fifth and final level of the WFM Labs Maturity Model™ — the model's Pioneering level, Enterprise-Wide Intelligence —…"
+      },
+      {
+        "page": "Scheduling",
+        "why": "Scheduling Methods is the master reference for the family of techniques used to assign agents to shifts in workforce management."
+      },
+      {
+        "page": "Multi-Objective Optimization",
+        "why": "Multi-objective optimization in contact centers is the mathematical process of simultaneously optimizing multiple, often conflicting objectives to achieve the best possible…"
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Capacity Planning",
+        "why": "Capacity Planning Methods is the master reference for capacity-planning techniques used in workforce management."
+      },
+      {
+        "page": "Cost per Contact",
+        "why": "Call center metrics (also contact center KPIs) are the quantitative measures used to evaluate the performance, efficiency, and effectiveness of contact center operations."
+      },
+      {
+        "page": "Reinforcement learning",
+        "why": "Reinforcement learning for schedule optimization is an application of reinforcement learning (RL) — a branch of machine learning in which an agent learns to make decisions by…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "chapter-12-journey-forward": {
+    "inline": [
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Service Level",
+        "page": "Service Level"
+      },
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "Attrition",
+        "page": "Attrition"
+      },
+      {
+        "term": "Probabilistic Planning",
+        "page": "Probabilistic Planning"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "Variance Harvesting",
+        "page": "Variance Harvesting"
+      },
+      {
+        "term": "Capacity Planning",
+        "page": "Capacity Planning"
+      },
+      {
+        "term": "Overtime",
+        "page": "Overtime"
+      },
+      {
+        "term": "Reinforcement learning",
+        "page": "Reinforcement learning"
+      },
+      {
+        "term": "WFM Labs Maturity Model",
+        "page": "WFM Labs Maturity Model"
+      },
+      {
+        "term": "Abandonment",
+        "page": "Abandonment"
+      },
+      {
+        "term": "Average Speed of Answer",
+        "page": "Average Speed of Answer"
+      },
+      {
+        "term": "Change Management",
+        "page": "Change Management"
+      },
+      {
+        "term": "Operations Research",
+        "page": "Operations Research"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "The Maturity Diagnostic and Pathways",
+        "why": "The Maturity Diagnostic and Pathways is the closing page of the Adaptive Concepts series and the level-agnostic guide that the series' five level pages resolve into: a quick…"
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Service Level",
+        "why": "Service level is a workforce management metric that measures the percentage of customer contacts answered within a defined time threshold."
+      },
+      {
+        "page": "Forecasting",
+        "why": "Forecasting Methods is the master reference for forecasting techniques used in workforce management."
+      },
+      {
+        "page": "Resource Optimization Center (ROC)",
+        "why": "The operating structure that runs forecasting, scheduling and real-time management as one continuous loop."
+      },
+      {
+        "page": "Attrition",
+        "why": "Employee Attrition and Turnover is the single largest controllable cost in contact center operations and the variable most likely to invalidate a capacity plan."
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
+      }
+    ]
+  },
+  "foreword": {
+    "inline": [
+      {
+        "term": "Intradiem",
+        "page": "Intradiem"
+      },
+      {
+        "term": "Matt McConnell",
+        "page": "Matt McConnell"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      }
+    ]
+  },
+  "preface": {
+    "inline": [
+      {
+        "term": "Forecasting",
+        "page": "Forecasting"
+      },
+      {
+        "term": "Real-Time Operations",
+        "page": "Real-Time Operations"
+      },
+      {
+        "term": "Resource Optimization Center",
+        "page": "Resource Optimization Center (ROC)"
+      },
+      {
+        "term": "Scheduling",
+        "page": "Scheduling"
+      },
+      {
+        "term": "The Collaborative Intelligence Era",
+        "page": "The Collaborative Intelligence Era"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      }
+    ]
+  },
+  "wfm-labs-companion": {
+    "inline": [
+      {
+        "term": "Occupancy",
+        "page": "Occupancy"
+      },
+      {
+        "term": "Shrinkage",
+        "page": "Shrinkage"
+      },
+      {
+        "term": "Workforce Management",
+        "page": "Workforce Management"
+      }
+    ],
+    "deeper": [
+      {
+        "page": "Occupancy",
+        "why": "Occupancy (also called agent occupancy or utilization rate) is a workforce management metric that measures the percentage of time agents spend actively handling customer…"
+      },
+      {
+        "page": "Shrinkage",
+        "why": "Shrinkage is a workforce management metric that quantifies the percentage of paid time during which agents are not available to handle customer contacts."
+      },
+      {
+        "page": "Workforce Management",
+        "why": "Workforce management (WFM) is an institutional process that maximizes the productivity, efficiency, and engagement of an organization's workforce by aligning labor supply with…"
+      },
+      {
+        "page": "Adaptive Concepts",
+        "why": "Adaptive Concepts is a series of pages presenting the core ideas of Adaptive, the WFM Labs book on workforce transformation in the Collaborative Intelligence Era — one page per…"
       }
     ]
   }
