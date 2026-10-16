@@ -1,5 +1,5 @@
 /* Ask the Book — slide-in chat panel grounded in the book text.
-   Talks to the book-agent Worker (SSE), renders citations as deep links that
+   Talks to the book-agent Worker (SSE), renders citations as deep links (book) or wiki links that
    soft-navigate through book-player.js so audio keeps playing. */
 (function () {
     'use strict';
@@ -53,10 +53,14 @@
         var html = md(text).replace(/\[(\d+)\]/g, function (m, n) {
             var c = citations[n - 1];
             if (!c) return '';
-            return '<a class="cite" href="' + c.url + '" title="' + (c.chapterLabel + ' · ' + c.heading).replace(/"/g, '&quot;') + '">' + n + '</a>';
+            var ext = c.source === 'wiki' ? ' target="_blank" rel="noopener"' : '';
+            return '<a class="cite' + (c.source === 'wiki' ? ' cite-wiki' : '') + '" href="' + c.url + '"' + ext + ' title="' + (c.chapterLabel + ' · ' + c.heading).replace(/"/g, '&quot;') + '">' + n + '</a>';
         });
         if (citations.length) {
             html += '<div class="cite-list">' + citations.map(function (c) {
+                if (c.source === 'wiki') {
+                    return '<a class="cite-chip cite-chip-wiki" href="' + c.url + '" target="_blank" rel="noopener"><span class="cite-n">' + c.n + '</span><span><strong>' + escapeHtml(c.chapterLabel) + '</strong> · ' + escapeHtml(c.heading) + '</span><span class="cite-go">Open on the wiki ↗</span></a>';
+                }
                 return '<a class="cite-chip" href="' + c.url + '"><span class="cite-n">' + c.n + '</span><span><strong>' + c.chapterLabel + '</strong> · ' + escapeHtml(c.heading) + '</span><span class="cite-go">Jump to passage →</span></a>';
             }).join('') + '</div>';
         }

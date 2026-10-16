@@ -12,3 +12,4 @@ workers/**/.wrangler/
 
 # Worker dependencies
 workers/**/node_modules/
+__pycache__/
