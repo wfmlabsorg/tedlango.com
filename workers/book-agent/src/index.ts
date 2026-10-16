@@ -5,19 +5,26 @@
  *   stream:true  → text/event-stream with `delta` / `done` / `error` events
  *   stream:false → { answer, citations, usage }
  *
- * The whole book sits in the system prompt behind a 1-hour prompt cache; the
- * model cites [[slug#anchor]] markers which are validated against the corpus
- * and turned into reader deep links. Abuse controls: origin allowlist, input
- * caps, per-IP rate limit binding, max_tokens, and a spend-capped API key.
+ * Retrieval-augmented: each question is embedded (Workers AI bge-m3) and matched
+ * against the book and the WFM Labs wiki in Neon (hybrid vector + keyword search,
+ * src/retrieve.ts). The top passages go to the model in the user turn; the system
+ * prompt holds only the rules and the book outline, behind a 1-hour prompt cache.
+ * The model cites [[key]] markers which are validated against the passages it was
+ * shown and turned into reader deep links (book) or wiki links. Abuse controls:
+ * origin allowlist, input caps, per-IP rate limit binding, max_tokens, and a
+ * spend-capped API key.
  */
 import Anthropic from "@anthropic-ai/sdk";
-import { SYSTEM_PROMPT, lookupCitation } from "./prompt";
+import { SYSTEM_PROMPT, makeCitationResolver, type CitationTarget } from "./prompt";
+import { retrieve, passagesXml, type Passage } from "./retrieve";
 import { neon } from "@neondatabase/serverless";
 
 interface Env {
   ANTHROPIC_API_KEY: string;
   MODEL?: string;
-  NEON_DATABASE_URL?: string; // optional: when set, every answered question is recorded (no IP, no identity)
+  NEON_DATABASE_URL?: string; // retrieval store (rag_chunks) + question log (book_questions; no IP, no identity)
+  CF_ACCOUNT_ID?: string;     // Workers AI REST for query embeddings
+  CF_AI_TOKEN?: string;
   RL?: { limit(opts: { key: string }): Promise<{ success: boolean }> };
 }
 
@@ -36,7 +43,7 @@ const MAX_CITATIONS = 4;
 const MARKER = /\[\[([a-z0-9-]+(?:#[a-z0-9_-]+)?)\]\]/g;
 
 type Turn = { role: "user" | "assistant"; content: string };
-type Citation = { n: number; slug: string; anchor: string; chapterLabel: string; chapterTitle: string; heading: string; url: string };
+type Citation = { n: number } & CitationTarget;
 
 function corsFor(request: Request): Record<string, string> {
   const origin = request.headers.get("Origin") ?? "";
@@ -60,12 +67,12 @@ function isAllowedRequest(request: Request): boolean {
 const json = (body: unknown, status: number, headers: Record<string, string>) =>
   new Response(JSON.stringify(body), { status, headers: { ...headers, "Content-Type": "application/json" } });
 
-/** Replace [[key]] markers with numbered [n] references; drop markers that are not real sections. */
-function resolveCitations(text: string): { text: string; citations: Citation[] } {
+/** Replace [[key]] markers with numbered [n] references; drop keys the model was not shown. */
+function resolveCitations(text: string, resolve: (key: string) => CitationTarget | null): { text: string; citations: Citation[] } {
   const citations: Citation[] = [];
   const index = new Map<string, number>();
   const out = text.replace(MARKER, (_m, key: string) => {
-    const hit = lookupCitation(key);
+    const hit = resolve(key);
     if (!hit) return "";
     if (!index.has(key)) {
       if (citations.length >= MAX_CITATIONS) return "";
@@ -77,11 +84,18 @@ function resolveCitations(text: string): { text: string; citations: Citation[] }
   return { text: out.replace(/\s+([.,;:])/g, "$1").replace(/ {2,}/g, " ").trim(), citations };
 }
 
-function buildMessages(question: string, history: Turn[], chapter: string | null): Anthropic.MessageParam[] {
+function buildMessages(question: string, history: Turn[], chapter: string | null, passages: string): Anthropic.MessageParam[] {
   const msgs: Anthropic.MessageParam[] = history.map((t) => ({ role: t.role, content: t.content }));
   const context = chapter ? `(The reader is currently on the page "${chapter}".)\n\n` : "";
-  msgs.push({ role: "user", content: context + question });
+  const block = passages ? `<passages>\n${passages}\n</passages>\n\n` : `<passages>\n(no passages matched this question)\n</passages>\n\n`;
+  msgs.push({ role: "user", content: block + context + question });
   return msgs;
+}
+
+/** What we embed: the question, plus the previous user turn when the question is a short follow-up ("why?", "and at Level 4?"). */
+function retrievalQuery(question: string, history: Turn[]): string {
+  const prevUser = [...history].reverse().find((t) => t.role === "user")?.content ?? "";
+  return question.length < 60 && prevUser ? `${prevUser.slice(0, 300)}\n${question}` : question;
 }
 
 function validate(body: any): { question: string; history: Turn[]; chapter: string | null; stream: boolean } | string {
@@ -109,7 +123,7 @@ export default {
     const cors = corsFor(request);
     if (request.method === "OPTIONS") return new Response(null, { headers: cors });
     if (request.method !== "POST") {
-      return json({ name: "Ask the Book — Adaptive", usage: 'POST {"question": "...", "history": [], "chapter": "slug", "stream": true}', book: "https://tedlango.com/adaptive/", rateLimit: env.RL ? "bound" : "unbound" }, 200, cors);
+      return json({ name: "Ask the Book — Adaptive", usage: 'POST {"question": "...", "history": [], "chapter": "slug", "stream": true}', book: "https://tedlango.com/adaptive/", sources: ["book", "wiki.wfmlabs.org"], rateLimit: env.RL ? "bound" : "unbound" }, 200, cors);
     }
     if (!isAllowedRequest(request)) return json({ error: "Forbidden" }, 403, cors);
 
@@ -128,26 +142,40 @@ export default {
     const input = validate(body);
     if (typeof input === "string") return json({ error: input }, 400, cors);
 
-    const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1 });
     const startedAt = Date.now();
+    let passages: Passage[] = [];
+    let embedded = false;
+    try {
+      const r = await retrieve(env, retrievalQuery(input.question, input.history), input.question, input.chapter);
+      passages = [...r.book, ...r.wiki];
+      embedded = r.embedded;
+    } catch (err: any) {
+      console.error("retrieve error", err?.message);
+    }
+    const retrievalMs = Date.now() - startedAt;
+    console.log(JSON.stringify({ event: "retrieve", ms: retrievalMs, embedded, book: passages.filter((p) => p.source === "book").length, wiki: passages.filter((p) => p.source === "wiki").length }));
+    const resolve = makeCitationResolver(passages);
+    const retrieved = passages.map((p) => p.citeKey);
+
+    const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1 });
     const params = {
-      model: env.MODEL || "claude-opus-5-5",
+      model: env.MODEL || "claude-sonnet-5-5",
       max_tokens: 1024,
       output_config: { effort: "low" as const },
       betas: ["server-side-fallback-2026-07-01"],
       fallbacks: "default" as const,
       system: [{ type: "text" as const, text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" as const, ttl: "1h" as const } }],
-      messages: buildMessages(input.question, input.history, input.chapter),
+      messages: buildMessages(input.question, input.history, input.chapter, passagesXml(passages.filter((p) => p.source === "book"), passages.filter((p) => p.source === "wiki"))),
     };
 
     if (!input.stream) {
       try {
         const msg = await client.beta.messages.create(params);
         const raw = msg.content.filter((b) => b.type === "text").map((b) => (b as any).text).join("");
-        const { text, citations } = resolveCitations(raw);
+        const { text, citations } = resolveCitations(raw, resolve);
         logUsage(msg.usage, msg.stop_reason);
-        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(msg.stop_reason), citations, usage: usageOf(msg.usage), stop: msg.stop_reason, latencyMs: Date.now() - startedAt, streamed: false }));
-        return json({ answer: text || declined(msg.stop_reason), citations, usage: usageOf(msg.usage), stopReason: msg.stop_reason }, 200, cors);
+        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(msg.stop_reason), citations, retrieved, usage: usageOf(msg.usage), stop: msg.stop_reason, latencyMs: Date.now() - startedAt, streamed: false }));
+        return json({ answer: text || declined(msg.stop_reason), citations, usage: usageOf(msg.usage), stopReason: msg.stop_reason, retrieval: { ms: retrievalMs, embedded, passages: retrieved.length } }, 200, cors);
       } catch (err: any) {
         console.error("book-agent error", err?.status, err?.message);
         return json({ error: "Something went wrong. Try again." }, 502, cors);
@@ -170,9 +198,9 @@ export default {
           }
         }
         const final = await stream.finalMessage();
-        const { text, citations } = resolveCitations(full);
+        const { text, citations } = resolveCitations(full, resolve);
         logUsage(final.usage, final.stop_reason);
-        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(final.stop_reason), citations, usage: usageOf(final.usage), stop: final.stop_reason, latencyMs: Date.now() - startedAt, streamed: true }));
+        ctx.waitUntil(record(env, { input, model: params.model, answer: text || declined(final.stop_reason), citations, retrieved, usage: usageOf(final.usage), stop: final.stop_reason, latencyMs: Date.now() - startedAt, streamed: true }));
         await send("done", { text: text || declined(final.stop_reason), citations, usage: usageOf(final.usage), stopReason: final.stop_reason });
       } catch (err: any) {
         console.error("book-agent stream error", err?.status, err?.message);
@@ -197,14 +225,14 @@ function logUsage(u: any, stop: string | null) {
 }
 
 /**
- * Record an answered question in Neon (table book_questions, schema/001_book_questions.sql).
- * Raw signal feed for "what do readers ask?" — stores the question, chapter context, the answer
- * and its citations, plus usage. Deliberately no IP, user agent or session id. Runs after the
- * response is sent (ctx.waitUntil) and never affects the reader if it fails.
+ * Record an answered question in Neon (table book_questions, schema/001 + 003).
+ * Raw signal feed for "what do readers ask?" — stores the question, chapter context, the answer,
+ * its citations, the passages retrieved, plus usage. Deliberately no IP, user agent or session id.
+ * Runs after the response is sent (ctx.waitUntil) and never affects the reader if it fails.
  */
 type RecordArgs = {
   input: { question: string; history: Turn[]; chapter: string | null };
-  model: string; answer: string; citations: Citation[];
+  model: string; answer: string; citations: Citation[]; retrieved: string[];
   usage: { input: number; cacheRead: number; cacheWrite: number; output: number };
   stop: string | null; latencyMs: number; streamed: boolean;
 };
@@ -212,11 +240,11 @@ async function record(env: Env, a: RecordArgs): Promise<void> {
   if (!env.NEON_DATABASE_URL) return;
   try {
     const sql = neon(env.NEON_DATABASE_URL);
-    const cites = a.citations.map((c) => ({ slug: c.slug, anchor: c.anchor, heading: c.heading, url: c.url }));
+    const cites = a.citations.map((c) => ({ source: c.source, slug: c.slug, anchor: c.anchor, heading: c.heading, url: c.url }));
     await sql`
-      INSERT INTO book_questions (question, chapter, history_turns, answer, citations, stop_reason, model,
+      INSERT INTO book_questions (question, chapter, history_turns, answer, citations, retrieved, stop_reason, model,
                                   input_tokens, cache_read, cache_write, output_tokens, cold, latency_ms, streamed)
-      VALUES (${a.input.question}, ${a.input.chapter ?? null}, ${a.input.history.length}, ${a.answer}, ${JSON.stringify(cites)}::jsonb,
+      VALUES (${a.input.question}, ${a.input.chapter ?? null}, ${a.input.history.length}, ${a.answer}, ${JSON.stringify(cites)}::jsonb, ${JSON.stringify(a.retrieved)}::jsonb,
               ${a.stop}, ${a.model}, ${a.usage.input}, ${a.usage.cacheRead}, ${a.usage.cacheWrite}, ${a.usage.output},
               ${a.usage.cacheRead === 0}, ${a.latencyMs}, ${a.streamed})`;
   } catch (err: any) {
