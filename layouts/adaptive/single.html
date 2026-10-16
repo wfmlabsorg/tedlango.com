@@ -20,7 +20,6 @@
     <p class="book-crumb"><a href="{{ $book.RelPermalink }}">Adaptive</a>{{ with .Params.part }} <span>/</span> {{ index (split . " — ") 0 }}{{ end }} <span>/</span> {{ .Params.label }}</p>
 
     <header class="book-header">
-        {{ with .Params.hero }}<img class="book-hero" src="{{ . }}" alt="" aria-hidden="true" width="140" height="140">{{ end }}
         <div>
             <p class="book-eyebrow">{{ .Params.label }}</p>
             <h1>{{ .Title }}</h1>
