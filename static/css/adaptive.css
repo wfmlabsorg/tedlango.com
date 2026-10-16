@@ -13,8 +13,7 @@ body.has-player { padding-bottom: calc(var(--player-h) + 1rem); }
 .book-crumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
 .book-crumb span { margin: 0 0.4rem; opacity: 0.6; }
 
-.book-header { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; align-items: start; margin-bottom: 2.5rem; }
-.book-hero { width: 140px; height: 140px; object-fit: contain; border-radius: 10px; background: var(--bg-secondary); border: 1px solid var(--border); padding: 0.5rem; }
+.book-header { margin-bottom: 2.5rem; }
 .book-eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
 .book-header h1, .book-home h1 { font-size: 2rem; line-height: 1.2; margin-bottom: 0.6rem; }
 .book-meta { font-size: 0.85rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
@@ -125,8 +124,7 @@ body.has-player .player { transform: none; }
 
 @media (max-width: 720px) {
     :root { --player-h: 128px; }
-    .book-header, .book-cover-row { grid-template-columns: 1fr; }
-    .book-hero { width: 96px; height: 96px; }
+    .book-cover-row { grid-template-columns: 1fr; }
     .book-cover { width: 160px; margin: 0 auto; }
     .book-nav { grid-template-columns: 1fr; }
     .book-next { text-align: left; }
