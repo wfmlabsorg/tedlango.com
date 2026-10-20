@@ -159,7 +159,7 @@ export default {
 
     const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1 });
     const params = {
-      model: env.MODEL || "claude-sonnet-5-5",
+      model: env.MODEL || "claude-haiku-5-5",
       max_tokens: 1024,
       output_config: { effort: "low" as const },
       betas: ["server-side-fallback-2026-07-01"],

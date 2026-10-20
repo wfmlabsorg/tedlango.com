@@ -7,8 +7,8 @@ workers_dev = true
 enabled = true
 
 [vars]
-# Sonnet 5.5 over retrieved passages (Ted's call, 2026-10-16). Haiku 5.5 is the cheaper fallback.
-MODEL = "claude-sonnet-5-5"
+# Haiku 5.5 over retrieved passages (Ted's call, 2026-10-20: eval 10/10, ~$0.001/question). claude-sonnet-5-5 if quality ever needs a step up.
+MODEL = "claude-haiku-5-5"
 # Workers AI account for query embeddings (REST). Token is a secret: CF_AI_TOKEN.
 CF_ACCOUNT_ID = "9faaae0334190755634fc54bf3a1517a"
 
