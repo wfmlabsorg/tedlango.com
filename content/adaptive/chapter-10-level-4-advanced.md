@@ -674,7 +674,7 @@ A three-tier structure that OR tools can solve and governance can review:
 
 **Examples of Level 4 goal statements**
 
-- *Service:* “Maintain P$_{85}$$\ge80/30 by interval; minimize expected delay subject to cost capC$.”
+- *Service:* “Maintain P<sub>85</sub>≥80/30 by interval; minimize expected delay subject to cost cap C.”
 
 - *Cost:* “Minimize \(\mathbb{E}[\text{TCO}] + \lambda \cdot \text{VaR}_{95}(\text{TCO})\), with OT ≤ 3% of hours.”
 

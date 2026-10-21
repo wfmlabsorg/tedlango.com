@@ -193,7 +193,7 @@ The framework’s power lies not in providing universal solutions, but in helpin
 
 **Understanding these four stages is essential** because workforce strategies that excel in one context can fail spectacularly in another. The following table distills the core workforce priorities for each STaRS stage:
 
-<div id="tab:stars_workforce">
+<div class="book-table" id="tab-stars-workforce">
 
 | **STaRS Stage**    | **Workforce Focus**            | **Key Initiatives**                                                        |
 |:-------------------|:-------------------------------|:---------------------------------------------------------------------------|
@@ -392,7 +392,7 @@ Beckhard’s framework focuses on four essential elements: Goals, Roles, Process
 
 The integrated GRPIT framework (Goals, Roles, Processes, Interpersonal relationships, and Technology) provides a structured methodology for designing workforce strategies that simultaneously optimize operational efficiency, enhance employee engagement, and leverage emerging technologies. This balanced approach is essential for building adaptive systems that sustain performance as conditions change.
 
-<div id="tab:grpit_foundations">
+<div class="book-table" id="tab-grpit-foundations">
 
 | **Source Framework** | **Contribution to GRPIT**                                        |
 |:---------------------|:-----------------------------------------------------------------|
@@ -511,7 +511,7 @@ The power of these frameworks lies in their complementary nature. The STaRS fram
 
 Different situations call for different frameworks. Use this matrix to choose, combine, and sequence STaRS, the Service-Profit Chain, and GRPIT:
 
-<div id="tab:framework_selection">
+<div class="book-table" id="tab-framework-selection">
 
 | **Framework**        | **Best For**              | **Key Question**                                        | **Deliverables**                           |
 |:---------------------|:--------------------------|:--------------------------------------------------------|:-------------------------------------------|

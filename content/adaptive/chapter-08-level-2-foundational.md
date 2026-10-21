@@ -292,7 +292,7 @@ Inherited targets (e.g., " ≤5% MAPE everywhere") often ignore volume-driven 
 
 ##### Minimal Interval Error Rate (baseline).
 
-Smaller queues fluctuate more; even a perfect model cannot beat this floor: \[\text{Minimal Interval Error Rate} \;=\; \sqrt{\frac{2}{\pi\, FC}},\] where FC is forecasted contacts in the interval. Example: FC{ = }100 ⇒ ≈ 8%; FC{ = }250 ⇒ ≈ 5%; FC{ = }400 ⇒ ≈ 4%. Targets below this floor are noise-chasing.
+Smaller queues fluctuate more; even a perfect model cannot beat this floor: \[\text{Minimal Interval Error Rate} \;=\; \sqrt{\frac{2}{\pi\, FC}},\] where FC is forecasted contacts in the interval. Example: FC = 100 ⇒ ≈ 8%; FC = 250 ⇒ ≈ 5%; FC = 400 ⇒ ≈ 4%. Targets below this floor are noise-chasing.
 
 <figure class="book-figure" id="fig-minimal-error">
 <img src="/img/adaptive/minimal_error_curve_bw.png" alt="Minimal Interval Error Rate vs. interval volume (FC): smaller queues have higher irreducible error due to mathematical constraints, not forecast quality." loading="lazy">
@@ -307,7 +307,7 @@ Weighted Absolute Percentage Error normalizes intervals by size: \[\text{WAPE} \
 
 1.  Compute the minimal error floor per interval using FC; flag intervals where the target sits below the floor.
 
-2.  Compare current targets to floors; adjust goals by band (e.g., FC{ < }120, 120{≤}FC{ < }300, FC{≥}300).
+2.  Compare current targets to floors; adjust goals by band (e.g., FC < 120, 120≤FC < 300, FC≥300).
 
 3.  Produce weekly WAPE and a top-5 interval list with biggest absolute misses; annotate "volume vs. AHT vs. staffing."
 

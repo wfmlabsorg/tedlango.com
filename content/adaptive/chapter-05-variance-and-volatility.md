@@ -208,7 +208,7 @@ The COVID-19 pandemic revealed both patterns: some organizations panicked at nor
 
 Organizations that excel in dynamic environments design strategies addressing both variance and volatility, recognizing that each requires fundamentally different approaches:
 
-<div id="tab:variance_volatility">
+<div class="book-table" id="tab-variance-volatility">
 
 | **Factor**     | **Managing Variance**                    | **Managing Volatility**                   |
 |:---------------|:-----------------------------------------|:------------------------------------------|
