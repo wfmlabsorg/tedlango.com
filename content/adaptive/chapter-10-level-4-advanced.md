@@ -257,7 +257,7 @@ For a 3,000–agent estate, total impact commonly reaches 15–20% of WFM spend.
 
 **Why spreadsheets persist**
 
-*Familiarity.* Everyone can open the file. *Flexibility theater.* Anything can be modeled (crudely). *Ownership.* Analysts “own” their workbook. *Diffuse accountability.* No single owner of the \\[\sim$20M gap. *Norms.* When everyone does it, it feels acceptable.
+*Familiarity.* Everyone can open the file. *Flexibility theater.* Anything can be modeled (crudely). *Ownership.* Analysts “own” their workbook. *Diffuse accountability.* No single owner of the \$~20M gap. *Norms.* When everyone does it, it feels acceptable.
 
 **A different foundation**
 
@@ -674,7 +674,7 @@ A three-tier structure that OR tools can solve and governance can review:
 
 **Examples of Level 4 goal statements**
 
-- *Service:* “Maintain P\(_{85}\]\ge80/30 by interval; minimize expected delay subject to cost capC\).”
+- *Service:* “Maintain P$_{85}$$\ge80/30 by interval; minimize expected delay subject to cost capC$.”
 
 - *Cost:* “Minimize \(\mathbb{E}[\text{TCO}] + \lambda \cdot \text{VaR}_{95}(\text{TCO})\), with OT ≤ 3% of hours.”
 

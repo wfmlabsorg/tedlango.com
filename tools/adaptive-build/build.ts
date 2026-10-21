@@ -240,6 +240,9 @@ function postprocess(md: string, u: Unit, refs: Map<string, Ref>): { body: strin
   md = md.replace(/<div id="refs" class="references csl-bib-body hanging-indent"[^>]*>/, '## References\n\n<div id="refs" class="references csl-bib-body">');
 
   md = md.replace(/<!-- -->/g, "");
+  // Literal dollars (pandoc writes "\$") must not pair up with the $…$ of a neighbouring inline formula
+  // ("the \$\(\sim\)20M gap" became a display-math block that swallowed the rest of the section). Hide them first.
+  md = md.replace(/\\\$/g, "\uE000");
   // Symbol-only inline math → Unicode so most pages never need KaTeX.
   const SYM: Record<string, string> = { "\\rightarrow": "→", "\\to": "→", "\\downarrow": "↓", "\\uparrow": "↑", "\\Rightarrow": "⇒", "\\leftarrow": "←", "\\sim": "~", "\\pm": "±", "\\times": "×", "\\approx": "≈", "\\div": "÷", "\\le": "≤", "\\ge": "≥", "\\leq": "≤", "\\geq": "≥", "\\neq": "≠", "\\infty": "∞", "\\lambda": "λ", "\\mu": "μ", "\\sigma": "σ", "\\Delta": "Δ", "\\cdot": "·" };
   md = md.replace(/(^|[^$\\])\$([^$\n]+)\$(?!\$)/g, (m, pre: string, body: string) => {
@@ -254,6 +257,10 @@ function postprocess(md: string, u: Unit, refs: Map<string, Ref>): { body: strin
   // Remaining math → \( \) and \[ \] so goldmark passthrough + KaTeX can render it without treating "$2.4M" as math.
   md = md.replace(/\$\$([\s\S]*?)\$\$/g, (_m, b: string) => `\\[${b.trim()}\\]`);
   md = md.replace(/(^|[^$\\])\$([^$\n]+)\$(?!\$)/g, (_m, pre: string, b: string) => `${pre}\\(${b}\\)`);
+  md = md.replace(/\uE000/g, "\\$");
+  // Prose in square brackets (an editorial translation, "[ ] Yes / [ ] No" checkboxes) arrives as \[…\], which KaTeX
+  // would render as display math and strip the spaces. Unescape spans that contain no math syntax.
+  md = md.replace(/\\\[([^\]\n]*)\\\]/g, (m, c: string) => (/[\\$=^_]/.test(c) ? m : `[${c}]`));
   const math = /\\[(\[]/.test(md);
 
   // Tidy

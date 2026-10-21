@@ -10,7 +10,6 @@ audio_file: "chapter-05.mp3"
 audio_duration: 2639
 wiki_page: "Variance and Volatility in Service Operations"
 hero: "/img/book/moving-target.svg"
-math: true
 type: adaptive
 ---
 
@@ -70,7 +69,7 @@ However, this modern paraphrase simplifies Moltke’s more nuanced original stat
 
 > “Kein Operationsplan reicht mit einiger Sicherheit über das erste Zusammentreffen mit der feindlichen Hauptmacht hinaus.”
 >
-> \[No plan of operations extends with any certainty beyond the first encounter with the main enemy forces.\]
+> [No plan of operations extends with any certainty beyond the first encounter with the main enemy forces.]
 >
 > —Helmuth von Moltke the Elder, 1871 (Moltke 1993)
 

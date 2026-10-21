@@ -10,7 +10,6 @@ audio_file: "chapter-03.mp3"
 audio_duration: 2983
 wiki_page: "The Ten Change Drivers"
 hero: "/img/book/change-drivers.svg"
-math: true
 type: adaptive
 ---
 
@@ -66,16 +65,16 @@ Organizations that thrive invest in continuous learning infrastructure, not one-
 
 | **Technological Evolution Indicators**                                                |     **Yes / No**     |
 |:--------------------------------------------------------------------------------------|:--------------------:|
-| Competitors use AI to deliver superior customer experiences                           | \[ \] Yes / \[ \] No |
-| Manual processes limit your ability to scale operations                               | \[ \] Yes / \[ \] No |
-| Your workforce lacks training on AI collaboration                                     | \[ \] Yes / \[ \] No |
-| Data silos prevent leveraging predictive analytics                                    | \[ \] Yes / \[ \] No |
-| Technology adoption has stalled due to workforce resistance                           | \[ \] Yes / \[ \] No |
-| You lack metrics for human-AI collaboration effectiveness                             | \[ \] Yes / \[ \] No |
-| Critical decisions rely on intuition rather than data insights                        | \[ \] Yes / \[ \] No |
-| AI initiatives focus on automation, not collaboration with human expertise            | \[ \] Yes / \[ \] No |
-| Digital infrastructure limits real-time coordination across teams                     | \[ \] Yes / \[ \] No |
-| Your organization lacks a strategy for continuous adaptation to emerging technologies | \[ \] Yes / \[ \] No |
+| Competitors use AI to deliver superior customer experiences                           | [ ] Yes / [ ] No |
+| Manual processes limit your ability to scale operations                               | [ ] Yes / [ ] No |
+| Your workforce lacks training on AI collaboration                                     | [ ] Yes / [ ] No |
+| Data silos prevent leveraging predictive analytics                                    | [ ] Yes / [ ] No |
+| Technology adoption has stalled due to workforce resistance                           | [ ] Yes / [ ] No |
+| You lack metrics for human-AI collaboration effectiveness                             | [ ] Yes / [ ] No |
+| Critical decisions rely on intuition rather than data insights                        | [ ] Yes / [ ] No |
+| AI initiatives focus on automation, not collaboration with human expertise            | [ ] Yes / [ ] No |
+| Digital infrastructure limits real-time coordination across teams                     | [ ] Yes / [ ] No |
+| Your organization lacks a strategy for continuous adaptation to emerging technologies | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -114,16 +113,16 @@ The path forward requires acknowledging that BCG’s research on AI transformati
 
 | **Customer Expectation Indicators**                                      |     **Yes / No**     |
 |:-------------------------------------------------------------------------|:--------------------:|
-| Customer satisfaction scores decline despite personalization investments | \[ \] Yes / \[ \] No |
-| Service escalations increase due to unmet personalization expectations   | \[ \] Yes / \[ \] No |
-| Employees lack real-time access to comprehensive customer data           | \[ \] Yes / \[ \] No |
-| Customers experience friction when moving between touchpoints            | \[ \] Yes / \[ \] No |
-| Channel silos prevent seamless journey management                        | \[ \] Yes / \[ \] No |
-| High volume of preventable contacts and escalations                      | \[ \] Yes / \[ \] No |
-| Limited predictive analytics for proactive intervention                  | \[ \] Yes / \[ \] No |
-| Teams organized by function rather than customer journey                 | \[ \] Yes / \[ \] No |
-| Limited autonomy to resolve customer issues creatively                   | \[ \] Yes / \[ \] No |
-| Technology limits rather than enables employee effectiveness             | \[ \] Yes / \[ \] No |
+| Customer satisfaction scores decline despite personalization investments | [ ] Yes / [ ] No |
+| Service escalations increase due to unmet personalization expectations   | [ ] Yes / [ ] No |
+| Employees lack real-time access to comprehensive customer data           | [ ] Yes / [ ] No |
+| Customers experience friction when moving between touchpoints            | [ ] Yes / [ ] No |
+| Channel silos prevent seamless journey management                        | [ ] Yes / [ ] No |
+| High volume of preventable contacts and escalations                      | [ ] Yes / [ ] No |
+| Limited predictive analytics for proactive intervention                  | [ ] Yes / [ ] No |
+| Teams organized by function rather than customer journey                 | [ ] Yes / [ ] No |
+| Limited autonomy to resolve customer issues creatively                   | [ ] Yes / [ ] No |
+| Technology limits rather than enables employee effectiveness             | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -162,16 +161,16 @@ Yet the gap between recognition and action remains. Many leaders acknowledge the
 
 | **Workforce Expectations Indicators**                  |     **Yes / No**     |
 |:-------------------------------------------------------|:--------------------:|
-| High performers leave despite competitive compensation | \[ \] Yes / \[ \] No |
-| Rigid policies prevent flexible work arrangements      | \[ \] Yes / \[ \] No |
-| Exit interviews cite lack of growth opportunities      | \[ \] Yes / \[ \] No |
-| Employee engagement scores trend downward              | \[ \] Yes / \[ \] No |
-| Mental health issues impact productivity               | \[ \] Yes / \[ \] No |
-| Top talent rejects offers citing culture concerns      | \[ \] Yes / \[ \] No |
-| Learning programs focus on compliance, not growth      | \[ \] Yes / \[ \] No |
-| Purpose and values feel disconnected from daily work   | \[ \] Yes / \[ \] No |
-| Manager behavior contradicts stated culture            | \[ \] Yes / \[ \] No |
-| Younger employees express highest dissatisfaction      | \[ \] Yes / \[ \] No |
+| High performers leave despite competitive compensation | [ ] Yes / [ ] No |
+| Rigid policies prevent flexible work arrangements      | [ ] Yes / [ ] No |
+| Exit interviews cite lack of growth opportunities      | [ ] Yes / [ ] No |
+| Employee engagement scores trend downward              | [ ] Yes / [ ] No |
+| Mental health issues impact productivity               | [ ] Yes / [ ] No |
+| Top talent rejects offers citing culture concerns      | [ ] Yes / [ ] No |
+| Learning programs focus on compliance, not growth      | [ ] Yes / [ ] No |
+| Purpose and values feel disconnected from daily work   | [ ] Yes / [ ] No |
+| Manager behavior contradicts stated culture            | [ ] Yes / [ ] No |
+| Younger employees express highest dissatisfaction      | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -210,16 +209,16 @@ Static org charts give way to dynamic team assembly. Five-year workforce plans c
 
 | **Market Competition Indicators**                                 |     **Yes / No**     |
 |:------------------------------------------------------------------|:--------------------:|
-| New entrants attract your best talent with innovative work models | \[ \] Yes / \[ \] No |
-| Geographic hiring constraints limit access to critical skills     | \[ \] Yes / \[ \] No |
-| Platform competitors achieve more with smaller workforces         | \[ \] Yes / \[ \] No |
-| Industry convergence creates unfamiliar talent requirements       | \[ \] Yes / \[ \] No |
-| Speed to market suffers due to lengthy hiring processes           | \[ \] Yes / \[ \] No |
-| Functional silos prevent rapid response to market shifts          | \[ \] Yes / \[ \] No |
-| Workforce planning cycles can’t match market volatility           | \[ \] Yes / \[ \] No |
-| Critical capabilities exist outside your traditional talent pools | \[ \] Yes / \[ \] No |
-| Competitive threats emerge from unexpected industries             | \[ \] Yes / \[ \] No |
-| Your workforce model assumes stable, predictable competition      | \[ \] Yes / \[ \] No |
+| New entrants attract your best talent with innovative work models | [ ] Yes / [ ] No |
+| Geographic hiring constraints limit access to critical skills     | [ ] Yes / [ ] No |
+| Platform competitors achieve more with smaller workforces         | [ ] Yes / [ ] No |
+| Industry convergence creates unfamiliar talent requirements       | [ ] Yes / [ ] No |
+| Speed to market suffers due to lengthy hiring processes           | [ ] Yes / [ ] No |
+| Functional silos prevent rapid response to market shifts          | [ ] Yes / [ ] No |
+| Workforce planning cycles can’t match market volatility           | [ ] Yes / [ ] No |
+| Critical capabilities exist outside your traditional talent pools | [ ] Yes / [ ] No |
+| Competitive threats emerge from unexpected industries             | [ ] Yes / [ ] No |
+| Your workforce model assumes stable, predictable competition      | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -260,16 +259,16 @@ Winners build compliance agility into workforce DNA. They track regulatory trend
 
 | **Regulatory Compliance Indicators**                                   |     **Yes / No**     |
 |:-----------------------------------------------------------------------|:--------------------:|
-| Different regulations across markets require multiple workforce models | \[ \] Yes / \[ \] No |
-| Privacy laws conflict with your AI/data strategy needs                 | \[ \] Yes / \[ \] No |
-| Labor classification uncertainty affects staffing decisions            | \[ \] Yes / \[ \] No |
-| Compliance requirements slow product development cycles                | \[ \] Yes / \[ \] No |
-| Regulatory changes catch your organization unprepared                  | \[ \] Yes / \[ \] No |
-| Compliance expertise remains siloed in legal/HR departments            | \[ \] Yes / \[ \] No |
-| Training programs can’t keep pace with regulatory shifts               | \[ \] Yes / \[ \] No |
-| Competitors use regulatory arbitrage against you                       | \[ \] Yes / \[ \] No |
-| Cross-border operations face conflicting requirements                  | \[ \] Yes / \[ \] No |
-| Your workforce model assumes stable regulations                        | \[ \] Yes / \[ \] No |
+| Different regulations across markets require multiple workforce models | [ ] Yes / [ ] No |
+| Privacy laws conflict with your AI/data strategy needs                 | [ ] Yes / [ ] No |
+| Labor classification uncertainty affects staffing decisions            | [ ] Yes / [ ] No |
+| Compliance requirements slow product development cycles                | [ ] Yes / [ ] No |
+| Regulatory changes catch your organization unprepared                  | [ ] Yes / [ ] No |
+| Compliance expertise remains siloed in legal/HR departments            | [ ] Yes / [ ] No |
+| Training programs can’t keep pace with regulatory shifts               | [ ] Yes / [ ] No |
+| Competitors use regulatory arbitrage against you                       | [ ] Yes / [ ] No |
+| Cross-border operations face conflicting requirements                  | [ ] Yes / [ ] No |
+| Your workforce model assumes stable regulations                        | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -310,16 +309,16 @@ Winners in cultural evolution share observable behaviors: they make hard choices
 
 | **Culture Transformation Indicators**                       |     **Yes / No**     |
 |:------------------------------------------------------------|:--------------------:|
-| High performers leave citing cultural misalignment          | \[ \] Yes / \[ \] No |
-| Stated values contradict daily management behaviors         | \[ \] Yes / \[ \] No |
-| DEI initiatives feel performative rather than substantive   | \[ \] Yes / \[ \] No |
-| Employees fear speaking up about problems or ideas          | \[ \] Yes / \[ \] No |
-| Remote workers feel excluded from advancement opportunities | \[ \] Yes / \[ \] No |
-| Innovation attempts meet bureaucratic resistance            | \[ \] Yes / \[ \] No |
-| Culture initiatives launch without measurable goals         | \[ \] Yes / \[ \] No |
-| Individual rewards undermine collaborative values           | \[ \] Yes / \[ \] No |
-| Leadership talks change but models status quo               | \[ \] Yes / \[ \] No |
-| Culture strategy remains separate from business strategy    | \[ \] Yes / \[ \] No |
+| High performers leave citing cultural misalignment          | [ ] Yes / [ ] No |
+| Stated values contradict daily management behaviors         | [ ] Yes / [ ] No |
+| DEI initiatives feel performative rather than substantive   | [ ] Yes / [ ] No |
+| Employees fear speaking up about problems or ideas          | [ ] Yes / [ ] No |
+| Remote workers feel excluded from advancement opportunities | [ ] Yes / [ ] No |
+| Innovation attempts meet bureaucratic resistance            | [ ] Yes / [ ] No |
+| Culture initiatives launch without measurable goals         | [ ] Yes / [ ] No |
+| Individual rewards undermine collaborative values           | [ ] Yes / [ ] No |
+| Leadership talks change but models status quo               | [ ] Yes / [ ] No |
+| Culture strategy remains separate from business strategy    | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -360,16 +359,16 @@ Winners in uncertainty share distinct characteristics: They scenario-plan consta
 
 | **Economic Uncertainty Indicators**                             |     **Yes / No**     |
 |:----------------------------------------------------------------|:--------------------:|
-| Recent disruptions caught your workforce planning unprepared    | \[ \] Yes / \[ \] No |
-| Fixed cost structures limit ability to adapt to revenue swings  | \[ \] Yes / \[ \] No |
-| Critical capabilities concentrated in single geographic regions | \[ \] Yes / \[ \] No |
-| Annual planning cycles can’t match market volatility            | \[ \] Yes / \[ \] No |
-| Talent strategies assume continued global mobility              | \[ \] Yes / \[ \] No |
-| Skills development lags behind capability requirements          | \[ \] Yes / \[ \] No |
-| Workforce costs rise faster than productivity gains             | \[ \] Yes / \[ \] No |
-| Contingency plans exist on paper but not in practice            | \[ \] Yes / \[ \] No |
-| Leadership treats each crisis as unique versus systemic         | \[ \] Yes / \[ \] No |
-| Your workforce model optimizes for efficiency over resilience   | \[ \] Yes / \[ \] No |
+| Recent disruptions caught your workforce planning unprepared    | [ ] Yes / [ ] No |
+| Fixed cost structures limit ability to adapt to revenue swings  | [ ] Yes / [ ] No |
+| Critical capabilities concentrated in single geographic regions | [ ] Yes / [ ] No |
+| Annual planning cycles can’t match market volatility            | [ ] Yes / [ ] No |
+| Talent strategies assume continued global mobility              | [ ] Yes / [ ] No |
+| Skills development lags behind capability requirements          | [ ] Yes / [ ] No |
+| Workforce costs rise faster than productivity gains             | [ ] Yes / [ ] No |
+| Contingency plans exist on paper but not in practice            | [ ] Yes / [ ] No |
+| Leadership treats each crisis as unique versus systemic         | [ ] Yes / [ ] No |
+| Your workforce model optimizes for efficiency over resilience   | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -408,16 +407,16 @@ Winners in demographic transformation implement structured knowledge transfer be
 
 | **Demographic and Social Changes Indicators**                          |     **Yes / No**     |
 |:-----------------------------------------------------------------------|:--------------------:|
-| \>15% of critical roles reach retirement eligibility within 3 years    | \[ \] Yes / \[ \] No |
-| Promotion rates in feeder roles differ materially by cohort            | \[ \] Yes / \[ \] No |
-| Key capabilities concentrated in a single geography or time zone       | \[ \] Yes / \[ \] No |
-| Visa/permit dependency creates single-point-of-failure exposure        | \[ \] Yes / \[ \] No |
-| Hybrid/remote preferences are known but not reflected in role design   | \[ \] Yes / \[ \] No |
-| Caregiver constraints materially limit shift coverage or availability  | \[ \] Yes / \[ \] No |
-| Part-time or flexible paths are unavailable for critical roles         | \[ \] Yes / \[ \] No |
-| Feeder-role representation does not match intended leadership mix      | \[ \] Yes / \[ \] No |
-| Knowledge capture/transfer is ad hoc or episodic                       | \[ \] Yes / \[ \] No |
-| Talent mapping ignores cross-border or cross-business mobility options | \[ \] Yes / \[ \] No |
+| \>15% of critical roles reach retirement eligibility within 3 years    | [ ] Yes / [ ] No |
+| Promotion rates in feeder roles differ materially by cohort            | [ ] Yes / [ ] No |
+| Key capabilities concentrated in a single geography or time zone       | [ ] Yes / [ ] No |
+| Visa/permit dependency creates single-point-of-failure exposure        | [ ] Yes / [ ] No |
+| Hybrid/remote preferences are known but not reflected in role design   | [ ] Yes / [ ] No |
+| Caregiver constraints materially limit shift coverage or availability  | [ ] Yes / [ ] No |
+| Part-time or flexible paths are unavailable for critical roles         | [ ] Yes / [ ] No |
+| Feeder-role representation does not match intended leadership mix      | [ ] Yes / [ ] No |
+| Knowledge capture/transfer is ad hoc or episodic                       | [ ] Yes / [ ] No |
+| Talent mapping ignores cross-border or cross-business mobility options | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -456,16 +455,16 @@ Organizations succeeding in this transformation share common approaches: They me
 
 | **Resource Scarcity and Sustainability Indicators**           |     **Yes / No**     |
 |:--------------------------------------------------------------|:--------------------:|
-| Talent shortages limit sustainability initiatives             | \[ \] Yes / \[ \] No |
-| Workforce models fail to optimize energy and waste            | \[ \] Yes / \[ \] No |
-| Employees lack circular economy and sustainability training   | \[ \] Yes / \[ \] No |
-| Remote work policies ignore environmental benefits            | \[ \] Yes / \[ \] No |
-| Recruitment ignores green skills and sustainability alignment | \[ \] Yes / \[ \] No |
-| Supply disruptions reveal workforce capacity gaps             | \[ \] Yes / \[ \] No |
-| Sustainability goals disconnect from workforce metrics        | \[ \] Yes / \[ \] No |
-| Skills programs exclude environmental competencies            | \[ \] Yes / \[ \] No |
-| Performance systems don’t reward sustainable behaviors        | \[ \] Yes / \[ \] No |
-| Workforce strategy assumes unlimited resources                | \[ \] Yes / \[ \] No |
+| Talent shortages limit sustainability initiatives             | [ ] Yes / [ ] No |
+| Workforce models fail to optimize energy and waste            | [ ] Yes / [ ] No |
+| Employees lack circular economy and sustainability training   | [ ] Yes / [ ] No |
+| Remote work policies ignore environmental benefits            | [ ] Yes / [ ] No |
+| Recruitment ignores green skills and sustainability alignment | [ ] Yes / [ ] No |
+| Supply disruptions reveal workforce capacity gaps             | [ ] Yes / [ ] No |
+| Sustainability goals disconnect from workforce metrics        | [ ] Yes / [ ] No |
+| Skills programs exclude environmental competencies            | [ ] Yes / [ ] No |
+| Performance systems don’t reward sustainable behaviors        | [ ] Yes / [ ] No |
+| Workforce strategy assumes unlimited resources                | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -508,16 +507,16 @@ Winners recognize that business model innovation is workforce innovation. They d
 
 | **Business Model Innovation Indicators**                             |     **Yes / No**     |
 |:---------------------------------------------------------------------|:--------------------:|
-| Platform or ecosystem models expose traditional management gaps      | \[ \] Yes / \[ \] No |
-| Subscription services require customer success capabilities you lack | \[ \] Yes / \[ \] No |
-| External contributors represent 20%+ of your workforce               | \[ \] Yes / \[ \] No |
-| Service-based models need outcome management skills                  | \[ \] Yes / \[ \] No |
-| Remote-first operations demand asynchronous coordination             | \[ \] Yes / \[ \] No |
-| Traditional hiring processes fail for gig-based talent               | \[ \] Yes / \[ \] No |
-| Boundary-spanning roles lack clear management structures             | \[ \] Yes / \[ \] No |
-| Continuous development cycles overwhelm project-based teams          | \[ \] Yes / \[ \] No |
-| Network business models operate despite hierarchical organization    | \[ \] Yes / \[ \] No |
-| Innovation initiatives fail due to workforce capability gaps         | \[ \] Yes / \[ \] No |
+| Platform or ecosystem models expose traditional management gaps      | [ ] Yes / [ ] No |
+| Subscription services require customer success capabilities you lack | [ ] Yes / [ ] No |
+| External contributors represent 20%+ of your workforce               | [ ] Yes / [ ] No |
+| Service-based models need outcome management skills                  | [ ] Yes / [ ] No |
+| Remote-first operations demand asynchronous coordination             | [ ] Yes / [ ] No |
+| Traditional hiring processes fail for gig-based talent               | [ ] Yes / [ ] No |
+| Boundary-spanning roles lack clear management structures             | [ ] Yes / [ ] No |
+| Continuous development cycles overwhelm project-based teams          | [ ] Yes / [ ] No |
+| Network business models operate despite hierarchical organization    | [ ] Yes / [ ] No |
+| Innovation initiatives fail due to workforce capability gaps         | [ ] Yes / [ ] No |
 
 <aside class="callout">
 
@@ -828,7 +827,7 @@ Uber Technologies Inc. 2025. “Form 10-k Annual Report.” U.S. Securities; Exc
 
 <div id="ref-uksc2021uber" class="csl-entry">
 
-UK Supreme Court. 2021. “Uber BV v Aslam and Others \[2021\] UKSC 5.” UK Supreme Court judgment. <https://www.supremecourt.uk/cases/uksc-2019-0029>.
+UK Supreme Court. 2021. “Uber BV v Aslam and Others [2021] UKSC 5.” UK Supreme Court judgment. <https://www.supremecourt.uk/cases/uksc-2019-0029>.
 
 </div>
 
