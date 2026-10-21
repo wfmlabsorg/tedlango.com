@@ -383,7 +383,9 @@ Scorecards should make better decisions inevitable. Keep them small, outcome-anc
 
 ##### Option Value of Flexibility (illustrative)
 
-\[\mathrm{OVF}=\mathbb{E}\!\left[C_{\mathrm{static}}\right]-\mathbb{E}\!\left[C_{\mathrm{ranged}}\right]\] where C includes OT, BPO spillover, and missed-revenue penalties under scenario weights.
+\[\mathrm{OVF}=\mathbb{E}\!\left[C_{\mathrm{static}}\right]-\mathbb{E}\!\left[C_{\mathrm{ranged}}\right]\]
+
+where C includes OT, BPO spillover, and missed-revenue penalties under scenario weights.
 
 ##### Employee Wellbeing Index (example)
 

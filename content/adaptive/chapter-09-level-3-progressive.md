@@ -400,12 +400,24 @@ Goal evolves from “minimize OT” to “eliminate *unintentional* OT and deplo
 
 ##### Automation Acceptance Rate (AAR).
 
-When prompts fire (training, break adjust, assist), what % are accepted? \[\text{AAR}=\frac{\text{\# accepted prompts}}{\text{\# total prompts}} \times 100\] Slice by rule, time of day, tenure. Healthy rules clear 85%+; low AAR flags timing, content, or trust issues.
+When prompts fire (training, break adjust, assist), what % are accepted?
+
+\[\text{AAR}=\frac{\text{\# accepted prompts}}{\text{\# total prompts}} \times 100\]
+
+Slice by rule, time of day, tenure. Healthy rules clear 85%+; low AAR flags timing, content, or trust issues.
 
 ##### Variance Capture Efficiency (VCE).
 
-How much positive variance becomes value? \[\text{VCE}=\frac{\sum \text{minutes of harvested activities}}{\sum \text{minutes of available variance}} \times 100\] Where available variance per interval measures the surplus capacity you could potentially harvest—calculated as the number of surplus agents multiplied by the interval length: \[\text{available variance} \approx \max(0, \text{staffed} - \text{required}) 
-\times \text{interval minutes}\] The \(\max(0, \ldots)\) ensures we only count positive surplus; if you’re understaffed, there’s no variance to harvest. For example: 50 agents staffed with 45 required in a 15-minute interval yields (50-45) × 15 = 75 minutes of harvestable capacity.
+How much positive variance becomes value?
+
+\[\text{VCE}=\frac{\sum \text{minutes of harvested activities}}{\sum \text{minutes of available variance}} \times 100\]
+
+Where available variance per interval measures the surplus capacity you could potentially harvest—calculated as the number of surplus agents multiplied by the interval length:
+
+\[\text{available variance} \approx \max(0, \text{staffed} - \text{required}) 
+\times \text{interval minutes}\]
+
+The \(\max(0, \ldots)\) ensures we only count positive surplus; if you’re understaffed, there’s no variance to harvest. For example: 50 agents staffed with 45 required in a 15-minute interval yields (50-45) × 15 = 75 minutes of harvestable capacity.
 
 ##### Employee Experience Index (EEI).
 
@@ -425,7 +437,11 @@ Weight locally; trend weekly, not just annually.
 
 ##### Supervisor Coaching Ratio (SCR).
 
-Quantify the time shift from admin to development/coaching: \[\mathrm{SCR} = \frac{\text{time on coaching/development}}{\text{total supervisor time}} \times 100\] Use calendar tags, workflow logs, and ROC tickets to instrument it. Level 3 should flip the Level‑2 ratio (e.g., from 30/70 to 60/40+). Direction and magnitude matter more than a universal target.
+Quantify the time shift from admin to development/coaching:
+
+\[\mathrm{SCR} = \frac{\text{time on coaching/development}}{\text{total supervisor time}} \times 100\]
+
+Use calendar tags, workflow logs, and ROC tickets to instrument it. Level 3 should flip the Level‑2 ratio (e.g., from 30/70 to 60/40+). Direction and magnitude matter more than a universal target.
 
 ### Building the measurement framework (make it drive the day)
 
@@ -658,7 +674,9 @@ Level 2 assumes predictability and pre-schedules; cancellations abound. Level 3 
 
 The best automation fails without *trust*. Level 3 stands or falls on relationships—agents with tech, supervisors with systems, WFM with operations. Tooling rarely fixes a trust problem. Process and metric upgrades help ([“Processes (P) — Dynamic Execution”](/adaptive/chapter-09-level-3-progressive/#processes-p--dynamic-execution) and [“Goals (G) — From Plan Defense to Outcome Optimization”](/adaptive/chapter-09-level-3-progressive/#goals-g--from-plan-defense-to-outcome-optimization)), but the interpersonal shift is what makes them stick—especially where Level 2 tensions ran hot ([“Interpersonal (I) — The Triangular Tension”](/adaptive/chapter-08-level-2-foundational/#interpersonal-i--the-triangular-tension)).
 
-**A short trust equation for automation** \[\text{Trust} \;\propto\; \frac{\text{Transparency} + \text{Benefit} + \text{Control}}{\text{Risk}}.\]
+**A short trust equation for automation**
+
+\[\text{Trust} \;\propto\; \frac{\text{Transparency} + \text{Benefit} + \text{Control}}{\text{Risk}}.\]
 
 **Transparency.** Explain *what* fired and *why*. Black boxes breed suspicion; short, plain-language reasons build confidence. *Example:* “Your break moved because your call ran over; adherence protected and customer served.” Tie explanations to published guardrails.
 
@@ -828,16 +846,26 @@ The engine: micro-moments. Ten agents free for three minutes is 30 minutes of pr
 
 **Direct ROI components (attribution you can defend)**
 
-**AHT reduction.** Pilot: -15 seconds via long-call assists and just-in-time knowledge ([“Understanding Level 3: The Automation Revolution”](/adaptive/chapter-09-level-3-progressive/#understanding-level-3-the-automation-revolution)). For 3,000 agents at 100 calls/day: \[3{,}000 \times 100 \times 15\text{s} = 4{,}500{,}000\text{s/day} \approx 1{,}250\text{ hours/day}.\] Annualized (250 days): 312,500 hours. That’s ≈ 155-170 FTEs depending on assumed annual productive hours (2,000–1,850) ⇒ \$6.2–\$6.8M at \$40k/FTE. Even half the effect funds the program.
+**AHT reduction.** Pilot: -15 seconds via long-call assists and just-in-time knowledge ([“Understanding Level 3: The Automation Revolution”](/adaptive/chapter-09-level-3-progressive/#understanding-level-3-the-automation-revolution)). For 3,000 agents at 100 calls/day:
 
-**Overtime reduction.** Typical 5–8% OT drops to 2–3% with end-of-shift protection, dynamic VTO, and better balancing: \[\Delta\text{OT} \approx 2{-}4\%\ \text{of}\ \$40\text{M} \Rightarrow \$0.8{-}1.6\text{M/year (1{,}000 agents)}.\]
+\[3{,}000 \times 100 \times 15\text{s} = 4{,}500{,}000\text{s/day} \approx 1{,}250\text{ hours/day}.\]
 
-**Turnover reduction.** If Level 3 trims annual attrition by 10 points (e.g., 50% → 40%): \[\begin{aligned}
+Annualized (250 days): 312,500 hours. That’s ≈ 155-170 FTEs depending on assumed annual productive hours (2,000–1,850) ⇒ \$6.2–\$6.8M at \$40k/FTE. Even half the effect funds the program.
+
+**Overtime reduction.** Typical 5–8% OT drops to 2–3% with end-of-shift protection, dynamic VTO, and better balancing:
+
+\[\Delta\text{OT} \approx 2{-}4\%\ \text{of}\ \$40\text{M} \Rightarrow \$0.8{-}1.6\text{M/year (1{,}000 agents)}.\]
+
+**Turnover reduction.** If Level 3 trims annual attrition by 10 points (e.g., 50% → 40%):
+
+\[\begin{aligned}
 &100\ \text{fewer replacements}\times \$6{,}000 \approx \$600\text{k}\ \text{(recruit+training)}\\
 &\quad +\ \text{productivity lift} \approx \$400\text{k}\ \Rightarrow\ \sim\$1\text{M}.
 \end{aligned}\]
 
-**Administrative efficiency.** Supervisors reclaim ≥2.5 hours/day from exceptions and rescheduling; RTAs shift to rule design ([“Roles (R) — Evolution of WFM Functions”](/adaptive/chapter-09-level-3-progressive/#roles-r--evolution-of-wfm-functions)): \[100\ \text{supervisors} \times 2.5 \times 250 = 62{,}500\ \text{hours} \Rightarrow \$1.9\text{M at \$30/hr}.\]
+**Administrative efficiency.** Supervisors reclaim ≥2.5 hours/day from exceptions and rescheduling; RTAs shift to rule design ([“Roles (R) — Evolution of WFM Functions”](/adaptive/chapter-09-level-3-progressive/#roles-r--evolution-of-wfm-functions)):
+
+\[100\ \text{supervisors} \times 2.5 \times 250 = 62{,}500\ \text{hours} \Rightarrow \$1.9\text{M at \$30/hr}.\]
 
 **Putting the pieces together.** These results roll up into four defensible value streams—*shrinkage budget saves*, *AHT reduction*, *overtime reduction*, and *administrative efficiency*. [Figure 9.2](/adaptive/chapter-09-level-3-progressive/#fig-business-case-roi) shows their *relative share* on a common 1,000-agent baseline; absolute amounts follow the modeled calculations above. Aim for *composition, not false precision*: what actually funds the Level 3 journey.
 

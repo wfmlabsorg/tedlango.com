@@ -268,6 +268,9 @@ function postprocess(md: string, u: Unit, refs: Map<string, Ref>): { body: strin
     return t.replace(/\s*([=<>≈])\s*/g, " $1 ").replace(/\s+/g, " ").trim();
   });
   md = md.replace(/\uE000/g, "\\$");
+  // Display math must stand in its own paragraph: Hugo's goldmark passthrough treats \[…\] as a block delimiter, and
+  // the Pages build (unlike local Hugo 0.146) drops the prose that shares a paragraph with it (chapters 7–10 lost ~290 words).
+  md = md.replace(/[ \t]*\\\[([\s\S]*?)\\\][ \t]*/g, (m, c: string) => (/[\\$=^_]/.test(c) ? `\n\n\\[${c}\\]\n\n` : m));
   // Prose in square brackets (an editorial translation, "[ ] Yes / [ ] No" checkboxes) arrives as \[…\], which KaTeX
   // would render as display math and strip the spaces. Unescape spans that contain no math syntax.
   md = md.replace(/\\\[([^\]\n]*)\\\]/g, (m, c: string) => (/[\\$=^_]/.test(c) ? m : `[${c}]`));
