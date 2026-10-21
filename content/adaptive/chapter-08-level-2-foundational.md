@@ -292,7 +292,11 @@ Inherited targets (e.g., " ≤5% MAPE everywhere") often ignore volume-driven 
 
 ##### Minimal Interval Error Rate (baseline).
 
-Smaller queues fluctuate more; even a perfect model cannot beat this floor: \[\text{Minimal Interval Error Rate} \;=\; \sqrt{\frac{2}{\pi\, FC}},\] where FC is forecasted contacts in the interval. Example: FC = 100 ⇒ ≈ 8%; FC = 250 ⇒ ≈ 5%; FC = 400 ⇒ ≈ 4%. Targets below this floor are noise-chasing.
+Smaller queues fluctuate more; even a perfect model cannot beat this floor:
+
+\[\text{Minimal Interval Error Rate} \;=\; \sqrt{\frac{2}{\pi\, FC}},\]
+
+where FC is forecasted contacts in the interval. Example: FC = 100 ⇒ ≈ 8%; FC = 250 ⇒ ≈ 5%; FC = 400 ⇒ ≈ 4%. Targets below this floor are noise-chasing.
 
 <figure class="book-figure" id="fig-minimal-error">
 <img src="/img/adaptive/minimal_error_curve_bw.png" alt="Minimal Interval Error Rate vs. interval volume (FC): smaller queues have higher irreducible error due to mathematical constraints, not forecast quality." loading="lazy">
@@ -301,7 +305,11 @@ Smaller queues fluctuate more; even a perfect model cannot beat this floor: \[\t
 
 ##### WAPE over MAPE (for uneven volumes).
 
-Weighted Absolute Percentage Error normalizes intervals by size: \[\text{WAPE} \;=\; \frac{\sum |\text{Actual} - \text{Forecast}|}{\sum \text{Actual}} \times 100.\] WAPE prevents low-volume intervals from dominating the story and better reflects operational impact. Use WAPE for weekly rollups; keep interval error for intraday learning.
+Weighted Absolute Percentage Error normalizes intervals by size:
+
+\[\text{WAPE} \;=\; \frac{\sum |\text{Actual} - \text{Forecast}|}{\sum \text{Actual}} \times 100.\]
+
+WAPE prevents low-volume intervals from dominating the story and better reflects operational impact. Use WAPE for weekly rollups; keep interval error for intraday learning.
 
 ### A short exercise Sarah runs with the team
 

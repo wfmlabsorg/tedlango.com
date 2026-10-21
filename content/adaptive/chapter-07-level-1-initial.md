@@ -413,7 +413,19 @@ These are strong assumptions. They are why we pair the baseline with interval ru
 
 ### From workload to staffing (the minimal recipe)
 
-Let λ be the arrival rate (calls per second) and s the average handle time (seconds). Offered load in erlangs is \[R = \lambda \cdot s.\] Given R and a trial number of agents N, the Erlang‑C waiting probability \(P(\text{wait})\) is \[P(\text{wait}) = \frac{\dfrac{R^N}{N!}\,\dfrac{N}{N-R}}{\displaystyle \sum_{k=0}^{N-1}\frac{R^k}{k!} + \dfrac{R^N}{N!}\,\dfrac{N}{N-R}},\] and the probability of answering within a target T seconds is \[P(\text{answer} \le T) = 1 - P(\text{wait})\, e^{-(N-R)\,T/s}.\] Increase or decrease N until the interval target (e.g., 80/30) is achieved, then adjust for shrinkage to convert to scheduled heads.
+Let λ be the arrival rate (calls per second) and s the average handle time (seconds). Offered load in erlangs is
+
+\[R = \lambda \cdot s.\]
+
+Given R and a trial number of agents N, the Erlang‑C waiting probability \(P(\text{wait})\) is
+
+\[P(\text{wait}) = \frac{\dfrac{R^N}{N!}\,\dfrac{N}{N-R}}{\displaystyle \sum_{k=0}^{N-1}\frac{R^k}{k!} + \dfrac{R^N}{N!}\,\dfrac{N}{N-R}},\]
+
+and the probability of answering within a target T seconds is
+
+\[P(\text{answer} \le T) = 1 - P(\text{wait})\, e^{-(N-R)\,T/s}.\]
+
+Increase or decrease N until the interval target (e.g., 80/30) is achieved, then adjust for shrinkage to convert to scheduled heads.
 
 ### A concrete example (matches our “Power of One” case)
 

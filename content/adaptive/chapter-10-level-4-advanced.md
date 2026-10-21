@@ -197,7 +197,11 @@ Saying “we need 287 agents next quarter” asserts certainty that does not exi
 
 Spreadsheets may footnote these, but rarely *model* their uncertainty, timing, or interaction.
 
-**2) Brittle assumptions.** Inputs are treated as fixed and independent: volume \(+\!x\%\), AHT \(-\!y\%\), attrition \(=\!z\%\). In reality they couple: \[\text{attrition}\uparrow \;\Rightarrow\; \text{experience}\downarrow \;\Rightarrow\; \text{AHT}\uparrow \;\Rightarrow\; \text{staffing}\uparrow \;\Rightarrow\; \text{hiring}\uparrow \;\Rightarrow\; \text{experience}\downarrow\ldots\] Small changes propagate nonlinearly; static sheets seldom capture the loop.
+**2) Brittle assumptions.** Inputs are treated as fixed and independent: volume \(+\!x\%\), AHT \(-\!y\%\), attrition \(=\!z\%\). In reality they couple:
+
+\[\text{attrition}\uparrow \;\Rightarrow\; \text{experience}\downarrow \;\Rightarrow\; \text{AHT}\uparrow \;\Rightarrow\; \text{staffing}\uparrow \;\Rightarrow\; \text{hiring}\uparrow \;\Rightarrow\; \text{experience}\downarrow\ldots\]
+
+Small changes propagate nonlinearly; static sheets seldom capture the loop.
 
 **3) The time–horizon trap.** The longest–lead decisions carry the most uncertainty:
 
