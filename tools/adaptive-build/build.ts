@@ -223,6 +223,16 @@ function postprocess(md: string, u: Unit, refs: Map<string, Ref>): { body: strin
       if (!ref) { console.warn(`  unresolved \\cref{${label}} in ${u.key}`); return "the referenced section"; }
       return `[${ref.text}](${ref.url})`;
     });
+  // \hyperref[label]{text} arrives as [text](#label); resolve it like \cref.
+  md = md.replace(/\]\(#((?:sec|fig|tab|chap|ch|app):[^)\s]+)\)/g, (m, label: string) => {
+    const ref = refs.get(label);
+    if (!ref) { console.warn(`  unresolved \\hyperref[${label}] in ${u.key}`); return m; }
+    return `](${ref.url})`;
+  });
+  // "Table~\ref{…}" → "Table [Table 6.1](…)": drop the doubled word.
+  md = md.replace(/\b(Table|Figure|Chapter|Section)[ \u00a0]\[\1 /g, "[$1 "); // "~" arrives as a no-break space
+  // Labelled tables arrive wrapped in <div id="tab:x">; use the same slug the cross-reference links point at.
+  md = md.replace(/<div id="(tab:[^"]+)">/g, (_m, label: string) => `<div class="book-table" id="${label.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()}">`);
 
   // LaTeX \cite glued to the preceding word → "internet(Narayanan and Kapoor 2025)". Add the space.
   md = md.replace(/([\p{L}\p{N}])\((?=[A-Z][^()\n]{0,80}?\b(?:19|20)\d{2}[a-z]?[);,])/gu, "$1 (");
@@ -243,20 +253,20 @@ function postprocess(md: string, u: Unit, refs: Map<string, Ref>): { body: strin
   // Literal dollars (pandoc writes "\$") must not pair up with the $…$ of a neighbouring inline formula
   // ("the \$\(\sim\)20M gap" became a display-math block that swallowed the rest of the section). Hide them first.
   md = md.replace(/\\\$/g, "\uE000");
-  // Symbol-only inline math → Unicode so most pages never need KaTeX.
+  // Symbol-only inline math → Unicode so most pages never need KaTeX; everything else → \( \) and \[ \] so goldmark
+  // passthrough + KaTeX can render it without treating "$2.4M" as math. One left-to-right pass: "$$" opens display
+  // math only at a delimiter position, so adjacent inline formulas ("P$_{85}$$\ge$80/30") are never mistaken for one.
   const SYM: Record<string, string> = { "\\rightarrow": "→", "\\to": "→", "\\downarrow": "↓", "\\uparrow": "↑", "\\Rightarrow": "⇒", "\\leftarrow": "←", "\\sim": "~", "\\pm": "±", "\\times": "×", "\\approx": "≈", "\\div": "÷", "\\le": "≤", "\\ge": "≥", "\\leq": "≤", "\\geq": "≥", "\\neq": "≠", "\\infty": "∞", "\\lambda": "λ", "\\mu": "μ", "\\sigma": "σ", "\\Delta": "Δ", "\\cdot": "·" };
-  md = md.replace(/(^|[^$\\])\$([^$\n]+)\$(?!\$)/g, (m, pre: string, body: string) => {
-    let t = body.replace(/\\%/g, "%").replace(/\\,/g, " ");
-    for (const [k, v] of Object.entries(SYM)) t = t.split(k).join(v);
+  md = md.replace(/\$\$([\s\S]*?)\$\$|\$([^$\n]+)\$/g, (_m, disp: string | undefined, inl: string | undefined) => {
+    if (disp !== undefined) return `\\[${disp.trim()}\\]`;
+    let t = inl!.replace(/\\%/g, "%").replace(/\\,/g, " ");
+    for (const [k, v] of Object.entries(SYM).sort((x, y) => y[0].length - x[0].length)) t = t.split(k).join(v); // longest first: \geq before \ge
     const sub = t.match(/^_\{([^{}]*)\}$/);
-    if (sub) return pre + `<sub>${sub[1]}</sub>`;
-    if (/\\/.test(t) || /[_^]/.test(t)) return m; // real math: leave for KaTeX
-    return pre + t.replace(/\s*([=<>≈])\s*/g, " $1 ").replace(/\s+/g, " ").trim();
+    if (sub) return `<sub>${sub[1]}</sub>`;
+    if (/\\/.test(t) || /[_^]/.test(t)) return `\\(${inl}\\)`; // real math: leave for KaTeX
+    t = t.replace(/\{([^{}]{0,3})\}/g, "$1"); // LaTeX spacing braces: FC{=}100, 85%{+}, 312{,}500, 155{-}170
+    return t.replace(/\s*([=<>≈])\s*/g, " $1 ").replace(/\s+/g, " ").trim();
   });
-
-  // Remaining math → \( \) and \[ \] so goldmark passthrough + KaTeX can render it without treating "$2.4M" as math.
-  md = md.replace(/\$\$([\s\S]*?)\$\$/g, (_m, b: string) => `\\[${b.trim()}\\]`);
-  md = md.replace(/(^|[^$\\])\$([^$\n]+)\$(?!\$)/g, (_m, pre: string, b: string) => `${pre}\\(${b}\\)`);
   md = md.replace(/\uE000/g, "\\$");
   // Prose in square brackets (an editorial translation, "[ ] Yes / [ ] No" checkboxes) arrives as \[…\], which KaTeX
   // would render as display math and strip the spaces. Unescape spans that contain no math syntax.

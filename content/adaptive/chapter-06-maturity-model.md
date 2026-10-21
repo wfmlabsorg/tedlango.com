@@ -29,7 +29,7 @@ The WFM Labs Maturity Model is your roadmap from where you are to where you need
 
 **Five Levels, Five Chapters, One Clear Path**
 
-This model distills decades of workforce management evolution into five progressive levels. Each level represents a fundamental shift in capability and is summarized in Table [Table 6.1](/adaptive/chapter-06-maturity-model/#tab-maturity-roadmap). Unlike academic maturity models that describe ideal states, this framework is built from real implementations. Every level reflects what actually works in practice, not what sounds good in theory. The progression isn’t just about technology—it’s about fundamentally changing how organizations think about their workforce as a strategic asset.
+This model distills decades of workforce management evolution into five progressive levels. Each level represents a fundamental shift in capability and is summarized in [Table 6.1](/adaptive/chapter-06-maturity-model/#tab-maturity-roadmap). Unlike academic maturity models that describe ideal states, this framework is built from real implementations. Every level reflects what actually works in practice, not what sounds good in theory. The progression isn’t just about technology—it’s about fundamentally changing how organizations think about their workforce as a strategic asset.
 
 **From Cost Center to Competitive Advantage**
 
@@ -37,15 +37,15 @@ Most organizations still treat workforce management as a cost-control function: 
 
 The maturity model shows this evolution clearly. At Level 1, you’re fighting fires with spreadsheets. By Level 5, you’re orchestrating enterprise-wide intelligence—*integration without ownership* of data—making workforce management a strategic differentiator. The journey between these points is systematic, measurable, and achievable.
 
-<div id="tab:maturity-roadmap">
+<div class="book-table" id="tab-maturity-roadmap">
 
 | **Level**                   | **Core Capability**                        | **Deep-Dive**          |
 |:----------------------------|:-------------------------------------------|:-----------------------|
-| **Level 1: Initial/Manual** | Spreadsheet-driven reactive planning       | [Chapter 7](#chap:7)   |
-| **Level 2: Foundational**   | Structured forecasting & scheduling        | [Chapter 8](#chap:8)   |
-| **Level 3: Progressive**    | Real-time automation & variance harvesting | [Chapter 9](#chap:9)   |
-| **Level 4: Advanced**       | Operations Research & ecosystem thinking   | [Chapter 10](#chap:10) |
-| **Level 5: Pioneering**     | AI-augmented enterprise orchestration      | [Chapter 11](#chap:11) |
+| **Level 1: Initial/Manual** | Spreadsheet-driven reactive planning       | [Chapter 7](/adaptive/chapter-07-level-1-initial/)   |
+| **Level 2: Foundational**   | Structured forecasting & scheduling        | [Chapter 8](/adaptive/chapter-08-level-2-foundational/)   |
+| **Level 3: Progressive**    | Real-time automation & variance harvesting | [Chapter 9](/adaptive/chapter-09-level-3-progressive/)   |
+| **Level 4: Advanced**       | Operations Research & ecosystem thinking   | [Chapter 10](/adaptive/chapter-10-level-4-advanced/) |
+| **Level 5: Pioneering**     | AI-augmented enterprise orchestration      | [Chapter 11](/adaptive/chapter-11-level-5-pioneering/) |
 
 WFM Labs Maturity Model — Your Implementation Roadmap
 

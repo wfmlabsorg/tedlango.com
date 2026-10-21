@@ -400,7 +400,7 @@ Goal evolves from “minimize OT” to “eliminate *unintentional* OT and deplo
 
 ##### Automation Acceptance Rate (AAR).
 
-When prompts fire (training, break adjust, assist), what % are accepted? \[\text{AAR}=\frac{\text{\# accepted prompts}}{\text{\# total prompts}} \times 100\] Slice by rule, time of day, tenure. Healthy rules clear 85%{+}; low AAR flags timing, content, or trust issues.
+When prompts fire (training, break adjust, assist), what % are accepted? \[\text{AAR}=\frac{\text{\# accepted prompts}}{\text{\# total prompts}} \times 100\] Slice by rule, time of day, tenure. Healthy rules clear 85%+; low AAR flags timing, content, or trust issues.
 
 ##### Variance Capture Efficiency (VCE).
 
@@ -537,7 +537,7 @@ With significant training and coaching moved out of pre-bookings, schedulers gai
 
 ### Sarah’s Level-3 role checklist (ready-to-run)
 
-- RTAs trained on the rule lifecycle; each owns ≥q2 pilots with defined AAR/VCE targets.
+- RTAs trained on the rule lifecycle; each owns ≥2 pilots with defined AAR/VCE targets.
 
 - Supervisor enablement: “no-exceptions” policy for protected adjustments; coaching time goal with Supervisor Coaching Ratio (SCR) tracking.
 
@@ -587,7 +587,7 @@ Level 2 assumes predictability and pre-schedules; cancellations abound. Level 3 
 
 2.  **Dynamic eligibility?**
 
-    - ≤q30 minutes, interruptible, no special equipment ⇒ dynamic.
+    - ≤30 minutes, interruptible, no special equipment ⇒ dynamic.
 
     - Long workshops, labs, or compliance with proctors ⇒ scheduled.
 
@@ -828,7 +828,7 @@ The engine: micro-moments. Ten agents free for three minutes is 30 minutes of pr
 
 **Direct ROI components (attribution you can defend)**
 
-**AHT reduction.** Pilot: -15 seconds via long-call assists and just-in-time knowledge ([“Understanding Level 3: The Automation Revolution”](/adaptive/chapter-09-level-3-progressive/#understanding-level-3-the-automation-revolution)). For 3,000 agents at 100 calls/day: \[3{,}000 \times 100 \times 15\text{s} = 4{,}500{,}000\text{s/day} \approx 1{,}250\text{ hours/day}.\] Annualized (250 days): 312{,}500 hours. That’s ≈ 155{-}170 FTEs depending on assumed annual productive hours (2,000–1,850) ⇒ \$6.2–\$6.8M at \$40k/FTE. Even half the effect funds the program.
+**AHT reduction.** Pilot: -15 seconds via long-call assists and just-in-time knowledge ([“Understanding Level 3: The Automation Revolution”](/adaptive/chapter-09-level-3-progressive/#understanding-level-3-the-automation-revolution)). For 3,000 agents at 100 calls/day: \[3{,}000 \times 100 \times 15\text{s} = 4{,}500{,}000\text{s/day} \approx 1{,}250\text{ hours/day}.\] Annualized (250 days): 312,500 hours. That’s ≈ 155-170 FTEs depending on assumed annual productive hours (2,000–1,850) ⇒ \$6.2–\$6.8M at \$40k/FTE. Even half the effect funds the program.
 
 **Overtime reduction.** Typical 5–8% OT drops to 2–3% with end-of-shift protection, dynamic VTO, and better balancing: \[\Delta\text{OT} \approx 2{-}4\%\ \text{of}\ \$40\text{M} \Rightarrow \$0.8{-}1.6\text{M/year (1{,}000 agents)}.\]
 
@@ -839,7 +839,7 @@ The engine: micro-moments. Ten agents free for three minutes is 30 minutes of pr
 
 **Administrative efficiency.** Supervisors reclaim ≥2.5 hours/day from exceptions and rescheduling; RTAs shift to rule design ([“Roles (R) — Evolution of WFM Functions”](/adaptive/chapter-09-level-3-progressive/#roles-r--evolution-of-wfm-functions)): \[100\ \text{supervisors} \times 2.5 \times 250 = 62{,}500\ \text{hours} \Rightarrow \$1.9\text{M at \$30/hr}.\]
 
-**Putting the pieces together.** These results roll up into four defensible value streams—*shrinkage budget saves*, *AHT reduction*, *overtime reduction*, and *administrative efficiency*. Figure [Figure 9.2](/adaptive/chapter-09-level-3-progressive/#fig-business-case-roi) shows their *relative share* on a common 1,000-agent baseline; absolute amounts follow the modeled calculations above. Aim for *composition, not false precision*: what actually funds the Level 3 journey.
+**Putting the pieces together.** These results roll up into four defensible value streams—*shrinkage budget saves*, *AHT reduction*, *overtime reduction*, and *administrative efficiency*. [Figure 9.2](/adaptive/chapter-09-level-3-progressive/#fig-business-case-roi) shows their *relative share* on a common 1,000-agent baseline; absolute amounts follow the modeled calculations above. Aim for *composition, not false precision*: what actually funds the Level 3 journey.
 
 <figure class="book-figure" id="fig-business-case-roi">
 <img src="/img/adaptive/ch9_business_case_pie_bw.svg" alt="Business Case for Automation" loading="lazy">

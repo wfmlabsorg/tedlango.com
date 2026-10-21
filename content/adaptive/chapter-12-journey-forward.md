@@ -395,7 +395,7 @@ Scorecards should make better decisions inevitable. Keep them small, outcome-anc
 
 - Publish target *bands* (e.g., SL 80/30 with ± tolerance; occupancy 78–88%), and report stability as “% within band.”
 
-- Set percentile targets for stochastic metrics (e.g., “P$_{80}$$\geq$ target for 12 of 13 weeks”).
+- Set percentile targets for stochastic metrics (e.g., “P<sub>80</sub>≥ target for 12 of 13 weeks”).
 
 - Pair every metric with a counter-metric to avoid perverse optimization (e.g., AHT with FCR/CLV; adherence with EWI).
 
@@ -474,7 +474,7 @@ Cadence beats intensity. Small, repeatable forums create the muscle memory that 
 
 ### Operating Guardrails
 
-- **Cap ceremony cost**: ≤q 3% of team capacity; cancel when no decision needed.
+- **Cap ceremony cost**: ≤ 3% of team capacity; cancel when no decision needed.
 
 - **Decide in the room**: every forum ends with owners, due dates, and success criteria.
 
@@ -558,14 +558,14 @@ Compute effect size with confidence; review operational fit and support load; ch
 
 | **Pilot Type**                   | **Minimum Success**                                                | **Guardrails**                                                        |
 |:---------------------------------|:-------------------------------------------------------------------|:----------------------------------------------------------------------|
-| Micro-learning in valleys        | VCE ≥q 25%; AAR ≥q 70%; no adverse SL drift                | SLS within band; opt-out honored; audit trail complete                |
-| Break/lunch protection           | ≥q 50% reduction in adherence exceptions; TTS ↓ 20% | Max shift per move; daily limit per agent; supervisor visibility      |
+| Micro-learning in valleys        | VCE ≥ 25%; AAR ≥ 70%; no adverse SL drift                | SLS within band; opt-out honored; audit trail complete                |
+| Break/lunch protection           | ≥ 50% reduction in adherence exceptions; TTS ↓ 20% | Max shift per move; daily limit per agent; supervisor visibility      |
 | End-of-shift & VTO/VOT           | OT minutes ↓ 30% with neutral CSAT                      | Equity checks across cohorts; voluntary only                          |
-| Staffing envelopes               | Envelope hit-rate ≥q 80% at chosen posture                     | Published assumptions; monthly calibration                            |
+| Staffing envelopes               | Envelope hit-rate ≥ 80% at chosen posture                     | Published assumptions; monthly calibration                            |
 | Abandon-aware simulation         | Lower unit cost at equal or better effort score                    | No hidden degradation of critical segments                            |
-| Value-based assignment           | CLV delta > 0 with stable risk metrics                           | Explainability ≥q 95%; override path live; fairness within bounds |
-| Decision service & guardrails    | Time-to-rollback ≤q 15 min; incident MTTR ↓ 30%     | Decision cards on 100% of auto actions                                |
-| Cross-functional pre-positioning | Lead-time gain ≥q 24 h; measurable revenue protection          | Finance sign-off; error budgets enforced                              |
+| Value-based assignment           | CLV delta > 0 with stable risk metrics                           | Explainability ≥ 95%; override path live; fairness within bounds |
+| Decision service & guardrails    | Time-to-rollback ≤ 15 min; incident MTTR ↓ 30%     | Decision cards on 100% of auto actions                                |
+| Cross-functional pre-positioning | Lead-time gain ≥ 24 h; measurable revenue protection          | Finance sign-off; error budgets enforced                              |
 
 ### Lightweight Artifacts Required
 

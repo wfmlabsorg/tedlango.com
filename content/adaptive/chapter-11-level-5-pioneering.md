@@ -775,7 +775,7 @@ Routing that prefers an empathetic expert over a faster bot may raise immediate 
 
 **From enablement to evidence.**
 
-The innovation enablers just outlined—velocity, learning, cross-pollination, participation—matter when they change outcomes. Figure [Figure 11.1](/adaptive/chapter-11-level-5-pioneering/#fig-multi-objective-scorecard) translates those behaviors into a balanced result profile across *CX, EX, Cost, Revenue, Risk*, and *Quality*; the “Before (L2)” and “After (L5)” traces show how orchestration reweights trade-offs in practice.
+The innovation enablers just outlined—velocity, learning, cross-pollination, participation—matter when they change outcomes. [Figure 11.1](/adaptive/chapter-11-level-5-pioneering/#fig-multi-objective-scorecard) translates those behaviors into a balanced result profile across *CX, EX, Cost, Revenue, Risk*, and *Quality*; the “Before (L2)” and “After (L5)” traces show how orchestration reweights trade-offs in practice.
 
 <figure class="book-figure" id="fig-multi-objective-scorecard">
 <img src="/img/adaptive/ch11_orchestration_scorecard_bw_v2.png" alt="Sample Multi-Objective Scorecard" loading="lazy">
